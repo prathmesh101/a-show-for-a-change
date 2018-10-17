@@ -5,6 +5,7 @@ const Footer = () => {
     return (
         <div className="header-cont">
             Header
+            <p>Header Test</p>
         </div>
     )
 }
