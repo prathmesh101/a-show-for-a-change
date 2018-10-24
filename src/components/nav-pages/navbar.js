@@ -7,6 +7,13 @@ const NavBar = () => {
     return (
         <div className="navbar-cont">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <ul className="navbar-nav ml-auto">
+                    <li className="nav-item">
+                        <Link to="/" className="nav-link navbar-brand left">
+                            CauseFX
+                            </Link>
+                    </li>
+                </ul>
                 <div className="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarNav">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
