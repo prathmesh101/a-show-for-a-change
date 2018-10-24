@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Video from '../video';
 
 const Home = () => {
     return (
         <div>
-            <p>home</p>
+            <Video />
         </div>
     )
 }
