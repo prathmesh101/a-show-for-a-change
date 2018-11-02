@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
-        <div>about Alex Choi</div>
+        <div>about</div>
     )
 }
 
