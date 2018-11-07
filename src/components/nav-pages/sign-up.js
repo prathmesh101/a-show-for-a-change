@@ -13,7 +13,7 @@ class SignUp extends Component {
       password: ''
     }
   }
-
+  //example change
   handleClick(event) {
     var apiBaseUrl = "http://localhost:8888/API_PHP/signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
