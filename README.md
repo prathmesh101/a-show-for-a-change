@@ -64,3 +64,5 @@ LAMP stack - Linux, Apache, MySQL, PHP
 AWS EC2 (free tier)
 
 AWS S3 (super simple storage)
+
+AWS RDS (for databases)
