@@ -59,6 +59,8 @@ HTML5
 
 CSS3
 
+PHP for RESTful API
+
 LAMP stack - Linux, Apache, MySQL, PHP
 
 AWS EC2 (free tier)
