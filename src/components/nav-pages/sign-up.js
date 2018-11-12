@@ -53,6 +53,7 @@ class SignUp extends Component {
         <h1>Sign Up Form</h1>
         <label>First Name</label>
         <input type="text" name="username" placeholder="First name" onChange={(event, newValue) => this.setState({ first_name: newValue })} />
+<<<<<<< HEAD
         <br/>
         <label>Last name</label>
         <input type="text" name="lastname" placeholder="Last name" onChange={(event, newValue) => this.setState({ last_name: newValue })} />
@@ -63,6 +64,14 @@ class SignUp extends Component {
         <label>Password</label>
         <input type="text" name="username" placeholder="password" onChange={(event, newValue) => this.setState({ password: newValue })} />
         <br/>
+=======
+        <label>Last name</label>
+        <input type="text" name="lastname" placeholder="Last name" onChange={(event, newValue) => this.setState({ last_name: newValue })} />
+        <label>E-mail</label>
+        <input type="text" name="username" placeholder="email" onChange={(event, newValue) => this.setState({ email: newValue })} />
+        <label>Password</label>
+        <input type="text" name="username" placeholder="password" onChange={(event, newValue) => this.setState({ password: newValue })} />
+>>>>>>> 4db2c7ff8f059c9df03c07a375ae1da6256c8649
 
         <input type="submit" onClick={(event) => this.handleClick(event)} />
 

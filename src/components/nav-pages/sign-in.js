@@ -51,12 +51,18 @@ class SignIn extends Component {
             <h4>Login</h4>
             <label>Username</label>
             <input type="text" name="username" placeholder="Username" />
+<<<<<<< HEAD
             <br/>
             <label>Password</label>
             <input type="password" name="password" placeholder="Password" onChange={(event, newValue) => this.setState({ password: newValue })} />
             <br/>
             <input type="submit" className="button" value="Login" onClick={(event) => this.handleClick(event)} />
             <br/>
+=======
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password" onChange={(event, newValue) => this.setState({ password: newValue })} />
+            <input type="submit" className="button" value="Login" onClick={(event) => this.handleClick(event)} />
+>>>>>>> 4db2c7ff8f059c9df03c07a375ae1da6256c8649
             <a href="/signup">Registration</a>
           </div>
         </div>
