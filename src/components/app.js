@@ -25,7 +25,7 @@ const App = () => (
             <Route path="/contact" component={Contact} />
             <Route path="/sign-in" component={SignIn} />
             <Route path="/sign-up" component={SignUp} />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     </div>
 );
