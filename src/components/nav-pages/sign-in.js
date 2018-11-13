@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap';
 import axios from 'axios';
+import '../../assets/css/sign-in.css';
 import { Link } from 'react-router-dom';
 
 class SignIn extends Component {
@@ -45,20 +46,46 @@ class SignIn extends Component {
 
     return (
 
-      <div>
-        <div id="Body">
-          <div className="medium-5 columns">
-            <h4>Login</h4>
-            <label>Username</label>
-            <input type="text" name="username" placeholder="Username" />
-            <label>Password</label>
-            <input type="password" name="password" placeholder="Password" onChange={(event, newValue) => this.setState({ password: newValue })} />
-            <input type="submit" className="button" value="Login" onClick={(event) => this.handleClick(event)} />
-            <a href="/signup">Registration</a>
-          </div>
-        </div>
-      </div>
+      <div className="signin-background">
 
+          <div className="container signin-content">
+
+            <div className="row signin-align">
+
+              <div class="col-sm-10">
+
+                <form>
+                      <h2 className="signin-head-text">Login</h2>
+
+                  
+
+                  <div className="form-group">
+
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" name="email" id="firstname" placeholder="Enter email" onChange = {(event,newValue) => this.setState({username:newValue})} />
+                    
+                  </div>
+
+                  <div className="form-group">
+
+                    <label for="password">Password</label>
+                    <input type="text" class="form-control" name="password" id="password" placeholder="Enter email" onChange={(event, newValue) => this.setState({ password: newValue })} />
+                    
+                  </div>
+
+                  <button type="submit" class="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
+
+                </form>
+
+              </div>
+
+            </div>
+
+          </div>
+          
+        </div>
+
+      
     );
   }
 }
