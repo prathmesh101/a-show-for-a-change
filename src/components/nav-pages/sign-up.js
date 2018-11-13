@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap';
 import axios from 'axios';
+import '../../assets/css/sign-up.css';
 import { Link } from 'react-router-dom';
 
 class SignUp extends Component {
@@ -49,22 +50,62 @@ class SignUp extends Component {
   render() {
 
     return (
-      <div>
-        <h1>Sign Up Form</h1>
-        <label>First Name</label>
-        <input type="text" name="username" placeholder="First name" onChange={(event, newValue) => this.setState({ first_name: newValue })} />
-        <label>Last name</label>
-        <input type="text" name="lastname" placeholder="Last name" onChange={(event, newValue) => this.setState({ last_name: newValue })} />
-        <label>E-mail</label>
-        <input type="text" name="username" placeholder="email" onChange={(event, newValue) => this.setState({ email: newValue })} />
-        <label>Password</label>
-        <input type="text" name="username" placeholder="password" onChange={(event, newValue) => this.setState({ password: newValue })} />
+     
+        <div className="signup-background">
 
-        <input type="submit" onClick={(event) => this.handleClick(event)} />
+          <div className="container signup-content">
 
-      </div>
+            <div className="row sign-align">
+
+              <div class="col-sm-10">
+
+                <form>
+                      <h2 className="signup-head-text">Sign Up Form</h2>
+
+                  <div className="form-group">
+
+                    <label for="firstname">First Name</label>
+                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Enter email" size="10" onChange={(event, newValue) => this.setState({ first_name: newValue })} />
+                    
+                  </div>
+
+                  <div className="form-group">
+
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ last_name: newValue })} />
+                    
+                  </div>
+
+                  <div className="form-group">
+
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" name="email" id="firstname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ email: newValue })} />
+                    
+                  </div>
+
+                  <div className="form-group">
+
+                    <label for="password">Password</label>
+                    <input type="text" class="form-control" name="password" id="password" placeholder="Enter email" onChange={(event, newValue) => this.setState({ password: newValue })} />
+                    
+                  </div>
+
+                  <button type="submit" class="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
+
+                </form>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
     );
   }
 }
 
 export default SignUp;
+
+
+  

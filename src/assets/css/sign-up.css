@@ -1,0 +1,35 @@
+.signup-background{
+
+ background-image: url("../img/Ticket1.png");
+ 
+  height: 660px;
+
+ 
+   background-repeat: no-repeat;
+   background-color: white;
+    background-position: center; 
+}
+
+
+
+.signup-content{
+	display: block;
+
+	margin-left:100px;
+  padding-top:120px;
+
+}
+
+.sign-align{
+	padding-left: 180px;
+}
+
+h2.signup-head-text{
+	text-align: center;
+}
+
+		     
+					    
+					
+
+
