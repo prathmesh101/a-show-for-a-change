@@ -2,8 +2,32 @@
   font-family: Helvetica;
 }
 
+/*color scheme */
 html {
-  background-color: #311f0a;
+  background-color:#156767;
+}
+
+#signUpForm input,
+#buttonCreateAccount,
+.three p,
+#headerText,
+#headerParagraph a {
+  color: white;
+}
+
+
+.three,
+#headerParagraph,
+#signUpText,
+#buttonCreateAccount {
+  background-color:teal;
+}
+
+/*box shadow */
+#headerParagraph,
+#signUpText,
+#buttonCreateAccount {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .wrapper {
@@ -24,14 +48,10 @@ html {
 .three {
   grid-column: 1 / 7;
   height: 100px;
-  background-color: orange;
 }
 
 @media screen and (max-width: 992px) {
-  .one {
-    grid-column: 1 / 7;
-  }
-
+  .one,
   .two {
     grid-column: 1 / 7;
   }
@@ -51,7 +71,6 @@ html {
 
 
 #headerText {
-  color: #ffffff;
   font-size: 3.8em;
   font-weight: bold;
   letter-spacing: 0.02em; 
@@ -61,16 +80,15 @@ html {
 }
 
 #headerParagraph {
-  color: orange;
   font-size: 1em;
-  padding: 15px 30px 0px;
+  padding: 15px 30px;
   letter-spacing: 0.03em;
   line-height: 1.3em;
+  border-radius: 0 20px 20px 0;
+  margin: 1em 1em 1em 0;
 }
 
-#headerParagraph a {
-  color: #ffffff;
-}
+
 
 .div-images {
   padding: 30px;
@@ -85,10 +103,9 @@ html {
 }
 
 #signUpText {
-  color: orange;
   font-size: 1.5em;
   letter-spacing: 0.07em; 
-  padding: 50px 30px 10px 0px;
+  padding: 5%;
   margin: 0;
 }
 
@@ -98,7 +115,6 @@ html {
   width: 100%;
   background: transparent;
   margin-bottom: 15px;
-  color: white;
   font-size: 1em;
 }
 
@@ -111,21 +127,15 @@ html {
 
 #buttonCreateAccount {
   display: block;
-  color: white;
   letter-spacing: 0.1em;
   font-size: 0.7em;
   margin: 0;
   text-transform: uppercase;
-  background-color: orange;
   border-radius: 4px;
   width: 150px;
   height: 40px;
   float: right;
   margin-top: 30px;
-}
-
-.three p {
-  color: white;
 }
 
 .div-headerBar {
