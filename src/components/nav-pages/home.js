@@ -13,7 +13,7 @@ const Home = () => {
 						<img src="https://m.media-amazon.com/images/M/MV5BMjM3MzE2OTEwNF5BMl5BanBnXkFtZTcwNTkyMTg4NA@@._V1_UX182_CR0,0,182,268_AL_.jpg"></img>
 						<img src="https://m.media-amazon.com/images/M/MV5BMjA3NjkzNjg2MF5BMl5BanBnXkFtZTgwMDkyMzgzMDI@._V1_UY268_CR0,0,182,268_AL_.jpg"></img>
 						<img src="https://m.media-amazon.com/images/M/MV5BMTQ2MjA4MTcwOF5BMl5BanBnXkFtZTgwNTI4OTI1MDE@._V1_UX182_CR0,0,182,268_AL_.jpg"></img>
-						<img src="https://m.media-amazon.com/images/M/MV5BMjIxMzExMTI4OF5BMl5BanBnXkFtZTgwNzU5MjMxMDE@._V1_UX182_CR0,0,182,268_AL_.jpg"></img>
+						{/* <img src="https://m.media-amazon.com/images/M/MV5BMjIxMzExMTI4OF5BMl5BanBnXkFtZTgwNzU5MjMxMDE@._V1_UX182_CR0,0,182,268_AL_.jpg"></img> */}
 					</div>
 				</div>
         <div className="two">
