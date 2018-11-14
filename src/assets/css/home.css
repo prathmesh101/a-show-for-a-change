@@ -52,7 +52,6 @@ html {
 }
 
 @media screen and (max-width: 992px) {
-<<<<<<< HEAD
   .wrapper {
     grid-auto-rows: minmax(600px, auto)
   }
@@ -62,9 +61,6 @@ html {
     overflow: hidden;
   }
 
-=======
-  .one,
->>>>>>> 41bda650402870350782f016869bdbe498878206
   .two {
     grid-column: 1 / 7;
   }
