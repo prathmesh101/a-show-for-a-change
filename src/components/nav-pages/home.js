@@ -5,8 +5,8 @@ import Video from '../video';
 
 const Home = () => {
 	return (
-    <div className="wrapper">
-      <div className="one">
+		<div className="wrapper">
+			<div className="one">
 				<p id="headerText">See with your eyes, then tip with your heart.</p>
 				<p id="headerParagraph">Watch a curated set of socially responsible movies, starting at $4.99/month. See content that will not only move you, but allow you to support independent filmmakers, celebrity influencers and their connected causes. <a href="/about">Want to learn more?</a></p>
 				<div className="div-images">
