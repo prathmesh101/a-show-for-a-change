@@ -73,7 +73,7 @@ class SignIn extends Component {
                     
                   </div>
 
-                  <button type="submit" class="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
+                  <button type="submit" class="btn btn-primary"onClick={(event) => this.handleClick(event)} >Submit</button>
 
                 </form>
 
