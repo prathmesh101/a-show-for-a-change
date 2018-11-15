@@ -33,7 +33,8 @@ html {
 .wrapper {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: minmax(500px, auto);
+  grid-auto-rows: 700px;
+  overflow: hidden;
 }
 
 .one {
@@ -51,7 +52,15 @@ html {
 }
 
 @media screen and (max-width: 992px) {
-  .one,
+  .wrapper {
+    grid-auto-rows: minmax(600px, auto)
+  }
+  
+  .one {
+    grid-column: 1 / 7;
+    overflow: hidden;
+  }
+
   .two {
     grid-column: 1 / 7;
   }
@@ -63,9 +72,17 @@ html {
 }
 
 @media screen and (max-width: 375px) {
+  .wrapper {
+    grid-auto-rows: minmax(600px, auto)
+  }
+  .one {
+    overflow: visible;
+  }
+  
   .div-images img {
     height: 100%;
     width: 100%;
+    padding-left: 0px!important;
   }
 }
 
@@ -95,7 +112,7 @@ html {
 }
 
 .div-images img {
-  padding: 0px 15px 30px 15px;
+  padding: 0px 0px 30px 15px;
 }
 
 .div-signUp {
