@@ -14,7 +14,7 @@ class SignIn extends Component {
   }
 
   handleClick(event) {
-    var apiBaseUrl = "http://API_PHP/signinapi.php";
+    var apiBaseUrl = "../../../API_PHP/signinapi.php";
     var self = this;
     var payload = {
       "email": this.state.username,
