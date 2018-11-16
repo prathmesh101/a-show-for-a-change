@@ -6,12 +6,10 @@ A video web application that connects socially conscious filmmakers with their a
 # Team
 * Jared Milrad - Chief Executive Officer (CEO)
 * Daniel Yeh - Cheif Marketing Officer (CMO)
-* Marissa Shankar - Production Assistant
 * David Martinez - Front End Lead
 * Prathmesh Pardhiye - Front End Developer
 * Alex Choi - Front End Developer
 * Sivak Khodaverdian - Back End Lead
-* Suketu Patel - Back End Developer
 * Alia Wilkinson - Back End Developer & SCRUM Lord
 
 # Feature List
@@ -59,8 +57,12 @@ HTML5
 
 CSS3
 
+PHP for RESTful API
+
 LAMP stack - Linux, Apache, MySQL, PHP
 
 AWS EC2 (free tier)
 
 AWS S3 (super simple storage)
+
+AWS RDS (for databases)

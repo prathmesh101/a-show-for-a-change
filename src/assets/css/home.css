@@ -1,0 +1,172 @@
+.body {
+  font-family: Helvetica;
+}
+
+/*color scheme */
+html {
+  background-color:#156767;
+}
+
+#signUpForm input,
+#buttonCreateAccount,
+.three p,
+#headerText,
+#headerParagraph a {
+  color: white;
+}
+
+
+.three,
+#headerParagraph,
+#signUpText,
+#buttonCreateAccount {
+  background-color:teal;
+}
+
+/*box shadow */
+#headerParagraph,
+#signUpText,
+#buttonCreateAccount {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 700px;
+  overflow: hidden;
+}
+
+.one {
+  grid-column: 1 / 5;
+}
+
+
+.two {
+  grid-column: 5 / 7;
+}
+
+.three {
+  grid-column: 1 / 7;
+  height: 100px;
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    grid-auto-rows: minmax(600px, auto)
+  }
+  
+  .one {
+    grid-column: 1 / 7;
+    overflow: hidden;
+  }
+
+  .two {
+    grid-column: 1 / 7;
+  }
+
+  .div-signUp {
+    margin: auto;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wrapper {
+    grid-auto-rows: minmax(600px, auto)
+  }
+  .one {
+    overflow: visible;
+  }
+  
+  .div-images img {
+    height: 100%;
+    width: 100%;
+    padding-left: 0px!important;
+  }
+}
+
+
+#headerText {
+  font-size: 3.8em;
+  font-weight: bold;
+  letter-spacing: 0.02em; 
+  line-height: 1em;
+  padding: 50px 30px 10px;
+  margin: 0;
+}
+
+#headerParagraph {
+  font-size: 1em;
+  padding: 15px 30px;
+  letter-spacing: 0.03em;
+  line-height: 1.3em;
+  border-radius: 0 20px 20px 0;
+  margin: 1em 1em 1em 0;
+}
+
+
+
+.div-images {
+  padding: 30px;
+}
+
+.div-images img {
+  padding: 0px 0px 30px 15px;
+}
+
+.div-signUp {
+  width: 330px;
+}
+
+#signUpText {
+  font-size: 1.5em;
+  letter-spacing: 0.07em; 
+  padding: 5%;
+  margin: 0;
+}
+
+#signUpForm input {
+  border: none;
+  border-bottom: 1px solid #d8d8d8;
+  width: 100%;
+  background: transparent;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+::placeholder {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.7em;
+  color: #d8d8d8;
+}
+
+#buttonCreateAccount {
+  display: block;
+  letter-spacing: 0.1em;
+  font-size: 0.7em;
+  margin: 0;
+  text-transform: uppercase;
+  border-radius: 4px;
+  width: 150px;
+  height: 40px;
+  float: right;
+  margin-top: 30px;
+}
+
+.div-headerBar {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.div-headerBar div {
+  width: 200px;
+  height: 100px;
+  float: left;
+  border: 1px solid red;
+  text-align: center;
+  padding-top: 55px;
+  letter-spacing: 0.03em;
+  font-size: 1.1em;
+}
