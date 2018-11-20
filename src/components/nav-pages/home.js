@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/css/home.css';
 import Video from '../video';
+import SignUp from './sign-up';
 
 const Home = () => {
 	return (
@@ -20,7 +21,7 @@ const Home = () => {
 				<p id="headerText">Watch. Learn. Give.</p>
 				<p id="headerParagraph">Sage Age offers a growing array of socially and environmentally responsible short films, and allows you to donate to the causes closest to your heart.</p>
 				<div className="div-buttonWatchFree">
-					<a href="sign-up"><button id="buttonWatchFree">WATCH FREE FOR 30 DAYS</button></a>
+					<a href="/sign-up"><button id="buttonGreen">WATCH FREE FOR 30 DAYS</button></a>
 				</div>
 				<div className="div-disclaimer">
 					<p>*Only $4.99/month or $49.99/year</p>
@@ -43,7 +44,8 @@ const Home = () => {
 				</div>
 			</div>
 			<div className="two">
-				<div className="div-signUp">
+				<SignUp />
+				{/* <div className="div-signUp">
 					<p id="signUpText">SIGN UP TODAY</p>
 					<form id="signUpForm" method="POST" action="/sign-up">
 						<input type="text" placeholder="email"></input>
@@ -51,24 +53,7 @@ const Home = () => {
 						<input type="password" placeholder="confirm password"></input>
 						<button id="buttonCreateAccount" className="btn">Create Account</button>
 					</form>
-				</div>
-			</div>
-			<div className="three">
-				<div className="div-headerBar">
-					<div className="div-watchTrailer">
-						{/* <img src="../../assets/img/icon-imgs/video-camera.svg"></img> */}
-						<p>Watch Trailer</p>
-					</div>
-					<div className="div-supportCreators">
-						<p>Support Creators</p>
-					</div>
-					<div className="div-browseVideos">
-						<p>Browse Videos</p>
-					</div>
-				</div>
-			</div>
-			<div className="four">
-				<div className="div-trailerBar"></div>
+				</div> */}
 			</div>
 		</div>
 	)

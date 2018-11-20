@@ -50,57 +50,58 @@ class SignUp extends Component {
   render() {
 
     return (
-     
-        <div className="signup-background">
 
-          <div className="container signup-content">
-
-            <div className="row sign-align">
-
-              <div class="col-sm-10">
-
-                <form>
-                      <h2 className="signup-head-text">Sign Up Form</h2>
-
-                  <div className="form-group">
-
-                    <label for="firstname">First Name</label>
-                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Enter email" size="10" onChange={(event, newValue) => this.setState({ first_name: newValue })} />
-                    
-                  </div>
-
-                  <div className="form-group">
-
-                    <label for="lastname">Last Name</label>
-                    <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ last_name: newValue })} />
-                    
-                  </div>
-
-                  <div className="form-group">
-
-                    <label for="email">E-mail</label>
-                    <input type="email" class="form-control" name="email" id="firstname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ email: newValue })} />
-                    
-                  </div>
-
-                  <div className="form-group">
-
-                    <label for="password">Password</label>
-                    <input type="text" class="form-control" name="password" id="password" placeholder="Enter email" onChange={(event, newValue) => this.setState({ password: newValue })} />
-                    
-                  </div>
-
-                  <button type="submit" class="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
-
-                </form>
-
-              </div>
-
+      <div>
+        <form>
+          <div className="form-group">
+            <h2 className="signup-head-text">Create Your Account</h2>
+            <div className="div-underline">
+              <i className="fas fa-user inlineBlock fillWhite"></i>
+              <input type="text" className="inlineBlock" name="firstname" id="firstname" placeholder="Your Name" onChange={(event, newValue) => this.setState({ first_name: newValue })} />
             </div>
-
           </div>
 
+          <div className="form-group">
+            <div className="div-underline">
+              <i className="fas fa-envelope fillWhite"></i>
+              <input type="email" className="inlineBlock" name="lastname" id="lastname" placeholder="Your Email" onChange={(event, newValue) => this.setState({ last_name: newValue })} />
+            </div>
+          </div>
+
+          <div className="form-group">
+            <div className="div-underline">
+              <i className="fas fa-unlock-alt fillWhite"></i>
+              <input type="password" className="inlineBlock" name="email" id="password" placeholder="Enter Password" onChange={(event, newValue) => this.setState({ email: newValue })} />
+            </div>
+          </div>
+
+          <div className="form-group">
+            <div className="div-underline">
+              <i className="fas fa-unlock-alt fillWhite"></i>
+              <input type="password" className="inlineBlock" name="password" id="passwordConfirmation" placeholder="Confirm Password" onChange={(event, newValue) => this.setState({ password: newValue })} />
+            </div>
+          </div>
+          <div className="div-submit">
+            <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >CONTINUE</button>
+          </div>
+        </form>
+
+        <div className="div-signIn">
+          <p>Already have an account? <span><a href="/sign-in" className="linkPrimary">SIGN IN</a></span></p>
         </div>
+
+        <div className="div-progressIndicator">
+          <svg height="28" width="40">
+            <circle className="circle-active" cx="14" cy="14" r="13" fill="#00CB94" />
+          </svg>
+          <svg height="28" width="40">
+            <circle cx="14" cy="14" r="13" fill="grey" />
+          </svg>
+          <svg height="28" width="40">
+            <circle cx="14" cy="14" r="13" fill="grey" />
+          </svg>
+        </div>
+      </div>
     );
   }
 }
@@ -108,4 +109,3 @@ class SignUp extends Component {
 export default SignUp;
 
 
-  

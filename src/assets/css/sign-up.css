@@ -1,35 +1,110 @@
-.signup-background{
-
- background-image: url("../img/Ticket1.png");
- 
-  height: 660px;
-
- 
-   background-repeat: no-repeat;
-   background-color: white;
-    background-position: center; 
-}
-
-
-
-.signup-content{
-	display: block;
-
-	margin-left:100px;
-  padding-top:120px;
+/* Desktop wide breakpoint */
+@media screen and (min-width: 1366px) {
 
 }
 
-.sign-align{
-	padding-left: 180px;
+/* Tablet breakpoint */
+@media screen and (min-width: 1024px) {
+  .form-group {
+    width: 40vw!important;
+    margin: 0 auto;
+  }
+
+  .div-submit {
+    width: 25vw!important;
+    margin: 0 auto;
+  }
 }
 
-h2.signup-head-text{
-	text-align: center;
+/* Mobile breakpoint */
+@media screen and (min-width: 375px) {
+
 }
 
-		     
-					    
-					
+.signup-head-text {
+  color: white;
+  padding: 10px 0;
+}
 
+.form-group {
+  width: 85vw;
+  margin: 0 auto;
+}
 
+.form-group input {
+  border: none;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  font-size: 20px;
+  width: 100%;
+}
+
+.form-group input:focus {
+  color: white;
+  background-color: transparent;
+  font-size: 20px;
+  outline: none;
+}
+
+.div-underline {
+  border-bottom: 1px solid #ffffff;
+}
+
+.fillWhite {
+  color: #fff;
+}
+
+#inlineBlock {
+  display: inline!important;
+}
+
+.div-submit {
+  width: 85vw;
+  margin: 0 auto;
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonGreen {
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #00CB94;
+  color: #005C43;
+  border: none;
+  width: 80vw;
+  height: 53px;
+}
+
+.div-signIn {
+  width: 85vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.div-signIn p {
+  color: grey;
+  padding-top: 50px;
+}
+
+.linkPrimary {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border-bottom: 2px solid #00CB94;
+  letter-spacing: 0.02em;
+}
+
+.div-progressIndicator {
+  width: 80vw;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.circle-active {
+  fill: "#00CB94";
+}
