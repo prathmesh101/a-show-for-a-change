@@ -2,9 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/css/home.css';
 import Video from '../video';
+import BackgroundImg from './background-video';
 
 const Home = () => {
 	return (
+		<div>
+		<BackgroundImg/>
 		<div className="wrapper">
 			<div className="one">
 				<p id="headerText">See with your eyes, then tip with your heart.</p>
@@ -40,6 +43,7 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	)
 }
