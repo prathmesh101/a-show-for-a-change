@@ -26,7 +26,7 @@ class SignUp extends Component {
       "email": this.state.email,
       "password": this.state.password
     }
-    axios.post(apiBaseUrl + '/register', payload)
+    axios.post(apiBaseUrl, payload)
       .then(function (response) {
         console.log(response);
         if (response.data.code == 200) {
