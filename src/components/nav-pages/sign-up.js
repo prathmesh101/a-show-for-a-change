@@ -18,7 +18,6 @@ class SignUp extends Component {
   handleClick(event) {
     var apiBaseUrl = "http://localhost/API_PHP/signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
-    alert("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
     //To be done:check for empty values before hitting submit
     var self = this;
     var payload = {
@@ -27,6 +26,7 @@ class SignUp extends Component {
       "email": this.state.email,
       "password": this.state.password
     }
+    alert("values", payload);
     axios.post(apiBaseUrl, payload)
       .then(function (response) {
         console.log(response);
@@ -44,6 +44,7 @@ class SignUp extends Component {
         }
       })
       .catch(function (error) {
+        alert("error is " + error);
         console.log(error);
       });
   }
