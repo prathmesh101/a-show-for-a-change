@@ -29,8 +29,6 @@ class SignUp extends Component {
     }
     axios.post(apiBaseUrl, payload)
       .then(function (response) {
-        alert("success " + response); 
-        console.log(response);
         if (response.data.code == 200) {
           console.log("registration successfull");
 alert("success " + response);          
@@ -43,11 +41,13 @@ alert("success " + response);
             buttonLabel: "Register",
             isLogin: true
           });
+        } else {
+          alert("not equal to 200 but what it is we don't know");
         }
       })
       .catch(function (error) {
         console.log(error);
-	alert("error is " + error);
+	alert("Error is " + error.response.data + "  " + error.response.status + "  " + error.response.headers);
       });
   }
 
