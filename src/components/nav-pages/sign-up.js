@@ -32,7 +32,7 @@ class SignUp extends Component {
         if (response.data.code == 200) {
           console.log("registration successfull");
 alert("success " + response);          
-    var loginscreen = [];
+   /* var loginscreen = [];
           loginscreen.push(<Login parentContext={this} />);
           var loginmessage = "Not Registered yet.Go to registration";
           self.props.parentContext.setState({
@@ -40,7 +40,7 @@ alert("success " + response);
             loginmessage: loginmessage,
             buttonLabel: "Register",
             isLogin: true
-          });
+          });*/
         } else {
           alert("not equal to 200 but what it is we don't know");
         }
