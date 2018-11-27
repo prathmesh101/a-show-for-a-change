@@ -8,13 +8,18 @@ class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      first_name: 'ben',
-      last_name: 'take',
-      email: 'be@low',
-      password: '111'
+      first_name: '',
+      last_name: '',
+      email: '',
+      password: ''
     }
   }
 
+  /*handleChange(event) {
+    this.setState({ [event.target.first_name]: event.target.last_name });
+  }
+*/
+handleClick = this.handleClick.bind(this);
   handleClick(event) {
     var apiBaseUrl = "signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
