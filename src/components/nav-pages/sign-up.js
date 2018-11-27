@@ -16,7 +16,7 @@ class SignUp extends Component {
   }
 
   handleClick(event) {
-    var apiBaseUrl = "signupapi.php";
+    var apiBaseUrl = "../../API_PHP/signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
     alert("values are " + this.state.first_name + "   " + this.state.email);
     //To be done:check for empty values before hitting submit
