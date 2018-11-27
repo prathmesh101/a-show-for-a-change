@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-size: 30px;
+        font-family: Ailerons-Regular, Ailerons;
+        letter-spacing: -0.1em;
+      }
+    </style>
+  </defs>
+  <text id="SAGE_APE" data-name="SAGE APE" class="cls-1" transform="translate(0 30)"><tspan x="0" y="0">SAGE APE</tspan></text>
+</svg>
