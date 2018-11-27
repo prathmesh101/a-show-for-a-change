@@ -2,10 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/css/home.css';
 import Video from '../video';
+
+import BackgroundImg from './background-video';
+
 import SignUp from './sign-up';
 
 const Home = () => {
 	return (
+		<div>
+		<BackgroundImg/>
 		<div className="wrapper">
       <div className="div-video">
         <video controls>
@@ -55,6 +60,7 @@ const Home = () => {
 					</form>
 				</div> */}
 			</div>
+		</div>
 		</div>
 	)
 }

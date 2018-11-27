@@ -259,6 +259,11 @@ html {
   border: 2px dotted white;
   text-align: center;
   padding-top: 55px;
-  letter-spacing: 0.03rem;
-  font-size: 1.1rem;
+
+  letter-spacing: 0.03em;
+  font-size: 1.1em;
 }
+
+
+
+
