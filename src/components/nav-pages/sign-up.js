@@ -15,6 +15,7 @@ class SignUp extends Component {
     }
   }
 
+
   handleChange = this.handleChange.bind(this);
   handleClick = this.handleClick.bind(this);
 
@@ -22,6 +23,7 @@ class SignUp extends Component {
     this.setState({ [event.target.name]: event.target.value })
     console.log(this.state);
   }
+
 
   handleClick(event) {
     var apiBaseUrl = "signupapi.php";
@@ -35,12 +37,13 @@ class SignUp extends Component {
       "email": this.state.email,
       "password": this.state.password
     }
-    axios.post(apiBaseUrl, payload)
+    axios.get(apiBaseUrl, payload)
       .then(function (response) {
         if (response.data.code == 200) {
           console.log("registration successfull");
-alert("success " + response);          
-	  var loginscreen = [];
+alert("success " + response);      
+
+   /* var loginscreen = [];
           loginscreen.push(<Login parentContext={this} />);
           var loginmessage = "Not Registered yet.Go to registration";
           self.props.parentContext.setState({
@@ -48,14 +51,14 @@ alert("success " + response);
             loginmessage: loginmessage,
             buttonLabel: "Register",
             isLogin: true
-          });
+          });*/
         } else {
           alert("not equal to 200 but what it is we don't know");
         }
       })
       .catch(function (error) {
         console.log(error);
-	alert("Error is " + error.response.data + "  " + error.response.status + "  " + error.response.headers);
+  alert("Error is " + error.response.data + "  " + error.response.status + "  " + error.response.headers);
       });
   }
 
@@ -76,25 +79,33 @@ alert("success " + response);
                   <div className="form-group">
 
                     <label for="firstname">First Name</label>
+
                     <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Enter first name" size="10" onChange={ this.handleChange } />
+
                   </div>
 
                   <div className="form-group">
 
                     <label for="lastname">Last Name</label>
+
                     <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Enter last name" onChange={ this.handleChange } />
+
                   </div>
 
                   <div className="form-group">
 
                     <label for="email">E-mail</label>
+
                     <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" onChange={ this.handleChange } />
+
                   </div>
 
                   <div className="form-group">
 
                     <label for="password">Password</label>
+
                     <input type="text" class="form-control" name="password" id="password" placeholder="Enter password" onChange={ this.handleChange } />
+
                   </div>
 
                   <button type="submit" className="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
