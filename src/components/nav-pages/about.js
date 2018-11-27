@@ -7,6 +7,9 @@ import david from '../../assets/img/emp-imgs/david.jpg';
 import jared from '../../assets/img/emp-imgs/jared.jpg';
 import prathmesh from '../../assets/img/emp-imgs/prathmesh.jpg';
 import sivak from '../../assets/img/emp-imgs/sivak.jpg';
+import aboutImg from '../../assets/img/about-us-img.jpg';
+
+import '../../assets/css/about.css';
 
 const employees = [
     {
@@ -66,18 +69,79 @@ const About = () => {
     });
 
     return (
-        <div>
-            <div>
-                <h1>A Show For A Change works with mission-driven storytellers and charitable partners to change the world.</h1>
-                <h2>Learn about us below!</h2>
-                <div></div>
-            </div >
-            <div className="employees">
-                <h2>Our On-Air Shows</h2>
+
+   
+        <div className="row">
+       
+            <div className="about-header col-xs-12">
+                <div className="header-about-info">
+                    <h1 className="header-text">Who are we ?</h1>
+                    <p className="header-para">A Show For A Change works with mission-driven storytellers and charitable partners to change the world.</p>
+                </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" preserveAspectRatio="none">
+                        <circle fill="white" cx="0" cy="100" r="100" />
+                        <circle fill="white" cx="200" cy="100" r="100" />
+                      </svg>
+
+                
+            </div>
+                    
+  <div id="about" className="about-area area-padding">
+    <div className="container">
+      <div className="row">
+        <div className="col-md-12 col-sm-12 col-xs-12">
+          <div className="section-headline text-center">
+            <h2>About us</h2>
+          </div>
+        </div>
+      </div>
+      <div className="row about-us-content">
+     
+        <div className="col-md-6 col-sm-6 col-xs-12">
+          <div className="well-left">
+            <div className="single-well">
+             
+                                  <img src={aboutImg} alt="" className="about-img"/>
+                             
+            </div>
+          </div>
+        </div>
+     
+        <div className="col-md-6 col-sm-6 col-xs-12">
+          <div className="well-middle">
+            <div className="single-well">
+             
+                <h4 className="sec-head">What we do ?</h4>
+            
+              <p>
+                Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
+              </p>
+             
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+
+
+                         
+
+
+       
+    <div className="employees">
+                <h2>Meet our Team</h2>
                 {employeesProfiles}
             </div>
-        </div>
+        </div> 
+
+       
+     
     )
 }
 
 export default About;
+/* Frame */
+

@@ -88,7 +88,7 @@ alert("success " + response);
                     <input type="text" class="form-control" name="password" id="password" placeholder="Enter email" onChange={(event, newValue) => this.setState({ password: newValue })} />
                   </div>
 
-                  <button type="submit" class="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
+                  <button type="submit" className="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
 
                 </form>
 
