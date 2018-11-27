@@ -32,7 +32,7 @@ class SignUp extends Component {
         if (response.data.code == 200) {
           console.log("registration successfull");
 alert("success " + response);          
-	  var loginscreen = [];
+    var loginscreen = [];
           loginscreen.push(<Login parentContext={this} />);
           var loginmessage = "Not Registered yet.Go to registration";
           self.props.parentContext.setState({
@@ -47,7 +47,7 @@ alert("success " + response);
       })
       .catch(function (error) {
         console.log(error);
-	alert("Error is " + error.response.data + "  " + error.response.status + "  " + error.response.headers);
+  alert("Error is " + error.response.data + "  " + error.response.status + "  " + error.response.headers);
       });
   }
 
@@ -68,25 +68,25 @@ alert("success " + response);
                   <div className="form-group">
 
                     <label for="firstname">First Name</label>
-                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Enter email" size="10" onChange={(event, newValue) => this.setState({ first_name: newValue })} />
+                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Enter First name" size="10" onChange={(event, newValue) => this.setState({ first_name: newValue })} />
                   </div>
 
                   <div className="form-group">
 
                     <label for="lastname">Last Name</label>
-                    <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ last_name: newValue })} />
+                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Enter Last name" onChange={(event, newValue) => this.setState({ last_name: newValue })} />
                   </div>
 
                   <div className="form-group">
 
                     <label for="email">E-mail</label>
-                    <input type="email" class="form-control" name="email" id="firstname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ email: newValue })} />
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" onChange={(event, newValue) => this.setState({ email: newValue })} />
                   </div>
 
                   <div className="form-group">
 
                     <label for="password">Password</label>
-                    <input type="text" class="form-control" name="password" id="password" placeholder="Enter email" onChange={(event, newValue) => this.setState({ password: newValue })} />
+                    <input type="text" class="form-control" name="password" id="password" placeholder="Enter password" onChange={(event, newValue) => this.setState({ password: newValue })} />
                   </div>
 
                   <button type="submit" className="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
