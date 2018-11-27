@@ -57,28 +57,28 @@ class SignUp extends Component {
             <h2 className="signup-head-text">Create Your Account</h2>
             <div className="div-underline">
               <i className="fas fa-user inlineBlock fillWhite"></i>
-              <input type="text" className="inlineBlock" name="firstname" id="firstname" placeholder="Your Name" onChange={(event, newValue) => this.setState({ first_name: newValue })} />
+              <input type="text" className="inlineBlock" name="fullName" id="fullName" placeholder="Your Name" onChange={(event, newValue) => this.setState({ first_name: newValue })} />
             </div>
           </div>
 
           <div className="form-group">
             <div className="div-underline">
               <i className="fas fa-envelope fillWhite"></i>
-              <input type="email" className="inlineBlock" name="lastname" id="lastname" placeholder="Your Email" onChange={(event, newValue) => this.setState({ last_name: newValue })} />
+              <input type="email" className="inlineBlock" name="email" id="email" placeholder="Your Email" onChange={(event, newValue) => this.setState({ last_name: newValue })} />
             </div>
           </div>
 
           <div className="form-group">
             <div className="div-underline">
               <i className="fas fa-unlock-alt fillWhite"></i>
-              <input type="password" className="inlineBlock" name="email" id="password" placeholder="Enter Password" onChange={(event, newValue) => this.setState({ email: newValue })} />
+              <input type="password" className="inlineBlock" name="password" id="password" placeholder="Enter Password" onChange={(event, newValue) => this.setState({ email: newValue })} />
             </div>
           </div>
 
           <div className="form-group">
             <div className="div-underline">
               <i className="fas fa-unlock-alt fillWhite"></i>
-              <input type="password" className="inlineBlock" name="password" id="passwordConfirmation" placeholder="Confirm Password" onChange={(event, newValue) => this.setState({ password: newValue })} />
+              <input type="password" className="inlineBlock" name="passwordConfirmation" id="passwordConfirmation" placeholder="Confirm Password" onChange={(event, newValue) => this.setState({ password: newValue })} />
             </div>
           </div>
           <div className="div-submit">
