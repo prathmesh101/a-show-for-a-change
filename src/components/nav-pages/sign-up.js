@@ -8,10 +8,10 @@ class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      first_name: '',
-      last_name: '',
-      email: '',
-      password: ''
+      first_name: 'ben',
+      last_name: 'take',
+      email: 'be@low',
+      password: '111'
     }
   }
 
@@ -27,11 +27,12 @@ class SignUp extends Component {
       "email": this.state.email,
       "password": this.state.password
     }
-    axios.post(apiBaseUrl, payload)
+    axios.get(apiBaseUrl, payload)
       .then(function (response) {
         if (response.data.code == 200) {
           console.log("registration successfull");
-alert("success " + response);          
+alert("success " + response);      
+
    /* var loginscreen = [];
           loginscreen.push(<Login parentContext={this} />);
           var loginmessage = "Not Registered yet.Go to registration";
