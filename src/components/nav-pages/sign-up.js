@@ -15,6 +15,14 @@ class SignUp extends Component {
     }
   }
 
+  handleChange = this.handleChange.bind(this);
+  handleClick = this.handleClick.bind(this);
+
+  handleChange(event) {
+    this.setState({ [event.target.name]: event.target.value })
+    console.log(this.state);
+  }
+
   handleClick(event) {
     var apiBaseUrl = "signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
@@ -68,25 +76,25 @@ alert("success " + response);
                   <div className="form-group">
 
                     <label for="firstname">First Name</label>
-                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Enter email" size="10" onChange={(event, newValue) => this.setState({ first_name: newValue })} />
+                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Enter first name" size="10" onChange={ this.handleChange } />
                   </div>
 
                   <div className="form-group">
 
                     <label for="lastname">Last Name</label>
-                    <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ last_name: newValue })} />
+                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Enter last name" onChange={ this.handleChange } />
                   </div>
 
                   <div className="form-group">
 
                     <label for="email">E-mail</label>
-                    <input type="email" class="form-control" name="email" id="firstname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ email: newValue })} />
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" onChange={ this.handleChange } />
                   </div>
 
                   <div className="form-group">
 
                     <label for="password">Password</label>
-                    <input type="text" class="form-control" name="password" id="password" placeholder="Enter email" onChange={(event, newValue) => this.setState({ password: newValue })} />
+                    <input type="text" class="form-control" name="password" id="password" placeholder="Enter password" onChange={ this.handleChange } />
                   </div>
 
                   <button type="submit" className="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
