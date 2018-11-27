@@ -1,58 +1,58 @@
 import React from 'react';
 import 'bootstrap';
-import '../../assets/css/footer.css';
+import '../../assets/css/navbar.css';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
         <div className="navbar-cont">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="head-navbar navbar navbar-expand-lg navbar-fixed-top">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <Link to="/" className="nav-link navbar-brand left">
-                            CauseFX
+                        <Link to="/" className="nav-link navbar-brand left" style={{color:'white'}}>
+                            Sage Ape
                             </Link>
                     </li>
                 </ul>
-                <div className="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarNav">
-                    <ul className="navbar-nav ml-auto">
+                <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 " id="navbarNav">
+                    <ul className="navbar-nav ml-auto" >
                         <li className="nav-item">
-                            <Link to="/" className="nav-link">
+                            <Link to="/" className="nav-link nav-style">
                                 Home
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/about" className="nav-link">
+                            <Link to="/about" className="nav-link nav-style" >
                                 About
                                 </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/film-festival" className="nav-link">
+                            <Link to="/film-festival" className="nav-link nav-style">
                                 Film Festival
                                 </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/projects" className="nav-link">
+                            <Link to="/projects" className="nav-link nav-style">
                                 Projects
                                 </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/partners" className="nav-link">
+                            <Link to="/partners" className="nav-link nav-style">
                                 Partners
                                 </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/contact" className="nav-link">
+                            <Link to="/contact" className="nav-link nav-style">
                                 Contact
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/sign-in" className="nav-link">
+                            <Link to="/sign-in" className="nav-link nav-style">
                                 Sign In
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/sign-up" className="nav-link">
+                            <Link to="/sign-up" className="nav-link nav-style">
                                 Sign Up
                             </Link>
                         </li>
