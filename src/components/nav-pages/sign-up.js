@@ -29,7 +29,7 @@ class SignUp extends Component {
     var apiBaseUrl = "signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
     alert("values are " + this.state.first_name + "   " + this.state.email);
-    //To be done:check for empty values before hitting submit
+    //To be done:check name empty values before hitting submit
     var self = this;
     var payload = {
       "first_name": this.state.first_name,
@@ -41,84 +41,84 @@ class SignUp extends Component {
       .then(function (response) {
         if (response.data.code == 200) {
           console.log("registration successfull");
-alert("success " + response);      
+          alert("success " + response);
 
-   /* var loginscreen = [];
-          loginscreen.push(<Login parentContext={this} />);
-          var loginmessage = "Not Registered yet.Go to registration";
-          self.props.parentContext.setState({
-            loginscreen: loginscreen,
-            loginmessage: loginmessage,
-            buttonLabel: "Register",
-            isLogin: true
-          });*/
+          /* var loginscreen = [];
+                 loginscreen.push(<Login parentContext={this} />);
+                 var loginmessage = "Not Registered yet.Go to registration";
+                 self.props.parentContext.setState({
+                   loginscreen: loginscreen,
+                   loginmessage: loginmessage,
+                   buttonLabel: "Register",
+                   isLogin: true
+                 });*/
         } else {
           alert("not equal to 200 but what it is we don't know");
         }
       })
       .catch(function (error) {
         console.log(error);
-  alert("Error is " + error.response.data + "  " + error.response.status + "  " + error.response.headers);
+        alert("Error is " + error.response.data + "  " + error.response.status + "  " + error.response.headers);
       });
   }
 
   render() {
 
     return (
-        <div className="signup-background">
+      <div className="signup-background">
 
-          <div className="container signup-content">
+        <div className="container signup-content">
 
-            <div className="row sign-align">
+          <div className="row sign-align">
 
-              <div class="col-sm-10">
+            <div className="col-sm-10">
 
-                <form>
-                      <h2 className="signup-head-text">Sign Up Form</h2>
+              <form>
+                <h2 className="signup-head-text">Sign Up Form</h2>
 
-                  <div className="form-group">
+                <div className="form-group">
 
-                    <label for="firstname">First Name</label>
+                  <label name="firstname">First Name</label>
 
-                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Enter first name" size="10" onChange={ this.handleChange } />
+                  <input type="text" className="form-control" name="first_name" id="first_name" placeholder="Enter first name" size="10" onChange={this.handleChange} />
 
-                  </div>
+                </div>
 
-                  <div className="form-group">
+                <div className="form-group">
 
-                    <label for="lastname">Last Name</label>
+                  <label name="lastname">Last Name</label>
 
-                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Enter last name" onChange={ this.handleChange } />
+                  <input type="text" className="form-control" name="last_name" id="last_name" placeholder="Enter last name" onChange={this.handleChange} />
 
-                  </div>
+                </div>
 
-                  <div className="form-group">
+                <div className="form-group">
 
-                    <label for="email">E-mail</label>
+                  <label name="email">E-mail</label>
 
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" onChange={ this.handleChange } />
+                  <input type="email" className="form-control" name="email" id="email" placeholder="Enter email" onChange={this.handleChange} />
 
-                  </div>
+                </div>
 
-                  <div className="form-group">
+                <div className="form-group">
 
-                    <label for="password">Password</label>
+                  <label name="password">Password</label>
 
-                    <input type="text" class="form-control" name="password" id="password" placeholder="Enter password" onChange={ this.handleChange } />
+                  <input type="text" className="form-control" name="password" id="password" placeholder="Enter password" onChange={this.handleChange} />
 
-                  </div>
+                </div>
 
-                  <button type="submit" className="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
+                <button type="submit" className="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
 
-                </form>
-
-              </div>
+              </form>
 
             </div>
 
           </div>
 
         </div>
+
+      </div>
     );
   }
 }
