@@ -4,9 +4,7 @@
   "description": "Website for a video streaming start up that focuses on social issues and positive change.",
   "main": "index.js",
   "proxy": {
-    "/API_PHP/*": {
-      "target": "http://localhost:8888"
-    }
+    
   },
   "scripts": {
     "start": "node dev_server.js",
