@@ -41,7 +41,8 @@ class SignUp extends Component {
       .then(function (response) {
         if (response) {
           console.log("registration successfull");
-          alert("success " + response);
+          console.log(response);
+          alert("success ");
 
           /* var loginscreen = [];
                  loginscreen.push(<Login parentContext={this} />);
