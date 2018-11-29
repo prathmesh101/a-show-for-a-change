@@ -55,6 +55,7 @@ class SignUp extends Component {
         } else {
           alert("not equal to 200 it is euqal to " + response.data.code);
           console.log(response);
+          alert("stop");
         }
       })
       .catch(function (error) {
