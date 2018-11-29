@@ -37,7 +37,7 @@ class SignUp extends Component {
       "email": this.state.email,
       "password": this.state.password
     }
-    axios.get(apiBaseUrl)
+    axios.get(apiBaseUrl, payload)
       .then(function (response) {
         if (response.data.code == 200) {
           console.log("registration successfull");
