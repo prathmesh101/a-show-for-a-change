@@ -39,7 +39,7 @@ class SignUp extends Component {
     }
     axios.post(apiBaseUrl, payload)
       .then(function (response) {
-        if (response.data.status == 200) {
+        if (response) {
           console.log("registration successfull");
           alert("success " + response);
 
