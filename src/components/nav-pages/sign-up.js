@@ -26,7 +26,7 @@ class SignUp extends Component {
 
 
   handleClick(event) {
-    var apiBaseUrl = "http://dev.sageape.com/API_PHP/signupapi.php";
+    var apiBaseUrl = "/API_PHP/signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
     alert("values are " + this.state.first_name + "   " + this.state.email);
     //To be done:check name empty values before hitting submit
@@ -61,7 +61,7 @@ class SignUp extends Component {
       })
       .catch(function (error) {
         console.log(error);
-        alert("Error is " + error.response.data + "  " + error.response.status + "  " + error.response.headers);
+        alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
       });
   }
 
