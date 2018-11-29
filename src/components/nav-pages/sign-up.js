@@ -38,7 +38,7 @@ class SignUp extends Component {
       "password": this.state.password
     }
     axios.post(apiBaseUrl, payload)
-      .then(function (data) {
+      .then(function (response) {
         if (response.data.code == 200) {
           console.log("registration successfull");
           alert("success " + response);
@@ -53,8 +53,8 @@ class SignUp extends Component {
                    isLogin: true
                  });*/
         } else {
-          alert("not equal to 200 it is euqal to " + data);
-          console.dir(data.headers + "     "  + data.config);
+          alert("not equal to 200 it is euqal to " + response);
+          console.dir(response.headers + "     "  + response.config);
           alert("stop");
         }
       })
