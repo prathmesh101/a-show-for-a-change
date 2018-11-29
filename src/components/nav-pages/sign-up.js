@@ -26,7 +26,7 @@ class SignUp extends Component {
 
 
   handleClick(event) {
-    var apiBaseUrl = "../../../API_PHP/signupapi.php";
+    var apiBaseUrl = "signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
     alert("values are " + this.state.first_name + "   " + this.state.email);
     //To be done:check name empty values before hitting submit
@@ -37,7 +37,7 @@ class SignUp extends Component {
       "email": this.state.email,
       "password": this.state.password
     }
-    axios.get(apiBaseUrl, payload)
+    axios.get(apiBaseUrl)
       .then(function (response) {
         if (response.data.code == 200) {
           console.log("registration successfull");
