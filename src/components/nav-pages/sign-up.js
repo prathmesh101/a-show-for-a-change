@@ -53,7 +53,8 @@ class SignUp extends Component {
                    isLogin: true
                  });*/
         } else {
-          alert("not equal to 200 but what it is we don't know");
+          alert("not equal to 200 it is euqal to " + response.data.code);
+          console.log(response);
         }
       })
       .catch(function (error) {
