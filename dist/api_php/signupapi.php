@@ -5,7 +5,7 @@ header("Access-Control-Allow-Methods: REQUEST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-require_once("../../src/backend/php//init.php");
+require_once("../../src/backend/php/init.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
