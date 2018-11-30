@@ -7,6 +7,11 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 require_once("../../src/backend/php/init.php");
 
+echo "reached server";
+
+exit;
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
 
