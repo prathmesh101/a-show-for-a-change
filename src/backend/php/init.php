@@ -3,7 +3,11 @@ $app = __DIR__;
 
 //require_once('/etc/php/7.0/cli/vendor/autoload.php');
 
-require_once("{$app}/src/php/config.php");
+
+file_put_contents("../../../backup/phpfilereached.txt",  $app   ."\n");
+require_once("{$app}/config.php");
+echo "afte config.php";
+exit;
 //require_once("{$app}/includes/classes/Stripe_API.php");
 require_once("{$app}/src/php/Session.php");
 require_once("{$app}/src/php/Database.php");

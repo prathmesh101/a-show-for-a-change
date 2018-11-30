@@ -42,7 +42,7 @@ class SignUp extends Component {
         if (response.status == 200) {
           console.log("registration successfull");
           console.log(response);
-          alert("success ");
+          alert("success inside 200");
 
           /* var loginscreen = [];
                  loginscreen.push(<Login parentContext={this} />);
