@@ -37,7 +37,7 @@ class SignUp extends Component {
       "email": this.state.email,
       "password": this.state.password
     }
-    axios.get(apiBaseUrl, payload)
+    axios.post(apiBaseUrl, payload)
       .then(function (response) {
         if (response.status == 200) {
           console.log("registration successfull");
