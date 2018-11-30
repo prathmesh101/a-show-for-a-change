@@ -7,8 +7,6 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 require_once("../../src/backend/php/init.php");
 
-echo "reached inside signupapi.php";
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
 
@@ -68,4 +66,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
         }
 }
-echo "exiting signupapi.php";
+
