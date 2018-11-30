@@ -40,23 +40,12 @@ class SignUp extends Component {
     axios.post(apiBaseUrl, payload)
       .then(function (response) {
         if (response.status == 200) {
-          console.log("registration successfull");
-          console.log(JSON.stringify(response));
-          alert("success inside 200");
-
-          /* var loginscreen = [];
-                 loginscreen.push(<Login parentContext={this} />);
-                 var loginmessage = "Not Registered yet.Go to registration";
-                 self.props.parentContext.setState({
-                   loginscreen: loginscreen,
-                   loginmessage: loginmessage,
-                   buttonLabel: "Register",
-                   isLogin: true
-                 });*/
+          console.log(response.data);
+          
+          /* Need to navigate to User Home Page */
+          
         } else {
-          alert("not equal to 200 it is euqal to " + JSON.stringify(response));
-          console.log(JSON.stringify(response.data) + "     "  + JSON.stringify(response.config));
-          alert("stop");
+          console.log(response.statue);
         }
       })
       .catch(function (error) {

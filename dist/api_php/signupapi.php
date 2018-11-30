@@ -55,14 +55,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
                 if($result) {
 
                         http_response_code(200);
-                        serialize(json_encode(array("message" => "success")));
+                        echo json_encode(array("message" => "Success"));
 
                 } else {
 
                          http_response_code(404);
-                         echo json_encode(array("message" => $errors));
+                         echo json_encode(array("message" => "Unable to updated database"));
                          
                 }
+
+        } else {
+
+            echo json_encode(array("message" => "Errors in input field", "list" => $errors))
 
         }
 }

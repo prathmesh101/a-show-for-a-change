@@ -18,5 +18,5 @@ $doc_root = substr($_SERVER['SCRIPT_NAME'], 0, 0);
 define("WWW_ROOT", $doc_root);
 
 //require_once("{$app}/includes/functions/functions.php");
-$errors=[];
 */
+$errors=[];
