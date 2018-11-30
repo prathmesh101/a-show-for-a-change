@@ -39,7 +39,7 @@ class SignUp extends Component {
     }
     axios.post(apiBaseUrl, payload)
       .then(function (response) {
-        alert("right before if");
+        alert("right before if " + JSON.stringify(response));
         if (response.status == 200) {
           console.log("registration successfull");
           /* var loginscreen = [];
@@ -57,7 +57,7 @@ class SignUp extends Component {
       })
       .catch(function (error) {
         console.log(error);
-        alert("Error is " + error.response.data + "  " + error.response.status + "  " + error.response.headers);
+        alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
       });
   }
 
