@@ -41,8 +41,6 @@ class SignUp extends Component {
       .then(function (response) {
         if (response.status == 200) {
           console.log("registration successfull");
-          alert("success " + response);
-          
           /* var loginscreen = [];
                  loginscreen.push(<Login parentContext={this} />);
                  var loginmessage = "Not Registered yet.Go to registration";
