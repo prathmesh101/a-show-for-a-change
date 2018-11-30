@@ -10,6 +10,9 @@ require_once("../../src/backend/php/init.php");
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
 
+var_dump($_REQUEST);
+exit;
+
         $first_name = $_REQUEST['first_name'] ? $_REQUEST['first_name'] : '';
         $middle_name = $_REQUEST['middle_name'] ? $_REQUEST['middle_name'] : '';
         $last_name = $_REQUEST['last_name'] ? $_REQUEST['last_name'] : '';
