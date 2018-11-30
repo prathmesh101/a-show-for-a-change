@@ -37,20 +37,28 @@ class SignUp extends Component {
       "email": this.state.email,
       "password": this.state.password
     }
-    axios.post(apiBaseUrl, payload)
+    axios.get(apiBaseUrl, payload)
       .then(function (response) {
         if (response.status == 200) {
-          //console.log(response.data);
-          
-          /* Need to navigate to User Home Page */
-          
+          console.log("registration successfull");
+          alert("success " + response);
+
+          /* var loginscreen = [];
+                 loginscreen.push(<Login parentContext={this} />);
+                 var loginmessage = "Not Registered yet.Go to registration";
+                 self.props.parentContext.setState({
+                   loginscreen: loginscreen,
+                   loginmessage: loginmessage,
+                   buttonLabel: "Register",
+                   isLogin: true
+                 });*/
         } else {
-          console.log(response.statue);
+          alert("not equal to 200 but what it is we don't know");
         }
       })
       .catch(function (error) {
         console.log(error);
-        alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
+        alert("Error is " + error.response.data + "  " + error.response.status + "  " + error.response.headers);
       });
   }
 
@@ -116,5 +124,3 @@ class SignUp extends Component {
 }
 
 export default SignUp;
-
-
