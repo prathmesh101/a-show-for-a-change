@@ -55,12 +55,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
                 if($result) {
 
                         http_response_code(200);
-                        echo serialize(json_encode(array("message" => "success")));
+                        serialize(json_encode(array("message" => "success")));
 
                 } else {
 
                          http_response_code(404);
-                         echo serialize(json_encode(array("message" => $errors)));
+                         echo json_encode(array("message" => $errors));
                          
                 }
 

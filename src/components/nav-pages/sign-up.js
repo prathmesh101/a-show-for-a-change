@@ -41,7 +41,7 @@ class SignUp extends Component {
       .then(function (response) {
         if (response.status == 200) {
           console.log("registration successfull");
-          console.log(response);
+          console.log(JSON.stringify(response));
           alert("success inside 200");
 
           /* var loginscreen = [];
