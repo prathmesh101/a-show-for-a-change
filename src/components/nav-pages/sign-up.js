@@ -40,7 +40,7 @@ class SignUp extends Component {
     axios.post(apiBaseUrl, payload)
       .then(function (response) {
         if (response.status == 200) {
-          console.log(response.data);
+          //console.log(response.data);
           
           /* Need to navigate to User Home Page */
           
