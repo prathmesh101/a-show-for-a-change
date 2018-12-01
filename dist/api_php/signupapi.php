@@ -12,6 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
     $form_values = json_decode(file_get_contents('php://input'),true);
 
+    echo $form_values['email'];
+    exit;
+
     $first_name = $form_values['first_name'] ? $form_values['first_name'] : '';
     //$middle_name = $form_values['middle_name'] ? $form_values['middle_name'] : '';
     $last_name = $form_values['last_name'] ? $form_values['last_name'] : '';
@@ -23,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     //$phone_no = $form_values['phone_no'] ? $form_values['phone_no'] : '';
     //$username = $form_values['username'] ? $form_values['username'] : '';
     $password = $form_values['password'] ? $form_values['password'] : '';
-    //$email = $form_values['email'] ? $form_values['email'] : '';
+    $email = $form_values['email'] ? $form_values['email'] : '';
 
 
         if(empty($first_name))
