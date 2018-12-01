@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
         } else {
 
-            echo json_encode(array("message" => "Errors in input field", "error" => $errors[0]));
+            echo json_encode(array("message" => "Errors in input field"));
 
         }
 }
