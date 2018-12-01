@@ -12,12 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
     $form_values = json_decode(file_get_contents('php://input'),true);
 
-    echo $form_values['email'];
-    exit;
-
-    $first_name = $form_values['first_name'] ? $form_values['first_name'] : '';
-    //$middle_name = $form_values['middle_name'] ? $form_values['middle_name'] : '';
-    $last_name = $form_values['last_name'] ? $form_values['last_name'] : '';
+    $first_name = !empty($form_values['first_name']) ? $form_values['first_name'] : '';
+    $middle_name = !empty($form_values['middle_name']) ? $form_values['middle_name'] : '';
+    $last_name = !empty($form_values['last_name']) ? $form_values['last_name'] : '';
     //$address = $form_values['address'] ? $form_values['address'] : '';
     //$address2 = $form_values['address2'] ? $form_values['address2'] : '';
     //$city = $form_values['city'] ? $form_values['city'] : '';
@@ -25,8 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     //$zipcode = $form_values['zipcode'] ? $form_values['zipcode'] : '';
     //$phone_no = $form_values['phone_no'] ? $form_values['phone_no'] : '';
     //$username = $form_values['username'] ? $form_values['username'] : '';
-    $password = $form_values['password'] ? $form_values['password'] : '';
-    $email = $form_values['email'] ? $form_values['email'] : '';
+    $password = !empty($form_values['password']) ? $form_values['password'] : '';
+    $email = !empty($form_values['email']) ? $form_values['email'] : '';
+
+    echo $email;
+    exit;
 
 
         if(empty($first_name))
