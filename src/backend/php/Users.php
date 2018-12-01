@@ -40,13 +40,14 @@ class User
                 $result = $db->query($sql);
                 if ($result)
                 {
-                        return true;
+                        echo true;
 
                 } else {
 
                         echo $db->error;
                         $db->close();
                         exit;
+
 
                 }
 
