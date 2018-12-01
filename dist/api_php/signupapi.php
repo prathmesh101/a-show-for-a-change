@@ -10,21 +10,20 @@ require_once("../../src/backend/php/init.php");
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
 
-echo var_dump($_REQUEST[0]);
-exit;
+    $form_values = json_decode(file_get_contents('php://input'),true);
 
-        $first_name = $_REQUEST['first_name'] ? $_REQUEST['first_name'] : '';
-        $middle_name = $_REQUEST['middle_name'] ? $_REQUEST['middle_name'] : '';
-        $last_name = $_REQUEST['last_name'] ? $_REQUEST['last_name'] : '';
-        $address = $_REQUEST['address'] ? $_REQUEST['address'] : '';
-        $address2 = $_REQUEST['address2'] ? $_REQUEST['address2'] : '';
-        $city = $_REQUEST['city'] ? $_REQUEST['city'] : '';
-        $state = $_REQUEST['state'] ? $_REQUEST['state'] : '';
-        $zipcode = $_REQUEST['zipcode'] ? $_REQUEST['zipcode'] : '';
-        $phone_no = $_REQUEST['phone_no'] ? $_REQUEST['phone_no'] : '';
-        $username = $_REQUEST['username'] ? $_REQUEST['username'] : '';
-        $password = $_REQUEST['password'] ? $_REQUEST['password'] : '';
-        $email = $_REQUEST['email'] ? $_REQUEST['email'] : '';
+    $first_name = $form_values['first_name'] ? $form_values['first_name'] : '';
+    //$middle_name = $form_values['middle_name'] ? $form_values['middle_name'] : '';
+    $last_name = $form_values['last_name'] ? $form_values['last_name'] : '';
+    //$address = $form_values['address'] ? $form_values['address'] : '';
+    //$address2 = $form_values['address2'] ? $form_values['address2'] : '';
+    //$city = $form_values['city'] ? $form_values['city'] : '';
+    //$state = $form_values['state'] ? $form_values['state'] : '';
+    //$zipcode = $form_values['zipcode'] ? $form_values['zipcode'] : '';
+    //$phone_no = $form_values['phone_no'] ? $form_values['phone_no'] : '';
+    //$username = $form_values['username'] ? $form_values['username'] : '';
+    $password = $form_values['password'] ? $form_values['password'] : '';
+    $email = $form_values['email'] ? $entityBody['email'] : '';
 
 
         if(empty($first_name))
@@ -35,10 +34,10 @@ exit;
         {
                 $errors[] = "Last name can not be empty.";
         }
-        if(empty($username))
-        {
-                $errors[] = "Username can not be empty.";
-        }
+ //       if(empty($username))
+ //       {
+ //               $errors[] = "Username can not be empty.";
+ //       }
         if(empty($password))
         {
                 $errors[] = "Password can not be empty.";
