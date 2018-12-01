@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     //$phone_no = $form_values['phone_no'] ? $form_values['phone_no'] : '';
     //$username = $form_values['username'] ? $form_values['username'] : '';
     $password = $form_values['password'] ? $form_values['password'] : '';
-    $email = $form_values['email'] ? $form_values['email'] : '';
+    //$email = $form_values['email'] ? $form_values['email'] : '';
 
 
         if(empty($first_name))
