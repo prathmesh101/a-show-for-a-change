@@ -57,12 +57,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
                 if($result["message"] == "success") {
 
-                        http_response_code(200);
+                        //http_response_code(200);
                         echo json_encode(array("message" => "success"));
 
                 } else {
 
-                         http_response_code(404);
+                         //http_response_code(404);
                          echo json_encode(array("message" => "Unable to updated database"));
                          
                 }
