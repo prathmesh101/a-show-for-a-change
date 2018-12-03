@@ -53,15 +53,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
                                 $address2, $city, $state, $zipcode, $phone_no,
                                 $username, $password, $email);
 
+                $result = json_decode($result, true);
 
-                if($result) {
+                if($result["message"] == "success") {
 
-                        //http_response_code(200);
+                        http_response_code(200);
                         echo json_encode(array("message" => "success"));
 
                 } else {
 
-                         //http_response_code(404);
+                         http_response_code(404);
                          echo json_encode(array("message" => "Unable to updated database"));
                          
                 }

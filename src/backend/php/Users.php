@@ -38,15 +38,16 @@ class User
                 $sql .=  "'defuser')";
 
                 $result = $db->query($sql);
+                
                 if ($result)
                 {
-                        echo true;
+                    return json_encode(["message" => "success"]);
 
                 } else {
 
-                        echo $db->error;
-                        $db->close();
-                        exit;
+                    return $db->error;
+                    $db->close();
+                    exit;
 
 
                 }
