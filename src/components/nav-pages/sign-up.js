@@ -37,7 +37,7 @@ class SignUp extends Component {
       "email": this.state.email,
       "password": this.state.password
     }
-    axios.post(apiBaseUrl, payload)
+    const lalala  = await axios.post(apiBaseUrl, payload)
       .then(function (response) {
         alert("here");
         alert(JSON.stringify(response));
@@ -64,7 +64,17 @@ class SignUp extends Component {
         console.log(error);
         alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
       });
+
+      return await lalala.json();
+
   }
+
+  componentDidMount() {
+        if (!this.state.data) {
+            this.handleClick().then(data => this.setState({data}))
+                          .catch(err => { /*...handle the error...*/});
+        }
+    }
 
   render() {
 
