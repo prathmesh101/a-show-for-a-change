@@ -37,7 +37,7 @@ class SignUp extends Component {
       "email": this.state.email,
       "password": this.state.password
     }
-      axios.post("./api_php/signupapi.php", payload).then(function(e){alert(JSON.stringify(e))}).catch(function(err) {alert(JSON.stringify(err))});
+      axios.post("./api_php/signupapi_test.php", payload).then(function(e){alert(JSON.stringify(e))}).catch(function(err) {alert(JSON.stringify(err))});
     // axios.post(apiBaseUrl, payload)
     //   .then(function (response) {
     //     alert("here");
