@@ -48,7 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         }
 
         if(empty($errors)) {
-
                 $result = $user->insert_record($first_name, $middle_name, $last_name, $address,
                                 $address2, $city, $state, $zipcode, $phone_no,
                                 $username, $password, $email);
@@ -58,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
                 if($result["message"] == "success") {
 
                         //http_response_code(200);
-                        echo json_encode(array("message" => "success"));
+                        echo json_encode("success");
 
                 } else {
 

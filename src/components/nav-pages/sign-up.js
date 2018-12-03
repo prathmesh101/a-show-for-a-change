@@ -39,6 +39,7 @@ class SignUp extends Component {
     }
     axios.post(apiBaseUrl, payload)
       .then(function (response) {
+        alert("here");
         alert(JSON.stringify(response));
         // console.log(response);
         var res = JSON.stringify(response);
