@@ -25,7 +25,7 @@ class SignUp extends Component {
   }
 
 
-  async handleClick(event) {
+  handleClick(event) {
     var apiBaseUrl = "./api_php/signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
     alert("values are " + this.state.first_name + "   " + this.state.email);
@@ -37,8 +37,8 @@ class SignUp extends Component {
       "email": this.state.email,
       "password": this.state.password
     }
-    const lalala  = await axios.post(apiBaseUrl, payload)
-      .then(async function (response) {
+    axios.post(apiBaseUrl, payload)
+      .then(function (response) {
         alert("here");
         alert(JSON.stringify(response));
         // console.log(response);
@@ -65,7 +65,7 @@ class SignUp extends Component {
         alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
       });
 
-      alert(lalala.json());
+      //alert(lalala.json());
 
   }
 
