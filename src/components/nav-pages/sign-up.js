@@ -38,34 +38,34 @@ class SignUp extends Component {
       "email": this.state.email,
       "password": this.state.password
     }
-      axios.post(apiBaseUrl).then(function(e){console.log(JSON.stringify(e));}).then(function(e){console.log(JSON.stringify(e))});
-    // axios.post(apiBaseUrl, payload)
-    //   .then(function (response) {
-    //     alert("here");
-    //     alert(JSON.stringify(response));
-    //     // console.log(response);
-    //     var res = JSON.stringify(response);
-    //     if (res.status == 200) {
-    //       //if (response == "success") {
-    //       console.log("registration successfull");
-    //       alert("status is 200");
-    //        var loginscreen = [];
-    //              loginscreen.push(<Login parentContext={this} />);
-    //              var loginmessage = "Not Registered yet.Go to registration";
-    //              self.props.parentContext.setState({
-    //                loginscreen: loginscreen,
-    //                loginmessage: loginmessage,
-    //                buttonLabel: "Register",
-    //                isLogin: true
-    //              });
-    //     } else {
-    //       alert("not equal to 200 but what it is we don't know");
-    //     }
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
-    //     alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
-    //   });
+     
+    axios.post(apiBaseUrl, payload)
+      .then(function (response) {
+        alert("here");
+        alert(JSON.stringify(response));
+        // console.log(response);
+        var res = JSON.stringify(response);
+        if (res.status == 200) {
+          //if (response == "success") {
+          console.log("registration successfull");
+          alert("status is 200");
+           var loginscreen = [];
+                 loginscreen.push(<Login parentContext={this} />);
+                 var loginmessage = "Not Registered yet.Go to registration";
+                 self.props.parentContext.setState({
+                   loginscreen: loginscreen,
+                   loginmessage: loginmessage,
+                   buttonLabel: "Register",
+                   isLogin: true
+                 });
+        } else {
+          alert("not equal to 200 but what it is we don't know");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
+      });
 
       //alert(lalala.json());
 
