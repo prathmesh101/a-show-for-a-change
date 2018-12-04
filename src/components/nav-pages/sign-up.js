@@ -28,8 +28,8 @@ class SignUp extends Component {
   handleClick(event) {
     var apiBaseUrl = "./api_php/signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
-    alert("values are " + this.state.first_name + "   " + this.state.email);
     alert(JSON.stringify(event));
+    alert("values are " + this.state.first_name + "   " + this.state.email);
     //To be done:check name empty values before hitting submit
     var self = this;
     var payload = {
@@ -38,7 +38,7 @@ class SignUp extends Component {
       "email": this.state.email,
       "password": this.state.password
     }
-      axios.post(apiBaseUrl).then(function(e){console.log(JSON.stringify(e));});
+      axios.post(apiBaseUrl).then(function(e){console.log(JSON.stringify(e));}).then(function(e){console.log(JSON.stringify(e));});
     // axios.post(apiBaseUrl, payload)
     //   .then(function (response) {
     //     alert("here");
