@@ -37,7 +37,7 @@ class SignUp extends Component {
       "last_name": this.state.last_name,
       "email": this.state.email,
       "password": this.state.password
-    }
+    };
      
     axios.post(apiBaseUrl, payload)
       .then(function (response) {
