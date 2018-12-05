@@ -89,7 +89,7 @@ AWS RDS (for databases)
 
 * Contact Sivak for access to AWS access if necessary
 
-# Instructions to start server
+# Instructions to start front-end server
 
 First time, run these commands: 
 * npm install
