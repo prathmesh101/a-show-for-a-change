@@ -26,24 +26,29 @@ class SignUp extends Component {
 
 
   handleClick(event) {
-    var apiBaseUrl = "signupapi.php";
+    var apiBaseUrl = "./api_php/signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
     alert("values are " + this.state.first_name + "   " + this.state.email);
     //To be done:check name empty values before hitting submit
-    var self = this;
-    var payload = {
-      "first_name": this.state.first_name,
-      "last_name": this.state.last_name,
-      "email": this.state.email,
-      "password": this.state.password
-    }
-    axios.get(apiBaseUrl, payload)
+    // var self = this;
+    // var payload = {
+    //   "first_name": this.state.first_name,
+    //   "last_name": this.state.last_name,
+    //   "email": this.state.email,
+    //   "password": this.state.password,
+    // };
+    var payload = this.state.first_name;
+    axios.post(apiBaseUrl, payload)
       .then(function (response) {
-        if (response.data.code == 200) {
+        alert("here");
+        alert(JSON.stringify(response));
+        // console.log(response);
+        var res = JSON.stringify(response);
+        if (res.status == 200) {
+          //if (response == "success") {
           console.log("registration successfull");
-          alert("success " + response);
-
-          /* var loginscreen = [];
+          alert("status is 200");
+           var loginscreen = [];
                  loginscreen.push(<Login parentContext={this} />);
                  var loginmessage = "Not Registered yet.Go to registration";
                  self.props.parentContext.setState({
@@ -51,16 +56,26 @@ class SignUp extends Component {
                    loginmessage: loginmessage,
                    buttonLabel: "Register",
                    isLogin: true
-                 });*/
+                 });
         } else {
           alert("not equal to 200 but what it is we don't know");
         }
       })
       .catch(function (error) {
         console.log(error);
-        alert("Error is " + error.response.data + "  " + error.response.status + "  " + error.response.headers);
+        alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
       });
+
+      //alert(lalala.json());
+
   }
+
+  // componentDidMount() {
+  //       if (!this.state.data) {
+  //           this.handleClick().then(data => this.setState({data}){alert(data);})
+  //                         .catch(err => { "error occured"});
+  //       }
+  //   }
 
   render() {
 
@@ -124,5 +139,3 @@ class SignUp extends Component {
 }
 
 export default SignUp;
-
-
