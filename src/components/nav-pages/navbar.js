@@ -16,11 +16,7 @@ const NavBar = () => {
                 </ul>
                 <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 " id="navbarNav">
                     <ul className="navbar-nav ml-auto" >
-                        <li className="nav-item">
-                            <Link to="/" className="nav-link nav-style">
-                                Home
-                            </Link>
-                        </li>
+                        
                         <li className="nav-item">
                             <Link to="/about" className="nav-link nav-style" >
                                 About
@@ -31,21 +27,7 @@ const NavBar = () => {
                                 Film Festival
                                 </Link>
                         </li>
-                        <li className="nav-item">
-                            <Link to="/projects" className="nav-link nav-style">
-                                Projects
-                                </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/partners" className="nav-link nav-style">
-                                Partners
-                                </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/contact" className="nav-link nav-style">
-                                Contact
-                            </Link>
-                        </li>
+                        
                         <li className="nav-item">
                             <Link to="/sign-in" className="nav-link nav-style">
                                 Sign In

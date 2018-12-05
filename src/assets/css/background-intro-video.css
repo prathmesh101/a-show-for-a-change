@@ -1,6 +1,6 @@
 .back-video-content{
 	width: 100%;
-	height: 650px;
+	height: 600px;
 }
 
 .backgrnd-video{
@@ -35,6 +35,21 @@ top:0;
 
 text-align: center;
   
+}
+
+
+#join-now-back{
+      background-color: transparent;
+      color:white;
+    border: 2px solid #00CB94;
+       padding: 8px;
+    width: 100px;
+    
+}
+
+#join-now-back:hover{
+  background-color: #00CB94;
+  text-decoration: none;
 }
 
 
