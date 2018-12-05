@@ -31,14 +31,17 @@ class SignUp extends Component {
     alert("values are " + this.state.first_name + "   " + this.state.email);
     //To be done:check name empty values before hitting submit
     // var self = this;
-    var payload = {
-      "first_name": this.state.first_name,
-      "last_name": this.state.last_name,
-      "email": this.state.email,
-      "password": this.state.password
-    };
+    // var payload = {
+    //   "first_name": this.state.first_name,
+    //   "last_name": this.state.last_name,
+    //   "email": this.state.email,
+    //   "password": this.state.password,
+    // };
     //var payload = first_name: this.state.first_name;
-    axios.post(apiBaseUrl, payload)
+    const formData = new FormData();
+    formData.append('key', value);
+
+    axios.post(apiBaseUrl, formData)
       .then(function (response) {
         alert("here");
         alert(JSON.stringify(response));
