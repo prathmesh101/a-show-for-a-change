@@ -37,11 +37,8 @@ class SignUp extends Component {
     //   "email": this.state.email,
     //   "password": this.state.password,
     // };
-    //var payload = first_name: this.state.first_name;
-    const formData = new FormData();
-    formData.append('key', value);
-
-    axios.post(apiBaseUrl, formData)
+    var payload = this.state.first_name;
+    axios.post(apiBaseUrl, payload)
       .then(function (response) {
         alert("here");
         alert(JSON.stringify(response));
