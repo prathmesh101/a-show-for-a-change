@@ -66,3 +66,14 @@ AWS EC2 (free tier)
 AWS S3 (super simple storage)
 
 AWS RDS (for databases)
+
+# Dependencies
+* node.js
+  * check node version in bash(aka terminal, command line) command: node -v
+* npm
+  * check npm version in bash(aka terminal, command line) command: npm -v
+* php
+  * check php version in bash(aka terminal, command line) command: php -v
+* MAMP for Mac or WAMP for Windows
+  * preferences => Web-Server
+    * Set document root to cloned a-show-for-a-change directory
