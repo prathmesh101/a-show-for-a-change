@@ -30,13 +30,14 @@ class SignUp extends Component {
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
     alert("values are " + this.state.first_name + "   " + this.state.email);
     //To be done:check name empty values before hitting submit
-    var self = this;
-    var payload = {
-      "first_name": this.state.first_name,
-      "last_name": this.state.last_name,
-      "email": this.state.email,
-      "password": this.state.password
-    }
+    // var self = this;
+    // var payload = {
+    //   "first_name": this.state.first_name,
+    //   "last_name": this.state.last_name,
+    //   "email": this.state.email,
+    //   "password": this.state.password
+    // }
+    payload = {first_name: this.state.first_name}
     axios.post(apiBaseUrl, payload)
       .then(function (response) {
         alert("here");
