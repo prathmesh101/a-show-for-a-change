@@ -17,10 +17,10 @@ const BackVideo = () => {
              				
 
              				<div className="overlay-content">	
-                                <h2>Watch. Learn. Give.</h2>
-                                
-                                
-                                <p>Sage Age offers a growing array of socially and environmentally responsible short films, and allows you to donate to the causes closest to your heart.</p>
+                                <h1>See with your eyes, then give with your heart.</h1>
+                                                                
+                                <h6>Watch engaging, socially conscious content on a mission-driven platform. Be moved by the power of story, and support independent filmmakers, celebrity influencers and their connected causes.<br /> Starting at just $2.99/month after a free 30-day trial.</h6>
+                                 <button className="btn  " id="join-now-back" href="/">Join Today</button>
                              </div> 
                               
                                 

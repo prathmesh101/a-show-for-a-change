@@ -4,6 +4,7 @@
 
 .body {
   font-family: 'Montserrat';
+
 }
 
 /*color scheme */
@@ -168,7 +169,7 @@ html {
   background-color: #00CB94;
   color: #005C43;
   border: none;
-  width: 85vw;
+  width: 500px;
   height: 53px;
 }
 
