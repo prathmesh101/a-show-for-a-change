@@ -1,5 +1,5 @@
 .idea
 .DS_Store
 node_modules
-config.php
-config_local_db.php
+src/backend/php/config.php
+src/backend/php/config_local_db.php
