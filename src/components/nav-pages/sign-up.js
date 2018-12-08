@@ -31,7 +31,7 @@ class SignUp extends Component {
     alert("values are " + this.state.first_name + "   " + this.state.email);
     //To be done:check name empty values before hitting submit
     var self = this;
-    var payload = {
+    var params = {
       "first_name": this.state.first_name,
       "last_name": this.state.last_name,
       "email": this.state.email,
@@ -43,7 +43,7 @@ class SignUp extends Component {
         alert("here");
         alert(JSON.stringify(response));
         // console.log(response);
-        var res = JSON.stringify(response);
+        //var res = JSON.stringify(response);
         if (res.status == 200) {
           //if (response == "success") {
           console.log("registration successfull");
