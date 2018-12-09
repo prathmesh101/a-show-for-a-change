@@ -44,12 +44,12 @@ class SignUp extends Component {
         alert(JSON.stringify(response));
         // console.log(response);
         //var res = JSON.parse(response);
-        if (response.status == 200) {
-         // if (true) {
+        //if (response.status == 200) {
+          if (true) {
           //if (response == "success") {
           console.log("registration successfull");
           alert("status is 200");
-           var loginscreen = [];
+           //var loginscreen = [];
                 // loginscreen.push(<Login parentContext={this} />);
                  //var loginmessage = "Not Registered yet.Go to registration";
                  // self.props.parentContext.setState({
