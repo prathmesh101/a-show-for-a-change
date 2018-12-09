@@ -41,10 +41,11 @@ class SignUp extends Component {
     axios.post(apiBaseUrl, {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password})
       .then(function (response) {
         alert("here");
-        alert(JSON.stringify(response));
+        alert(JSON.parse(response));
         // console.log(response);
-        //var res = JSON.stringify(response);
-        if (response.status == 200) {
+        var res = JSON.parse(response);
+        if (res.status == 200) {
+         // if (true) {
           //if (response == "success") {
           console.log("registration successfull");
           alert("status is 200");
