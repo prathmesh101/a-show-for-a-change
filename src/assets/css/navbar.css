@@ -1,32 +1,17 @@
-.head-navbar{
-  background: rgba(0,0,0,0.3) !important;
 
-}
-
-
-
-
-
+ .navbar-cont{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+ }
+ 
  .nav-style{
   color: white;
-
-
  }
 
 a.nav-link.nav-style:hover {
   background: #156767;
-   border-radius: 5px;
         cursor: pointer;
         color: white;
 
-}
-
-
-
-li.nav-style > a.active {
-    display: block;
-    width: 100%;
-    height:100%;
-    color: white;
-    background-color: blue;
 }
