@@ -30,33 +30,34 @@ class SignUp extends Component {
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
     alert("values are " + this.state.first_name + "   " + this.state.email);
     //To be done:check name empty values before hitting submit
-    // var self = this;
-    // var payload = {
-    //   "first_name": this.state.first_name,
-    //   "last_name": this.state.last_name,
-    //   "email": this.state.email,
-    //   "password": this.state.password,
-    // };
-    var payload = this.state.first_name;
-    axios.post(apiBaseUrl, payload)
+    var self = this;
+    var params = {
+      "first_name": this.state.first_name,
+      "last_name": this.state.last_name,
+      "email": this.state.email,
+      "password": this.state.password,
+    };
+    //var payload = this.state.first_name;
+    axios.post(apiBaseUrl, {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password})
       .then(function (response) {
         alert("here");
         alert(JSON.stringify(response));
         // console.log(response);
-        var res = JSON.stringify(response);
-        if (res.status == 200) {
+        //var res = JSON.parse(response);
+        //if (response.status == 200) {
+          if (true) {
           //if (response == "success") {
           console.log("registration successfull");
           alert("status is 200");
-           var loginscreen = [];
-                 loginscreen.push(<Login parentContext={this} />);
-                 var loginmessage = "Not Registered yet.Go to registration";
-                 self.props.parentContext.setState({
-                   loginscreen: loginscreen,
-                   loginmessage: loginmessage,
-                   buttonLabel: "Register",
-                   isLogin: true
-                 });
+           //var loginscreen = [];
+                // loginscreen.push(<Login parentContext={this} />);
+                 //var loginmessage = "Not Registered yet.Go to registration";
+                 // self.props.parentContext.setState({
+                 //   loginscreen: loginscreen,
+                 //   loginmessage: loginmessage,
+                 //   buttonLabel: "Register",
+                 //   isLogin: true
+                 // });
         } else {
           alert("not equal to 200 but what it is we don't know");
         }

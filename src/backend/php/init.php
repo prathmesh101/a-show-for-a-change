@@ -3,11 +3,11 @@ $app = __DIR__;
 
 //require_once('/etc/php/7.0/cli/vendor/autoload.php');
 
-require_once("{$app}/config.php");
+require_once("config.php");
 //require_once("{$app}/includes/classes/Stripe_API.php");
-require_once("{$app}/Session.php");
-require_once("{$app}/Database.php");
-require_once("{$app}/Users.php");
+require_once("Session.php");
+require_once("Database.php");
+require_once("Users.php");
 /*require_once("{$app}/includes/classes/Dealer.php");
 require_once("{$app}/includes/classes/Plan.php");
 require_once("{$app}/includes/classes/Subscription.php");
