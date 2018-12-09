@@ -49,14 +49,14 @@ class SignUp extends Component {
           console.log("registration successfull");
           alert("status is 200");
            var loginscreen = [];
-                 loginscreen.push(<Login parentContext={this} />);
-                 var loginmessage = "Not Registered yet.Go to registration";
-                 self.props.parentContext.setState({
-                   loginscreen: loginscreen,
-                   loginmessage: loginmessage,
-                   buttonLabel: "Register",
-                   isLogin: true
-                 });
+                // loginscreen.push(<Login parentContext={this} />);
+                 //var loginmessage = "Not Registered yet.Go to registration";
+                 // self.props.parentContext.setState({
+                 //   loginscreen: loginscreen,
+                 //   loginmessage: loginmessage,
+                 //   buttonLabel: "Register",
+                 //   isLogin: true
+                 // });
         } else {
           alert("not equal to 200 but what it is we don't know");
         }
