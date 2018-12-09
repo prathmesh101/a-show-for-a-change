@@ -4,6 +4,7 @@
 
 .body {
   font-family: 'Montserrat';
+
 }
 
 /*color scheme */
@@ -116,7 +117,6 @@ html {
 
 .div-underVideo {
   padding-bottom: 30px;
-  font-size: 12px;
 }
 
 .div-underVideo p {
@@ -127,21 +127,15 @@ html {
   float: right;
 }
 
-.div-underVideo a {
-  font-size: 14px;
-}
-
 .linkPrimary {
   color: white;
   text-decoration: none;
-  font-size: 1.5rem;
   border-bottom: 2px solid #00CB94;
 }
 
 #headerText {
   font-family: 'IBM Plex Sans';
   font-weight: 700;
-  font-size: 33px;
   letter-spacing: 0.02rem; 
   line-height: 1rem;
   margin: 0;
@@ -149,7 +143,6 @@ html {
 }
 
 #headerParagraph {
-  font-size: 17px;
   padding: 15px 0;
   letter-spacing: 0.03rem;
   line-height: 1.3rem;
@@ -164,11 +157,10 @@ html {
 
 #buttonGreen {
   font-weight: bold;
-  font-size: 18px;
   background-color: #00CB94;
   color: #005C43;
   border: none;
-  width: 85vw;
+  width: 500px;
   height: 53px;
 }
 
@@ -182,10 +174,6 @@ html {
 
 .div-disclaimer p {
   color: #00B2C9;
-}
-
-.div-infoLinks {
-  font-size: 20px;
 }
 
 .div-infoLinks span {
@@ -206,7 +194,6 @@ html {
 }
 
 #signUpText {
-  font-size: 1.5rem;
   letter-spacing: 0.07rem; 
   padding: 5%;
   margin: 0;
@@ -218,7 +205,6 @@ html {
   width: 100%;
   background: transparent;
   margin-bottom: 15px;
-  font-size: 1rem;
   padding-top: 5px;
 }
 
@@ -229,14 +215,12 @@ html {
 ::placeholder {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  font-size: 0.7rem;
   color: #d8d8d8;
 }
 
 #buttonCreateAccount {
   display: block;
   letter-spacing: 0.1rem;
-  font-size: 0.7rem;
   margin: 0;
   text-transform: uppercase;
   border-radius: 4px;
@@ -259,9 +243,6 @@ html {
   border: 2px dotted white;
   text-align: center;
   padding-top: 55px;
-
-  letter-spacing: 0.03em;
-  font-size: 1.1em;
 }
 
 

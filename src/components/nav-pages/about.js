@@ -76,9 +76,9 @@ const About = () => {
             <div className="about-header col-xs-12">
                 <div className="header-about-info">
                     <h1 className="header-text">Who are we ?</h1>
-                    <p className="header-para">A Show For A Change works with mission-driven storytellers and charitable partners to change the world.</p>
+                    <h5 className="header-para">A Show For A Change is a socially conscious entertainment company that changes the world through the power of story.<br/> We believe that by learning about the world around us and giving audiences the tools to act, we can make the world a better place</h5>
                 </div>
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" preserveAspectRatio="none">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" preserveAspectRatio="none">
                         <circle fill="white" cx="0" cy="100" r="100" />
                         <circle fill="white" cx="200" cy="100" r="100" />
                       </svg>
@@ -114,7 +114,7 @@ const About = () => {
                 <h4 className="sec-head">What we do ?</h4>
             
               <p>
-                Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
+Through exclusive partnerships with filmmakers, influencers, non-profits, and brands, we create and curate meaningful, impactful films and series on a mobile platform that inspires change - and we give audiences the tools to make a difference. By donating, volunteering, and supporting independent filmmakers, our engaged audience unlocks the power of story to accelerate charitable giving and global impact.
               </p>
              
             </div>
