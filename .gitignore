@@ -3,3 +3,9 @@
 node_modules
 src/backend/php/config.php
 src/backend/php/config_local_db.php
+html
+node_modules
+src*
+dev_server*
+package*
+webpack*
