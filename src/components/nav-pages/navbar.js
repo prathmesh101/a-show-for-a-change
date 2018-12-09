@@ -1,28 +1,28 @@
 import React from 'react';
 import 'bootstrap';
-import '../../assets/css/footer.css';
+import '../../assets/css/navbar.css';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
         <div className="navbar-cont">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <ul className="navbar-nav ml-auto">
-                    <li className="nav-item">
-                        <Link to="/" className="nav-link navbar-brand left">
-                            CauseFX
+                <Link to="/" className="navbar-brand" style={{ color: 'white' }}>
+                    Sage Ape
                             </Link>
-                    </li>
-                </ul>
-                <div className="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarNav">
-                    <ul className="navbar-nav ml-auto">
-                        <li className="nav-item">
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav mr-auto">
+                        <li className="nav-item active">
                             <Link to="/" className="nav-link">
                                 Home
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/about" className="nav-link">
+                            <Link to="/about" className="nav-link" >
                                 About
                                 </Link>
                         </li>
@@ -47,19 +47,23 @@ const NavBar = () => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/sign-in" className="nav-link">
+                            <Link to="/sign-in" className="nav-link nav-style">
                                 Sign In
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/sign-up" className="nav-link">
+                            <Link to="/sign-up" className="nav-link nav-style">
                                 Sign Up
                             </Link>
                         </li>
                     </ul>
+                    <form className="form-inline my-2 my-lg-0">
+                        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
             </nav>
-        </div >
+        </div>
     )
 }
 

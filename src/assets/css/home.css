@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: 'Montserrat';
+
+}
+
+/*color scheme */
+html {
+  background-color:#001E27;
+}
+
+#signUpForm input,
+#buttonCreateAccount,
+.three p,
+#headerText,
+#headerParagraph {
+  color: white;
+}
+
+
+.three,
+#signUpText,
+#buttonCreateAccount {
+  background-color:teal;
+}
+
+.wrapper {
+  /* display: grid; */
+  /* grid-template-columns: repeat(6, 1fr); */
+  /* grid-auto-rows: 700px; */
+  overflow: hidden;
+}
+
+.one {
+  grid-column: 1 / 5;
+}
+
+
+.two {
+  grid-column: 5 / 7;
+}
+
+.three {
+  grid-column: 1 / 7;
+  height: 100px;
+}
+
+.four {
+  grid-column: 1 / 7;
+}
+
+/* Desktop wide breakpoint */
+@media screen and (max-width: 1366px) {
+
+}
+
+/* Tablet breakpoint */
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    grid-auto-rows: minmax(0px, auto)
+  }
+  
+  .one {
+    grid-column: 1 / 7;
+    overflow: hidden;
+  }
+
+  .two {
+    grid-column: 1 / 7;
+    height: 350px;
+  }
+
+  .div-signUp {
+    margin: auto;
+    width: 50%;
+    padding: 0px!important;
+  }
+}
+
+/* Mobile breakpoint */
+@media screen and (max-width: 375px) {
+  .wrapper {
+    grid-auto-rows: minmax(600px, auto)
+  }
+  .one {
+    overflow: visible;
+  }
+
+  .div-images img {
+    height: 100%;
+    width: 100%;
+    padding-left: 0px!important;
+  }
+
+  .div-signUp {
+    padding: 0px!important;
+  }
+}
+
+
+
+.div-video video {
+  width: 100vw;
+}
+
+.div-header {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.div-underVideo {
+  color: rgb(128, 128, 128);
+}
+
+.div-underVideo {
+  padding-bottom: 30px;
+}
+
+.div-underVideo p {
+  display: inline;
+}
+
+.div-underVideo span {
+  float: right;
+}
+
+.linkPrimary {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid #00CB94;
+}
+
+#headerText {
+  font-family: 'IBM Plex Sans';
+  font-weight: 700;
+  letter-spacing: 0.02rem; 
+  line-height: 1rem;
+  margin: 0;
+  line-height: 2rem;
+}
+
+#headerParagraph {
+  padding: 15px 0;
+  letter-spacing: 0.03rem;
+  line-height: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.div-buttonWatchFree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#buttonGreen {
+  font-weight: bold;
+  background-color: #00CB94;
+  color: #005C43;
+  border: none;
+  width: 500px;
+  height: 53px;
+}
+
+.div-disclaimer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8px;
+  padding-bottom: 50px;
+}
+
+.div-disclaimer p {
+  color: #00B2C9;
+}
+
+.div-infoLinks span {
+  float: right;
+}
+
+.div-images {
+  padding: 30px;
+}
+
+.div-images img {
+  padding: 0px 0px 30px 15px;
+}
+
+.div-signUp {
+  width: 330px;
+  padding: 50px 0px 0px 30px;
+}
+
+#signUpText {
+  letter-spacing: 0.07rem; 
+  padding: 5%;
+  margin: 0;
+}
+
+#signUpForm input {
+  border: none;
+  border-bottom: 1px solid #d8d8d8;
+  width: 100%;
+  background: transparent;
+  margin-bottom: 15px;
+  padding-top: 5px;
+}
+
+#signUpForm input[type=text] {
+  padding-top: 15px;
+}
+
+::placeholder {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #d8d8d8;
+}
+
+#buttonCreateAccount {
+  display: block;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  text-transform: uppercase;
+  border-radius: 4px;
+  width: 150px;
+  height: 40px;
+  float: right;
+  margin-top: 30px;
+}
+
+.div-headerBar {
+  margin: 0 auto;
+  width: 80vw;
+  align-content: center;
+}
+
+.div-headerBar div {
+  width: 33.3%;
+  height: 100px;
+  float: left;
+  border: 2px dotted white;
+  text-align: center;
+  padding-top: 55px;
+}
+
+
+
+

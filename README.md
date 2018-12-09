@@ -6,13 +6,11 @@ A video web application that connects socially conscious filmmakers with their a
 # Team
 * Jared Milrad - Chief Executive Officer (CEO)
 * Daniel Yeh - Cheif Marketing Officer (CMO)
-* Marissa Shankar - Production Assistant
 * David Martinez - Front End Lead
 * Prathmesh Pardhiye - Front End Developer
 * Alex Choi - Front End Developer
 * Sivak Khodaverdian - Back End Lead
-* Suketu Patel - Back End Developer
-* Alia Wilkinson - Back End Developer & SCRUM Lord
+* Alia Wilkinson - Back End Developer & Product Manager & SCRUM Lord
 
 # Feature List
 ## store and stream video
@@ -59,8 +57,47 @@ HTML5
 
 CSS3
 
+PHP for RESTful API
+
 LAMP stack - Linux, Apache, MySQL, PHP
 
 AWS EC2 (free tier)
 
 AWS S3 (super simple storage)
+
+AWS RDS (for databases)
+
+# Dependencies
+* node.js
+  * check node version in bash(aka terminal, command line) command: node -v
+* npm
+  * check npm version in bash(aka terminal, command line) command: npm -v
+  
+* If you don't have node or npm, download them together here: https://nodejs.org/en/download/
+
+* Check Apache version: httpd -v
+* Check MySQL version: mysql -v
+* Check PHP version: php -v
+
+* Install LAMP stack: https://howtoubuntu.org/how-to-install-lamp-on-ubuntu
+
+* MAMP for Mac or WAMP for Windows (to run the LAMP backend)
+  * preferences => Web-Server
+    * Set document root to cloned a-show-for-a-change directory
+* Check for AWS CLI with command: aws --version
+* Download AWS CLI here: https://docs.aws.amazon.com/cli/latest/userguide/installing.html
+
+* Contact Sivak for access to AWS access if necessary
+
+# Instructions to start front-end server
+
+First time, run these commands: 
+* npm install
+* npm start
+Wait for the web server to start, then go to localhost:3000 in your browser.
+
+After the first time, run: 
+* npm start
+Wait for the web server to start, then go to localhost:3000 in your browser.
+
+If the server does not start after the first opening, contact the last person who committed changes to the branch. 
