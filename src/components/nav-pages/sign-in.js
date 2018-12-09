@@ -52,7 +52,7 @@ class SignIn extends Component {
 
           <div className="row signin-align">
 
-            <div class="col-sm-10">
+            <div className="col-sm-10">
 
               <form>
                 <h2 className="signin-head-text">Login</h2>
@@ -61,19 +61,19 @@ class SignIn extends Component {
 
                 <div className="form-group">
 
-                  <label for="email">E-mail</label>
-                  <input type="email" class="form-control" name="email" id="firstname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ username: newValue })} />
+                  <label type="email">E-mail</label>
+                  <input type="email" className="form-control" name="email" id="firstname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ username: newValue })} />
 
                 </div>
 
                 <div className="form-group">
 
                   <label for="password">Password</label>
-                  <input type="text" class="form-control" name="password" id="password" placeholder="Enter email" onChange={(event, newValue) => this.setState({ password: newValue })} />
+                  <input type="text" className="form-control" name="password" id="password" placeholder="Enter email" onChange={(event, newValue) => this.setState({ password: newValue })} />
 
                 </div>
 
-                <button type="submit" class="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
+                <button type="submit" className="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
 
               </form>
 
