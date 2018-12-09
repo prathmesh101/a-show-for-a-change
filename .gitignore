@@ -5,7 +5,18 @@ src/backend/php/config.php
 src/backend/php/config_local_db.php
 html
 node_modules
-src
-dev_server
+src*
+dev_server*
 package*
 webpack*
+.babelrc	Added packages for async functionality	a year ago
+.eslintrc.json	Updated dev_server, updated versions of dependencies, other minor con…	a year ago
+.gitignore	ignored unnecessary files for deployment	a minute ago
+README.md	Update README.md	a month ago
+dev_server.js	Updated to React 16 and Webpack 4	9 months ago
+package-lock.json	synching with dev branch and creating new bundle file	19 days ago
+package.json	landing page updated	5 days ago
+webpack.common.js	Updated to React 16 and Webpack 4	9 months ago
+webpack.dev.js	Updated to React 16 and Webpack 4	9 months ago
+webpack.prod.js	Updated to React 16 and Webpack 4	9 months ago
+webpack.prod_orig.js
