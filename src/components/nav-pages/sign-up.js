@@ -44,7 +44,7 @@ class SignUp extends Component {
         alert(JSON.stringify(response));
         // console.log(response);
         //var res = JSON.stringify(response);
-        if (res.status == 200) {
+        if (response.status == 200) {
           //if (response == "success") {
           console.log("registration successfull");
           alert("status is 200");
