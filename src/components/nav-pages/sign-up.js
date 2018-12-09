@@ -25,7 +25,7 @@ class SignUp extends Component {
   }
 
 
-  handleClick(event) {
+  async handleClick(event) {
     var apiBaseUrl = "./api_php/signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
     alert("values are " + this.state.first_name + "   " + this.state.email);
@@ -38,7 +38,7 @@ class SignUp extends Component {
       "password": this.state.password,
     };
     //var payload = this.state.first_name;
-    axios.post(apiBaseUrl, {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password})
+    await axios.post(apiBaseUrl, {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password})
       .then(function (response) {
         alert("here");
         alert(JSON.stringify(response));
@@ -93,7 +93,7 @@ class SignUp extends Component {
           </div>
           <div className="form-group">
             <div className="div-underline">
-              <i className="fas fa-user inlineBlock fillWhite"></i>            
+              <i className="fas fa-user inlineBlock fillWhite"></i>
               <input type="text" className="form-control inlineBlock" name="last_name" id="lastname" placeholder="Enter last name" onChange={this.handleChange} />
             </div>
           </div>
