@@ -10,6 +10,8 @@ import FilmFestival from './nav-pages/film-festival';
 
 import SignIn from './nav-pages/sign-in';
 import SignUp from './nav-pages/sign-up';
+import CreditCard from './nav-pages/credit-card';
+import SignUpSuccess from './nav-pages/sign-up-success';
 
 const App = () => (
     <div>
@@ -23,6 +25,8 @@ const App = () => (
            
             <Route path="/sign-in" component={SignIn} />
             <Route path="/sign-up" component={SignUp} />
+            <Route path="/credit-card" component={CreditCard} />
+            <Route path="/success" component={SignUpSuccess} />
             {/* <Footer /> */}
         </div>
     </div>
