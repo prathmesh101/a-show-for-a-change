@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/css/app.css';
-import { Route } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 import Header from './header.js';
 import Footer from './footer.js';
 
@@ -20,9 +20,6 @@ const App = () => (
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/film-festival" component={FilmFestival} />
-           
-            
-           
             <Route path="/sign-in" component={SignIn} />
             <Route path="/sign-up" component={SignUp} />
             <Route path="/credit-card" component={CreditCard} />
