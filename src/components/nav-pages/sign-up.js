@@ -25,9 +25,16 @@ class SignUp extends Component {
 
 
   async handleClick(event) {
+<<<<<<< HEAD
     event.preventDefault();
     var apiBaseUrl = "../dist/api_php/signupapi.php";
     console.log("values are " + this.state.first_name + "   " + this.state.email);
+=======
+
+    var apiBaseUrl = "./api_php/signupapi.php";
+    console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
+    alert("values are " + this.state.first_name + "   " + this.state.email);
+>>>>>>> 6faf2942915fbf73fecf1eda0d8027073a1979f6
     //To be done:check name empty values before hitting submit
     var self = this;
     var params = {
@@ -37,11 +44,18 @@ class SignUp extends Component {
       "password": this.state.password,
     };
     //var payload = this.state.first_name;
+<<<<<<< HEAD
     console.log('from handleClick: ', apiBaseUrl);
     await axios.post(apiBaseUrl, { first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password })
+=======
+
+    await axios.post(apiBaseUrl, {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password})
+
+>>>>>>> 6faf2942915fbf73fecf1eda0d8027073a1979f6
       .then(function (response) {
         alert("here");
         alert(JSON.stringify(response));
+        console.log(response);
         // console.log(response);
         //var res = JSON.parse(response);
         //if (response.status == 200) {
@@ -67,6 +81,11 @@ class SignUp extends Component {
         alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
       });
 
+<<<<<<< HEAD
+=======
+    //alert(lalala.json());
+
+>>>>>>> 6faf2942915fbf73fecf1eda0d8027073a1979f6
   }
 
   componentDidMount() {
