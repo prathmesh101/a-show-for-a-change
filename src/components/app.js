@@ -5,8 +5,8 @@ import Header from './header.js';
 import Footer from './footer.js';
 
 import Home from './nav-pages/home';
-import About from './nav-pages/about';
-import FilmFestival from './nav-pages/film-festival';
+//import About from './nav-pages/about';
+//import FilmFestival from './nav-pages/film-festival';
 
 import SignIn from './nav-pages/sign-in';
 import SignUp from './nav-pages/sign-up';
@@ -16,8 +16,8 @@ const App = () => (
         <div className="spacing-div">
             <Header />
             <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/film-festival" component={FilmFestival} />
+ 
+            
            
             
            

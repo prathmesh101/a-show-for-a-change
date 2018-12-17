@@ -3,6 +3,7 @@ import 'bootstrap';
 import axios from 'axios';
 import '../../assets/css/sign-up.css';
 import { Link } from 'react-router-dom';
+import UserPage from './user-page.js';
 
 class SignUp extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class SignUp extends Component {
 
   handleClick(event) {
     preventDefault();
-    var apiBaseUrl = "./api_php/signupapi.php";
+    var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
     alert("values are " + this.state.first_name + "   " + this.state.email);
     //To be done:check name empty values before hitting submit
@@ -41,6 +42,7 @@ class SignUp extends Component {
     //var payload = this.state.first_name;
     axios.post(apiBaseUrl, { first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password })
       .then(function (response) {
+        this.props.history.push('/UserPage');
         alert("here");
         alert(JSON.stringify(response));
         console.log(response);

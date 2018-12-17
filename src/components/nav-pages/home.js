@@ -5,7 +5,7 @@ import '../../assets/css/home.css';
 
 
 import BackgroundImg from './background-video';
-import Genre from './genre';
+//import Genre from './genre';
 import Features from './features';
 import Join from './join-now';
 import SignUp from './sign-up';
@@ -15,7 +15,7 @@ const Home = () => {
 	return (
 		<div>
 			<BackgroundImg />
-			<Genre />
+			
 			<Features />
 			<Join />
 			
