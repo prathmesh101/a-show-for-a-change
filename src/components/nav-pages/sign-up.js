@@ -68,7 +68,7 @@ class SignUp extends Component {
       })
       .catch(function (error) {
         console.log(error);
-        alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
+        alert("Error is " + error.response + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
       });
 
   }
