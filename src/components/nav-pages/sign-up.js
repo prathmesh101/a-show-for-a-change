@@ -42,14 +42,13 @@ class SignUp extends Component {
     axios.post(apiBaseUrl, {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password})
 
       .then(function (response) {
-        this.props.history.push('/UserPage');
-        alert("here");
-        alert(JSON.stringify(response));
-        console.log(response);
+        //this.props.history.push('/UserPage');
+        // alert("here");
+        // alert(JSON.stringify(response));
+        // console.log(response);
         // console.log(response);
         //var res = JSON.parse(response);
-        //if (response.status == 200) {
-        if (true) {
+        if (response.status == 200) {
           //if (response == "success") {
           console.log("registration successfull");
           alert("status is 200");
