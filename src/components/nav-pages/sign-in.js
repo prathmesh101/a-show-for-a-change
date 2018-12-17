@@ -43,7 +43,7 @@ class SignIn extends Component {
       });
   }
   render() {
-
+    console.log(this.state);
     return (
 
       <div className="signin-background">
@@ -68,7 +68,7 @@ class SignIn extends Component {
 
                 <div className="form-group">
 
-                  <label for="password">Password</label>
+                  <label type="password">Password</label>
                   <input type="text" className="form-control" name="password" id="password" placeholder="Enter email" onChange={(event, newValue) => this.setState({ password: newValue })} />
 
                 </div>

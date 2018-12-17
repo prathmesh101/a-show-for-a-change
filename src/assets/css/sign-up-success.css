@@ -26,9 +26,18 @@
   padding: 10px 0;
 }
 
+
+
 .form-group {
   width: 85vw;
   margin: 0 auto;
+  color: white;
+  line-height: .8rem;
+  font-size: 1.2rem;
+}
+
+.form-group h2 {
+  font-size: 3rem;
 }
 
 .form-group input {
@@ -38,6 +47,7 @@
   background-color: transparent;
   font-size: 20px;
   width: 100%;
+  padding-left: 0;
 }
 
 .form-group input:focus {
@@ -48,11 +58,22 @@
 }
 
 ::-webkit-input-placeholder {
+  font-size: 1.6rem;
   text-transform: none;
  }
 
+#width40 {
+  width: 40vw;
+  display: inline-block;
+}
+
 .div-underline {
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid gray;
+}
+
+.div-underline p{
+  display: inline;
+  color: white;
 }
 
 .fillWhite {

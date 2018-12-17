@@ -22,15 +22,14 @@ class SignUp extends Component {
 
   handleChange(event) {
     this.setState({ [event.target.name]: event.target.value })
-    console.log(this.state);
   }
 
 
+
   handleClick(event) {
-    preventDefault();
+    event.preventDefault();
     var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
-    alert("values are " + this.state.first_name + "   " + this.state.email);
     //To be done:check name empty values before hitting submit
     var self = this;
     var params = {
@@ -40,7 +39,8 @@ class SignUp extends Component {
       "password": this.state.password,
     };
     //var payload = this.state.first_name;
-    axios.post(apiBaseUrl, { first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password })
+    axios.post(apiBaseUrl, {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password})
+
       .then(function (response) {
         this.props.history.push('/UserPage');
         alert("here");
@@ -71,74 +71,62 @@ class SignUp extends Component {
         alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
       });
 
-    //alert(lalala.json());
-
   }
 
-  // componentDidMount() {
-  //       if (!this.state.data) {
-  //           this.handleClick().then(data => this.setState({data}){alert(data);})
-  //                         .catch(err => { "error occured"});
-  //       }
-  //   }
+  componentDidMount() {
+    console.log('did mount');
+  }
 
   render() {
-
     return (
-      <div className="signup-background">
 
-        <div className="container signup-content">
-
-          <div className="row sign-align">
-
-            <div className="col-sm-10">
-
-              <form>
-                <h2 className="signup-head-text">Sign Up Form</h2>
-
-                <div className="form-group">
-
-                  <label name="firstname">First Name</label>
-
-                  <input type="text" className="form-control" name="first_name" id="first_name" placeholder="Enter first name" size="10" onChange={this.handleChange} />
-
-                </div>
-
-                <div className="form-group">
-
-                  <label name="lastname">Last Name</label>
-
-                  <input type="text" className="form-control" name="last_name" id="last_name" placeholder="Enter last name" onChange={this.handleChange} />
-
-                </div>
-
-                <div className="form-group">
-
-                  <label name="email">E-mail</label>
-
-                  <input type="email" className="form-control" name="email" id="email" placeholder="Enter email" onChange={this.handleChange} />
-
-                </div>
-
-                <div className="form-group">
-
-                  <label name="password">Password</label>
-
-                  <input type="text" className="form-control" name="password" id="password" placeholder="Enter password" onChange={this.handleChange} />
-
-                </div>
-
-                <button type="submit" className="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
-
-              </form>
-
+      <div>
+        <form>
+          <div className="form-group">
+            <h2 className="signup-head-text">Create Your Account</h2>
+            <div className="div-underline">
+              <i className="fas fa-user inlineBlock fillWhite"></i>
+              <input type="text" className="form-control inlineBlock" name="first_name" id="firstname" placeholder="Enter first name" size="10" onChange={this.handleChange} />
             </div>
-
           </div>
-
+          <div className="form-group">
+            <div className="div-underline">
+              <i className="fas fa-user inlineBlock fillWhite"></i>
+              <input type="text" className="form-control inlineBlock" name="last_name" id="lastname" placeholder="Enter last name" onChange={this.handleChange} />
+            </div>
+          </div>
+          <div className="form-group">
+            <div className="div-underline">
+              <i className="fas fa-envelope fillWhite"></i>
+              <input type="email" className="form-control inlineBlock" name="email" id="email" placeholder="Enter email" onChange={this.handleChange} />
+            </div>
+          </div>
+          <div className="form-group">
+            <div className="div-underline">
+              <i className="fas fa-unlock-alt fillWhite"></i>
+              <input type="password" className="form-control inlineBlock" name="password" id="password" placeholder="Enter password" onChange={this.handleChange} />
+            </div>
+          </div>
+          <div className="div-submit">
+            <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >CONTINUE</button>
+          </div>
+        </form>
+        <div className="div-signIn">
+          <p>Already have an account? <span><a href="/sign-in" className="linkPrimary">SIGN IN</a></span></p>
         </div>
-
+        {/* <div className="div-progressIndicator">
+          <svg height="28" width="40">
+            <circle className="circle-active" cx="14" cy="14" r="13" fill="#00CB94" />
+          </svg>
+          <svg height="28" width="40">
+            <circle cx="14" cy="14" r="13" fill="grey" />
+          </svg>
+          <svg height="28" width="40">
+            <circle cx="14" cy="14" r="13" fill="grey" />
+          </svg>
+        </div> */}
       </div>
+
     );
   }
 }
