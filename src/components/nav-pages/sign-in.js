@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap';
 import axios from 'axios';
-import '../../assets/css/sign-in.css';
+//import '../../assets/css/sign-in.css';
 import { Link } from 'react-router-dom';
 
 class SignIn extends Component {
@@ -14,7 +14,7 @@ class SignIn extends Component {
   }
 
   handleClick(event) {
-    var apiBaseUrl = "../API_PHP/signinapi.php";
+    var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
     var self = this;
     var payload = {
       "email": this.state.username,
@@ -43,7 +43,7 @@ class SignIn extends Component {
       });
   }
   render() {
-
+    console.log(this.state);
     return (
 
       <div className="signin-background">

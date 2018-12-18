@@ -3,6 +3,7 @@ import 'bootstrap';
 import axios from 'axios';
 import '../../assets/css/sign-up.css';
 import { Link } from 'react-router-dom';
+import UserPage from './user-page.js';
 
 class SignUp extends Component {
   constructor(props) {
@@ -21,15 +22,14 @@ class SignUp extends Component {
 
   handleChange(event) {
     this.setState({ [event.target.name]: event.target.value })
-    console.log(this.state);
   }
 
 
-  async handleClick(event) {
 
-    var apiBaseUrl = "./api_php/signupapi.php";
+  handleClick(event) {
+    event.preventDefault();
+    var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
-    alert("values are " + this.state.first_name + "   " + this.state.email);
     //To be done:check name empty values before hitting submit
     var self = this;
     var params = {
@@ -39,17 +39,16 @@ class SignUp extends Component {
       "password": this.state.password,
     };
     //var payload = this.state.first_name;
-
-    await axios.post(apiBaseUrl, {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password})
+    axios.post(apiBaseUrl, {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password})
 
       .then(function (response) {
-        alert("here");
-        alert(JSON.stringify(response));
-        console.log(response);
+        //this.props.history.push('/UserPage');
+        // alert("here");
+        // alert(JSON.stringify(response));
+        // console.log(response);
         // console.log(response);
         //var res = JSON.parse(response);
-        //if (response.status == 200) {
-        if (true) {
+        if (response.status == 200) {
           //if (response == "success") {
           console.log("registration successfull");
           alert("status is 200");
@@ -68,22 +67,16 @@ class SignUp extends Component {
       })
       .catch(function (error) {
         console.log(error);
-        alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
+        alert("Error is " + error.response + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
       });
-
-    //alert(lalala.json());
 
   }
 
-  // componentDidMount() {
-  //       if (!this.state.data) {
-  //           this.handleClick().then(data => this.setState({data}){alert(data);})
-  //                         .catch(err => { "error occured"});
-  //       }
-  //   }
+  componentDidMount() {
+    console.log('did mount');
+  }
 
   render() {
-
     return (
 
       <div>
