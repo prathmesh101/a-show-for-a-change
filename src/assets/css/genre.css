@@ -16,11 +16,17 @@
   margin: 0 auto;
 }
 
+#vid {
+  background-image: 
+   url(../img/cumpleanera-thumbnail.png);
+  background-size: cover;
+}
+
 .portfolio-box .portfolio-box-caption {
   position: absolute;
   bottom: 0;
   display: block;
-  width: 100%;
+  width: 0;
   height: 100%;
   text-align: center;
   opacity: 0;
@@ -55,9 +61,9 @@
   font-size: 18px;
 }
 
-.portfolio-box:hover .portfolio-box-caption {
+/* .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
-}
+} */
 
 .portfolio-box:focus {
   outline: none;
