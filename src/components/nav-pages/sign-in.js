@@ -6,28 +6,37 @@ import { Link } from 'react-router-dom';
 
 class SignIn extends Component {
   constructor(props) {
+
     super(props);
+    
     this.state = {
       username: '',
-      password: ''
+      password: '',
+
     }
   }
+
+
 
   handleClick(event) {
     var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
     var self = this;
     var payload = {
       "email": this.state.username,
-      "password": this.state.password
+      "password": this.state.password,
+
     }
     axios.post(apiBaseUrl, payload)
       .then(function (response) {
+
         console.log(response);
         if (response.data.code == 200) {
-          console.log("Login successfull");
-          var uploadScreen = [];
-          uploadScreen.push(<UploadScreen appContext={self.props.appContext} />)
-          self.props.appContext.setState({ loginPage: [], uploadScreen: uploadScreen })
+
+         console.log("Login successfull");
+        var uploadScreen = [];
+        uploadScreen.push(<UploadScreen appContext={self.props.appContext} />)
+        self.props.appContext.setState({ loginPage: [], uploadScreen: uploadScreen });
+
         }
         else if (response.data.code == 204) {
           console.log("Username password do not match");
@@ -48,7 +57,7 @@ class SignIn extends Component {
 
       <div className="signin-background">
 
-        <div className="container signin-content">
+        <div className="container signin-content" style={{paddingTop:'100px'}}>
 
           <div className="row signin-align">
 
@@ -91,6 +100,3 @@ class SignIn extends Component {
 }
 
 export default SignIn;
-
-
-
