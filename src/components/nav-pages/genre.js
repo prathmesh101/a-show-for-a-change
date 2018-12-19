@@ -12,7 +12,6 @@ const Genre = () => {
 
             <h3>Always streaming thousands of shorts, documentaries and more.</h3>
         </div>
-        <br />
 
       <div className="container-fluid p-0">
         <div className="row no-gutters popup-gallery">
