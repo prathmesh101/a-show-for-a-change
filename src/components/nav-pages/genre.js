@@ -17,8 +17,10 @@ const Genre = () => {
       <div className="container-fluid p-0">
         <div className="row no-gutters popup-gallery">
           <div className="col-lg-4 col-sm-6">
-            <a className="portfolio-box" href="img/portfolio/fullsize/1.jpg">
-              <img className="img-fluid" src= {genreImg} alt="" />
+            <div className="portfolio-box">
+              <video width="100%" height="100%" controls preload="metadata" id="vid" poster="../../assets/img/cumpleanera-thumbnail.png">
+               <source src="http://dl1cz9lqgee4z.cloudfront.net/Cumplaneara.mp4" type="video/mp4" />
+              </video>
               <div className="portfolio-box-caption">
                 <div className="portfolio-box-caption-content">
                   <div className="project-category text-faded">
@@ -29,7 +31,7 @@ const Genre = () => {
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
           <div className="col-lg-4 col-sm-6">
             <a className="portfolio-box" href="img/portfolio/fullsize/2.jpg">
