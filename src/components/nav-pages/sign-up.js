@@ -3,8 +3,6 @@ import 'bootstrap';
 import axios from 'axios';
 import '../../assets/css/sign-up.css';
 import { Link } from 'react-router-dom';
-import UserPage from './user-page.js';
-import { Redirect } from 'react-router';
 
 class SignUp extends Component {
   constructor(props) {
@@ -13,8 +11,7 @@ class SignUp extends Component {
       first_name: '',
       last_name: '',
       email: '',
-      password: '',
-      redirect: false
+      password: ''
     }
   }
 
@@ -27,11 +24,11 @@ class SignUp extends Component {
   }
 
 
+  async handleClick(event) {
 
-  handleClick(event) {
-    event.preventDefault();
-    var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
+    var apiBaseUrl = "/api_php/signupapi.php";
     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
+    alert("values are " + this.state.first_name + "   " + this.state.email);
     //To be done:check name empty values before hitting submit
     var self = this;
     var params = {
@@ -41,29 +38,19 @@ class SignUp extends Component {
       "password": this.state.password,
     };
     //var payload = this.state.first_name;
-    axios.post(apiBaseUrl, {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password})
-        .then(() => this.setState({ redirect: true }));
 
-      //.then(function (response) {
-
-        //let path = `./user-page`;
-        //this.props.history.push(path);
-
-
-
-
-
-
-        //this.props.history.push('/UserPage');
-        // alert("here");
-        // alert(JSON.stringify(response));
-        // console.log(response);
+    await axios.post(apiBaseUrl, { first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password })
+      .then(function (response) {
+        alert("here");
+        alert(JSON.stringify(response));
+        console.log(response);
         // console.log(response);
         //var res = JSON.parse(response);
-      //  if (response.status == 200) {
+        //if (response.status == 200) {
+        if (true) {
           //if (response == "success") {
-      //    console.log("registration successfull");
-        //  alert("status is 200");
+          console.log("registration successfull");
+          alert("status is 200");
           //var loginscreen = [];
           // loginscreen.push(<Login parentContext={this} />);
           //var loginmessage = "Not Registered yet.Go to registration";
@@ -73,15 +60,20 @@ class SignUp extends Component {
           //   buttonLabel: "Register",
           //   isLogin: true
           // });
-      //  } else {
-        //  alert("not equal to 200 but what it is we don't know");
-      //  }
-    //  })
-  //    .catch(function (error) {
-    //    console.log(error);
-      //  alert("Error is " + error.response + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
-    //  });
+        } else {
+          alert("not equal to 200 but what it is we don't know");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
+      });
 
+<<<<<<< HEAD
+=======
+    //alert(lalala.json());
+
+>>>>>>> 6faf2942915fbf73fecf1eda0d8027073a1979f6
   }
 
   componentDidMount() {
@@ -89,15 +81,6 @@ class SignUp extends Component {
   }
 
   render() {
-
-    const { redirect } = this.state;
-
-    if (redirect) {
-         return <Redirect to='./user-page'/>;
-       }
-
-
-
     return (
 
       <div>
