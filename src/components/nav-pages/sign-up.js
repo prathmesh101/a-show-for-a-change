@@ -69,11 +69,7 @@ class SignUp extends Component {
         alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
       });
 
-<<<<<<< HEAD
-=======
-    //alert(lalala.json());
 
->>>>>>> 6faf2942915fbf73fecf1eda0d8027073a1979f6
   }
 
   componentDidMount() {
