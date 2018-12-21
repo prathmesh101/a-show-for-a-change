@@ -51,12 +51,12 @@ class SignUp extends Component {
         console.log(response);
         // console.log(response);
         //var res = JSON.parse(response);
-        //if (response.status == 200) {
-        if (true) {
+        if (response.status == 200) {
+        //if (true) {
           //if (response == "success") {
           console.log("registration successfull");
           alert("status is 200");
-          this.setState({ redirect: true });
+          this.setState({ redirect: true })
           //var loginscreen = [];
           // loginscreen.push(<Login parentContext={this} />);
           //var loginmessage = "Not Registered yet.Go to registration";
@@ -72,7 +72,7 @@ class SignUp extends Component {
       })
       .catch(function (error) {
         console.log(error);
-        alert("Error is " + error.response.data + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
+        alert("Error is " + error.response + "  " + error.response.status + "  " + JSON.stringify(error.response.headers));
       });
 
 
