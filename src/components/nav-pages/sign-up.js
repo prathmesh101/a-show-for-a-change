@@ -3,6 +3,8 @@ import 'bootstrap';
 import axios from 'axios';
 import '../../assets/css/sign-up.css';
 import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router';
+
 
 class SignUp extends Component {
   constructor(props) {
@@ -11,7 +13,9 @@ class SignUp extends Component {
       first_name: '',
       last_name: '',
       email: '',
-      password: ''
+      password: '',
+      redirect: false
+
     }
   }
 
@@ -26,9 +30,8 @@ class SignUp extends Component {
 
   async handleClick(event) {
 
-    var apiBaseUrl = "/api_php/signupapi.php";
-    console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
-    alert("values are " + this.state.first_name + "   " + this.state.email);
+    var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
+
     //To be done:check name empty values before hitting submit
     var self = this;
     var params = {
@@ -39,7 +42,9 @@ class SignUp extends Component {
     };
     //var payload = this.state.first_name;
 
-    await axios.post(apiBaseUrl, { first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password })
+     axios.post(apiBaseUrl, { first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password })
+
+
       .then(function (response) {
         alert("here");
         alert(JSON.stringify(response));
@@ -51,6 +56,7 @@ class SignUp extends Component {
           //if (response == "success") {
           console.log("registration successfull");
           alert("status is 200");
+          this.setState({ redirect: true });
           //var loginscreen = [];
           // loginscreen.push(<Login parentContext={this} />);
           //var loginmessage = "Not Registered yet.Go to registration";
@@ -72,11 +78,15 @@ class SignUp extends Component {
 
   }
 
-  componentDidMount() {
-    console.log('did mount');
-  }
 
   render() {
+
+    const { redirect } = this.state;
+
+    if (redirect) {
+         return <Redirect to='./user-page'/>;
+       }
+
     return (
 
       <div>
