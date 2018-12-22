@@ -2,16 +2,19 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Max-Age: 3600");
+//header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-require_once("../init.php");
+require_once("../../src/backend/php/init.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-        $username = $_REQUEST['username'] ? $_REQUEST['username'] : '';
-        $password = $_REQUEST['password'] ? $_REQUEST['password'] : '';
+        // $username = $_REQUEST['username'] ? $_REQUEST['username'] : '';
+        // $password = $_REQUEST['password'] ? $_REQUEST['password'] : '';
 
+        $form_values = json_decode(file_get_contents('php://input'),true);
+        $username = !empty($form_values['username']) ? $form_values['username'] : '';
+        $password = !empty($form_values['password']) ? $form_values['password'] : '';
 
         if(empty($username))
         {
@@ -35,11 +38,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 {
                         if (password_verify($password, $user_data["password"]))
                         {
-                                $session->login($username);
-                                http_response_code(200);
+                               // $session->login($username);
+                               // http_response_code(200);
 
                                 // make it json format
-                                echo serialize(json_encode(array("firstname" => $user_data["first_name"], "lastname" => $user_data["last_name"])));
+                                echo "success";
                         } else {
 
                                 http_response_code(404);
@@ -49,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 } else {
 
                         http_response_code(404);
-                        echo serialize(json_encode(array("message" => $errors)));
+                        echo serialize(json_encode(array("message" => "Problem logining in")));
                 }
 
 
