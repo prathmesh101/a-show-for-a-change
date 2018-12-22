@@ -46,20 +46,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         } else {
 
                                 http_response_code(404);
-                                echo serialize(json_encode(array("message" => "Problem logining in")));
+                                echo "Problem logining in";
                         }
 
                 } else {
 
                         http_response_code(404);
-                        echo serialize(json_encode(array("message" => "Problem logining in")));
+                        echo "Problem logining in";
                 }
 
 
         } else {
 
                 http_response_code(404);
-                echo serialize(json_encode(array("message" => $errors)));
+                echo "Values missing";
 
         }
 
