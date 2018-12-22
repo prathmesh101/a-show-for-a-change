@@ -17,7 +17,7 @@ class UserPage extends Component {
   render() {
     return (
 
-    	 <div style={{paddingTop:'100px', color:'white'}}><h1>Hello</h1></div>
+    	 <div style={{paddingTop:'100px', color:'white'}}><h1>Hello User</h1></div>
 
     );
   }
