@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         {
 
                 // verify email in the database
-                $user_data = $user->get_by_username($email);
+                $user_data = $user->get_by_email($email);
 
                 if ($user_data)
                 {
