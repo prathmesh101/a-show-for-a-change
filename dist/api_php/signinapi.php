@@ -13,12 +13,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // $password = $_REQUEST['password'] ? $_REQUEST['password'] : '';
 
         $form_values = json_decode(file_get_contents('php://input'),true);
-        $username = !empty($form_values['username']) ? $form_values['username'] : '';
+        $email = !empty($form_values['email']) ? $form_values['email'] : '';
         $password = !empty($form_values['password']) ? $form_values['password'] : '';
 
-        if(empty($username))
+        if(empty($email))
         {
-                $errors[] = "Username can not be empty";
+                $errors[] = "Email can not be empty";
         }
 
 
