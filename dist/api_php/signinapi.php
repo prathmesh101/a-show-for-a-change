@@ -9,12 +9,13 @@ require_once("../../src/backend/php/init.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-        // $username = $_REQUEST['username'] ? $_REQUEST['username'] : '';
-        // $password = $_REQUEST['password'] ? $_REQUEST['password'] : '';
+        $email = $_REQUEST['email'] ? $_REQUEST['email'] : '';
+        $password = $_REQUEST['password'] ? $_REQUEST['password'] : '';
 
-        $form_values = json_decode(file_get_contents('php://input'),true);
-        $email = !empty($form_values['email']) ? $form_values['email'] : '';
-        $password = !empty($form_values['password']) ? $form_values['password'] : '';
+        // $form_values = json_decode(file_get_contents('php://input'),true);
+
+        // $email = !empty($form_values['email']) ? $form_values['email'] : '';
+        // $password = !empty($form_values['password']) ? $form_values['password'] : '';
 
         if(empty($email))
         {
@@ -31,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (empty($errors))
         {
 
-                // verify username in the database
-                $user_data = $user->get_by_username($username);
+                // verify email in the database
+                $user_data = $user->get_by_username($email);
 
                 if ($user_data)
                 {
@@ -45,20 +46,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 echo "success";
                         } else {
 
-                                http_response_code(404);
+                               // http_response_code(404);
                                 echo "Problem logining in";
                         }
 
                 } else {
 
-                        http_response_code(404);
+                       // http_response_code(404);
                         echo "Problem logining in";
                 }
 
 
         } else {
 
-                http_response_code(404);
+                //http_response_code(404);
                 echo "Values missing";
 
         }
