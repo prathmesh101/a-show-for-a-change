@@ -17,7 +17,9 @@ class UserPage extends Component {
   render() {
     return (
 
-    	 <div style={{paddingTop:'100px', color:'white'}}><h1>Hello User</h1></div>
+    	 <div style={{paddingTop:'100px', color:'white'}}><h1>Hello User</h1>
+       <button type="submit" className="btn btn-primary" >Upload Video</button>
+       </div>
 
     );
   }
