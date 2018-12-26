@@ -68,9 +68,9 @@ const About = () => {
 
     return (
 
-   
+
         <div className="row">
-       
+
             <div className="about-header col-xs-12">
                 <div className="header-about-info">
                     <h1 className="header-text">Who are we ?</h1>
@@ -81,9 +81,9 @@ const About = () => {
                         <circle fill="white" cx="200" cy="100" r="100" />
                       </svg>
 
-                
+
             </div>
-                    
+
   <div id="about" className="about-area area-padding">
     <div className="container">
       <div className="row">
@@ -94,52 +94,51 @@ const About = () => {
         </div>
       </div>
       <div className="row about-us-content">
-     
+
         <div className="col-md-6 col-sm-6 col-xs-12">
           <div className="well-left">
             <div className="single-well">
-             
+
                                   <img src={aboutImg} alt="" className="about-img"/>
-                             
+
             </div>
           </div>
         </div>
-     
+
         <div className="col-md-6 col-sm-6 col-xs-12">
           <div className="well-middle">
             <div className="single-well">
-             
+
                 <h4 className="sec-head">What we do ?</h4>
-            
+
               <p>
 Through exclusive partnerships with filmmakers, influencers, non-profits, and brands, we create and curate meaningful, impactful films and series on a mobile platform that inspires change - and we give audiences the tools to make a difference. By donating, volunteering, and supporting independent filmmakers, our engaged audience unlocks the power of story to accelerate charitable giving and global impact.
               </p>
-             
+
             </div>
           </div>
         </div>
-       
+
       </div>
     </div>
   </div>
 
 
 
-                         
 
 
-       
+
+
     <div className="employees">
                 <h2>Meet our Team</h2>
                 {employeesProfiles}
             </div>
-        </div> 
+        </div>
 
-       
-     
+
+
     )
 }
 
 export default About;
 /* Frame */
-
