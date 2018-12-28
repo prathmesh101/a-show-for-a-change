@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
- import 'bootstrap';
- import axios from 'axios';
+import 'bootstrap';
+import axios from 'axios';
 import '../../assets/css/sign-up.css';
 import { Link } from 'react-router-dom';
 import UserPage from './user-page.js';
@@ -97,8 +97,8 @@ class SignUp extends Component {
     const { redirect } = this.state;
 
     if (redirect) {
-         return <Redirect to='./user-page'/>;
-       }
+      return <Redirect to='./user-page'/>;
+    }
 
 
     return (
