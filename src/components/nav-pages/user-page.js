@@ -8,18 +8,35 @@ class UserPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      video:''
 
     }
   }
 
+  onChange(e){
+    let files = e.target.files;
+    let reader = new FileReader();
+    reader.readAsDataURL(files[0]);
+
+    reader.onload = (e) => {
+      const url = "URL goes here";
+      const formData = { file: e.target.result }
+      return post (url, formData)
+              .then(response => console.warn("result", response))
+    }
+  }
 
 
   render() {
     return (
+      <div style={{paddingTop:'100px', color:'white'}}>
+        <h1>Hello</h1>
+        <p>Upload Video</p>
+      	<div onSubmit={this.onFormSubmit}>
+          <input type="file" name="file" text="Upload Video" onChange={(e) => this.onChange(e)} />
 
-    	 <div style={{paddingTop:'100px', color:'white'}}><h1>Hello User</h1>
-       <button type="submit" className="btn btn-primary" >Upload Video</button>
-       </div>
+        </div>
+      </div>
 
     );
   }
