@@ -21,7 +21,11 @@
 
 }
 
-.signup-head-text {
+.div-signUp {
+  margin-top: 100px;
+}
+
+.headText {
   color: white;
   padding: 10px 0;
 }
