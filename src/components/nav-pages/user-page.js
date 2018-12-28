@@ -8,21 +8,24 @@ class UserPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      file_name: '',
-      file_path: ''
+
+      video:''
+
     }
   }
 
-  handleClick = this.handleClick.bind(this);
+  onChange(e){
+    let files = e.target.files;
+    let reader = new FileReader();
+    reader.readAsDataURL(files[0]);
 
-  handleClick(event) {
-    event.preventDefault();
-
-    var params = {
-       "file_name": this.state.file_name,
-       "file_path": this.state.file_path
-    };
-    var apiBaseUrl = "https://dev.sageape.com/api_php/uploadFile.php";
+    reader.onload = (e) => {
+      const url = "URL goes here";
+      const formData = { file: e.target.result }
+      return post (url, formData)
+              .then(response => console.warn("result", response))
+    }
+  }
 
 
   }
@@ -30,9 +33,15 @@ class UserPage extends Component {
   render() {
     return (
 
-    	 <div style={{paddingTop:'100px', color:'white'}}><h1>Hello User</h1>
-        <button type="submit" className="btn btn-primary" onClick={(event) => this.handleClick(event)}>Upload Video</button>
-       </div>
+      <div style={{paddingTop:'100px', color:'white'}}>
+        <h1>Hello</h1>
+        <p>Upload Video</p>
+      	<div onSubmit={this.onFormSubmit}>
+          <input type="file" name="file" text="Upload Video" onChange={(e) => this.onChange(e)} />
+
+        </div>
+      </div>
+
 
     );
   }

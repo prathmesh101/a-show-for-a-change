@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap';
 import axios from 'axios';
-//import '../../assets/css/sign-in.css';
+import '../../assets/css/sign-in.css';
 import { Link } from 'react-router-dom';
 import UserPage from './user-page.js';
 import { Redirect } from 'react-router';
@@ -61,45 +61,28 @@ class SignIn extends Component {
 
     return (
 
-      <div className="signin-background">
-
-        <div className="container signin-content" style={{ paddingTop: '50px' }}>
-
-          <div className="row signin-align">
-
-            <div className="col-sm-10">
-
-              <form>
-                <h2 className="signin-head-text">Login</h2>
-
-
-
-                <div className="form-group">
-
-                  <label type="email">E-mail</label>
-                  <input type="email" className="form-control" name="email" id="firstname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ email: newValue })} />
-
-                </div>
-
-                <div className="form-group">
-
-                  <label type="password">Password</label>
-                  <input type="text" className="form-control" name="password" id="password" placeholder="Enter email" onChange={(event, newValue) => this.setState({ password: newValue })} />
-
-                </div>
-
-                <button type="submit" className="btn btn-primary" onClick={(event) => this.handleClick(event)} >Submit</button>
-
-              </form>
-
+      <div className="div-signIn">
+        <div className="div-form">
+          <form>
+            <h2 className="headText">Login</h2>
+            <div className="form-group">
+              <div className="div-underline">
+              <i className="fas fa-envelope fillWhite"></i>
+                <input type="email" className="inlineBlock" name="email" id="firstname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ email: newValue })} />            
+              </div>
             </div>
-
-          </div>
-
+            <div className="form-group">
+              <div className="div-underline">
+                <i className="fas fa-unlock-alt fillWhite"></i>
+                <input type="text" className="inlineBlock" name="password" id="password" placeholder="Enter password" onChange={(event, newValue) => this.setState({ password: newValue })} />
+              </div>
+            </div>
+            <div className="div-submit">
+              <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >Submit</button>
+            </div>
+          </form>
         </div>
-
       </div>
-
 
     );
   }

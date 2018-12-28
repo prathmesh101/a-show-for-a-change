@@ -15,15 +15,14 @@ const Home = () => {
 	return (
 		<div>
 			<BackgroundImg />
-			
-			<Genre />
 			<Features />
+			<Genre />
+
 			<Join />
-			
+
 			<Footer />
 		</div>
 	)
 }
 
 export default Home;
-
