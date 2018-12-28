@@ -7,124 +7,50 @@ import genreImg from '../../assets/img/cumpleanera-thumbnail.png';
 
 const Genre = () => {
     return (
-        <div>
-        <div className="genre-head">
 
-            <h3>Always streaming thousands of shorts, documentaries and more.</h3>
+<div className="genre-section">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12 text-center">
+            <h2 className="genre-section-heading">Content That Matters</h2>
+          </div>
         </div>
-        <br />
+      </div>
+      <div className="container">
+        <div className="row">
 
-      <div className="container-fluid p-0">
-        <div className="row no-gutters popup-gallery">
-          <div className="col-lg-4 col-sm-6">
-            <div className="portfolio-box">
-              <video width="100%" height="100%" controls preload="metadata" id="vid" poster="../../assets/img/cumpleanera-thumbnail.png">
-               <source src="http://dl1cz9lqgee4z.cloudfront.net/Cumplaneara.mp4" type="video/mp4" />
-              </video>
-              <div className="portfolio-box-caption">
-                <div className="portfolio-box-caption-content">
-                  <div className="project-category text-faded">
-                    Category
-                  </div>
-                  <div className="project-name">
-                    Influencers
-                  </div>
-                </div>
-              </div>
+          <div className="col-lg-4 col-md-6 text-center">
+            <div className="service-box mt-5 mx-auto">
+            <video width="80%" height="400px" controls preload="metadata" id="vid" poster={genreImg}>
+             <source src="http://dl1cz9lqgee4z.cloudfront.net/Cumplaneara.mp4" type="video/mp4" />
+            </video>
+              <h3 className="mb-3 genre-cont-head">Cumpleañera</h3>
+              <p className=" mb-0 genre-cont-para">On her 13th birthday, Gabriela Morales is given a <br />magical heirloom that could change her future.</p>
             </div>
           </div>
-          <div className="col-lg-4 col-sm-6">
-            <a className="portfolio-box" href="img/portfolio/fullsize/2.jpg">
-              <img className="img-fluid" src= {genreImg} alt="" />
-              <div className="portfolio-box-caption">
-                <div className="portfolio-box-caption-content">
-                  <div className="project-category text-faded">
-                    Category
-                  </div>
-                  <div className="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
+          <div className="col-lg-4 col-md-6 text-center">
+            <div className="service-box mt-5 mx-auto">
+            <video width="80%" height="400px" controls preload="metadata" id="vid" poster={genreImg}>
+             <source src="http://dl1cz9lqgee4z.cloudfront.net/Cumplaneara.mp4" type="video/mp4" />
+            </video>
+              <h3 className="mb-3 genre-cont-head">Physioshark</h3>
+              <p className=" mb-0 genre-cont-para">Short documentary about how climate change <br />threatens shark populations worldwide. </p>
+            </div>
           </div>
-          <div className="col-lg-4 col-sm-6">
-            <a className="portfolio-box" href="img/portfolio/fullsize/3.jpg">
-              <img className="img-fluid" src= {genreImg} alt="" />
-              <div className="portfolio-box-caption">
-                <div className="portfolio-box-caption-content">
-                  <div className="project-category text-faded">
-                    Category
-                  </div>
-                  <div className="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div className="col-lg-4 col-sm-6">
-            <a className="portfolio-box" href="img/portfolio/fullsize/4.jpg">
-              <img className="img-fluid" src= {genreImg} alt="" />
-              <div className="portfolio-box-caption">
-                <div className="portfolio-box-caption-content">
-                  <div className="project-category text-faded">
-                    Category
-                  </div>
-                  <div className="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div className="col-lg-4 col-sm-6">
-            <a className="portfolio-box" href="img/portfolio/fullsize/5.jpg">
-              <img className="img-fluid" src= {genreImg} alt="" />
-              <div className="portfolio-box-caption">
-                <div className="portfolio-box-caption-content">
-                  <div className="project-category text-faded">
-                    Category
-                  </div>
-                  <div className="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div className="col-lg-4 col-sm-6">
-            <a className="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-              <img className="img-fluid" src= {genreImg} alt="" />
-              <div className="portfolio-box-caption">
-                <div className="portfolio-box-caption-content">
-                  <div className="project-category text-faded">
-                    Category
-                  </div>
-                  <div className="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
+          <div className="col-lg-4 col-md-6 text-center">
+            <div className="service-box mt-5 mx-auto">
+            <video width="80%" height="400px" controls preload="metadata" id="vid" poster={genreImg}>
+             <source src="http://dl1cz9lqgee4z.cloudfront.net/Cumplaneara.mp4" type="video/mp4" />
+            </video>
+              <h3 className="mb-3 genre-cont-head">Kharam</h3>
+              <p className=" mb-0 genre-cont-para">An eye-opening feature film about an Indian<br /> woman’s resistance to violent oppression.</p>
+            </div>
           </div>
         </div>
       </div>
-    
-        <div className="browser-more-section">
-        
-      <div className="container text-center">
-        
-        <button className="btn btn-lg " id="more-btn" href="/">Browse All Titles</button>
+</div>
 
-      </div>
-   
-        </div>
-        	        
-
-        </div>
     )
 }
 
 export default Genre;
-

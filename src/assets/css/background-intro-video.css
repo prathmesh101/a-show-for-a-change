@@ -19,7 +19,7 @@
 top:0;
 
 
- 
+
  /*Align center text*/
  height: 100%;
   width: 100%;
@@ -34,22 +34,41 @@ top:0;
 .overlay-content{
 
 text-align: center;
-  
+font-family: 'Montserrat';
+
+
+
 }
 
+.overlay-content h1{
+	font-size: 50px;
+	font-weight: 700;
+}
+ .overlay-content-para{
+	font-size: 15px;
+	line-height: 25px;
+}
 
 #join-now-back{
+
       background-color: transparent;
-      color:white;
+      color:#00CB94;
     border: 2px solid #00CB94;
        padding: 8px;
-    width: 100px;
-    
+    width: 250px;
+		font-size: 1em;
+
 }
 
 #join-now-back:hover{
   background-color: #00CB94;
   text-decoration: none;
+	color: #fff;
 }
 
-
+.overlay-sub-plan{
+		padding-top: 10px;
+	font-size: 10px;
+	line-height: 15px;
+	font-style: italic;
+}
