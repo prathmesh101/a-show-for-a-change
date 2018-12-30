@@ -1,8 +1,8 @@
 import React from 'react';
 import '../assets/css/footer.css';
-import Twitter from '../assets/img/twitter.png';
-import Facebook from '../assets/img/facebook.png';
-import Insta from '../assets/img/insta.png';
+// import Twitter from '../assets/img/twitter.png';
+// import Facebook from '../assets/img/facebook.png';
+// import Insta from '../assets/img/insta.png';
 
 const Footer = () => {
     return (
@@ -17,14 +17,14 @@ const Footer = () => {
             <div className="footer-connect"><p>Connect with us</p></div>
             <div className="footer-twitter">
 
-                <img src={ Twitter } alt="twitter" />
+                {/*<img src={ Twitter } alt="twitter" />*/}
 
             </div>
             <div className="footer-facebook">
-              <img src={ Facebook } alt="facebook" />
+              {/*<img src={ Facebook } alt="facebook" />*/}
             </div>
             <div className="footer-insta">
-                <img src={ Insta } alt="insta" />
+                {/*<img src={ Insta } alt="insta" />*/}
             </div>
 
 
