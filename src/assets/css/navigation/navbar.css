@@ -1,0 +1,65 @@
+.navBar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 8rem;
+  background-color: transparent;
+  transition: background-color 0.5s ease-out;
+}
+
+.solid{
+  background-color: aqua;
+}
+
+.navBar__body {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 3rem;
+  justify-content: space-between
+}
+
+.navBar__logo a {
+  text-decoration: none;
+  color: black;
+  font-size: 3rem;
+}
+
+.navBar__logo .color{
+  color: white;
+}
+
+.navBar__navigation--list{
+  list-style: none;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.navBar__navigation--list a {
+  color: black;
+  text-decoration: none;
+  padding-left: 4rem;
+}
+
+.navBar__navigation--list .color{
+  color: white;
+}
+
+.navBar__navigation--list a:last-child{
+  padding-right: 2rem;
+}
+
+@media (max-width: 37.5em){
+  .navBar__navigation {
+    display: none;
+  }
+}
+
+@media (min-width: 37.6em){
+  .navToggleDiv{
+    display: none;
+  }
+}
+
+

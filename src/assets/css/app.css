@@ -1,10 +1,19 @@
-body {
-    font-family: "Montserrat ";
-    line-height: 5em;
-
-    line-height: 0em;
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
-.spacing-div {
-    height: 60px;
+html{
+
+    font-size: 62.5%;    /* 1rem = 10px; setting font size in html changes all font sizes base root */ 
+                         /*best practice is to use percent here  (if you want 10px*/
+                         /*10 divide by 16 (original browser px) = .625 => 62.5%*/
+}
+
+body {
+    
+    box-sizing: border-box;
 }
