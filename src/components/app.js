@@ -7,7 +7,6 @@ import Backdrop from './nav-pages/navigation/backdrop';
 import Header from './header.js';
 import Footer from './footer.js';
 
-import Home from './nav-pages/home';
 import About from './nav-pages/about';
 
 import SignIn from './nav-pages/sign-in';
@@ -50,7 +49,7 @@ class App extends Component {
                 <NavBar sideNavClickHandler={this.handleSideNavClick} />
                 <SideNav open={this.state.sideNavOpen} />
                 {backDrop}
-                <main style={{ height: '500vh' }}>
+                <main style = {{paddingBottom: '300rem'}}>
                     <p>this is the body</p>
                 </main>
                 {/*
