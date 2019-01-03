@@ -5,6 +5,14 @@
 
 /* Tablet breakpoint */
 @media screen and (min-width: 1024px) {
+  .div-signUp {
+    width: 40vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .form-group {
     width: 40vw!important;
     margin: 0 auto;
@@ -23,6 +31,7 @@
 
 .div-signUp {
   margin-top: 100px;
+  width: 85vw;
 }
 
 .headText {

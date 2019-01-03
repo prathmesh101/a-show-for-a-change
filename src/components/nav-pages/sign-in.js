@@ -78,9 +78,12 @@ class SignIn extends Component {
               </div>
             </div>
             <div className="div-submit">
-              <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >Submit</button>
+              <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >LOG IN</button>
             </div>
           </form>
+          {/* <div className="div-signIn">
+            <p>Not a member yet? <span><a href="/sign-up" className="linkPrimary">SIGN UP</a></span></p>
+          </div> */}
         </div>
       </div>
 

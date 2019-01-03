@@ -30,6 +30,10 @@
   padding: 10px 0;
 }
 
+h2 {
+  font-size: 3rem!important;
+}
+
 .form-group {
   width: 85vw;
   margin: 0 auto;
