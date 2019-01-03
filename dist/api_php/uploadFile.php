@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file_name'])) {
     $extention = strtolower(end($extention));
 
     if ($extention != "mp4" || $extention != "jpeg") {
-        echo "Only files of type mp4 and jpeg may be uploaded.";
+        echo "Only files of type mp4 or jpeg may be uploaded.";
         exit;
     }
 
@@ -37,11 +37,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file_name'])) {
     move_uploaded_file($tmp_name, $tmp_file_path);
 
     //Create a S3Client
-    $s3Client = new S3Client([
-        'profile' => 'default',
-        'region' => 'us-west-2',
-        'version' => 'latest'
-    ]);
+    // $s3Client = new S3Client([
+    //     'profile' => 'default',
+    //     'region' => 'us-west-2',
+    //     'version' => 'latest'
+    // ]);
 
 
     try {
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file_name'])) {
         ]);
         $result = $s3Client->putObject([
             'Bucket' => "s4c-videos",
-            'Key' => "uploads/{$file_name}",
+            'Key' => "{$file_name}",
             'ACL' => "public-read",
             'Body' => fopen($tmp_file_path, "r"),
         ]);
