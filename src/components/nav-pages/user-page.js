@@ -26,17 +26,13 @@ class UserPage extends Component {
               .then(response => console.warn("result", response))
     }
   }
-
-
-  }
-
   render() {
     return (
 
-      <div style={{paddingTop:'100px', color:'white'}}>
+      <div style={{ paddingTop: '100px', color: 'white' }}>
         <h1>Hello</h1>
         <p>Upload Video</p>
-      	<div onSubmit={this.onFormSubmit}>
+        <div onSubmit={this.onFormSubmit}>
           <input type="file" name="file" text="Upload Video" onChange={(e) => this.onChange(e)} />
 
         </div>
@@ -45,6 +41,9 @@ class UserPage extends Component {
 
     );
   }
-}
+
+
+  }
+
 
 export default UserPage;
