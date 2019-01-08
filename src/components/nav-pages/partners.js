@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Partners = () => {
     return (
-        <div><h1>Partners Page</h1></div>
+        <div><h1 style="color:white">Partners Page</h1></div>
     )
 }
 
