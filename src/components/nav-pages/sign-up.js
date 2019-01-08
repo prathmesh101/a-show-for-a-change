@@ -134,7 +134,7 @@ class SignUp extends Component {
           </div>
         </form>
         <div className="div-signIn">
-          <p>Already have an account? <span><a href="/sign-in" className="linkPrimary">SIGN IN</a></span></p>
+          <p>Already have an account? <span><Link to="/sign-in" className="linkPrimary">SIGN IN</Link></span></p>
         </div>
         {/* <div className="div-progressIndicator">
           <svg height="28" width="40">
