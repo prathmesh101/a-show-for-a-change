@@ -28,7 +28,7 @@ const App = () => (
           {/*  <Route path="/credit-card" component={CreditCard} /> */}
           {/*  <Route path="/user-page" component={UserPage} /> */}
           {/*  <Route path="/success" component={SignUpSuccess} /> */}
-            <Footer /> 
+            {/* <Footer /> */}
         </div>
     </div>
 );
