@@ -64,8 +64,8 @@ class SignIn extends Component {
       <div className="div-signIn">
         <div className="div-form">
           <form>
-            <h2 className="headText">Login</h2>
             <div className="form-group">
+            <h2 className="headText">Login</h2>
               <div className="div-underline">
               <i className="fas fa-envelope fillWhite"></i>
                 <input type="email" className="inlineBlock" name="email" id="firstname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ email: newValue })} />            
@@ -81,9 +81,9 @@ class SignIn extends Component {
               <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >LOG IN</button>
             </div>
           </form>
-          {/* <div className="div-signIn">
-            <p>Not a member yet? <span><a href="/sign-up" className="linkPrimary">SIGN UP</a></span></p>
-          </div> */}
+          <div className="div-signIn">
+            <p>Not a member yet? <span><Link to="/sign-up" className="linkPrimary">SIGN UP</Link></span></p>
+          </div>
         </div>
       </div>
 
