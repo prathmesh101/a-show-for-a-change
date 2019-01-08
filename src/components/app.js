@@ -20,7 +20,7 @@ const App = () => (
             <Header />
          {/*   <Route exact path="/" component={Home} /> */}
 
-         {/*  <Route path="/about" component={About} /> */}
+           <Route path="/about" component={About} /> 
          {/*  <Route path="/film-festival" component={FilmFestival} /> */}
 
           {/*  <Route path="/sign-in" component={SignIn} /> */}
