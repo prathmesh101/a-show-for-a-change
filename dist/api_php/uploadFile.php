@@ -14,9 +14,10 @@ use Aws\CloudFront\CloudFrontClient;
 use Aws\Exception\AwsException;
 use Aws\S3\Exception\S3Exception;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file_name'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file_name'])  && $_POST['user_id']) {
 
     $file = $_FILES['file_name'];
+    $user_id = $_POST['user_id'];
 
     $file_name = $file['name'];
     $tmp_name = $file['tmp_name'];
@@ -24,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file_name'])) {
     $extention = explode('.', $file_name);
     $extention = strtolower(end($extention));
 
-    if ($extention != "mp4" || $extention != "jpeg") {
+    if ($extention != "mp4" && $extention != "jpeg") {
         echo "Only files of type mp4 or jpeg may be uploaded.";
         exit;
     }
@@ -115,7 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file_name'])) {
         ],
         'ViewerProtocolPolicy' => 'allow-all',
     ];
-    $enabled = false;
+    $enabled = true;
     $origin = [
         'Items' => [
             [
@@ -140,7 +141,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file_name'])) {
         $result = $cfClient->createDistribution([
             'DistributionConfig' => $distribution, //REQUIRED
         ]);
-        var_dump($result);
+        //var_dump($result);
+        //echo json_encode(array("DistributionId" => $result["Distribution"]["Id"], "DomainName" => $result["Distribution"]["DomainName"], "ARN" =>  $result["Distribution"]["ARN"]));
+
+        //update database 
+        $msg = $video->insert_record($result["Distribution"]["Id"], $result["Distribution"]["DomainName"], $result["Distribution"]["ARN"], $user_id);
+        $msg = json_decode($msg, true);
+        echo $msg['message'];
+        
     } catch (AwsException $e) {
         // output error message if fails
         echo $e->getMessage();

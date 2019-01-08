@@ -8,6 +8,7 @@ require_once("config.php");
 require_once("Session.php");
 require_once("Database.php");
 require_once("Users.php");
+require_once("Video.php");
 /*require_once("{$app}/includes/classes/Dealer.php");
 require_once("{$app}/includes/classes/Plan.php");
 require_once("{$app}/includes/classes/Subscription.php");

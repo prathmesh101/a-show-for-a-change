@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import alex from '../../assets/img/emp-imgs/alex.jpg';
-// import alia from '../../assets/img/emp-imgs/alia.jpg';
-// import daniel from '../../assets/img/emp-imgs/daniel.jpg';
-// import david from '../../assets/img/emp-imgs/david.jpg';
-// import jared from '../../assets/img/emp-imgs/jared.jpg';
-// import prathmesh from '../../assets/img/emp-imgs/prathmesh.jpg';
-// import sivak from '../../assets/img/emp-imgs/sivak.jpg';
-// import aboutImg from '../../assets/img/about-us-img.jpg';
+import alex from '../../assets/img/emp-imgs/alex.jpg';
+import alia from '../../assets/img/emp-imgs/alia.jpg';
+import daniel from '../../assets/img/emp-imgs/daniel.jpg';
+import david from '../../assets/img/emp-imgs/david.jpg';
+import jared from '../../assets/img/emp-imgs/jared.jpg';
+import prathmesh from '../../assets/img/emp-imgs/prathmesh.jpg';
+import sivak from '../../assets/img/emp-imgs/sivak.jpg';
+import aboutImg from '../../assets/img/about-us-img.jpg';
 
 import '../../assets/css/about.css';
 

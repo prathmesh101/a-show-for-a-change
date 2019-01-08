@@ -20,28 +20,28 @@ const NavBar = () => {
                   </li>
                   <li className="nav-item">
                       <Link to="/about" className="nav-link nav-style" >
-                          ABOUT
-                          </Link>
+                        ABOUT
+                      </Link>
                   </li>
                   <li className="nav-item">
                       <Link to="/film-festival" className="nav-link nav-style">
                           PARTNERS
-                          </Link>
+                      </Link>
                   </li>
                   <li className="nav-item">
                       <Link to="/projects" className="nav-link nav-style">
                           CAUSES
-                          </Link>
+                      </Link>
                   </li>
                   <li className="nav-item">
                       <Link to="/partners" className="nav-link nav-style">
                         GENRE
-                          </Link>
+                      </Link>
                   </li>
                   <li className="nav-item">
                       <Link to="/partners" className="nav-link nav-style">
                         CHANNELS
-                          </Link>
+                      </Link>
                   </li>
               </ul>
               <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 " id="navbarNav">
