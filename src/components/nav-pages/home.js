@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/css/home.css';
 
-
-
 import BackgroundImg from './background-video';
 import Genre from './genre';
 import Features from './features';

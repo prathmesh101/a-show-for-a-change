@@ -8,7 +8,7 @@ import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 const NavBar = () => {
     return (
       <nav>
-        <NavLink to="/home">
+        <NavLink to="/">
           Home
         </NavLink>
         <NavLink to="/about">
