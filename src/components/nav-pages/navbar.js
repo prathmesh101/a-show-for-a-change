@@ -3,7 +3,7 @@ import React from 'react';
 import Home from './home.js';
 import About from './about.js';
 import '../../assets/css/navbar.css';
-import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
