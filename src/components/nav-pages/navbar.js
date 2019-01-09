@@ -12,7 +12,7 @@ const NavBar = () => {
     return (
       <nav className="nav-item">
         <NavLink className="nav-link nav-style" to="/">
-          Home
+          HOME
         </NavLink>
         <NavLink className="nav-link nav-style" to="/about">
           ABOUT

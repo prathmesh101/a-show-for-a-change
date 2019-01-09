@@ -1,8 +1,8 @@
 import React from 'react';
 import '../assets/css/footer.css';
-// import Twitter from '../assets/img/twitter.png';
-// import Facebook from '../assets/img/facebook.png';
-// import Insta from '../assets/img/insta.png';
+import Twitter from '../assets/img/twitter.png';
+import Facebook from '../assets/img/facebook.png';
+import Insta from '../assets/img/insta.png';
 
 const Footer = () => {
     return (
@@ -12,7 +12,6 @@ const Footer = () => {
             <p>Copyright © 2018</p>
           </div>
           <div className="pull-right footer-right">
-
 
             <div className="footer-connect"><p>Connect with us</p></div>
             <div className="footer-twitter">
