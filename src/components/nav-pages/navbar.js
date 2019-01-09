@@ -1,5 +1,5 @@
 import React from 'react';
-//import 'bootstrap';
+import 'bootstrap';
 import Partners from './partners.js';
 import About from './about.js';
 import Causes from './partners.js';
