@@ -12,8 +12,8 @@ const NavBar = () => {
     return (
       <nav className="nav-item">
         <div className="nav-start">
-          <NavLink className="nav-link nav-style" to="/">
-            HOME
+          <NavLink className="nav-link nav-style" to="/" style={{color:'white', fontFamily:'Ailerons, Regular', paddingRight:'20px', fontSize:'14px'}}>
+            SAGE APE
           </NavLink>
           <NavLink className="nav-link nav-style" to="/about">
             ABOUT
