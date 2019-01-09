@@ -43,6 +43,7 @@ li.nav-style > a.active {
 }
 
 .nav-start {
+  padding-left: 1em;
   display: flex;
   flex-direction: row;
 }
@@ -50,4 +51,5 @@ li.nav-style > a.active {
 .nav-end {
   display: flex;
   flex-direction: row;
+  padding-right: 1em;
 }
