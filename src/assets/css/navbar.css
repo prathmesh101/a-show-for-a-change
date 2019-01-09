@@ -1,32 +1,25 @@
-.head-navbar{
+.head-navbar {
   background: rgba(0,0,0,0.3) !important;
     font-size: 13px !important;
     padding:0 30px !important;
-
 }
 
-
-
-
-
- .nav-style{
+ .nav-style {
   color: white;
  font-family: DIN Alternate;
  font-weight: 0;
+}
 
-
-
- }
+.nav-item a:visited {
+  color: white;
+}
 
 a.nav-link.nav-style:hover {
   background: #156767;
-   border-radius: 5px;
-        cursor: pointer;
-        color: white;
-
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
 }
-
-
 
 li.nav-style > a.active {
     display: block;
