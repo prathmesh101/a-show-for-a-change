@@ -37,6 +37,7 @@ li.nav-style > a.active {
 }
 
 .nav-item {
+  background-color: #03232B;
   display: flex;
   justify-content: space-between;
 }
