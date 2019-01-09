@@ -11,24 +11,36 @@ import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 const NavBar = () => {
     return (
       <nav className="nav-item">
-        <NavLink className="nav-link nav-style" to="/">
-          HOME
+        <div className="nav-start">
+          <NavLink className="nav-link nav-style" to="/">
+            HOME
+          </NavLink>
+          <NavLink className="nav-link nav-style" to="/about">
+            ABOUT
+          </NavLink>
+          <NavLink className="nav-link nav-style" to="/partners">
+            PARTNERS
+          </NavLink>
+          <NavLink className="nav-link nav-style" to="/causes">
+            CAUSES
+          </NavLink>
+          <NavLink className="nav-link nav-style" to="/partners">
+            GENRE
+          </NavLink>
+          <NavLink className="nav-link nav-style" to="/partners">
+            CHANNELS
+          </NavLink>
+        </div>
+        
+        <div className="nav-end">
+        <NavLink className="nav-link nav-style nav-end" to="/sign-in">
+          SIGN IN
         </NavLink>
-        <NavLink className="nav-link nav-style" to="/about">
-          ABOUT
-        </NavLink>
-        <NavLink className="nav-link nav-style" to="/partners">
-          PARTNERS
-        </NavLink>
-        <NavLink className="nav-link nav-style" to="/causes">
-          CAUSES
-        </NavLink>
-        <NavLink className="nav-link nav-style" to="/partners">
-          GENRE
-        </NavLink>
-        <NavLink className="nav-link nav-style" to="/partners">
-          CHANNELS
-        </NavLink>
+        <NavLink className="nav-link nav-style nav-end" to="/sign-up">
+          SIGN UP
+        </NavLink>    
+        </div>
+            
       </nav>
     )
 }

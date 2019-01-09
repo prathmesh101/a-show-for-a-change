@@ -35,3 +35,18 @@ li.nav-style > a.active {
     color: white;
     background-color: blue;
 }
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-start {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-end {
+  display: flex;
+  flex-direction: row;
+}

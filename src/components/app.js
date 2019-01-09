@@ -23,6 +23,8 @@ const App = () => (
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route path="/about" component={About} />
+                        <Route path="/sign-in" component={SignIn} />
+                        <Route path="/sign-up" component={SignUp} />
                     </Switch>
                 </main>
             </BrowserRouter>
@@ -32,8 +34,8 @@ const App = () => (
         {/*   <Route path="/about" component={About} />  */}
          {/*  <Route path="/film-festival" component={FilmFestival} /> */}
 
-          {/*  <Route path="/sign-in" component={SignIn} /> */}
-          {/*  <Route path="/sign-up" component={SignUp} /> */}
+           {/* <Route exact path="/sign-in" component={SignIn} /> */}
+           {/* <Route exact path="/sign-up" component={SignUp} /> */}
           {/*  <Route path="/credit-card" component={CreditCard} /> */}
           {/*  <Route path="/user-page" component={UserPage} /> */}
           {/*  <Route path="/success" component={SignUpSuccess} /> */}
