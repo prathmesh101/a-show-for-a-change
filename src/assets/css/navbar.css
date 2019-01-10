@@ -21,7 +21,7 @@ a.nav-link.nav-style:hover {
   color: white;
 }
 
-li.nav-style > a.active {
+navlink.nav-style > a.active {
     display: block;
     width: 100%;
     height:100%;
