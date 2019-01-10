@@ -10,28 +10,28 @@ import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-md">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="mainMenu">
           <div className="nav-start">
-            <NavLink className="navbar-brand nav-link nav-style" to="/" style={{color:'white', fontFamily:'Ailerons, Regular', paddingRight:'20px', fontSize:'14px'}}>
+            <NavLink className="nav-item navbar-brand nav-link nav-style" to="/" style={{color:'white', fontFamily:'Ailerons, Regular', paddingRight:'20px', fontSize:'14px'}}>
               SAGE APE
             </NavLink>
-            <NavLink className="nav-link nav-style" to="/about">
+            <NavLink className="nav-item nav-link nav-style" to="/about">
               ABOUT
             </NavLink>
-            <NavLink className="nav-link nav-style" to="/partners">
+            <NavLink className="nav-item nav-link nav-style" to="/partners">
               PARTNERS
             </NavLink>
-            <NavLink className="nav-link nav-style" to="/causes">
+            <NavLink className="nav-item nav-link nav-style" to="/causes">
               CAUSES
             </NavLink>
-            <NavLink className="nav-link nav-style" to="/partners">
+            <NavLink className="nav-item nav-link nav-style" to="/partners">
               GENRE
             </NavLink>
-            <NavLink className="nav-link nav-style" to="/partners">
+            <NavLink className="nav-item nav-link nav-style" to="/partners">
               CHANNELS
             </NavLink>
           </div>
