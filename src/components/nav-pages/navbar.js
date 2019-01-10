@@ -17,22 +17,22 @@ const NavBar = () => {
 
         <div class="collapse navbar-collapse" id="mainMenu">
           <div className="nav-start">
-            <NavLink className="navbar-brand nav-item nav-link nav-style" to="/" style={{color:'white', fontFamily:'Ailerons, Regular', paddingRight:'20px', fontSize:'14px'}}>
+            <NavLink className="navbar-brand nav-link nav-style" to="/" style={{color:'white', fontFamily:'Ailerons, Regular', paddingRight:'20px', fontSize:'14px'}}>
               SAGE APE
             </NavLink>
-            <NavLink className="nav-item nav-link nav-style" to="/about">
+            <NavLink className="nav-link nav-style" to="/about">
               ABOUT
             </NavLink>
-            <NavLink className="nav-item nav-link nav-style" to="/partners">
+            <NavLink className="nav-link nav-style" to="/partners">
               PARTNERS
             </NavLink>
-            <NavLink className="nav-item nav-link nav-style" to="/causes">
+            <NavLink className="nav-link nav-style" to="/causes">
               CAUSES
             </NavLink>
-            <NavLink className="nav-item nav-link nav-style" to="/partners">
+            <NavLink className="nav-link nav-style" to="/partners">
               GENRE
             </NavLink>
-            <NavLink className="nav-item nav-link nav-style" to="/partners">
+            <NavLink className="nav-link nav-style" to="/partners">
               CHANNELS
             </NavLink>
           </div>
