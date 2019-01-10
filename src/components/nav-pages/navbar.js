@@ -10,7 +10,7 @@ import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-      <nav className="navbar navbar-expand-md">
+      <nav className="navbar navbar-expand-md navbar-light">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -19,28 +19,28 @@ const NavBar = () => {
             <NavLink className="nav-item navbar-brand nav-link nav-style" to="/" style={{color:'white', fontFamily:'Ailerons, Regular', paddingRight:'20px', fontSize:'14px'}}>
               SAGE APE
             </NavLink>
-            <NavLink className="nav-item nav-link nav-style" to="/about">
+            <NavLink className="nav-link nav-style" to="/about">
               ABOUT
             </NavLink>
-            <NavLink className="nav-item nav-link nav-style" to="/partners">
+            <NavLink className="nav-link nav-style" to="/partners">
               PARTNERS
             </NavLink>
-            <NavLink className="nav-item nav-link nav-style" to="/causes">
+            <NavLink className="nav-link nav-style" to="/causes">
               CAUSES
             </NavLink>
-            <NavLink className="nav-item nav-link nav-style" to="/partners">
+            <NavLink className="nav-link nav-style" to="/partners">
               GENRE
             </NavLink>
-            <NavLink className="nav-item nav-link nav-style" to="/partners">
+            <NavLink className="nav-link nav-style" to="/partners">
               CHANNELS
             </NavLink>
           </div>
           
           <div className="nav-end">
-            <NavLink className="nav-item nav-link nav-style nav-end" to="/sign-in">
+            <NavLink className="nav-link nav-style nav-end" to="/sign-in">
               SIGN IN
             </NavLink>
-            <NavLink className="nav-item nav-link nav-style nav-end" to="/sign-up">
+            <NavLink className="nav-link nav-style nav-end" to="/sign-up">
               SIGN UP
             </NavLink>    
           </div>
