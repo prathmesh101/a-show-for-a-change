@@ -6,13 +6,12 @@ import Causes from './partners.js';
 import GENRE from './genre.js';
 import CHANNELS from './partners.js';
 import '../../assets/css/navbar.css';
-import 'bootstrap';
 import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
       <nav className="navbar navbar-expand-md">
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="mainMenu">
