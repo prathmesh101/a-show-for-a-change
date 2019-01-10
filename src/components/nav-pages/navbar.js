@@ -6,6 +6,7 @@ import Causes from './partners.js';
 import GENRE from './genre.js';
 import CHANNELS from './partners.js';
 import '../../assets/css/navbar.css';
+import 'bootstrap';
 import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
@@ -15,7 +16,7 @@ const NavBar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="mainMenu">
-          <div className="">
+          <div className="nav-start">
             <NavLink className="nav-item navbar-brand nav-link nav-style" to="/" style={{color:'white', fontFamily:'Ailerons, Regular', paddingRight:'20px', fontSize:'14px'}}>
               SAGE APE
             </NavLink>
@@ -36,7 +37,7 @@ const NavBar = () => {
             </NavLink>
           </div>
           
-          <div className="">
+          <div className="nav-end">
             <NavLink className="nav-item nav-link nav-style nav-end" to="/sign-in">
               SIGN IN
             </NavLink>
