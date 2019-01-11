@@ -36,14 +36,14 @@ const NavBar = () => {
             </NavLink>
           
           
-            <div className="nav-end">
-              <NavLink className="nav-link nav-style" to="/sign-in">
+            
+              <NavLink className="nav-link nav-style nav-end" to="/sign-in">
                 SIGN IN
               </NavLink>
-              <NavLink className="nav-link nav-style" to="/sign-up">
+              <NavLink className="nav-link nav-style nav-end" to="/sign-up">
                 SIGN UP
               </NavLink>    
-            </div>
+            
           </div>
         </div>
             
