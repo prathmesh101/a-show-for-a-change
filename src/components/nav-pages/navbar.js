@@ -15,7 +15,7 @@ const NavBar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="mainMenu">
-          <div className="nav-start navbar-nav">
+          <div className="nav-start navbar-nav mr-auto mt-2 mt-lg-0">
             <NavLink className="nav-item navbar-brand nav-link nav-style" to="/" style={{color:'white', fontFamily:'Ailerons, Regular', paddingRight:'20px', fontSize:'14px'}}>
               SAGE APE
             </NavLink>
