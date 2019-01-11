@@ -15,7 +15,7 @@ const NavBar = () => {
           <span className="navbar-toggler-icon navbar-light"></span>
         </button>
         <div className="collapse navbar-collapse" id="mainMenu">
-          <div className="navbar-nav mr-auto mt-2">
+          <div className="nav-start navbar-nav mr-auto mt-2">
             <NavLink className="nav-link nav-style" to="/" style={{color:'white', fontFamily:'Ailerons, Regular', paddingRight:'20px', fontSize:'18px'}}>
               SAGE APE
             </NavLink>
@@ -34,19 +34,17 @@ const NavBar = () => {
             <NavLink className="nav-link nav-style" to="/partners">
               CHANNELS
             </NavLink>
-          
-          
-            <div className="nav-end">
-              <NavLink className="nav-link nav-style nav-end" to="/sign-in">
-                SIGN IN
-              </NavLink>
-              <NavLink className="nav-link nav-style nav-end" to="/sign-up">
-                SIGN UP
-              </NavLink>    
-            </div>
           </div>
-        </div>
-            
+          
+          <div className="nav-end">
+            <NavLink className="nav-link nav-style nav-end" to="/sign-in">
+              SIGN IN
+            </NavLink>
+            <NavLink className="nav-link nav-style nav-end" to="/sign-up">
+              SIGN UP
+            </NavLink>    
+          </div>
+        </div>     
       </nav>
     )
 }
