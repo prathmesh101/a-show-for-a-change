@@ -12,7 +12,7 @@ const NavBar = () => {
     return (
       <nav className="navbar navbar-expand-md">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon navbar-inverse"></span>
+          <span className="navbar-toggler-icon navbar-light"></span>
         </button>
         <div className="collapse navbar-collapse" id="mainMenu">
           <div className="navbar-nav mr-auto mt-2">
@@ -36,11 +36,11 @@ const NavBar = () => {
             </NavLink>
           
           
-            <div className="nav-end">
-              <NavLink className="nav-link nav-style nav-end" to="/sign-in">
+            <div className="nav-end my-2 my-lg-0">
+              <NavLink className="nav-link nav-style nav-end my-2" to="/sign-in">
                 SIGN IN
               </NavLink>
-              <NavLink className="nav-link nav-style nav-end" to="/sign-up">
+              <NavLink className="nav-link nav-style nav-end my-2" to="/sign-up">
                 SIGN UP
               </NavLink>    
             </div>
