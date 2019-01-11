@@ -1,10 +1,10 @@
 import React from 'react';
 import 'bootstrap';
-import Partners from './partners.js';
-import About from './about.js';
-import Causes from './partners.js';
-import GENRE from './genre.js';
-import CHANNELS from './partners.js';
+// import Partners from './partners.js';
+// import ABOUT from './about.js';
+// import Causes from './partners.js';
+// import GENRE from './genre.js';
+// import CHANNELS from './partners.js';
 import '../../assets/css/navbar.css';
 import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 
