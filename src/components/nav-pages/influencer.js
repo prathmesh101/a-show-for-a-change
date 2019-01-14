@@ -129,6 +129,6 @@ const influencers = () => {
 
 		</div>
 //	)
-}
+};
 
 export default influencers;
