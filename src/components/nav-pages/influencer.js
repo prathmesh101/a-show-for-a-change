@@ -16,16 +16,16 @@ const Influencer = () => {
 						</div>
 					</div>
 				</div>
-				<div className="influencer-name" style="font-size: 1.2em;">
+				<div className="influencer-name" style={{fontSize: '1.2em'}}>
 					Kiana Madani
 				</div>
-				<div className="influencer-causes" style="font-size: smaller">
+				<div className="influencer-causes" style={{fontSize: 'smaller'}}>
 					Causes: Equal Rights •  Animal Welfare
 				</div>
-				<div className="influencer-description" style="font-size: small;">
+				<div className="influencer-description" style={{fontSize: 'small'}}>
 					<p>Iranian-American actress Kiana Madani has been acting, modeling
 						for nearly ten years.<br />Born and raised in San Jose, California, Kiana
-						partook in <span style="text-decoration: underline;">Read more</span>  
+						partook in <span style={{textDecoration: 'underline'}}>Read more</span>  
 					</p>
 				</div>
 				<div>
@@ -79,14 +79,14 @@ const Influencer = () => {
 						</div>
 					</div>
 				</div>
-				<div className="influencer-name" style="font-size: 1.2em;">
+				<div className="influencer-name" style={{fontSize: '1.2em'}}>
 					Jared Milrad
 				</div>
-				<div className="influencer-causes" style="font-size: smaller;">
+				<div className="influencer-causes" style={{fontSize: 'smaller'}}>
 					Causes: Equal Rights •  Animal Welfare
 				</div>
-				<div className="influencer-description" style="font-size: small;">
-					<p>Seasoned entrepreneurial leader adept at launching innovative projects and achieving<br />tangible results. An accomplished filmmaker, advocate, and <span style="text-decoration: underline; ">Read more</span> 
+				<div className="influencer-description" style={{fontSize: 'small'}}>
+					<p>Seasoned entrepreneurial leader adept at launching innovative projects and achieving<br />tangible results. An accomplished filmmaker, advocate, and <span style={{textDecoration: 'underline'}}>Read more</span> 
 					</p>
 				</div>
 				<div>
