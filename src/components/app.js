@@ -10,7 +10,7 @@ import About from './nav-pages/about.js';
 
 import SignIn from './nav-pages/sign-in';
 import SignUp from './nav-pages/sign-up';
-import Partners from './nav-pages/partners';
+import Partners from './nav-pages/partners.js';
 import SignUpSuccess from './nav-pages/sign-up-success';
 import UserPage from './nav-pages/user-page';
 
