@@ -1,66 +1,66 @@
 import React from 'react';
 import kiana_hero from '../../assets/img/influencer/Kiana_HeroImage@2x.png';
-import Kiana_Video1 from '../../assets/img/influencer/Kiana_Video1@2x.png';
+import kiana_Video1 from '../../assets/img/influencer/Kiana_Video1@2x.png';
 
 const Influencer = () => {
 	return (
-		<div class="container">
-			<section class="influencer mb-5">
-				<div class="influencer-poster">
-					<div class="row">
-						<div class="col-lg-6 m-0 p-0">
-							<img class="img-fluid" src="{kiana_hero}" />
+		<div className="container">
+			<section className="influencer mb-5">
+				<div className="influencer-poster">
+					<div className="row">
+						<div className="col-lg-6 m-0 p-0">
+							<img className="img-fluid" src={kiana_hero} />
 						</div>
-						<div class="col-lg-6 m-0 p-0">
-							<img class="img-fluid" src={Kiana_Video1} />
+						<div className="col-lg-6 m-0 p-0">
+							<img className="img-fluid" src={kiana_Video1} />
 						</div>
 					</div>
 				</div>
-				<div class="influencer-name" style="font-size: 1.2em;">
+				<div className="influencer-name" style="font-size: 1.2em;">
 					Kiana Madani
 				</div>
-				<div class="influencer-causes" style="font-size: smaller">
+				<div className="influencer-causes" style="font-size: smaller">
 					Causes: Equal Rights •  Animal Welfare
 				</div>
-				<div class="influencer-description" style="font-size: small;">
+				<div className="influencer-description" style="font-size: small;">
 					<p>Iranian-American actress Kiana Madani has been acting, modeling
 						for nearly ten years.<br />Born and raised in San Jose, California, Kiana
 						partook in <span style="text-decoration: underline;">Read more</span>  
 					</p>
 				</div>
 				<div>
-					<button class="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
-					<button class="btn btn-dark btn-outline-success">DONATE</button>
+					<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
+					<button className="btn btn-dark btn-outline-success">DONATE</button>
 				</div>
 			</section>
 		
-			<section class="more-from mb-5">
+			<section className="more-from mb-5">
 				<h3>More from Kiana</h3>
-				<div class="row">
-					<figure class="col-lg-3 col-md-6 figure text-center">
-						<img src="Kiana_Video2@2x.png" alt="Kiana2" class="img-fluid figure-img" />
-						<figcaption class="figure-caption">
+				<div className="row">
+					<figure className="col-lg-3 col-md-6 figure text-center">
+						<img src="Kiana_Video2@2x.png" alt="Kiana2" className="img-fluid figure-img" />
+						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
 						
 					</figure>
-					<figure class="col-lg-3 col-md-6 figure text-center">
-						<img src="Kiana_Video3@2x.png" alt="Kiana3" class="img-fluid figure-img" />
-						<figcaption class="figure-caption">
+					<figure className="col-lg-3 col-md-6 figure text-center">
+						<img src="Kiana_Video3@2x.png" alt="Kiana3" className="img-fluid figure-img" />
+						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
 						
 					</figure>
-					<figure class="col-lg-3 col-md-6 figure text-center">
-						<img src="Kiana_Video4@2x.png" alt="Kiana4" class="img-fluid figure-img" />
-						<figcaption class="figure-caption">
+					<figure className="col-lg-3 col-md-6 figure text-center">
+						<img src="Kiana_Video4@2x.png" alt="Kiana4" className="img-fluid figure-img" />
+						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
 						
 					</figure>
-					<figure class="col-lg-3 col-md-6 figure text-center">
-						<img src="Kiana_Video5@2x.png" alt="Kiana5" class="img-fluid figure-img" />
-						<figcaption class="figure-caption">
+					<figure className="col-lg-3 col-md-6 figure text-center">
+						<img src="Kiana_Video5@2x.png" alt="Kiana5" className="img-fluid figure-img" />
+						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
 						
@@ -68,60 +68,60 @@ const Influencer = () => {
 				</div>
 			</section>
 
-			<section class="influencer mb-5">
-				<div class="influencer-poster">
-					<div class="row">
-						<div class="col-lg-6 m-0 p-0">
-							<img class="img-fluid" src="Jared_HeroImage@2x.png" />
+			<section className="influencer mb-5">
+				<div className="influencer-poster">
+					<div className="row">
+						<div className="col-lg-6 m-0 p-0">
+							<img className="img-fluid" src="Jared_HeroImage@2x.png" />
 						</div>
-						<div class="col-lg-6 m-0 p-0">
-							<img class="img-fluid" src="Jared_Video1@2x.png" />
+						<div className="col-lg-6 m-0 p-0">
+							<img className="img-fluid" src="Jared_Video1@2x.png" />
 						</div>
 					</div>
 				</div>
-				<div class="influencer-name" style="font-size: 1.2em;">
+				<div className="influencer-name" style="font-size: 1.2em;">
 					Jared Milrad
 				</div>
-				<div class="influencer-causes" style="font-size: smaller;">
+				<div className="influencer-causes" style="font-size: smaller;">
 					Causes: Equal Rights •  Animal Welfare
 				</div>
-				<div class="influencer-description" style="font-size: small;">
+				<div className="influencer-description" style="font-size: small;">
 					<p>Seasoned entrepreneurial leader adept at launching innovative projects and achieving<br />tangible results. An accomplished filmmaker, advocate, and <span style="text-decoration: underline; ">Read more</span> 
 					</p>
 				</div>
 				<div>
-					<button class="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
-					<button class="btn btn-dark btn-outline-success">DONATE</button>
+					<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
+					<button className="btn btn-dark btn-outline-success">DONATE</button>
 				</div>
 			</section>
 		
-			<section class="more-from mb-5">
+			<section className="more-from mb-5">
 				<h3>More from Jared</h3>
-				<div class="row">
-					<figure class="col-lg-3 col-md-6 figure text-center">
-						<img src="Jared_Video2@2x.png" alt="Jared2" class="img-fluid figure-img" />
-						<figcaption class="figure-caption">
+				<div className="row">
+					<figure className="col-lg-3 col-md-6 figure text-center">
+						<img src="Jared_Video2@2x.png" alt="Jared2" className="img-fluid figure-img" />
+						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
 						
 					</figure>
-					<figure class="col-lg-3 col-md-6 figure text-center">
-						<img src="Jared_Video3@2x.png" alt="Jared3" class="img-fluid figure-img" />
-						<figcaption class="figure-caption">
+					<figure className="col-lg-3 col-md-6 figure text-center">
+						<img src="Jared_Video3@2x.png" alt="Jared3" className="img-fluid figure-img" />
+						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
 						
 					</figure>
-					<figure class="col-lg-3 col-md-6 figure text-center">
-						<img src="Jared_Video4@2x.png" alt="Jared4" class="img-fluid figure-img" />
-						<figcaption class="figure-caption">
+					<figure className="col-lg-3 col-md-6 figure text-center">
+						<img src="Jared_Video4@2x.png" alt="Jared4" className="img-fluid figure-img" />
+						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
 						
 					</figure>
-					<figure class="col-lg-3 col-md-6 figure text-center">
-						<img src="Jared_Video5@2x.png" alt="Jared5" class="img-fluid figure-img" />
-						<figcaption class="figure-caption">
+					<figure className="col-lg-3 col-md-6 figure text-center">
+						<img src="Jared_Video5@2x.png" alt="Jared5" className="img-fluid figure-img" />
+						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
 						
