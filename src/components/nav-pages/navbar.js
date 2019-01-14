@@ -26,7 +26,7 @@ const NavBar = () => {
             <NavLink className="nav-link nav-style" to="/genre">
               GENRE
             </NavLink>
-            <NavLink className="nav-link nav-style" to="/influencers">
+            <NavLink className="nav-link nav-style" to="/influencer">
               CHANNELS
             </NavLink>
           </div>
