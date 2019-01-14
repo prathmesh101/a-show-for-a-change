@@ -10,7 +10,7 @@ import About from './nav-pages/about.js';
 
 import SignIn from './nav-pages/sign-in';
 import SignUp from './nav-pages/sign-up';
-import CreditCard from './nav-pages/credit-card';
+import Partners from './nav-pages/partners';
 import SignUpSuccess from './nav-pages/sign-up-success';
 import UserPage from './nav-pages/user-page';
 
@@ -23,6 +23,7 @@ const App = () => (
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route path="/about" component={About} />
+                        <Route path="/partners" component={Partners} />
                         <Route path="/sign-in" component={SignIn} />
                         <Route path="/sign-up" component={SignUp} />
                     </Switch>
