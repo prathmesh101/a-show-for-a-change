@@ -1,6 +1,10 @@
 import React from 'react';
 import kiana_hero from '../../assets/img/influencer/Kiana_HeroImage@2x.png';
 import kiana_Video1 from '../../assets/img/influencer/Kiana_Video1@2x.png';
+import kiana_Video2 from '../../assets/img/influencer/Kiana_Video2@2x.png';
+import kiana_Video3 from '../../assets/img/influencer/Kiana_Video3@2x.png';
+import kiana_Video4 from '../../assets/img/influencer/Kiana_Video4@2x.png';
+import kiana_Video5 from '../../assets/img/influencer/Kiana_Video5@2x.png';
 
 const Influencer = () => {
 	return (
@@ -38,28 +42,28 @@ const Influencer = () => {
 				<h3>More from Kiana</h3>
 				<div className="row">
 					<figure className="col-lg-3 col-md-6 figure text-center">
-						<img src="Kiana_Video2@2x.png" alt="Kiana2" className="img-fluid figure-img" />
+						<img src="{kiana_Video2}" alt="Kiana2" className="img-fluid figure-img" />
 						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
 						
 					</figure>
 					<figure className="col-lg-3 col-md-6 figure text-center">
-						<img src="Kiana_Video3@2x.png" alt="Kiana3" className="img-fluid figure-img" />
+						<img src="{kiana_Video3}" alt="Kiana3" className="img-fluid figure-img" />
 						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
 						
 					</figure>
 					<figure className="col-lg-3 col-md-6 figure text-center">
-						<img src="Kiana_Video4@2x.png" alt="Kiana4" className="img-fluid figure-img" />
+						<img src="{kiana_Video4}" alt="Kiana4" className="img-fluid figure-img" />
 						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
 						
 					</figure>
 					<figure className="col-lg-3 col-md-6 figure text-center">
-						<img src="Kiana_Video5@2x.png" alt="Kiana5" className="img-fluid figure-img" />
+						<img src="{kiana_Video5}" alt="Kiana5" className="img-fluid figure-img" />
 						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
