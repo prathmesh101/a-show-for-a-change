@@ -42,28 +42,28 @@ const Influencer = () => {
 				<h3>More from Kiana</h3>
 				<div className="row">
 					<figure className="col-lg-3 col-md-6 figure text-center">
-						<img src="{kiana_Video2}" alt="Kiana2" className="img-fluid figure-img" />
+						<img src={kiana_Video2} alt="Kiana2" className="img-fluid figure-img" />
 						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
 						
 					</figure>
 					<figure className="col-lg-3 col-md-6 figure text-center">
-						<img src="{kiana_Video3}" alt="Kiana3" className="img-fluid figure-img" />
+						<img src={kiana_Video3} alt="Kiana3" className="img-fluid figure-img" />
 						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
 						
 					</figure>
 					<figure className="col-lg-3 col-md-6 figure text-center">
-						<img src="{kiana_Video4}" alt="Kiana4" className="img-fluid figure-img" />
+						<img src={kiana_Video4} alt="Kiana4" className="img-fluid figure-img" />
 						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
 						
 					</figure>
 					<figure className="col-lg-3 col-md-6 figure text-center">
-						<img src="{kiana_Video5}" alt="Kiana5" className="img-fluid figure-img" />
+						<img src={kiana_Video5} alt="Kiana5" className="img-fluid figure-img" />
 						<figcaption className="figure-caption">
 							Video Title
 						</figcaption>
