@@ -1,4 +1,5 @@
 import React from 'react';
+import kiana_hero from '../../assets/img/influencer/Kiana_HeroImage@2x.png';
 
 const Influencer = () => {
 	return (
@@ -7,10 +8,10 @@ const Influencer = () => {
 				<div class="influencer-poster">
 					<div class="row">
 						<div class="col-lg-6 m-0 p-0">
-							<img class="img-fluid" src="Kiana_HeroImage@2x.png" />
+							<img class="img-fluid" src="../../assets/img/influencer/Kiana_HeroImage@2x.png" />
 						</div>
 						<div class="col-lg-6 m-0 p-0">
-							<img class="img-fluid" src="Kiana_Video1@2x.png" />
+							<img class="img-fluid" src="../../assets/img/influencer/Kiana_Video1@2x.png" />
 						</div>
 					</div>
 				</div>
