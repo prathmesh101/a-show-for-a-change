@@ -1,7 +1,7 @@
 import React from 'react';
 
 const influencers = () => {
-//	return (
+	return (
 		<div class="container">
 			<section class="influencer mb-5">
 				<div class="influencer-poster">
@@ -128,7 +128,7 @@ const influencers = () => {
 			</section>
 
 		</div>
-//	)
+	)
 };
 
 export default influencers;
