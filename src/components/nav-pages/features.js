@@ -9,9 +9,6 @@ import { Link } from 'react-router-dom';
 const Features = () => {
     return (
         <div className="features-section">
-
-
-
               <div className="container">
                 <div className="row">
                   <div className="col-lg-12 text-center">

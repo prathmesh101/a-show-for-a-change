@@ -1,12 +1,7 @@
 import React from 'react';
 import 'bootstrap';
-// import Partners from './partners.js';
-// import ABOUT from './about.js';
-// import Causes from './partners.js';
-// import GENRE from './genre.js';
-// import CHANNELS from './partners.js';
 import '../../assets/css/navbar.css';
-import { BrowserRouter, Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
@@ -28,10 +23,10 @@ const NavBar = () => {
             <NavLink className="nav-link nav-style" to="/causes">
               CAUSES
             </NavLink>
-            <NavLink className="nav-link nav-style" to="/partners">
+            <NavLink className="nav-link nav-style" to="/genre">
               GENRE
             </NavLink>
-            <NavLink className="nav-link nav-style" to="/partners">
+            <NavLink className="nav-link nav-style" to="/influencers">
               CHANNELS
             </NavLink>
           </div>
