@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Influencers = () => {
+const Influencer = () => {
 	return (
 		<div class="container">
 			<section class="influencer mb-5">
@@ -131,4 +131,4 @@ const Influencers = () => {
 	)
 }
 
-export default Influencers;
+export default Influencer;

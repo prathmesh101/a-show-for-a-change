@@ -10,7 +10,7 @@ import SignIn from './nav-pages/sign-in.js';
 import SignUp from './nav-pages/sign-up.js';
 import Partners from './nav-pages/partners.js';
 import Genres from './nav-pages/genre.js';
-import Influencers from './nav-pages/influencer.js';
+import Influencer from './nav-pages/influencer.js';
 import UserPage from './nav-pages/user-page.js';
 
 const App = () => (
@@ -24,7 +24,7 @@ const App = () => (
                         <Route path="/about" component={About} />
                         <Route path="/partners" component={Partners} />
                         <Route path="/genre" component={Genres} />
-                        <Route path="/influencer" component={Influencers} />
+                        <Route path="/influencer" component={Influencer} />
                         <Route path="/sign-in" component={SignIn} />
                         <Route path="/sign-up" component={SignUp} />
                     </Switch>
