@@ -28,6 +28,7 @@ const App = () => (
                         <Route path="/sign-in" component={SignIn} />
                         <Route path="/sign-up" component={SignUp} />
                     </Switch>
+                    <Footer />
                 </main>
             </BrowserRouter>
 
