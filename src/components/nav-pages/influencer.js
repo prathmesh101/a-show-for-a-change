@@ -32,9 +32,9 @@ const Influencer = () => {
 				<div className="influencer-causes" style={{fontSize: 'smaller'}}>
 					Causes: Equal Rights •  Animal Welfare
 				</div>
-				<div className="influencer-description" style={{fontSize: 'small'}}>
+				<div className="influencer-description" style={{fontSize: 'small', color: 'white'}}>
 					<p>Iranian-American actress Kiana Madani has been acting, modeling
-						for nearly ten years.<br/>
+						for nearly ten years.<br />
 						Born and raised in San Jose, California, Kiana
 						partook in <span style={{textDecoration: 'underline'}}>Read more</span>  
 					</p>
