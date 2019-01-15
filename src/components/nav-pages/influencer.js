@@ -15,6 +15,21 @@ import jared_Video5 from '../../assets/img/influencer/Jared_Video5@2x.png';
 const Influencer = () => {
 	return (
 		<div className="container">
+			<div className="modal fade" id="stripe-payment">
+				<div className="modal-dialog">
+					<div className="modal-content">
+						<div className="modal-header">
+							<h5 className="modal-title">Donation</h5>
+							<button type="button" className="close" data-dismiss="modal" aria-label="Close">
+							     <span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div className="modal-body">
+							<p>Here goes stripe payment</p>
+						</div>
+					</div>{/* modal-content */}
+				</div>{/* modal-dialog */}
+			</div>{/* modal */}
 			<section className="influencer mb-5" style={{marginTop: '100px'}}>
 				<div className="influencer-poster">
 					<div className="row">
