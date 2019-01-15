@@ -2,7 +2,7 @@ import React from 'react';
 
 const Partners = () => {
      return (
-        <h1 style={{color: 'white'}}>Partners Page</h1>
+        <h2 style={{color: 'white', marginBottom:'100px'}}>Partners Page</h2>
     )
 }
 
