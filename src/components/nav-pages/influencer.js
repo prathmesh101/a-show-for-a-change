@@ -96,7 +96,7 @@ const Influencer = () => {
 				<div className="influencer-causes" style={{fontSize: 'smaller'}}>
 					Causes: Equal Rights •  Animal Welfare
 				</div>
-				<div className="influencer-description" style={{fontSize: 'small'}}>
+				<div className="influencer-description" style={{fontSize: 'small', color: 'white'}}>
 					<p>Seasoned entrepreneurial leader adept at launching innovative projects and achieving<br />tangible results. An accomplished filmmaker, advocate, and <span style={{textDecoration: 'underline'}}>Read more</span> 
 					</p>
 				</div>
