@@ -15,7 +15,7 @@ import jared_Video5 from '../../assets/img/influencer/Jared_Video5@2x.png';
 const Influencer = () => {
 	return (
 		<div className="container">
-			<section className="influencer mb-5">
+			<section className="influencer mb-5" style={{marginTop: '100px'}}>
 				<div className="influencer-poster">
 					<div className="row">
 						<div className="col-lg-6 m-0 p-0">
