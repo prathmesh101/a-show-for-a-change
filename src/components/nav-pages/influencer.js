@@ -15,7 +15,7 @@ import jared_Video5 from '../../assets/img/influencer/Jared_Video5@2x.png';
 const Influencer = () => {
 	return (
 		<div className="container">
-			<div className="modal fade" id="stripe-payment">
+			<div className="modal fade" id="payment-processing">
 				<div className="modal-dialog">
 					<div className="modal-content">
 						<div className="modal-header">
@@ -56,7 +56,7 @@ const Influencer = () => {
 				</div>
 				<div>
 					<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
-					<button className="btn btn-dark btn-outline-success">DONATE</button>
+					<button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button>
 				</div>
 			</section>
 		
