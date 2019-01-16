@@ -45,16 +45,19 @@ const employees = [
 const About = () => {
     const employeesProfiles = employees.map((employee, index) => {
         return (
-            <div key={index} className="employee-cont">
-                <h3>{employee['name']}</h3>
-                <div className="person-cont">
-
-                    <img src={employee['img']} />
-
+            <div className="div-employee">
+                <div key={index} className="div-employeeContent">
+                    <div className="employee-text">
+                        <h3>{employee.name}</h3>
+                        <h5>{employee.position}</h5>
+                        <p>{employee.blurb}</p>
+                    </div>
+                    { index % 2 === 0 ? 
+                        <img src={employee.img} className="imgEmployee"/>
+                        :
+                        <img src={employee.img} className="imgEmployee"/>
+                    }
                 </div>
-                <p>
-                    {employee['blurb']}
-                </p>
             </div>
         )
     });
@@ -102,10 +105,10 @@ const About = () => {
           <div className="well-middle">
             <div className="single-well">
 
-                <h4 className="sec-head">What we do ?</h4>
+                <h4 className="sec-head">What do we do ?</h4>
 
               <p>
-Through exclusive partnerships with filmmakers, influencers, non-profits, and brands, we create and curate meaningful, impactful films and series on a mobile platform that inspires change - and we give audiences the tools to make a difference. By donating, volunteering, and supporting independent filmmakers, our engaged audience unlocks the power of story to accelerate charitable giving and global impact.
+                Through exclusive partnerships with filmmakers, influencers, non-profits, and brands, we create and curate meaningful, impactful films and series on a mobile platform that inspires change - and we give audiences the tools to make a difference. By donating, volunteering, and supporting independent filmmakers, our engaged audience unlocks the power of story to accelerate charitable giving and global impact.
               </p>
 
             </div>
@@ -124,7 +127,10 @@ Through exclusive partnerships with filmmakers, influencers, non-profits, and br
 
     <div className="employees">
                 <h2>Meet our Team</h2>
+                <div className="profiles">
                 {employeesProfiles}
+
+                </div>
             </div>
         </div>
 

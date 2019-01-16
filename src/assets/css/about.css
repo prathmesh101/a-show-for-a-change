@@ -1,3 +1,9 @@
+
+/* Mobile breakpoint */
+@media screen and (min-width: 375px) {
+  background-color: black!important;
+}
+
 .about-header{
 		
   position: relative;
@@ -54,10 +60,6 @@ svg {
   padding: 50px 0;
 }
 
-.single-well{
-
-}
-
 .single-well>a {
   display: block;
 }
@@ -83,5 +85,54 @@ svg {
 	padding: 50px 0;
 }
 
+.profiles {
+  width: 100%;
+  margin: 0 auto;
+}
 
+.employees h2 {
+  padding-top: .7em;
+  color: white;
+  padding-left: 2.3em;
+}
 
+.div-employee {
+  width: 90%;
+  display: flex;
+  align-content: center;
+}
+
+.div-employeeContent {
+  color: white;
+  width: 100%;
+  padding-left: 2em;
+  display: flex;
+  align-content: space-around;
+  padding-bottom: 2em;
+}
+
+.div-employeeContent h5 {
+  font-size: 1em;
+  padding-top: 8px;
+}
+
+.div-employeeContent p {
+  font-size: 0.7em;
+  font-weight: 300;
+}
+
+.employee-text {
+  width: 70%;
+  padding-right: 1.5em;
+  padding-left: 5em;
+}
+
+.imgEmployee {
+  height: 400px;
+  width: auto;
+  padding-right: 5em;
+}
+
+.floatRight {
+  float: right
+}
