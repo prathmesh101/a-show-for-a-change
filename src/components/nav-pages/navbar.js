@@ -14,7 +14,7 @@ const NavBar = () => {
             <NavLink className="nav-link nav-style" to="/" style={{color:'white', fontFamily:'Ailerons, Regular', paddingRight:'20px', fontSize:'16px'}}>
               SAGE APE
             </NavLink>
-            <NavLink className="nav-link nav-style" to="/about">
+            <NavLink data-toggle="collapse" data-target=".navbar-collapse.in" className="nav-link nav-style" to="/about">
               ABOUT
             </NavLink>
             <NavLink className="nav-link nav-style" to="/partners">
