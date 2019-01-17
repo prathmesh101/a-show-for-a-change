@@ -8,7 +8,8 @@ import Home from './nav-pages/home.js';
 import About from './nav-pages/about.js';
 import SignIn from './nav-pages/sign-in.js';
 import SignUp from './nav-pages/sign-up.js';
-import Partners from './nav-pages/partners.js';
+// import Partners from './nav-pages/partners.js';
+import Partners from './nav-pages/partners/partners_page';
 import Genres from './nav-pages/genre.js';
 import Influencer from './nav-pages/influencer.js';
 import UserPage from './nav-pages/user-page.js';
@@ -22,7 +23,8 @@ const App = () => (
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route path="/about" component={About} />
-                        <Route path="/partners" component={Partners} />
+                        {/*<Route path="/partners" component={Partners} />*/}
+                        <Route path = "/partners" component = {Partners}/>
                         <Route path="/genre" component={Genres} />
                         <Route path="/influencer" component={Influencer} />
                         <Route path="/sign-in" component={SignIn} />
