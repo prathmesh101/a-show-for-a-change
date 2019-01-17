@@ -13,7 +13,15 @@ import jared_Video4 from '../../assets/img/influencer/Jared_Video4@2x.png';
 import jared_Video5 from '../../assets/img/influencer/Jared_Video5@2x.png';
 
 
+
 class Influencer extends React.Component{
+
+	onToken = (token) => {
+		fetch('/save-stripe-token', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");
+	});
+	});
+	}
+
 	render () {
 
 		return (
@@ -35,16 +43,7 @@ class Influencer extends React.Component{
 									      Credit or debit card
 									    </label>
 									    <div id="card-element">
-									     <script
-										    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-										    data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
-										    data-amount="999"
-										    data-name="Stripe.com"
-										    data-description="Example charge"
-										    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-										    data-locale="auto"
-										    data-zip-code="true">
-										  </script>
+									     <StripeCheckout token={this.onToken} stripeKey="pk_test_TYooMQauvdEDq54NiTphI7jx" />
 									    </div>
 								    	{/*  Used to display form errors.   */}
 								    <div id="card-errors" role="alert"></div>
