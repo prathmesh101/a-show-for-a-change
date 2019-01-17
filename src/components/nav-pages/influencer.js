@@ -53,7 +53,7 @@ const Influencer = () => {
 						</div>
 						<div className="col-lg-6 m-0 p-0">
 							<video controls preload="metadata" id="vid1">
-               					<source src="http://d2lnjewrjhs49q.cloudfront.net/KM\ -\ General\ Pitch 1.MOV" type="video/mp4" />
+               					<source src="http://d2lnjewrjhs49q.cloudfront.net/KM - General∂ Pitch 1.MOV" type="video/mp4" />
               				</video>
 						</div>
 					</div>
@@ -118,7 +118,7 @@ const Influencer = () => {
 							<img className="img-fluid" src={jared_hero} />
 						</div>
 						<div className="col-lg-6 m-0 p-0">
-							<video controls preload="metadata" id="vid2">
+							<video width="80%" height="400px" controls preload="metadata" id="vid2">
                					<source src="http://d103vieut5cu8x.cloudfront.net/JaredChannelPitch.MOV" type="video/mp4" />
               				</video>
 						</div>
