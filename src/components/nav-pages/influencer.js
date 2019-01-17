@@ -30,12 +30,21 @@ const Influencer = () => {
 							<p>Here goes stripe payment</p>
 							<form action="/charge" method="post" id="payment-form">
   								<div className="form-row">
-							    <label for="card-element">
-							      Credit or debit card
-							    </label>
-							    <div id="card-element">
-							     {/*  A Stripe Element will be inserted here.   */}
-							    </div>
+								    <label for="card-element">
+								      Credit or debit card
+								    </label>
+								    <div id="card-element">
+								     <script
+									    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+									    data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
+									    data-amount="999"
+									    data-name="Stripe.com"
+									    data-description="Example charge"
+									    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+									    data-locale="auto"
+									    data-zip-code="true">
+									  </script>
+								    </div>
 							    	{/*  Used to display form errors.   */}
 							    <div id="card-errors" role="alert"></div>
 							  </div>
