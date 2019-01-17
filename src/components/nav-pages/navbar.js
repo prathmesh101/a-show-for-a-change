@@ -14,19 +14,19 @@ const NavBar = () => {
             <NavLink className="nav-link nav-style" to="/" style={{color:'white', fontFamily:'Ailerons, Regular', paddingRight:'20px', fontSize:'16px'}}>
               SAGE APE
             </NavLink>
-            <NavLink data-toggle="collapse" data-target=".navbar-collapse.in" className="nav-link nav-style" to="/about">
+            <NavLink data-toggle="collapse" data-target=".navbar-collapse.show" className="nav-link nav-style" to="/about">
               ABOUT
             </NavLink>
-            <NavLink className="nav-link nav-style" to="/partners">
+            <NavLink data-toggle="collapse" data-target=".navbar-collapse.show" className="nav-link nav-style" to="/partners">
               PARTNERS
             </NavLink>
-            <NavLink className="nav-link nav-style" to="/causes">
+            <NavLink data-toggle="collapse" data-target=".navbar-collapse.show" className="nav-link nav-style" to="/causes">
               CAUSES
             </NavLink>
-            <NavLink className="nav-link nav-style" to="/genre">
+            <NavLink data-toggle="collapse" data-target=".navbar-collapse.show" className="nav-link nav-style" to="/genre">
               GENRE
             </NavLink>
-            <NavLink className="nav-link nav-style" to="/influencer">
+            <NavLink data-toggle="collapse" data-target=".navbar-collapse.show" className="nav-link nav-style" to="/influencer">
               CHANNELS
             </NavLink>
           </div>
