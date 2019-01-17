@@ -3,6 +3,8 @@ import '../../../assets/css/partners/p_block-odd.css';
 import CAF from '../../../assets/img/partners/logos/CAF-logo.png';
 
 function BlockEven(props){
+    console.log(props);
+    console.log(props.var[0].name);
     return (
         <div className="odd container-fluid">
             <div className="row flex-row-reverse">
@@ -11,7 +13,7 @@ function BlockEven(props){
                         <img src={CAF} alt=""/>
                     </div>
                     <div className="partner_info">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur rerum deleniti, odio consequatur ipsum eum.</p>
+                        <p>{props.var[0].info}</p>
                         <a href="#">visit website</a>
                     </div>
                 </div>

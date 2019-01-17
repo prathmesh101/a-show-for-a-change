@@ -1,10 +1,28 @@
 import React, { Component } from 'react';
 import BlockOdd from './p_block-odd';
 import '../../../assets/css/partners/partners_page.css';
+import cfa from '../../../assets/img/partners/logos/CAF-logo.png'
 
 class Partners extends Component {
     constructor(props){
         super(props);
+
+        this.info = [
+            {
+                name: 'Challenged Athletes Foundation',
+                img: {cfa},
+                info: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum fugiat doloremque perferendis, cupiditate quasi voluptatum?'
+            },
+            {
+
+            },
+            {
+
+            },
+            {
+
+            }
+        ];
     }
     render(){
         return (
@@ -17,7 +35,7 @@ class Partners extends Component {
                         <span>commitment to improving the world thourhg the power of story.</span>
                     </p>
                 </div>
-                <BlockOdd/>
+                <BlockOdd var = {this.info}/>
             </div>
         );
     }
