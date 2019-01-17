@@ -18,7 +18,7 @@ import StripeCheckout from 'react-stripe-checkout';
 class Influencer extends React.Component{
 
 	onToken = (token) => {
-		fetch('/save-stripe-token', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");
+		fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");
 	});
 	});
 	}
@@ -38,7 +38,7 @@ class Influencer extends React.Component{
 							</div>
 							<div className="modal-body">
 								<p>Here goes stripe payment</p>
-								<form action="/charge" method="post" id="payment-form">
+								<form action="" method="post" id="payment-form">
 	  								<div className="form-row">
 									    <label for="card-element">
 									      Credit or debit card
