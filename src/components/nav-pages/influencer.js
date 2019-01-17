@@ -13,79 +13,6 @@ import jared_Video3 from '../../assets/img/influencer/Jared_Video3@2x.png';
 import jared_Video4 from '../../assets/img/influencer/Jared_Video4@2x.png';
 import jared_Video5 from '../../assets/img/influencer/Jared_Video5@2x.png';
 
-// componentDidMount() {
-//  				var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
-
-// 				// Create an instance of Elements.
-// 				var elements = stripe.elements();
-
-// 				// Custom styling can be passed to options when creating an Element.
-// 				// (Note that this demo uses a wider set of styles than the guide below.)
-// 				// var style = {
-// 				//   base: {
-// 				//     color: '#32325d',
-// 				//     lineHeight: '18px',
-// 				//     fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-// 				//     fontSmoothing: 'antialiased',
-// 				//     fontSize: '16px',
-// 				//     '::placeholder': {
-// 				//       color: '#aab7c4'
-// 				//     }
-// 				//   },
-// 				//   invalid: {
-// 				//     color: '#fa755a',
-// 				//     iconColor: '#fa755a'
-// 				//   }
-// 				// };
-
-// 				// Create an instance of the card Element.
-// 				var card = elements.create('card');
-
-// 				// Add an instance of the card Element into the `card-element` <div>.
-// 				card.mount('#card-element');
-
-// 				// Handle real-time validation errors from the card Element.
-// 				card.addEventListener('change', function(event) {
-// 				  var displayError = document.getElementById('card-errors');
-// 				  if (event.error) {
-// 				    displayError.textContent = event.error.message;
-// 				  } else {
-// 				    displayError.textContent = '';
-// 				  }
-// 				});
-
-// 				// Handle form submission.
-// 				var form = document.getElementById('payment-form');
-// 				form.addEventListener('submit', function(event) {
-// 				  event.preventDefault();
-
-// 				  stripe.createToken(card).then(function(result) {
-// 				    if (result.error) {
-// 				      // Inform the user if there was an error.
-// 				      var errorElement = document.getElementById('card-errors');
-// 				      errorElement.textContent = result.error.message;
-// 				    } else {
-// 				      // Send the token to your server.
-// 				      stripeTokenHandler(result.token);
-// 				    }
-// 				  });
-// 				});
-
-// 				// Submit the form with the token ID.
-// 				function stripeTokenHandler(token) {
-// 				  // Insert the token ID into the form so it gets submitted to the server
-// 				  var form = document.getElementById('payment-form');
-// 				  var hiddenInput = document.createElement('input');
-// 				  hiddenInput.setAttribute('type', 'hidden');
-// 				  hiddenInput.setAttribute('name', 'stripeToken');
-// 				  hiddenInput.setAttribute('value', token.id);
-// 				  form.appendChild(hiddenInput);
-
-// 				  // Submit the form
-// 				  form.submit();
-// 				}
-// }
-
 const Influencer = () => {
 	return (
 		<div className="container">
@@ -125,7 +52,9 @@ const Influencer = () => {
 							<img className="img-fluid" src={kiana_hero} />
 						</div>
 						<div className="col-lg-6 m-0 p-0">
-							<img className="img-fluid" src={kiana_Video1} />
+							<video controls preload="metadata" id="vid1">
+               					<source src="http://d2lnjewrjhs49q.cloudfront.net/KM\ -\ General\ Pitch 1.MOV" type="video/mp4" />
+              				</video>
 						</div>
 					</div>
 				</div>
@@ -189,7 +118,9 @@ const Influencer = () => {
 							<img className="img-fluid" src={jared_hero} />
 						</div>
 						<div className="col-lg-6 m-0 p-0">
-							<img className="img-fluid" src={jared_Video1} />
+							<video controls preload="metadata" id="vid2">
+               					<source src="http://d103vieut5cu8x.cloudfront.net/JaredChannelPitch.MOV" type="video/mp4" />
+              				</video>
 						</div>
 					</div>
 				</div>
