@@ -13,6 +13,7 @@ import jared_Video3 from '../../assets/img/influencer/Jared_Video3@2x.png';
 import jared_Video4 from '../../assets/img/influencer/Jared_Video4@2x.png';
 import jared_Video5 from '../../assets/img/influencer/Jared_Video5@2x.png';
 
+
 const Influencer = () => {
 	return (
 		<div className="container">
@@ -52,9 +53,7 @@ const Influencer = () => {
 							<img className="img-fluid" src={kiana_hero} />
 						</div>
 						<div className="col-lg-6 m-0 p-0">
-							<video width="80%" height="400px" controls preload="metadata" id="vid1">
-               					<source src="http://dc4o1amiorcev.cloudfront.net/KianaChannelPitch.MOV" type="video/mp4" />
-              				</video>
+							<img className="img-fluid" src={kiana_Video1} />
 						</div>
 					</div>
 				</div>
@@ -117,10 +116,8 @@ const Influencer = () => {
 						<div className="col-lg-6 m-0 p-0">
 							<img className="img-fluid" src={jared_hero} />
 						</div>
-						<div className="col-lg-6 m-0 p-0 service-box">
-							<video width="80%" height="400px" controls preload="metadata" id="vid2">
-               					<source src="http://d103vieut5cu8x.cloudfront.net/JaredChannelPitch.MOV" type="video/mp4" />
-              				</video>
+						<div className="col-lg-6 m-0 p-0">
+							<img className="img-fluid" src={jared_Video1} />
 						</div>
 					</div>
 				</div>
