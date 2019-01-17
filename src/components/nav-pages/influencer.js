@@ -117,8 +117,8 @@ const Influencer = () => {
 						<div className="col-lg-6 m-0 p-0">
 							<img className="img-fluid" src={jared_hero} />
 						</div>
-						<div className="col-lg-6 m-0 p-0">
-							<video width="80%" height="400px" controls preload="metadata" id="vid2">
+						<div className="col-lg-6 m-0 p-0 service-box">
+							<video width="100%" height="200px" controls preload="metadata" id="vid2">
                					<source src="http://d103vieut5cu8x.cloudfront.net/JaredChannelPitch.MOV" type="video/mp4" />
               				</video>
 						</div>
