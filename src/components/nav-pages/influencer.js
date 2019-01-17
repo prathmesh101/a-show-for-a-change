@@ -11,6 +11,7 @@ import jared_Video2 from '../../assets/img/influencer/Jared_Video2@2x.png';
 import jared_Video3 from '../../assets/img/influencer/Jared_Video3@2x.png';
 import jared_Video4 from '../../assets/img/influencer/Jared_Video4@2x.png';
 import jared_Video5 from '../../assets/img/influencer/Jared_Video5@2x.png';
+import StripeCheckout from 'react-stripe-checkout';
 
 
 
