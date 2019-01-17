@@ -52,8 +52,8 @@ const Influencer = () => {
 							<img className="img-fluid" src={kiana_hero} />
 						</div>
 						<div className="col-lg-6 m-0 p-0">
-							<video width="100%" height="400px" controls preload="metadata" id="vid1">
-               					<source src="http://dc4o1amiorcev.cloudfront.net/KianaChannelPitch.MOV" type="video/quicktime" />
+							<video width="80%" height="400px" controls preload="metadata" id="vid1">
+               					<source src="http://dc4o1amiorcev.cloudfront.net/KianaChannelPitch.MOV" type="video/mp4" />
               				</video>
 						</div>
 					</div>
@@ -118,8 +118,8 @@ const Influencer = () => {
 							<img className="img-fluid" src={jared_hero} />
 						</div>
 						<div className="col-lg-6 m-0 p-0 service-box">
-							<video width="100%" height="200px" controls preload="metadata" id="vid2">
-               					<source src="http://d103vieut5cu8x.cloudfront.net/JaredChannelPitch.MOV" type="video/quicktime" />
+							<video width="80%" height="400px" controls preload="metadata" id="vid2">
+               					<source src="http://d103vieut5cu8x.cloudfront.net/JaredChannelPitch.MOV" type="video/mp4" />
               				</video>
 						</div>
 					</div>
