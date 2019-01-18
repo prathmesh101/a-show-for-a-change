@@ -1,183 +1,137 @@
-
-.MainIntro {
-  width: 100%;
-  position: relative;
-  background-size: cover;
-  min-height: 800px;
-}
-.MainIntro .content {
-  position: relative;
-  z-index: 4;
-  width: 500px;
-  left: 10vw;
-  top: 10vw;
-}
-.MainIntro .content .logo {
-  max-width: 400px;
-  display: block;
-  position: relative;
-  left: -5px;
-}
-.MainIntro .content p {
-  width: 100%;
-}
-.MainIntro .content .button-wrapper {
-  display: flex;
-  width: 400px;
-  margin-top: 30px;
-}
-.MainIntro .content .button-wrapper .Button:first-child {
-  margin-right: 10px;
-}
-.MainIntro .overlay {
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #221f1f 0%, rgba(34, 31, 31, 0) 100%);
-
-  height: 100%;
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  width: 100%;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+.user-page-main{
+ color: white;
 }
 
-.Button {
-  background: transparent;
-  display: flex;
-  height: 44px;
-  align-items: center;
-  justify-content: center;
+.user-back-img-content{
+	width: 100%;
+  height: 600px;
+
+
+}
+
+.backgrnd-img-user{
+	text-shadow:rgba(0,0,0,.6);
+   background-image: linear-gradient(bottom, transparent);
+       filter: brightness(50%);
+       height: 100%;
+   height: -webkit-fill-available;
+     height: -moz-available;          /* WebKit-based browsers will ignore this. */
+      height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+      height: fill-available;
+
+}
+
+
+
+
+.overlay-main{
+
+
+
+  /*Align text above video*/
+   position:absolute;
+
+  bottom: 130px;
+  left: 40px;
+
+
+
+
+
+    color: white;
+    line-height: 20px;
+
+
+}
+
+.overlay-main-user{
+
+font-family: 'Montserrat';
+text-align: bottom;
+font-family: 'Montserrat';
+
+
+}
+
+.overlay-main-user h1{
+	font-size: 50px;
+	font-weight: 700;
+
+}
+
+
+
+.img-border{
+  border: 1px solid #00CB94;
+}
+
+/*influencers section*/
+
+.influencer-user-content{
+	width: 100%;
+  position: relative;
+  background-image: url('../img/user-influ.png');
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+
+
+}
+
+
+
+
+.influencer-overlay{
+
+
+/*Align text above video*/
+ position:absolute;
+
+
+
+
+
+ /*Align center text*/
+
+bottom: 20px;
+left: 60px;
+
+  color: white;
+  line-height: 40px;
+
+}
+
+.influencer-overlay-content{
+
+font-family: 'Montserrat';
+
+
+
+}
+
+.influencer-overlay-content h1{
+	font-size: 50px;
+	font-weight: 700;
+}
+ .influencer-overlay-para{
+	font-size: 15px;
+	line-height: 25px;
+}
+
+#info-but{
+
+      background-color: transparent;
+      color:#00CB94;
+    border: 2px solid #00CB94;
+       padding: 8px;
+
+    width: 280px;
+
+
+}
+
+#info-but:hover{
+  background-color: #00CB94;
   text-decoration: none;
-  color: #ffffff;
-  padding: 20px;
-  box-sizing: border-box;
-  border: 2px solid rgba(245, 245, 241, 0.2);
-  border-radius: 44px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: border 0.125s ease, background 0.125s ease;
-}
-.Button:hover {
-  border: 2px solid #f5f5f1;
-}
-
-
-.TitleList {
-  padding: 20px 40px;
-  box-sizing: border-box;
-  transition: opacity 3s ease;
-  opacity: 0;
-}
-.TitleList .titles-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px 0;
-
-  box-sizing: border-box;
-  justify-content: space-between;
-}
-
-.Item {
-
-  background-color: #000000;
-  flex: 1 0 auto;
-  background-position: center;
-  background-size: 100%;
-  height: 200px;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  margin-right: 10px;
-  transition: background 1s ease;
-}
-.Item .overlay {
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
-
-  padding: 20px;
-  position: relative;
-  height: 100%;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.125s ease;
-}
-.Item .overlay .title {
-  font-size: 22px;
-  font-weight: 200;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-.Item .overlay .rating {
-  font-size: 14px;
-  opacity: 0;
-  transition: opacity 0.25s ease 0.125s;
-}
-.Item .overlay .plot {
-  font-size: 14px;
-  display: -webkit-box;
-  margin-top: 100px;
-  font-weight: 300;
-  line-height: 1.6;
-  opacity: 0;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: margin 0.25s ease 0.125s, opacity 0.25s ease 0.25s;
-}
-.Item:hover {
-  background-size: 150%;
-}
-.Item:hover .overlay {
-  opacity: 1;
-  pointer-events: all;
-}
-.Item:hover .overlay .plot {
-  margin-top: 10px;
-  opacity: 1;
-}
-.Item:hover .overlay .title {
-  opacity: 1;
-}
-.Item:hover .overlay .rating {
-  opacity: 1;
-}
-.Item:hover .overlay .ListToggle {
-  opacity: 1;
-}
-
-.ListToggle {
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  border-radius: 32px;
-  overflow: hidden;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  opacity: 0;
-}
-.ListToggle:hover {
-  border: 2px solid #ffffff;
-}
-.ListToggle:hover div {
-  top: -32px;
-}
-.ListToggle div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 64px;
-  width: 32px;
-  transition: 0.125s ease;
-}
-.ListToggle div i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 32px;
-  width: 32px;
+	color: #fff;
 }
