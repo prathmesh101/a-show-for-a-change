@@ -1,141 +1,24 @@
 import React, { Component } from 'react';
 import 'bootstrap';
 import axios from 'axios';
+
 import '../../assets/css/user-page.css';
+
+
 import { Link } from 'react-router-dom';
 
+import { Helmet } from 'react-helmet';
+import hero from '../../assets/img/user-back.png';
+import jared from '../../assets/img/user-influ.png';
 
-//Background section with info and submit button
-
-const MainIntro = () => {
-  return (
-    <div id="MainIntro" className="MainIntro" style={{backgroundImage: 'url(https://images.alphacoders.com/633/633643.jpg)'}}>
-      <div className="content">
-        <img className="logo" src="http://www.returndates.com/backgrounds/narcos.logo.png" alt="" />
-        <h2>Season info</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque id quam sapiente unde voluptatum alias vero debitis, magnam quis quod.</p>
-        <div className="button-wrapper">
-          <MainIntroButton primary={true} text="Watch now" />
-          <MainIntroButton primary={false} text="+ My list" />
-          <MainIntroButton primary={false} text="Donate" />
-        </div>
-      </div>
-      <div className="overlay"></div>
-    </div>
-  );
-
-}
-
-
-
-// submit button for the background page
-const MainIntroButton = () => {
-  return (
-    <a href="#" className="Button" data-primary={this.props.primary}>{this.props.text}</a>
-  );
-
-
-}
-
-
-
-// Title list of movies
-class TitleList extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-    apiKey: '87dfa1c669eea853da609d4968d294be',
-
-
-    }
-  }
-  getInitialState() {
-		return {data: [], mounted: false};
-	}
-  loadContent() {
-    var requestUrl = 'https://api.themoviedb.org/3/' + this.props.url + '&api_key=' + this.apiKey;
-
-    $.ajax({
-      url: requestUrl,
-      dataType: 'json',
-      cache: false,
-      success: function(data) {
-        this.setState({data: data});
-        // console.log(data);
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this.props.url, status, err.toString());
-      }.bind(this)
-    });
-  }
-
-  componentDidMount(){
-    this.loadContent();
-    this.setState({ mounted: true });
-  }
-
-  componentWillUnmount() {
-    this.setState({ mounted: false });
-  }
-
-  render() {
-    if(this.state.data.results) {
-      var titles = this.state.data.results.map(function(title, i) {
-        if(i < 5) {
-
-          var backDrop = 'http://image.tmdb.org/t/p/original' + title.backdrop_path;
-          if(!title.name) {
-            var name = title.original_title;
-          } else {
-            var name = title.name;
-          }
-
-          return (
-            <Item key={title.id} title={name} score={title.vote_average} overview={title.overview} backdrop={backDrop} />
-          );
-
-        }
-      });
-
-    } else {
-      var titles = '';
-    }
-
-    return (
-      <div ref="titlecategory" className="TitleList" data-loaded={this.state.mounted}>
-        <div className="Title">
-          <h1>{this.props.title}</h1>
-          <div className="titles-wrapper">
-            {titles}
-          </div>
-        </div>
-      </div>
-
-
-    );
-  }
-
-}
-
-
-
-
-//hover items in title list
-const Items = () => {
-  return (
-    <div className="Item" style={{backgroundImage: 'url(' + this.props.backdrop + ')'}} >
-      <div className="overlay">
-        <div className="title">{this.props.title}</div>
-        <div className="rating">{this.props.score} / 10</div>
-        <div className="plot">{this.props.overview}</div>
-
-      </div>
-    </div>
-  );
-
-}
-
+import Video1 from '../../assets/img/cump.png';
+import Video2 from '../../assets/img/willow.png';
+import Video3 from '../../assets/img/office.png';
+import Video4 from '../../assets/img/hurry.png';
+import Video5 from '../../assets/img/married.png';
+import Video6 from '../../assets/img/munah.png';
+import Video7 from '../../assets/img/stress.png';
+import Video8 from '../../assets/img/wear.png';
 
 
 
@@ -145,42 +28,11 @@ class UserPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    apiKey: "87dfa1c669eea853da609d4968d294be",
-      results:''
+
+
 
     }
   }
-
-  getInitialState() {
-    return { data: [] };
-  }
-  performSearch(e) {
-    // stop form from submitting
-    e.preventDefault();
-
-    // get the value
-    var val = $(".Search input").val();
-
-    // Do the thing
-    var requestUrl =
-      "https://api.themoviedb.org/3/search/multi?query=" +
-      val +
-      "&api_key=" +
-      this.apiKey;
-
-    $.ajax({
-      url: requestUrl,
-      dataType: "json",
-      cache: false,
-      success: function(data) {
-        this.setState({ data: data });
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this.props.url, status, err.toString());
-      }.bind(this)
-    });
-  }
-
 
 
   /*
@@ -200,40 +52,150 @@ class UserPage extends Component {
 
 
   render() {
-    if (this.state.data.results) {
-      console.log(this.state.data);
-    }
+
+
+
     return (
 
+      <div className="user-page-main">
+
+      <div className="user-back-img-content">
+
+      <img
+      className="backgrnd-img-user"
+      style={{objectFit: 'cover', width:'100%'}}
+        src={hero}/>
+
+           <div className="overlay-main">
+                <div className="container">
+                             <div className="overlay-main-user">
+                             <div className="user-head-text" style={{fontSize: '1.2em'}}>
+                               <h1>Emigration</h1>
+                             </div>
+
+                             <div className="influencer-description" style={{fontSize: 'medium', fontWeight:'100'}}>
+                               <p>depicts the plight of the Iranian people which leave their <br/>country due to social and political issues. </p>
+                             </div>
+                             <div>
+                               <button className="btn btn-dark btn-outline-success"  style={{marginRight:'10px'}}>Play</button>
+                               <button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button>
+                             </div>
+                             </div>
+                </div>
+           </div>
+
+      </div>
 
 
 
 
 
 
-      <div style={{ paddingTop: '100px', color: 'white' }}>
-      <MainIntro />
-      <TitleList
-        title="Top TV picks for Jack"
-        url="discover/tv?sort_by=popularity.desc&page=1"
-      />
-      <TitleList
-        title="Trending now"
-        url="discover/movie?sort_by=popularity.desc&page=1"
-      />
-      <TitleList
-        title=" Horror"
-        url="genre/27/movies?sort_by=popularity.desc&page=1"
-      />
-      <TitleList
-        title="Sci-Fi"
-        url="genre/878/movies?sort_by=popularity.desc&page=1"
-      />
-      <TitleList
-        title="Comedy"
-        url="genre/35/movies?sort_by=popularity.desc&page=1"
-      />
-    </div>
+
+        <section className="more-from mb-5">
+          <div className="container">
+          <h3  style={{paddingTop:'50px', paddingBottom:'30px'}}>Popular</h3>
+          <div className="row">
+
+            <figure className="col-lg-3 col-md-6 figure text-center">
+              <img src={Video1} alt="Kiana2" className="img-fluid figure-img img-border" />
+              <figcaption className="figure-caption">
+                Cumpleañera
+              </figcaption>
+
+            </figure>
+            <figure className="col-lg-3 col-md-6 figure text-center">
+              <img src={Video2} alt="Kiana3" className="img-fluid figure-img img-border" />
+              <figcaption className="figure-caption">
+                Willow
+              </figcaption>
+
+            </figure>
+            <figure className="col-lg-3 col-md-6 figure text-center">
+              <img src={Video3} alt="Kiana4" className="img-fluid figure-img img-border" />
+              <figcaption className="figure-caption">
+                Office Party
+              </figcaption>
+
+            </figure>
+            <figure className="col-lg-3 col-md-6 figure text-center">
+              <img src={Video4} alt="Kiana5" className="img-fluid figure-img img-border" />
+              <figcaption className="figure-caption">
+                Hurry up and wait
+              </figcaption>
+
+            </figure>
+
+          </div>
+          </div>
+        </section>
+
+        <section className="more-from mb-5" >
+        <div className="container">
+          <h3 style={{paddingBottom:'30px'}} >Newly Added</h3>
+          <div className="row">
+            <figure className="col-lg-3 col-md-6 figure text-center">
+              <img src={Video5} alt="Kiana2" className="img-fluid figure-img img-border" />
+              <figcaption className="figure-caption">
+                Marriage
+              </figcaption>
+
+            </figure>
+            <figure className="col-lg-3 col-md-6 figure text-center">
+              <img src={Video6} alt="Kiana3" className="img-fluid figure-img img-border" />
+              <figcaption className="figure-caption">
+                Emunah
+              </figcaption>
+
+            </figure>
+            <figure className="col-lg-3 col-md-6 figure text-center">
+              <img src={Video7} alt="Kiana4" className="img-fluid figure-img img-border" />
+              <figcaption className="figure-caption">
+                Stressed
+  </figcaption>
+
+            </figure>
+            <figure className="col-lg-3 col-md-6 figure text-center">
+              <img src={Video8} alt="Kiana5" className="img-fluid figure-img img-border" />
+              <figcaption className="figure-caption">
+                Wear
+              </figcaption>
+
+            </figure>
+          </div>
+          </div>
+        </section>
+
+
+        <div className="influencer-user-content">
+          <div className="container-fluid">
+
+
+          <div className="influencer-overlay">
+               <div className="container">
+                            <div className="influencer-overlay-content">
+                              <h1>Featured Influencer</h1>
+                              <p className="influencer-overlay-para">Influencer content exclusive to the platform, updated weekly.</p>
+                              <button className="btn  " id="info-but" href="/">VISIT INFLUENCER CHANNEL</button>
+
+                            </div>
+               </div>
+          </div>
+
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+
+
+
 
 
         /*  <h1>Hello</h1>
