@@ -65,7 +65,7 @@ class Influencer extends React.Component{
 							</div>
 							<div className="col-lg-6 m-0 p-0">
 								<video width="80%" height="400px" controls preload="metadata" id="vid1" poster={kiana_pitch}>
-								   <source src="https://d2d9lc244tytnt.cloudfront.net/KianaMadaniIRC.mp4" type="video/mp4">
+								   <source src="https://d2d9lc244tytnt.cloudfront.net/KianaMadaniIRC.mp4" type="video/mp4" />
                					</video>
 							</div>
 						</div>
