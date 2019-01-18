@@ -244,3 +244,18 @@ html {
   text-align: center;
   padding-top: 55px;
 }
+
+.subscription-plan-section h2 {
+  line-height: .9em;
+}
+
+/* Mobile breakpoint */
+@media screen and (max-width: 777px) {
+  /* .plan {
+    margin-left: 40px;
+  } */
+}
+
+.plan {
+  margin-left: 40px;
+}
