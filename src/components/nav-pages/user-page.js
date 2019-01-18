@@ -94,7 +94,7 @@ class UserPage extends Component {
 
         <section className="more-from mb-5">
           <div className="container">
-          <h3  style={{paddingTop:'50px', paddingBottom:'30px'}}>Popular</h3>
+          <h3  style={{paddingTop:'50px', paddingBottom:'30px'}}  className="head-movie-genre" >Popular</h3>
           <div className="row">
 
             <figure className="col-lg-3 col-md-6 figure text-center">
@@ -132,7 +132,7 @@ class UserPage extends Component {
 
         <section className="more-from mb-5" >
         <div className="container">
-          <h3 style={{paddingBottom:'30px'}} >Newly Added</h3>
+          <h3 style={{paddingBottom:'30px'}} className="head-movie-genre" >Newly Added</h3>
           <div className="row">
             <figure className="col-lg-3 col-md-6 figure text-center">
               <img src={Video5} alt="Kiana2" className="img-fluid figure-img img-border" />
