@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap';
 import '../../assets/css/background-intro-video.css';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +9,7 @@ const BackVideo = () => {
 
         	<video loop muted autoPlay
                             className="backgrnd-video"
-                            style={{objectFit: 'cover', width:'100%', height:'400px'}}
+                            style={{objectFit: 'cover', width:'100%', height:'475px'}}
                             src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
                             type="video/mp4"/>
 

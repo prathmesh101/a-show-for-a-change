@@ -17,3 +17,14 @@ font-weight:500;
 .features-cont-para{
   font-size: 20px;
 }
+
+
+@media only screen and (max-width: 500px){ //some value
+  .features-section{
+
+  padding: 0px 0;
+
+  }
+
+
+}

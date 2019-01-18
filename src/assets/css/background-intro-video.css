@@ -72,3 +72,22 @@ font-family: 'Montserrat';
 	line-height: 15px;
 	font-style: italic;
 }
+
+
+@media only screen and (max-width: 500px){ //some value
+   .backgrnd-video{
+
+
+   }
+
+   .overlay{
+
+
+          position: absolute;
+             top: 50%;
+             left: 50%;
+             margin-right: -50%;
+             text-align: center;
+             transform: translate(-50%, -50%)
+   }
+}
