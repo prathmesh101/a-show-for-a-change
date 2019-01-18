@@ -50,7 +50,7 @@ class Partners extends Component {
         const renderBlock = this.info.map((item, index) => {
             const { img, info, background } = item;
             return(
-                <BlockOdd key={index} logo={img} text={info} backImg={background} />
+                <BlockOdd key={index} logo={img} text={info} backImg={background} num = {index} />
             );
             
         });
@@ -66,7 +66,6 @@ class Partners extends Component {
                         <span>commitment to improving the world thourhg the power of story.</span>
                     </p>
                 </div>
-                {/*<BlockOdd background = {block1} logo = {caf} info = {this.info[0].info}/>*/}
                 {renderBlock}
             </div>
         );
