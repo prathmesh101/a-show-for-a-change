@@ -4,16 +4,19 @@ import CAF from '../../../assets/img/partners/logos/CAF-logo.png';
 
 function BlockEven(props){
     console.log(props);
-    console.log(props.var[0].name);
+
+    const { backImg, logo, text} = props;
+
+
     return (
-        <div className="odd container-fluid">
-            <div className="row flex-row-reverse">
+        <div className="odd container-fluid" style = {{backgroundImage: `url(${props.backImg})`}}>
+            <div className="row flex-row-reverse"> {/* if even = "", odd = "flex-row-reverse"*/}
                 <div className="col-sm-3">
                     <div className="img_container">
-                        <img src={CAF} alt=""/>
+                        <img src={props.logo} alt=""/>
                     </div>
                     <div className="partner_info">
-                        <p>{props.var[0].info}</p>
+                        <p>{props.text}</p>
                         <a href="#">visit website</a>
                     </div>
                 </div>
