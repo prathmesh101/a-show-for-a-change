@@ -2,7 +2,7 @@ import React from 'react';
 import '../../../assets/css/partners/p_block-odd.css';
 
 function BlockEven(props){
-    console.log(props);
+    // console.log(props);
 
     const { backImg, logo, text, num} = props;
 
