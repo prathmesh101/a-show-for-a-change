@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/css/app.css';
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 import Header from './header.js';
 import Footer from './footer.js';
 
