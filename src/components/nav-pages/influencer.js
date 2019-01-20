@@ -7,6 +7,7 @@ import kiana_Video3 from '../../assets/img/influencer/Kiana_Video3@2x.png';
 import kiana_Video4 from '../../assets/img/influencer/Kiana_Video4@2x.png';
 import kiana_Video5 from '../../assets/img/influencer/Kiana_Video5@2x.png';
 import jared_hero from '../../assets/img/influencer/Jared_HeroImage@2x.png';
+import jared_pitch from '../../assets/img/influencer/Jared_Screenshot.png';
 import jared_Video1 from '../../assets/img/influencer/Jared_Video1@2x.png';
 import jared_Video2 from '../../assets/img/influencer/Jared_Video2@2x.png';
 import jared_Video3 from '../../assets/img/influencer/Jared_Video3@2x.png';
@@ -126,7 +127,9 @@ class Influencer extends React.Component{
 								<img className="img-fluid" src={jared_hero} />
 							</div>
 							<div className="col-lg-6 m-0 p-0">
-								<img className="img-fluid" src={jared_Video1} />
+								<video width="80%" height="400px" controls preload="metadata" id="vid1" poster={jared_pitch}>
+								   <source src="https://dhcrjikk6i91q.cloudfront.net/JaredMilradCovenantHouse.mp4" type="video/mp4" />
+               					</video>
 							</div>
 						</div>
 					</div>
