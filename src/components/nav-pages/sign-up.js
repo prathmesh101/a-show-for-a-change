@@ -50,7 +50,7 @@ class SignUp extends Component {
                             last_name: this.state.last_name, 
                             email: this.state.email, 
                             password: this.state.password})
-      .then((response) => {
+      .then(function(response){
         console.log(response.data['message'], response.data['first_name']);
         this.setState({redirect: true});
       });
