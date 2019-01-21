@@ -50,6 +50,7 @@ class SignUp extends Component {
                             password: this.state.password})
       .then(function(response){
         console.log(response);
+        this.setState({redirect: true});
       });
 
 
