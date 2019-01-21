@@ -14,12 +14,14 @@ class SignIn extends Component {
       password: '',
       redirect: false
     }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
 
 
-  handleChange = this.handleChange.bind(this);
-  handleClick = this.handleClick.bind(this);
+  // this.handleChange = this.handleChange.bind(this);
+  // this.handleClick = this.handleClick.bind(this);
 
   handleChange(event) {
      this.setState({ [event.target.name]: event.target.value })
