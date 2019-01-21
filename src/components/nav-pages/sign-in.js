@@ -27,8 +27,8 @@ class SignIn extends Component {
     var apiBaseUrl = "https://dev.sageape.com/api_php/signinapi.php";
     var self = this;
 
-    axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
-      .then(() => this.setState({ redirect: true }));
+    // axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
+    //   .then(() => this.setState({ redirect: true }));
 
     axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
       .then(function(response){
