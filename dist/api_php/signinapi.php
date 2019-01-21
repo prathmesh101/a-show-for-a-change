@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $email = !empty($form_values['email']) ? $form_values['email'] : '';
         $password = !empty($form_values['password']) ? $form_values['password'] : '';
 
+
         if(empty($email))
         {
                 $errors[] = "Email can not be empty";
