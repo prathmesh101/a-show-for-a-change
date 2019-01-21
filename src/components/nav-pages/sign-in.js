@@ -24,6 +24,7 @@ class SignIn extends Component {
 
 
   handleClick(event) {
+    event.preventDefault();
     var apiBaseUrl = "https://dev.sageape.com/api_php/signinapi.php";
     var self = this;
 
