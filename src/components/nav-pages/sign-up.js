@@ -41,11 +41,16 @@ class SignUp extends Component {
        "password": this.state.password,
     };
     //var payload = this.state.first_name;
-    axios.post(apiBaseUrl, {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password})
-        .then(() => this.setState({ redirect: true }));
+    // axios.post(apiBaseUrl, {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password})
+    //     .then(() => this.setState({ redirect: true }));
 
-  
-
+    axios.post(apiBaseUrl, {first_name: this.state.first_name, 
+                            last_name: this.state.last_name, 
+                            email: this.state.email, 
+                            password: this.state.password})
+      .then(function(response){
+        console.log(response);
+      });
 
 
 /*
