@@ -31,7 +31,7 @@ class SignUp extends Component {
    handleClick(event) {
      event.preventDefault();
      var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
-     console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
+     //console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
      //To be done:check name empty values before hitting submit
      var self = this;
      var params = {
