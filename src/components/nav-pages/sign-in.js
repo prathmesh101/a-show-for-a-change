@@ -18,9 +18,12 @@ class SignIn extends Component {
 
 
 
-     handleClick = this.handleClick.bind(this);
+  handleChange = this.handleChange.bind(this);
+  handleClick = this.handleClick.bind(this);
 
-     
+  handleChange(event) {
+     this.setState({ [event.target.name]: event.target.value })
+  }
 
 
   handleClick(event) {
@@ -74,14 +77,14 @@ class SignIn extends Component {
             <div className="form-group">
             <h2 className="headText">Login</h2>
               <div className="div-underline">
-              <i className="fas fa-envelope fillWhite"></i>
-                <input type="email" className="inlineBlock" name="email" id="firstname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ email: newValue })} />            
+                <i className="fas fa-envelope fillWhite"></i>
+                <input type="email" className="inlineBlock" name="email" id="firstname" placeholder="Enter email" onChange={this.handleChange} />            
               </div>
             </div>
             <div className="form-group">
               <div className="div-underline">
                 <i className="fas fa-unlock-alt fillWhite"></i>
-                <input type="text" className="inlineBlock" name="password" id="password" placeholder="Enter password" onChange={(event, newValue) => this.setState({ password: newValue })} />
+                <input type="text" className="inlineBlock" name="password" id="password" placeholder="Enter password" onChange={this.handleChange} />
               </div>
             </div>
             <div className="div-submit">
