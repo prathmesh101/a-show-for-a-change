@@ -35,13 +35,13 @@ class SignIn extends Component {
     //   .then(() => this.setState({ redirect: true }));
 
     axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
-      .then(function(response){
+      .then((function(response){
         if (response.data["message"] == "success") {
-          this.setState(()=>({redirect: true}));
+          this.setState({redirect: true});
         } else {
-          alert("Problem logging in. \n Please try again.")
-        };
-      });
+          alert("Problem logging in. \n Please try again.");
+        }
+      }));
 
 /*
       .then(function (response) {
