@@ -50,8 +50,13 @@ class SignUp extends Component {
                             last_name: this.state.last_name, 
                             email: this.state.email, 
                             password: this.state.password})
-      .then((response) => 
-        this.setState({ redirect: true }));
+      .then((response) => {
+        if (response.data["message"] == "success") {
+          this.setState({ redirect: true });
+        } else {
+          alert("Unable to register.");
+        }
+      });
 
 
 
