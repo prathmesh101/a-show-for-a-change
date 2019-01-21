@@ -49,7 +49,7 @@ class SignUp extends Component {
                             email: this.state.email, 
                             password: this.state.password})
       .then(function(response){
-        console.log(response);
+        console.log(response.data['message'], response.data['first_name']);
         this.setState({redirect: true});
       });
 
