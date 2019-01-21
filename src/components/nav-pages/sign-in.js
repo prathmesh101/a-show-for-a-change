@@ -37,7 +37,7 @@ class SignIn extends Component {
     axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
       .then(function(response){
         if (response.data["message"] == "success") {
-          this.setState({redirect: true});
+          this.setState(()=>({redirect: true}));
         } else {
           alert("Problem logging in. \n Please try again.")
         };
@@ -69,9 +69,9 @@ class SignIn extends Component {
   render() {
     const { redirect } = this.state.redirect;
 
-   if (redirect) {
-        return <Redirect to='./user-page'/>;
-      }
+    if (redirect) {
+        return <Redirect to='./user-page' />;
+    }
 
     return (
 

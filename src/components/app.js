@@ -27,7 +27,7 @@ const App = () => (
                         <Route path="/influencer" component={Influencer} />
                         <Route path="/sign-in" component={SignIn} />
                         <Route path="/sign-up" component={SignUp} />
-                        <Route path="/user-page" component={ UserPage} />
+                        <Route path="/user-page" component={UserPage} />
                         <Redirect to="{Home}" />
                     </Switch>
                     <Footer />
