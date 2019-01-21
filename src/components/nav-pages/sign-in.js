@@ -39,7 +39,6 @@ class SignIn extends Component {
     axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
       .then((response) => {
         if (response.data["message"] == "success") {
-          console.log("inside post");
           this.setState({redirect: true});
         } else {
           alert("Problem logging in. \n Please try again.");
@@ -73,7 +72,6 @@ class SignIn extends Component {
     const { redirect } = this.state;
 
     if (redirect) {
-      console.log("inside if redirect");
         return <Redirect to='./user-page' />;
     }
 

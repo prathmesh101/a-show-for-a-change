@@ -16,11 +16,13 @@ class SignUp extends Component {
       password: '',
       redirect: false
     }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
 
-   handleChange = this.handleChange.bind(this);
-   handleClick = this.handleClick.bind(this);
+   // handleChange = this.handleChange.bind(this);
+   // handleClick = this.handleClick.bind(this);
 
    handleChange(event) {
      this.setState({ [event.target.name]: event.target.value })
@@ -48,7 +50,7 @@ class SignUp extends Component {
                             last_name: this.state.last_name, 
                             email: this.state.email, 
                             password: this.state.password})
-      .then(function(response){
+      .then((response) => {
         console.log(response.data['message'], response.data['first_name']);
         this.setState({redirect: true});
       });
