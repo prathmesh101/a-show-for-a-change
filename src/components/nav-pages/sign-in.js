@@ -40,7 +40,8 @@ class SignIn extends Component {
       .then((function(response){
         if (response.data["message"] == "success") {
           //this.setState({redirect: true});
-          this.setState(()=>({redirect: true}));
+          console.log("inside post");
+          this.setState(()=>{redirect: true});
         } else {
           alert("Problem logging in. \n Please try again.");
         }
