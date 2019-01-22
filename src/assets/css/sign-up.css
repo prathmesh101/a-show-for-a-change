@@ -1,3 +1,9 @@
+.div-signUp {
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
+}
+
 /* Desktop wide breakpoint */
 @media screen and (min-width: 1366px) {
 
@@ -5,23 +11,7 @@
 
 /* Tablet breakpoint */
 @media screen and (min-width: 1024px) {
-  .div-signUp {
-    width: 40vw;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
 
-  .form-group {
-    width: 40vw!important;
-    margin: 0 auto;
-  }
-
-  .div-submit {
-    width: 25vw!important;
-    margin: 0 auto;
-  }
 }
 
 /* Mobile breakpoint */
@@ -29,10 +19,15 @@
 
 }
 
-.div-signUp {
-  margin-top: 100px;
-  width: 85vw;
-  padding: 0;
+.div-form {
+  width: 350px;
+}
+
+.div-headText {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
 }
 
 .headText {
@@ -40,9 +35,17 @@
   padding: 10px 0;
 }
 
+h2 {
+  font-size: 2.5rem!important;
+  letter-spacing: 0.02em;
+}
+
+.inline {
+  display:inline;
+}
+
 .form-group {
-  width: 85vw;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .form-group input {
@@ -51,7 +54,6 @@
   color: white;
   background-color: transparent;
   font-size: 20px;
-  width: 100%;
 }
 
 .form-group input:focus {
@@ -63,55 +65,60 @@
 
 ::-webkit-input-placeholder {
   text-transform: none;
+  color: darkgray;
+  letter-spacing: 0;
+  font-size: 15px;
  }
 
 .div-underline {
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid darkgray!important;
+  opacity: 0.7;
+  margin-bottom: 3em;
 }
 
-.fillWhite {
-  color: #fff;
+.div-underline i {
+  padding-right: 10px;
 }
 
-#inlineBlock {
-  display: inline!important;
+.fillPrimary {
+  color: #00CB94;
 }
 
 .div-submit {
-  width: 85vw;
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .buttonGreen {
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 1.7em;
   background-color: #00CB94;
-  color: #005C43;
+  color: #00171D;
   border: none;
-  width: 80vw;
   height: 53px;
+  width: 100%;
 }
 
-.div-signIn {
-  width: 85vw;
-  margin: 0 auto;
+.div-footer {
+  margin-top: 75px;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.div-signIn p {
+.div-footer p {
   color: grey;
-  padding-top: 50px;
+  font-size: .9em;
 }
 
 .linkPrimary {
   color: white;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1em;
+  font-weight: 600;
   border-bottom: 2px solid #00CB94;
   letter-spacing: 0.02em;
 }
@@ -142,3 +149,36 @@ select:-webkit-autofill:focus {
   box-shadow: none;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+/* Old css based on Prath's figma wireframe */
+/* .signin-background{
+
+
+ background-image: url("../img/Ticket1.png");
+
+  height: 660px;
+
+
+   background-repeat: no-repeat;
+   background-color: white;
+    background-position: center;
+}
+
+
+
+.signin-content{
+	display: block;
+
+	margin-left:100px;
+  padding-top:160px;
+
+}
+
+.signin-align{
+	padding-left: 165px;
+}
+
+h2.signin-head-text{
+  padding-top: 100px;
+	text-align: center;
+} */

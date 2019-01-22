@@ -1,5 +1,7 @@
 .div-signIn {
-  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
 }
 
 /* Desktop wide breakpoint */
@@ -9,20 +11,23 @@
 
 /* Tablet breakpoint */
 @media screen and (min-width: 1024px) {
-  .form-group {
-    width: 40vw!important;
-    margin: 0 auto;
-  }
 
-  .div-submit {
-    width: 25vw!important;
-    margin: 0 auto;
-  }
 }
 
 /* Mobile breakpoint */
 @media screen and (min-width: 375px) {
 
+}
+
+.div-form {
+  width: 350px;
+}
+
+.div-headText {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
 }
 
 .headText {
@@ -31,12 +36,16 @@
 }
 
 h2 {
-  font-size: 3rem!important;
+  font-size: 2.5rem!important;
+  letter-spacing: 0.02em;
+}
+
+.inline {
+  display:inline;
 }
 
 .form-group {
-  width: 85vw;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .form-group input {
@@ -45,8 +54,6 @@ h2 {
   color: white;
   background-color: transparent;
   font-size: 20px;
-  width: 100%;
-  border-bottom: 1px solid red;
 }
 
 .form-group input:focus {
@@ -58,55 +65,67 @@ h2 {
 
 ::-webkit-input-placeholder {
   text-transform: none;
+  color: darkgray;
+  letter-spacing: 0;
+  font-size: 15px;
  }
 
 .div-underline {
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid darkgray!important;
+  opacity: 0.7;
+  margin-bottom: 3em;
 }
 
-.fillWhite {
-  color: #fff;
+.div-underline i {
+  padding-right: 10px;
 }
 
-#inlineBlock {
-  display: inline!important;
+.fillPrimary {
+  color: #00CB94;
 }
 
 .div-submit {
-  width: 85vw;
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .buttonGreen {
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 1.7em;
   background-color: #00CB94;
-  color: #005C43;
+  color: #00171D;
   border: none;
-  width: 80vw;
   height: 53px;
+  width: 100%;
 }
 
-.div-signIn {
-  width: 85vw;
-  margin: 0 auto;
+.div-footer {
+  margin: 75px 0;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.div-signIn p {
+.div-footer p {
   color: grey;
-  padding-top: 50px;
+  font-size: .9em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.div-center {
+  display: flex;
+  justify-content: center;
 }
 
 .linkPrimary {
   color: white;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1em;
+  font-weight: 600;
   border-bottom: 2px solid #00CB94;
   letter-spacing: 0.02em;
 }
