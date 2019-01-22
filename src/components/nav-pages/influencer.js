@@ -21,7 +21,7 @@ class Influencer extends React.Component{
 	
 	onToken = (e, token) => {
 		e.preventDefault;
-		fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");});
+		fetch('/save-stripe-token', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");});
 																					});
 	}
 
