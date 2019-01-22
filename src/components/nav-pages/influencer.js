@@ -28,6 +28,7 @@ class Influencer extends React.Component{
 		//e.preventDefault;
 		return function(e){
 			e.preventDefault;
+			console.log("inside onToken " + token);
 			fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");});
 																					});
 		};
