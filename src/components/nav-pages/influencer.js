@@ -19,10 +19,10 @@ import StripeCheckout from 'react-stripe-checkout';
 
 class Influencer extends React.Component{
 	
-	onToken = (token) => {
+	onToken = (token, e) => {
 		//e.preventDefault;
 		console.log("inside token");
-		fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");});
+		fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert(`We are in business, ${data.email}`);});
 																					});
 	}
 
