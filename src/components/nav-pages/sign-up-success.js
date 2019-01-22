@@ -3,13 +3,36 @@ import '../../assets/css/sign-up-success.css';
 
 class SignUpSuccess extends Component {
   constructor(props) {
-    super(props);
-    this.state = {
+     super(props);
+     this.state = {
 
+      redirect: false
     }
   }
 
+
+       handleClick = this.handleClick.bind(this);
+
+
+   handleClick(event) {
+     event.preventDefault();
+
+    //var payload = this.state.first_name;
+  this.setState({ redirect: true });
+
+
+
+
+  }
+
+
   render() {
+    const { redirect } = this.state;
+
+   if (redirect) {
+        return <Redirect to='./user-page'/>;
+      }
+
     return (
       <div>
         <div className="form-group">
@@ -19,7 +42,7 @@ class SignUpSuccess extends Component {
         </div>
         <form>
           <div className="div-submit">
-            <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >CONTINUE</button>
+            <button type="submit" className="buttonGreen"  onClick={(event) => this.handleClick(event)}  >CONTINUE</button>
           </div>
         </form>
         <div className="div-signIn">

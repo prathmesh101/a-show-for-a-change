@@ -44,7 +44,7 @@ class SignUp extends Component {
     axios.post(apiBaseUrl, {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password})
         .then(() => this.setState({ redirect: true }));
 
-  
+
 
 
 
@@ -97,7 +97,7 @@ class SignUp extends Component {
     const { redirect } = this.state;
 
     if (redirect) {
-      return <Redirect to='./user-page'/>;
+      return <Redirect to='./sign-up-success'/>;
     }
 
     return (

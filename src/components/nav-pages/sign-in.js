@@ -20,16 +20,21 @@ class SignIn extends Component {
 
      handleClick = this.handleClick.bind(this);
 
-     
+
 
 
   handleClick(event) {
-    var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
-    var self = this;
+  //  var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
+    //var self = this;
 
-    axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
-      .then(() => this.setState({ redirect: true }));
+  //  axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
+    //  .then(() => this.setState({ redirect: true }));
+
+
+
+      this.setState({ redirect: true });
 /*
+
       .then(function (response) {
         console.log(response);
         if (response.data.code == 200) {
@@ -68,7 +73,7 @@ class SignIn extends Component {
             <h2 className="headText">Login</h2>
               <div className="div-underline">
               <i className="fas fa-envelope fillWhite"></i>
-                <input type="email" className="inlineBlock" name="email" id="firstname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ email: newValue })} />            
+                <input type="email" className="inlineBlock" name="email" id="firstname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ email: newValue })} />
               </div>
             </div>
             <div className="form-group">

@@ -12,6 +12,7 @@ import Partners from './nav-pages/partners.js';
 import Genres from './nav-pages/genre.js';
 import Influencer from './nav-pages/influencer.js';
 import UserPage from './nav-pages/user-page.js';
+import SignUpSuccess from './nav-pages/sign-up-success.js';
 
 const App = () => (
     <div>
@@ -27,6 +28,7 @@ const App = () => (
                         <Route path="/influencer" component={Influencer} />
                         <Route path="/sign-in" component={SignIn} />
                         <Route path="/sign-up" component={SignUp} />
+                      
                         <Route path="/user-page" component={ UserPage} />
                     </Switch>
                     <Footer />
