@@ -20,15 +20,9 @@ class SignUp extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-
-   // handleChange = this.handleChange.bind(this);
-   // handleClick = this.handleClick.bind(this);
-
    handleChange(event) {
      this.setState({ [event.target.name]: event.target.value })
    }
-
-
 
    handleClick(event) {
      event.preventDefault();
@@ -115,7 +109,7 @@ class SignUp extends Component {
 
     return (
 
-      <div className="div-signUp">
+      <div className="div-signUpDiv">
         <form>
           <div className="form-group">
             <h2 className="headText">Create Your Account</h2>
@@ -145,21 +139,15 @@ class SignUp extends Component {
           <div className="div-submit">
             <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >CONTINUE</button>
           </div>
-        </form>
-        <div className="div-signIn">
-          <p>Already have an account? <span><Link to="/sign-in" className="linkPrimary">SIGN IN</Link></span></p>
-        </div>
-        {/* <div className="div-progressIndicator">
-          <svg height="28" width="40">
-            <circle className="circle-active" cx="14" cy="14" r="13" fill="#00CB94" />
-          </svg>
-          <svg height="28" width="40">
-            <circle cx="14" cy="14" r="13" fill="grey" />
-          </svg>
-          <svg height="28" width="40">
-            <circle cx="14" cy="14" r="13" fill="grey" />
-          </svg>
-        </div> */}
+          <div className="div-signUpFooter">
+            <span>
+              <p>Already have an account?</p>
+                <div className="div-center">
+                  <p><Link to="/sign-in" className="linkPrimary">SIGN IN</Link></p>              
+                </div>
+            </span>
+          </div>
+        </form>        
       </div>
 
     );

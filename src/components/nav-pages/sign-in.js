@@ -105,8 +105,7 @@ class SignIn extends Component {
                 <div className="div-center">
                   <p><Link to="/sign-up" className="linkPrimary">JOIN</Link></p>              
                 </div>
-            </span>
-            
+            </span>            
           </div>
         </div>
       </div>
