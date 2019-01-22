@@ -20,15 +20,15 @@ const NavBar = () => {
             <NavLink className="nav-link nav-style" to="/partners">
               PARTNERS
             </NavLink>
-            <NavLink className="nav-link nav-style" to="/causes">
+            <NavLink className="nav-link nav-style" to="/influencer">
+              CHANNELS
+            </NavLink>
+            {/* <NavLink className="nav-link nav-style" to="/causes">
               CAUSES
             </NavLink>
             <NavLink className="nav-link nav-style" to="/genre">
               GENRE
-            </NavLink>
-            <NavLink className="nav-link nav-style" to="/influencer">
-              CHANNELS
-            </NavLink>
+            </NavLink>*/}
           </div>
           
           <div className="nav-end navbar-nav">

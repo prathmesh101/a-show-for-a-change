@@ -103,7 +103,7 @@ h2 {
 }
 
 .div-signUpFooter {
-  margin-top: 75px;
+  margin: 75px 0;
   width: 100%;
   display: flex;
   justify-content: center;
