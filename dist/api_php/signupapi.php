@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
                         echo json_encode(array("message" => "success", 
                                                 "first_name" => $first_name, 
                                                 "last_name" => $last_name,
-                                                "email" => $email));
+                                                "username" => $username));
 
                 } else {
 
