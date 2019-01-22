@@ -1,11 +1,13 @@
 import React from 'react';
 import kiana_hero from '../../assets/img/influencer/Kiana_HeroImage@2x.png';
+import kiana_pitch from '../../assets/img/influencer/Kiana_Screenshot.png';
 import kiana_Video1 from '../../assets/img/influencer/Kiana_Video1@2x.png';
 import kiana_Video2 from '../../assets/img/influencer/Kiana_Video2@2x.png';
 import kiana_Video3 from '../../assets/img/influencer/Kiana_Video3@2x.png';
 import kiana_Video4 from '../../assets/img/influencer/Kiana_Video4@2x.png';
 import kiana_Video5 from '../../assets/img/influencer/Kiana_Video5@2x.png';
 import jared_hero from '../../assets/img/influencer/Jared_HeroImage@2x.png';
+import jared_pitch from '../../assets/img/influencer/Jared_Screenshot.png';
 import jared_Video1 from '../../assets/img/influencer/Jared_Video1@2x.png';
 import jared_Video2 from '../../assets/img/influencer/Jared_Video2@2x.png';
 import jared_Video3 from '../../assets/img/influencer/Jared_Video3@2x.png';
@@ -16,7 +18,7 @@ import StripeCheckout from 'react-stripe-checkout';
 
 
 class Influencer extends React.Component{
-
+	
 	onToken = (token) => {
 		fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");
 	});
@@ -63,7 +65,9 @@ class Influencer extends React.Component{
 								<img className="img-fluid" src={kiana_hero} />
 							</div>
 							<div className="col-lg-6 m-0 p-0">
-								<img className="img-fluid" src={kiana_Video1} />
+								<video width="80%" height="400px" controls preload="metadata" id="vid1" poster={kiana_pitch}>
+								   <source src="https://d2d9lc244tytnt.cloudfront.net/KianaMadaniIRC.mp4" type="video/mp4" />
+               					</video>
 							</div>
 						</div>
 					</div>
@@ -74,11 +78,7 @@ class Influencer extends React.Component{
 						Causes: Equal Rights •  Animal Welfare
 					</div>
 					<div className="influencer-description" style={{fontSize: 'small', color: 'white'}}>
-						<p>Iranian-American actress Kiana Madani has been acting, modeling
-							for nearly ten years.<br />
-							Born and raised in San Jose, California, Kiana
-							partook in <span style={{textDecoration: 'underline'}}>Read more</span>  
-						</p>
+						<p>Iranian-American actress Kiana Madani has been acting, modeling and performing for nearly ten years. Born and raised in San Jose, California, Kiana partook in theatre productions locally and participated in acting classes in San Francisco. She has worked on multiple TV pilots, national commercials and feature films amongst seasoned actors. Currently, you can watch her in the political drama THE PIRATES OF SOMALIA opposite Al Pacino, Evan Peters, Barkhad Abdi, and Melanie Griffith on Netflix.</p>
 					</div>
 					<div>
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
@@ -127,7 +127,9 @@ class Influencer extends React.Component{
 								<img className="img-fluid" src={jared_hero} />
 							</div>
 							<div className="col-lg-6 m-0 p-0">
-								<img className="img-fluid" src={jared_Video1} />
+								<video width="80%" height="400px" controls preload="metadata" id="vid1" poster={jared_pitch}>
+								   <source src="https://dhcrjikk6i91q.cloudfront.net/JaredMilradCovenantHouse.mp4" type="video/mp4" />
+               					</video>
 							</div>
 						</div>
 					</div>
@@ -138,8 +140,7 @@ class Influencer extends React.Component{
 						Causes: Equal Rights •  Animal Welfare
 					</div>
 					<div className="influencer-description" style={{fontSize: 'small', color: 'white'}}>
-						<p>Seasoned entrepreneurial leader adept at launching innovative projects and achieving<br />tangible results. An accomplished filmmaker, advocate, and <span style={{textDecoration: 'underline'}}>Read more</span> 
-						</p>
+						<p>A filmmaker and entrepreneur, Jared Milrad worked for President Barack Obama and founded a nationally recognized non-profit organization. The founder of A Show For A Change, his recent film credits include Cumpleañera (writer/director), Marriage (writer/director), 1.20.17 (writer/director), Officer Party (writer/actor), and Hurry Up and Wait (writer/actor).</p>
 					</div>
 					<div>
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>

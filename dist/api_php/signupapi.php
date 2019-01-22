@@ -57,7 +57,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
                 if($result["message"] == "success") {
 
                         //http_response_code(200);
-                        echo json_encode(array("message" => "success", "first_name" => $first_name, "last_name" => $last_name));
+                        echo json_encode(array("message" => "success", 
+                                                "first_name" => $first_name, 
+                                                "last_name" => $last_name,
+                                                "email" => $email));
 
                 } else {
 

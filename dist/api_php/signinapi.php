@@ -9,13 +9,14 @@ require_once("../../src/backend/php/init.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-        $email = $_REQUEST['email'] ? $_REQUEST['email'] : '';
-        $password = $_REQUEST['password'] ? $_REQUEST['password'] : '';
+        // $email = $_REQUEST['email'] ? $_REQUEST['email'] : '';
+        // $password = $_REQUEST['password'] ? $_REQUEST['password'] : '';
 
-        // $form_values = json_decode(file_get_contents('php://input'),true);
+        $form_values = json_decode(file_get_contents('php://input'),true);
 
-        // $email = !empty($form_values['email']) ? $form_values['email'] : '';
-        // $password = !empty($form_values['password']) ? $form_values['password'] : '';
+        $email = !empty($form_values['email']) ? $form_values['email'] : '';
+        $password = !empty($form_values['password']) ? $form_values['password'] : '';
+
 
         if(empty($email))
         {
@@ -43,25 +44,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                // http_response_code(200);
 
                                 // make it json format
-                                echo "success";
+                                echo json_encode(array("message" => "success"));
                         } else {
 
                                // http_response_code(404);
-                                echo "Problem logining in";
+                                echo json_encode(array("message" => "Problem logining in"));
                         }
 
                 } else {
 
                        // http_response_code(404);
                         echo "Problem logining in";
+                        echo json_encode(array("message" => "Problem logining in"));
                 }
 
 
         } else {
 
                 //http_response_code(404);
-                echo "Values missing";
-
+                echo json_encode(array("message" => "Values missing"));
         }
 
 }

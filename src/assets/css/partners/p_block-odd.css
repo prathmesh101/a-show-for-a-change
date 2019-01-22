@@ -1,0 +1,8 @@
+.odd{
+    border-top: 1px solid #00CB94;
+    border-bottom: 1px solid #00CB94;
+}
+
+.img_container img{
+    width: 50%;
+}

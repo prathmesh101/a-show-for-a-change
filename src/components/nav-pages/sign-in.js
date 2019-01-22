@@ -14,25 +14,43 @@ class SignIn extends Component {
       password: '',
       redirect: false
     }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
 
 
-     handleClick = this.handleClick.bind(this);
+  // this.handleChange = this.handleChange.bind(this);
+  // this.handleClick = this.handleClick.bind(this);
 
 
+
+
+
+
+  handleChange(event) {
+     this.setState({ [event.target.name]: event.target.value })
+  }
 
 
   handleClick(event) {
-  //  var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
-    //var self = this;
+    event.preventDefault();
+    var apiBaseUrl = "https://dev.sageape.com/api_php/signinapi.php";
+    var self = this;
 
-  //  axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
-    //  .then(() => this.setState({ redirect: true }));
+    // axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
+    //   .then(() => this.setState({ redirect: true }));
 
+    axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
+      .then((response) => {
+        if (response.data["message"] == "success") {
+          this.setState({redirect: true});
+        } else {
+          alert("Problem logging in. \n Please try again.");
+        }
+      });
 
-
-      this.setState({ redirect: true });
+}
 /*
 
       .then(function (response) {
@@ -60,34 +78,43 @@ class SignIn extends Component {
   render() {
     const { redirect } = this.state;
 
-   if (redirect) {
-        return <Redirect to='./user-page'/>;
-      }
+    if (redirect) {
+        return <Redirect to='./user-page' />;
+    }
 
     return (
 
       <div className="div-signIn">
         <div className="div-form">
           <form>
+            <div className="div-headText">
+              <h2 className="headText">Sign in</h2>
+            </div>
             <div className="form-group">
-            <h2 className="headText">Login</h2>
               <div className="div-underline">
-              <i className="fas fa-envelope fillWhite"></i>
-                <input type="email" className="inlineBlock" name="email" id="firstname" placeholder="Enter email" onChange={(event, newValue) => this.setState({ email: newValue })} />
+
+                <i className="fas fa-envelope fillPrimary inline"></i>
+                <input type="email" className="inline" name="email" id="firstname" placeholder="Email" onChange={this.handleChange} />
+
               </div>
             </div>
             <div className="form-group">
               <div className="div-underline">
-                <i className="fas fa-unlock-alt fillWhite"></i>
-                <input type="text" className="inlineBlock" name="password" id="password" placeholder="Enter password" onChange={(event, newValue) => this.setState({ password: newValue })} />
+                <i className="fas fa-unlock-alt fillPrimary"></i>
+                <input type="text" className="inline" name="password" id="password" placeholder="Password" onChange={this.handleChange} />
               </div>
             </div>
             <div className="div-submit">
-              <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >LOG IN</button>
+              <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >SIGN IN</button>
             </div>
           </form>
-          <div className="div-signIn">
-            <p>Not a member yet? <span><Link to="/sign-up" className="linkPrimary">SIGN UP</Link></span></p>
+          <div className="div-footer">
+            <span>
+              <p>New to Sage Ape?</p>
+                <div className="div-center">
+                  <p><Link to="/sign-up" className="linkPrimary">JOIN</Link></p>
+                </div>
+            </span>
           </div>
         </div>
       </div>
