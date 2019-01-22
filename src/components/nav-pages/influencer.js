@@ -25,11 +25,11 @@ class Influencer extends React.Component{
 	// 																				});
 	// }
 
-	onToken(token){
+	onToken(e, token){
 		console.log("isnide token upper lever");
-		//e.preventDefault;
-		return function(e){
-			e.preventDefault;
+		e.preventDefault();
+		return function(token){
+			//e.preventDefault();
 			console.log("inside onToken " + token);
 			fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");});
 																					});
