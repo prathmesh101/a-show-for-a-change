@@ -52,12 +52,9 @@ class Influencer extends React.Component{
 								</button>
 							</div>
 							<div className="modal-body">
-								<p>Here goes stripe payment</p>
+								<p className="p-3 mb-2 bg-secondary text-white">Donate</p>
 								<form action="" method="post" id="payment-form">
 	  								<div className="form-row">
-									    <label for="card-element">
-									      Credit or debit card
-									    </label>
 									    <div id="card-element">
 									      <StripeCheckout 	name="A Show For A Change" 
 									      					amount={1000000} 
@@ -69,8 +66,6 @@ class Influencer extends React.Component{
 								    	{/*  Used to display form errors.   */}
 								    <div id="card-errors" role="alert"></div>
 								  </div>
-
-								  <button>Submit Payment</button>
 								</form>
 							</div>
 						</div>{/* modal-content */}
