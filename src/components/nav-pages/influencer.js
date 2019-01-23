@@ -19,10 +19,10 @@ import StripeCheckout from 'react-stripe-checkout';
 
 class Influencer extends React.Component{
 	
-	onToken = (token, e) => {
-		//e.preventDefault;
+	onToken = (token) => {
+		e.preventDefault();
 		console.log("inside token");
-		fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert(`We are in business, ${data.email}`);});
+		fetch('https://dev.sageape.com/api_php/processpayment.php', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert(`We are in business, ${data.email}`);});
 																					});
 	}
 
@@ -58,9 +58,12 @@ class Influencer extends React.Component{
 									      Credit or debit card
 									    </label>
 									    <div id="card-element">
-									      <StripeCheckout name="A Show For A Change" amount={1000000} email="info@vidhub.co" token={this.onToken} stripeKey="pk_test_tmtdfK9dsNMNYoz8bBzuXbx5" />
-									    	<button className="btn btn-primary">
-									    	</button>
+									      <StripeCheckout 	name="A Show For A Change" 
+									      					amount={1000000} 
+									      					email="info@sageape.com" 
+									      					token={this.onToken} 
+									      					stripeKey="pk_test_tmtdfK9dsNMNYoz8bBzuXbx5" 
+									      />
 									    </div>
 								    	{/*  Used to display form errors.   */}
 								    <div id="card-errors" role="alert"></div>
