@@ -58,7 +58,7 @@ class Influencer extends React.Component{
 									      Credit or debit card
 									    </label>
 									    <div id="card-element">
-									      <StripeCheckout name="A Show For A Change" amount={1000000} email="info@vidhub.co" token={this.onToken(e)} stripeKey="pk_test_tmtdfK9dsNMNYoz8bBzuXbx5" />
+									      <StripeCheckout name="A Show For A Change" amount={1000000} email="info@vidhub.co" token={this.onToken} stripeKey="pk_test_tmtdfK9dsNMNYoz8bBzuXbx5" />
 									    </div>
 								    	{/*  Used to display form errors.   */}
 								    <div id="card-errors" role="alert"></div>
