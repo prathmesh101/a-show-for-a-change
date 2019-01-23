@@ -92,6 +92,18 @@ h2 {
   justify-content: center;
 }
 
+.div-options {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+#checkbox {
+  margin-right: 8px;
+}
+
 .buttonGreen {
   font-weight: 400;
   font-size: 1.7em;
