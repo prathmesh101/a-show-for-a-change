@@ -46,13 +46,13 @@ class Influencer extends React.Component{
 					<div className="modal-dialog">
 						<div className="modal-content">
 							<div className="modal-header">
-								<h5 className="modal-title">Donation</h5>
+								<h5 className="modal-title">A Show For A Change</h5>
 								<button type="button" className="close" data-dismiss="modal" aria-label="Close">
 								     <span aria-hidden="true">&times;</span>
 								</button>
 							</div>
 							<div className="modal-body">
-								<p className="p-3 mb-2 bg-secondary text-white">Donate</p>
+								<p className="p-3 mb-5 bg-success text-white">Donate</p>
 								<form action="" method="post" id="payment-form">
 	  								<div className="form-row">
 									    <div id="card-element">
