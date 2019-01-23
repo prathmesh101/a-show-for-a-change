@@ -19,11 +19,23 @@ import StripeCheckout from 'react-stripe-checkout';
 
 class Influencer extends React.Component{
 	
-	onToken = (token) => {
-		fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");
-	});
-	});
+	onToken = (token, e) => {
+		//e.preventDefault;
+		console.log("inside token");
+		fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert(`We are in business, ${data.email}`);});
+																					});
 	}
+
+	// onToken(token){
+	// 	console.log("isnide token upper lever");
+	// 	e.preventDefault();
+	// 	return function(token){
+	// 		//e.preventDefault();
+	// 		console.log("inside onToken " + token);
+	// 		fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");});
+	// 																				});
+	// 	};
+	// }
 
 	render () {
 
@@ -46,7 +58,7 @@ class Influencer extends React.Component{
 									      Credit or debit card
 									    </label>
 									    <div id="card-element">
-									     <StripeCheckout token={this.onToken} stripeKey="pk_test_TYooMQauvdEDq54NiTphI7jx" />
+									      <StripeCheckout amount={1000000} email="info@vidhub.co" token={this.onToken} stripeKey="pk_test_tmtdfK9dsNMNYoz8bBzuXbx5" />
 									    </div>
 								    	{/*  Used to display form errors.   */}
 								    <div id="card-errors" role="alert"></div>

@@ -44,7 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                // http_response_code(200);
 
                                 // make it json format
-                                echo json_encode(array("message" => "success"));
+                                echo json_encode(array("message" => "success", 
+                                        "first_name" => $user_data["first_name"], 
+                                        "last_name" => $user_data["last_name"], 
+                                        "username" => $user_data["username"]));
                         } else {
 
                                // http_response_code(404);
