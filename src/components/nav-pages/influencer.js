@@ -62,7 +62,7 @@ class Influencer extends React.Component{
 									      					amount={1000000} 
 									      					email="info@sageape.com" 
 									      					token={this.onToken} 
-									      					stripeKey="pk_test_tmtdfK9dsNMNYoz8bBzuXbx5" 
+									      					stripeKey="pk_test_AptgKCw7QNGytDXUbTAuwWrJ" 
 									      />
 									    </div>
 								    	{/*  Used to display form errors.   */}
