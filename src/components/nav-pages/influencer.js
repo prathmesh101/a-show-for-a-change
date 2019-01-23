@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap';
 import kiana_hero from '../../assets/img/influencer/Kiana_HeroImage@2x.png';
 import kiana_pitch from '../../assets/img/influencer/Kiana_Screenshot.png';
 import kiana_Video1 from '../../assets/img/influencer/Kiana_Video1@2x.png';
