@@ -5,6 +5,7 @@ import '../../assets/css/sign-up.css';
 import { Link } from 'react-router-dom';
 import UserPage from './user-page.js';
 import { Redirect } from 'react-router';
+import NavBar from './navbar-toggle.js'
 
 class SignUp extends Component {
   constructor(props) {
@@ -104,7 +105,9 @@ class SignUp extends Component {
     const { redirect } = this.state;
 
     if (redirect) {
-      return <Redirect to='./sign-up-success'/>;
+      
+
+      return <Redirect to='./user-page'/>;
     }
 
     return (
