@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap';
 import kiana_hero from '../../assets/img/influencer/Kiana_HeroImage@2x.png';
 import kiana_pitch from '../../assets/img/influencer/Kiana_Screenshot.png';
 import kiana_Video1 from '../../assets/img/influencer/Kiana_Video1@2x.png';
@@ -19,19 +20,23 @@ import StripeCheckout from 'react-stripe-checkout';
 
 class Influencer extends React.Component{
 	
-	// onToken = (token) => {
-	// 	fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");});
-	// 																				});
-	// }
-
-	onToken(token){
-		//e.preventDefault;
-		return function(e){
-			e.preventDefault;
-			fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");});
+	onToken = (token) => {
+		e.preventDefault();
+		console.log("inside token");
+		fetch('https://dev.sageape.com/api_php/processpayment.php', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert(`We are in business, ${data.email}`);});
 																					});
-		};
 	}
+
+	// onToken(token){
+	// 	console.log("isnide token upper lever");
+	// 	e.preventDefault();
+	// 	return function(token){
+	// 		//e.preventDefault();
+	// 		console.log("inside onToken " + token);
+	// 		fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");});
+	// 																				});
+	// 	};
+	// }
 
 	render () {
 
@@ -41,26 +46,26 @@ class Influencer extends React.Component{
 					<div className="modal-dialog">
 						<div className="modal-content">
 							<div className="modal-header">
-								<h5 className="modal-title">Donation</h5>
+								<h5 className="modal-title">A Show For A Change</h5>
 								<button type="button" className="close" data-dismiss="modal" aria-label="Close">
 								     <span aria-hidden="true">&times;</span>
 								</button>
 							</div>
 							<div className="modal-body">
-								<p>Here goes stripe payment</p>
+								<p className="p-3 mb-5 bg-success text-white">Donate</p>
 								<form action="" method="post" id="payment-form">
 	  								<div className="form-row">
-									    <label for="card-element">
-									      Credit or debit card
-									    </label>
 									    <div id="card-element">
-									     <StripeCheckout token={this.onToken} stripeKey="pk_test_tmtdfK9dsNMNYoz8bBzuXbx5" />
+									      <StripeCheckout 	name="A Show For A Change" 
+									      					amount={1000000} 
+									      					email="info@sageape.com" 
+									      					token={this.onToken} 
+									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
+									      />
 									    </div>
 								    	{/*  Used to display form errors.   */}
 								    <div id="card-errors" role="alert"></div>
 								  </div>
-
-								  <button>Submit Payment</button>
 								</form>
 							</div>
 						</div>{/* modal-content */}
