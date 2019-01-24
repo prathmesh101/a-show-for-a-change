@@ -7,7 +7,7 @@ import Navbar from './nav-pages/navbar-toggle.js';
 const Header = () => {
     return (
         <div className="header-cont">
-            <Navbar isLoggedIn={false}/>
+            <Navbar isLoggedIn={true}/>
         </div>
     )
 }

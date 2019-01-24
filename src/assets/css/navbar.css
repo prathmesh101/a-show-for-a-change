@@ -1,7 +1,7 @@
 .head-navbar {
-  background: rgba(0,0,0,0.3) !important;
-    font-size: 13px !important;
-    padding:0 30px !important;
+  background: transparent !important;
+  font-size: 13px !important;
+  padding:0 30px !important;
 }
 
  .nav-style {
@@ -45,4 +45,33 @@ navlink.nav-style > a.active {
   display: flex;
   flex-direction: row;
   padding-right: 1em;
+}
+
+.genresDropdown {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  background-color: #156767;
+  padding: 10px;
+  margin: 10px 0 0 0;
+  border-radius: .5em;
+}
+
+.genresDropdown a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.genresDropdown a:hover {
+  background-color: #156767!important;
+  text-decoration: none!important;
+  color: white;
+}
+
+.genresDropdown a:hover {background-color: #ddd;}
+
+#navGenres:hover .genresDropdown {
+  display: flex;
+  flex-direction: column;
 }
