@@ -20,12 +20,12 @@ import StripeCheckout from 'react-stripe-checkout';
 
 class Influencer extends React.Component{
 	
-	onToken = (token) => {
+	onToken = (token, e) => {
 		e.preventDefault();
 		console.log("inside token");
 		fetch('https://dev.sageape.com/api_php/processpayment.php', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert(`We are in business, ${data.email}`);});
 																					});
-	}
+	};
 
 	// onToken(token){
 	// 	console.log("isnide token upper lever");
@@ -59,7 +59,6 @@ class Influencer extends React.Component{
 									      <StripeCheckout 	name="A Show For A Change" 
 									      					amount={1000000} 
 									      					email="info@sageape.com" 
-									      					token={this.onToken} 
 									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
 									      />
 									    </div>
