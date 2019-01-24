@@ -97,8 +97,11 @@ class Influencer extends React.Component{
 					<div>
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
 					{/*    <button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button> */}
-						<StripeCheckout 					name="A Show For A Change" 
-									      					email="info@sageape.com" 
+						<StripeCheckout 					name="A Show For A Change"
+															description="Donations for Kiana\'s cause"
+									      					email="info@sageape.com"
+									      					shippingAddress
+									      					panelLabel="Give A Hand"
 									      					token={this.onToken} 
 									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
 									      />
@@ -163,7 +166,15 @@ class Influencer extends React.Component{
 					</div>
 					<div>
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
-						<button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button>
+					{/*	<button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button> */}
+						<StripeCheckout 					name="A Show For A Change"
+															description="Donations for Jared\'s cause"
+									      					email="info@sageape.com"
+									      					shippingAddress
+									      					panelLabel="Give A Hand"
+									      					token={this.onToken} 
+									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
+									      />
 					</div>
 				</section>
 			
