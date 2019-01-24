@@ -1,5 +1,4 @@
 import React from 'react';
-//import 'bootstrap';
 import kiana_hero from '../../assets/img/influencer/Kiana_HeroImage@2x.png';
 import kiana_pitch from '../../assets/img/influencer/Kiana_Screenshot.png';
 import kiana_Video1 from '../../assets/img/influencer/Kiana_Video1@2x.png';
@@ -15,63 +14,22 @@ import jared_Video3 from '../../assets/img/influencer/Jared_Video3@2x.png';
 import jared_Video4 from '../../assets/img/influencer/Jared_Video4@2x.png';
 import jared_Video5 from '../../assets/img/influencer/Jared_Video5@2x.png';
 import StripeCheckout from 'react-stripe-checkout';
+import CheckoutForm from '../CheckoutForm.js';
 
 
 
 class Influencer extends React.Component{
 	
 	onToken = (token) => {
-		//e.preventDefault();
-		console.log("inside token");
+		
 		fetch('https://dev.sageape.com/api_php/processpayment.php', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert(`We are in business, ${data.email}`);});
 																					});
 	};
-
-	// onToken(token){
-	// 	console.log("isnide token upper lever");
-	// 	e.preventDefault();
-	// 	return function(token){
-	// 		//e.preventDefault();
-	// 		console.log("inside onToken " + token);
-	// 		fetch('', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert("we are in");});
-	// 																				});
-	// 	};
-	// }
 
 	render () {
 
 		return (
 			<div className="container">
-				<div className="modal fade" id="payment-processing">
-					<div className="modal-dialog">
-						<div className="modal-content">
-							<div className="modal-header">
-								<h5 className="modal-title">A Show For A Change</h5>
-								<button type="button" className="close" data-dismiss="modal" aria-label="Close">
-								     <span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div className="modal-body">
-								<p className="p-3 mb-5 bg-success text-white">Donate</p>
-								<form action="" method="post" id="payment-form">
-	  								<div className="form-row">
-									    <div id="card-element">
-									   {/*   <StripeCheckout 	name="A Show For A Change" 
-									      						amount={1000000} 
-									      						email="info@sageape.com" 
-									      						token={this.onToken} 
-									      						stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
-									      />
-									    */}
-									    </div>
-								    	{/*  Used to display form errors.   */}
-								    <div id="card-errors" role="alert"></div>
-								  </div>
-								</form>
-							</div>
-						</div>{/* modal-content */}
-					</div>{/* modal-dialog */}
-				</div>{/* modal */}
 				<section className="influencer mb-5" style={{marginTop: '100px'}}>
 					<div className="influencer-poster">
 						<div className="row">
@@ -97,11 +55,12 @@ class Influencer extends React.Component{
 					<div>
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
 					{/*    <button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button> */}
+						<CheckoutForm />
 						<StripeCheckout 					name="A Show For A Change"
 															description="Donations for Kiana cause"
 									      					email="info@sageape.com"
 									      					shippingAddress
-									      					panelLabel="Give A Hand"
+									      					label="Give A Hand"
 									      					amount={1000}
 									      					token={this.onToken} 
 									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
@@ -172,7 +131,7 @@ class Influencer extends React.Component{
 															description="Donations for Jared cause"
 									      					email="info@sageape.com"
 									      					shippingAddress
-									      					panelLabel="Give A Hand"
+									      					label="Give A Hand"
 									      					amount={1000}
 									      					token={this.onToken} 
 									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
