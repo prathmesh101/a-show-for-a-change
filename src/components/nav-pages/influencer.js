@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap';
+//import 'bootstrap';
 import kiana_hero from '../../assets/img/influencer/Kiana_HeroImage@2x.png';
 import kiana_pitch from '../../assets/img/influencer/Kiana_Screenshot.png';
 import kiana_Video1 from '../../assets/img/influencer/Kiana_Video1@2x.png';
@@ -20,12 +20,12 @@ import StripeCheckout from 'react-stripe-checkout';
 
 class Influencer extends React.Component{
 	
-	onToken = (token) => {
+	onToken = (token, e) => {
 		e.preventDefault();
 		console.log("inside token");
 		fetch('https://dev.sageape.com/api_php/processpayment.php', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert(`We are in business, ${data.email}`);});
 																					});
-	}
+	};
 
 	// onToken(token){
 	// 	console.log("isnide token upper lever");
@@ -56,12 +56,13 @@ class Influencer extends React.Component{
 								<form action="" method="post" id="payment-form">
 	  								<div className="form-row">
 									    <div id="card-element">
-									      <StripeCheckout 	name="A Show For A Change" 
+									   {/*   <StripeCheckout 	name="A Show For A Change" 
 									      					amount={1000000} 
 									      					email="info@sageape.com" 
 									      					token={this.onToken} 
 									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
 									      />
+									    */}
 									    </div>
 								    	{/*  Used to display form errors.   */}
 								    <div id="card-errors" role="alert"></div>
@@ -95,8 +96,14 @@ class Influencer extends React.Component{
 					</div>
 					<div>
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
-						<button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button>
-					</div>
+					{/*    <button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button> */}
+						<StripeCheckout 	name="A Show For A Change" 
+									      					amount={1000} 
+									      					email="info@sageape.com" 
+									      					token={this.onToken} 
+									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
+									      />
+						</div>
 				</section>
 			
 				<section className="more-from mb-5">
