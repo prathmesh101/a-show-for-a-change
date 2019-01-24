@@ -9,7 +9,6 @@ const Footer = () => {
         <div className="footer-cont">
           <div className="pull-left footer-left">
             <h3>SAGE APE</h3>
-            <p>Copyright © 2018</p>
             <p>&copy; {(new Date().getFullYear())}, A Show For A Change, Inc. All rights reserved.</p>
           </div>
           <div className="pull-right footer-right">
