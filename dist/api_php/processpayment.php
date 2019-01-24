@@ -9,7 +9,6 @@ require_once("../../src/backend/php/init.php");
 
 file_put_contents("../../../../backup/filedump.txt", "we are inside processpayment\n");
 
-<?php
 require_once('../../../../vendor/autoload.php');
 
 $stripe = [
@@ -19,22 +18,22 @@ $stripe = [
 
 \Stripe\Stripe::setApiKey($stripe['secret_key']);
 
- $token  = $_POST['stripeToken'];
-  $email  = $_POST['stripeEmail'];
+$token  = $_POST['stripeToken'];
+$email  = $_POST['stripeEmail'];
 
-  $customer = \Stripe\Customer::create([
-      'email' => $email,
-      'source'  => $token,
-  ]);
+$customer = \Stripe\Customer::create([
+    'email' => $email,
+    'source'  => $token,
+]);
 
-  $charge = \Stripe\Charge::create([
-      'customer' => $customer->id,
-      'amount'   => 1000,
-      'currency' => 'usd',
-  ]);
+$charge = \Stripe\Charge::create([
+    'customer' => $customer->id,
+    'amount'   => 1000,
+    'currency' => 'usd',
+]);
 
-  echo '<h1>Successfully charged $10.00!</h1>';
+echo '<h1>Successfully charged $10.00!</h1>';
 
-  file_put_contents("../../../../backup/filedump.txt", "at the end of program\n");
+file_put_contents("../../../../backup/filedump.txt", "at the end of program\n");
 ?>
 
