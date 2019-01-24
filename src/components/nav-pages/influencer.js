@@ -57,10 +57,10 @@ class Influencer extends React.Component{
 	  								<div className="form-row">
 									    <div id="card-element">
 									   {/*   <StripeCheckout 	name="A Show For A Change" 
-									      					amount={1000000} 
-									      					email="info@sageape.com" 
-									      					token={this.onToken} 
-									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
+									      						amount={1000000} 
+									      						email="info@sageape.com" 
+									      						token={this.onToken} 
+									      						stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
 									      />
 									    */}
 									    </div>
