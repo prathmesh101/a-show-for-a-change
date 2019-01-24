@@ -98,7 +98,7 @@ class Influencer extends React.Component{
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
 					{/*    <button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button> */}
 						<StripeCheckout 	name="A Show For A Change" 
-									      					amount={1000000} 
+									      					amount={1000} 
 									      					email="info@sageape.com" 
 									      					token={this.onToken} 
 									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
