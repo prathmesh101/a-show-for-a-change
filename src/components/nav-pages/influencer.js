@@ -56,9 +56,6 @@ class Influencer extends React.Component{
 					<div>
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
 					{/*    <button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button> */}
-						<Elements>
-							<CheckoutForm />
-						</Elements>
 						<StripeCheckout 					name="A Show For A Change"
 															description="Donations for Kiana cause"
 									      					email="info@sageape.com"
