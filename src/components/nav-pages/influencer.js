@@ -14,6 +14,7 @@ import jared_Video3 from '../../assets/img/influencer/Jared_Video3@2x.png';
 import jared_Video4 from '../../assets/img/influencer/Jared_Video4@2x.png';
 import jared_Video5 from '../../assets/img/influencer/Jared_Video5@2x.png';
 import StripeCheckout from 'react-stripe-checkout';
+import {Elements} from 'react-stripe-elements';
 import CheckoutForm from '../CheckoutForm.js';
 
 
@@ -55,7 +56,9 @@ class Influencer extends React.Component{
 					<div>
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
 					{/*    <button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button> */}
-						<CheckoutForm />
+						<Elements>
+							<CheckoutForm />
+						</Elements>
 						<StripeCheckout 					name="A Show For A Change"
 															description="Donations for Kiana cause"
 									      					email="info@sageape.com"
