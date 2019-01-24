@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Slider from "react-slick";
-//import 'bootstrap';
 import axios from 'axios';
 import '../../assets/css/video-page.css';
 
