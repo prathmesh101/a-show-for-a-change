@@ -20,8 +20,8 @@ import StripeCheckout from 'react-stripe-checkout';
 
 class Influencer extends React.Component{
 	
-	onToken = (token, e) => {
-		e.preventDefault();
+	onToken = (token) => {
+		//e.preventDefault();
 		console.log("inside token");
 		fetch('https://dev.sageape.com/api_php/processpayment.php', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert(`We are in business, ${data.email}`);});
 																					});
@@ -57,10 +57,10 @@ class Influencer extends React.Component{
 	  								<div className="form-row">
 									    <div id="card-element">
 									   {/*   <StripeCheckout 	name="A Show For A Change" 
-									      					amount={1000000} 
-									      					email="info@sageape.com" 
-									      					token={this.onToken} 
-									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
+									      						amount={1000000} 
+									      						email="info@sageape.com" 
+									      						token={this.onToken} 
+									      						stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
 									      />
 									    */}
 									    </div>
@@ -97,8 +97,7 @@ class Influencer extends React.Component{
 					<div>
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
 					{/*    <button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button> */}
-						<StripeCheckout 	name="A Show For A Change" 
-									      					amount={1000} 
+						<StripeCheckout 					name="A Show For A Change" 
 									      					email="info@sageape.com" 
 									      					token={this.onToken} 
 									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
