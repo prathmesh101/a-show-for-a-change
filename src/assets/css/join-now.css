@@ -31,18 +31,17 @@ font-size: 25px;
 
 }
 
-
-
 .monthly-bill{
 	border: 1px solid #00CB94;
-	margin-right: 5px;
-
 }
+
 .subscription-set-plan h6:hover{
 	background: #00CB94;
 }
 
-
+.margin-right {
+	margin-right: 5px;
+}
 
 .plan{
 	width: 80%;

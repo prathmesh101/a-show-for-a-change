@@ -86,7 +86,7 @@ class SignIn extends Component {
             <div className="form-group">
               <div className="div-underline">
                 <i className="fas fa-envelope fillPrimary inline"></i>
-                <input type="email" className="inline" name="email" id="firstname" placeholder="Email" onChange={this.handleChange} />            
+                <input type="email" className="inline" name="email" id="firstname" placeholder="Email" onChange={this.handleChange} />
               </div>
             </div>
             <div className="form-group">
@@ -107,9 +107,9 @@ class SignIn extends Component {
             <span>
               <p>New to Sage Ape?</p>
                 <div className="div-center">
-                  <p><Link to="/sign-up" className="linkPrimary">JOIN</Link></p>              
+                  <p><Link to="/sign-up" className="linkPrimary">JOIN</Link></p>
                 </div>
-            </span>            
+            </span>
           </div>
         </div>
       </div>

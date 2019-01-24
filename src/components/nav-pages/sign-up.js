@@ -40,9 +40,9 @@ class SignUp extends Component {
     // axios.post(apiBaseUrl, {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password})
     //     .then(() => this.setState({ redirect: true }));
 
-    axios.post(apiBaseUrl, {first_name: this.state.first_name, 
-                            last_name: this.state.last_name, 
-                            email: this.state.email, 
+    axios.post(apiBaseUrl, {first_name: this.state.first_name,
+                            last_name: this.state.last_name,
+                            email: this.state.email,
                             password: this.state.password})
       .then((response) => {
         if (response.data["message"] == "success") {
@@ -145,11 +145,11 @@ class SignUp extends Component {
             <span>
               <p>Already have an account?</p>
                 <div className="div-center">
-                  <p><Link to="/sign-in" className="linkPrimary">SIGN IN</Link></p>              
+                  <p><Link to="/sign-in" className="linkPrimary">SIGN IN</Link></p>
                 </div>
             </span>
           </div>
-        </form>        
+        </form>
       </div>
 
     );
@@ -157,4 +157,3 @@ class SignUp extends Component {
 }
 
 export default SignUp;
-

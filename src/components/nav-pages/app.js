@@ -12,7 +12,7 @@ import Partners from './nav-pages/partners/partners_page';
 import Genres from './nav-pages/genre.js';
 import Influencer from './nav-pages/influencer.js';
 import UserPage from './nav-pages/user-page.js';
-import VideoPage from './nav-pages/video-page.js';
+import SignUpSuccess from './nav-pages/sign-up-success.js';
 
 const App = () => (
     <div>
@@ -28,9 +28,10 @@ const App = () => (
                         <Route path="/influencer" component={Influencer} />
                         <Route path="/sign-in" component={SignIn} />
                         <Route path="/sign-up" component={SignUp} />
+
                         <Route path="/user-page" component={UserPage} />
-                        
-                        <Route path="/video-page" component={VideoPage} />
+                        <Redirect to="{Home}" />
+
                     </Switch>
                     <Footer />
                 </main>

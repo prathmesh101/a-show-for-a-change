@@ -1,11 +1,13 @@
 import React from 'react';
 import '../assets/css/header.css';
-import NavBar from './nav-pages/navbar.js';
+
+import Navbar from './nav-pages/navbar-toggle.js';
+
 
 const Header = () => {
     return (
         <div className="header-cont">
-            <NavBar />
+            <Navbar isLoggedIn={false}/>
         </div>
     )
 }

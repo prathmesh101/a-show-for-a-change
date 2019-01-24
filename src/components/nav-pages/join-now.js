@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component} from 'react';
 import '../../assets/css/join-now.css';
 import { Link } from 'react-router-dom';
 
-const JoinNow = () => {
+const JoinNow = () => { 
     return (
         <div className="subscription-plan-section">
             <div className="container">
@@ -11,8 +11,39 @@ const JoinNow = () => {
                   <h2 className="subscription-section-heading-main">Choose a plan to start making a difference</h2>
                     <h4 className="subscription-section-sub-main">Free for 30 days, cancel anytime.</h4>
                     <div className="subscription-set-plan">
-                    <h6 className="monthly-bill">Billed Monthly </h6>
-                    <h6>Billed Annually </h6>
+                    <h6 id="billedMonthly"
+                      className="monthly-bill"
+                      onClick={
+                        function() {
+                          document.getElementById('billedMonthly').classList.add('monthly-bill');
+                          document.getElementById('billedAnnually').classList.remove('monthly-bill');
+                          const NodeList = document.getElementsByClassName('plan-billed');
+                          const arr = Array.from(NodeList);
+                          arr.map((div) => {
+                            div.innerHTML="Billed Monthly"
+                          })
+                          document.getElementById('student-plan').innerHTML='$1.99'
+                          document.getElementById('standard-plan').innerHTML='$2.99'
+                          document.getElementById('premium-plan').innerHTML='$4.99'
+                        }
+                      }>Billed Monthly </h6>
+                    <h6 id="billedAnnually"
+                      onClick={
+                        function() {
+                          document.getElementById('billedAnnually').classList.add('monthly-bill');
+                          document.getElementById('billedMonthly').classList.remove('monthly-bill');
+                          const NodeList = document.getElementsByClassName('plan-billed');
+                          const arr = Array.from(NodeList);
+                          arr.map((div) => {
+                            div.innerHTML="Billed Annually"
+                          })
+                          document.getElementById('student-plan').innerHTML='$57.90'
+                          document.getElementById('standard-plan').innerHTML='$89.70'
+                          document.getElementById('premium-plan').innerHTML='$149.70'
+                        }
+                      }
+                    
+                    >Billed Annually </h6>
 
                     </div>
                 </div>
@@ -27,7 +58,7 @@ const JoinNow = () => {
               <div className="flex-container plan">
 
                 <div className="plan-head">Student Plan</div>
-                <div className="plan-price">$1.99</div>
+                <div className="plan-price" id="student-plan">$1.99</div>
                 <div className="plan-billed">Billed Monthly</div>
                 <div className="plan-device">1 device</div>
                 <div className="plan-format">Standard Definition</div>
@@ -43,7 +74,7 @@ const JoinNow = () => {
                 <div className="flex-container plan">
 
                   <div className="plan-head">Standard Plan</div>
-                  <div className="plan-price">$2.99</div>
+                  <div className="plan-price" id="standard-plan">$2.99</div>
                   <div className="plan-billed">Billed Monthly</div>
                   <div className="plan-device">1 device</div>
                   <div className="plan-format">Standard Definition</div>
@@ -58,7 +89,7 @@ const JoinNow = () => {
                 <div className="flex-container plan">
 
                   <div className="plan-head">Premium Plan</div>
-                  <div className="plan-price">$4.99</div>
+                  <div className="plan-price" id="premium-plan">$4.99</div>
                   <div className="plan-billed">Billed Monthly</div>
                   <div className="plan-device">2 device</div>
                   <div className="plan-format">High Definition</div>

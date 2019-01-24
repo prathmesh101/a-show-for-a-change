@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import 'bootstrap';
 import axios from 'axios';
-
+import { Redirect } from 'react-router';
 import '../../assets/css/user-page.css';
+import Navbar from './navbar-toggle';
 
 
 import { Link } from 'react-router-dom';
@@ -29,10 +30,30 @@ class UserPage extends Component {
     super(props);
     this.state = {
 
-
-
+      redirect: false
     }
   }
+
+
+
+     handleClick = this.handleClick.bind(this);
+
+
+
+
+  handleClick(event) {
+
+
+
+      this.setState({ redirect: true });
+
+
+  }
+
+
+
+
+
 
 
   /*
@@ -53,12 +74,19 @@ class UserPage extends Component {
 
   render() {
 
+        const { redirect } = this.state;
+
+        if (redirect) {
+
+          return <Redirect to='./video-page'/>;
+        }
 
 
     return (
 
       <div className="user-page-main">
 
+          
       <div className="user-back-img-content">
 
       <img
@@ -97,7 +125,7 @@ class UserPage extends Component {
           <h3  style={{paddingTop:'50px', paddingBottom:'30px'}}  className="head-movie-genre" >Popular</h3>
           <div className="row">
 
-            <figure className="col-lg-3 col-md-6 figure text-center">
+            <figure className="col-lg-3 col-md-6 figure text-center" onClick={(event) => this.handleClick(event)}>
               <img src={Video1} alt="Kiana2" className="img-fluid figure-img img-border" />
               <figcaption className="figure-caption">
                 Cumpleañera
