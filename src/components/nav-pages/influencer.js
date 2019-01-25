@@ -40,10 +40,10 @@ class Influencer extends React.Component{
 				<section className="influencer mb-5" style={{marginTop: '100px'}}>
 					<div className="influencer-poster">
 					  <div className="row">
-					  	<div className="h4"><strong>Influener:</strong>Kiana Madani</div>
+					  	<div className="h4" style={{color: 'white'}}><bolder>Influencer:</bolder> Kiana Madani</div>
 					  </div>
 						<div className="row">
-							<div className="col-lg-6 m-0 p-0">
+							<div className="col-lg-6 p-0" style={{marginTop: '70px'}}>
 								<img className="img-fluid" src={kiana_hero} />
 							</div>
 							<div className="col-lg-6 m-0 p-0">
@@ -113,8 +113,11 @@ class Influencer extends React.Component{
 
 				<section className="influencer mb-5">
 					<div className="influencer-poster">
+					  <div className="row">
+					  	<div className="h4" style={{color: 'white'}}><bolder>Influencer:</bolder> Jared Milrad</div>
+					  </div>
 						<div className="row">
-							<div className="col-lg-6 m-0 p-0">
+							<div className="col-lg-6 p-0" style={{marginTop: '70px'}}>
 								<img className="img-fluid" src={jared_hero} />
 							</div>
 							<div className="col-lg-6 m-0 p-0">
