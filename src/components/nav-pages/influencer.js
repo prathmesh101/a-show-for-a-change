@@ -23,9 +23,15 @@ class Influencer extends React.Component{
 	
 	onToken = (token) => {
 		
-		fetch('https://dev.sageape.com/api_php/processpayment.php', {method: "POST", body: JSON.stringify(token),}).then(response => {response.json().then(data => {alert(`We are in business, ${data.email}`);});
-																					});
-	};
+		fetch('https://dev.sageape.com/api_php/processpayment.php', {
+			method: "POST", 
+			body: JSON.stringify(token)
+		}).then(response => {
+			response.json().then(data => {
+				alert(`We are in business, ${data.email}`);
+			});
+		});
+	}
 
 	render () {
 
