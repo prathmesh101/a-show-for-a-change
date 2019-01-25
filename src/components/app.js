@@ -29,24 +29,11 @@ const App = () => (
                         <Route path="/sign-in" component={SignIn} />
                         <Route path="/sign-up" component={SignUp} />
                         <Route path="/user-page" component={UserPage} />
-                        
                         <Route path="/video-page" component={VideoPage} />
                     </Switch>
                     <Footer />
                 </main>
             </BrowserRouter>
-
-         {/*   <Route exact path="/" component={Home} /> */}
-
-        {/*   <Route path="/about" component={About} />  */}
-         {/*  <Route path="/film-festival" component={FilmFestival} /> */}
-
-           {/* <Route exact path="/sign-in" component={SignIn} /> */}
-           {/* <Route exact path="/sign-up" component={SignUp} /> */}
-          {/*  <Route path="/credit-card" component={CreditCard} /> */}
-          {/*  <Route path="/user-page" component={UserPage} /> */}
-          {/*  <Route path="/success" component={SignUpSuccess} /> */}
-            {/* <Footer /> */}
         </div>
     </div>
 );

@@ -9,7 +9,6 @@ require_once("../../src/backend/php/init.php");
 
 require_once('../../../../vendor/autoload.php');
 
-
 $stripe = [
   "secret_key"      => "sk_test_oTOTAOYTb91W3T0kOBreOFpU",
   "publishable_key" => "pk_test_QnqxjgpNaY5eYWI0mhVwVvZA",

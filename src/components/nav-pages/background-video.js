@@ -10,7 +10,7 @@ const BackVideo = () => {
         	<video loop muted autoPlay
                             className="backgrnd-video"
                             style={{objectFit: 'cover', width:'100%', height:'475px'}}
-                            src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+                            src="https://www.youtube.com/watch?v=yNpff6jcSqI"
                             type="video/mp4"/>
 
              <div className="overlay">
