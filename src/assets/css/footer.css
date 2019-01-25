@@ -32,3 +32,9 @@
 .footer-facebook{
   padding: 0 5px 0 0;
 }
+.footer-logo{
+  color:'white'; 
+  fontFamily:'Ailerons, Regular'; 
+  paddingRight:'20px'; 
+  fontSize:'16px'
+}

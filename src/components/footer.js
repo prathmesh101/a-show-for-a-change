@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <div className="footer-cont">
           <div className="pull-left footer-left">
-            <h3>SAGE APE</h3>
+            <h3 className="footer-logo">MOVIEKARMA</h3>
             <p>&copy; {(new Date().getFullYear())} A Show For A Change, Inc. All rights reserved.</p>
           </div>
           <div className="pull-right footer-right">

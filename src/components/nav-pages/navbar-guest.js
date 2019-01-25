@@ -12,7 +12,7 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="mainMenu">
           <div className="nav-start navbar-nav mr-auto mt-2">
             <NavLink className="nav-link nav-style" to="/" style={{color:'white', fontFamily:'Ailerons, Regular', paddingRight:'20px', fontSize:'16px'}}>
-              SAGE APE
+              MOVIEKARMA
             </NavLink>
             <NavLink className="nav-link nav-style" to="/about">
               ABOUT
