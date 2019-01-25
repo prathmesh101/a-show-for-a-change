@@ -16,7 +16,7 @@ import jared_Video5 from '../../assets/img/influencer/Jared_Video5@2x.png';
 import StripeCheckout from 'react-stripe-checkout';
 import {Elements} from 'react-stripe-elements';
 import CheckoutForm from '../CheckoutForm.js';
-
+import CVLogo from '../../assets/img/partners/logos/CV-logo.png';
 
 
 class Influencer extends React.Component{
@@ -47,6 +47,7 @@ class Influencer extends React.Component{
 								<img className="img-fluid" src={kiana_hero} />
 							</div>
 							<div className="col-lg-6 m-0 p-0">
+							  <div class="position-static"><span>In partnership with {{CVLogo}}</span></div>
 								<video width="80%" height="400px" controls preload="metadata" id="vid1" poster={kiana_pitch}>
 								   <source src="https://d2d9lc244tytnt.cloudfront.net/KianaMadaniIRC.mp4" type="video/mp4" />
                					</video>
