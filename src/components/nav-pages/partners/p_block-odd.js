@@ -17,7 +17,7 @@ function BlockEven(props){
                         <img src={logo} alt=""/>
                     </div>
                     <div className="partner_info">
-                        <p>{text}</p>
+                        <p className="partner_desc">{text}</p>
                         <a href="#">visit website</a>
                     </div>
                 </div>
