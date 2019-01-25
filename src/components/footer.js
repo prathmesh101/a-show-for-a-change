@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <div className="footer-cont">
           <div className="pull-left footer-left">
-            <img src="{{websiteLogo}}" />
+            <img className="img-fluid" src="{{websiteLogo}}" />
             <p>&copy; {(new Date().getFullYear())} A Show For A Change, Inc. All rights reserved.</p>
           </div>
           <div className="pull-right footer-right">
