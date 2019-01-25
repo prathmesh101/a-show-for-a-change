@@ -47,7 +47,6 @@ class Influencer extends React.Component{
 								<img className="img-fluid" src={kiana_hero} />
 							</div>
 							<div className="col-lg-6 m-0 p-0">
-							  <div class="position-static"><span>In partnership with Covenant House</span></div>
 								<video width="80%" height="400px" controls preload="metadata" id="vid1" poster={kiana_pitch}>
 								   <source src="https://d2d9lc244tytnt.cloudfront.net/KianaMadaniIRC.mp4" type="video/mp4" />
                					</video>

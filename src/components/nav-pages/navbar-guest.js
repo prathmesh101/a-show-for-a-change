@@ -2,6 +2,7 @@ import React from 'react';
 //import 'bootstrap';
 import '../../assets/css/navbar.css';
 import { NavLink } from 'react-router-dom';
+import websiteLogo from '../../assets/img/Movikarma_White.png';
 
 const NavBar = () => {
     return (
@@ -11,8 +12,8 @@ const NavBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="mainMenu">
           <div className="nav-start navbar-nav mr-auto mt-2">
-            <NavLink className="nav-link nav-style" to="/" style={{color:'white', fontFamily:'Ailerons, Regular', paddingRight:'20px', fontSize:'16px'}}>
-              MOVIEKARMA
+            <NavLink className="nav-link nav-style" to="/" style={{}}>
+              <img src={{websiteLogo}} />
             </NavLink>
             <NavLink className="nav-link nav-style" to="/about">
               ABOUT

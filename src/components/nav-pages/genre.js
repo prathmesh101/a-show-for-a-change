@@ -3,9 +3,9 @@ import React from 'react';
 import '../../assets/css/genre.css';
 //import { Link } from 'react-router-dom';
 
-import cumpImg from '../../assets/img/cumpleanera-thumbnail.png';
-import marriedImg from '../../assets/img/married.png';
-import kharmaImg from '../../assets/img/office.png';
+import cumpImg from '../../assets/img/Poster_Cumpleanera@2x.png';
+import emigrantImg from '../../assets/img/Poster_Emigration@2x.png';
+import stressedImg from '../../assets/img/Poster_Stressed@2x.png';
 
 
 const Genre = () => {
@@ -32,16 +32,16 @@ const Genre = () => {
           </div>
           <div className="col-lg-4 col-md-6 text-center">
             <div className="service-box mt-5 mx-auto">
-              <video width="80%" height="400px" controls preload="metadata" id="vid2" poster={marriedImg}>
+              <video width="80%" height="400px" controls preload="metadata" id="vid2" poster={emigrantImg}>
                <source src="http://djn1t69fp4pr0.cloudfront.net/weddingtrailer.mp4" type="video/mp4" />
               </video>
               <h3 className="mb-3 genre-cont-head">Marriage</h3>
-              <p className=" mb-5 genre-cont-para">Marriage and all its complications. </p>
+              <p className=" mb-5 genre-cont-para">Emigration and all its complications. </p>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 text-center">
             <div className="service-box mt-5 mx-auto">
-              <video width="80%" height="400px" controls preload="metadata" id="vid3" poster={kharmaImg}>
+              <video width="80%" height="400px" controls preload="metadata" id="vid3" poster={stressedImg}>
                <source src="https://d2gm4ehypw4n5s.cloudfront.net/hurry.mp4" type="video/mp4" />
               </video>
               <h3 className="mb-3 genre-cont-head">Kharam</h3>

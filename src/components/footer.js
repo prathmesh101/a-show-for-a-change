@@ -3,12 +3,13 @@ import '../assets/css/footer.css';
 import Twitter from '../assets/img/twitter.png';
 import Facebook from '../assets/img/facebook.png';
 import Insta from '../assets/img/insta.png';
+import websiteLogo from '../assets/img/Movikarma_White.png';
 
 const Footer = () => {
     return (
         <div className="footer-cont">
           <div className="pull-left footer-left">
-            <h3 className="footer-logo">MOVIEKARMA</h3>
+            <img src="{{websiteLogo}}" />
             <p>&copy; {(new Date().getFullYear())} A Show For A Change, Inc. All rights reserved.</p>
           </div>
           <div className="pull-right footer-right">
