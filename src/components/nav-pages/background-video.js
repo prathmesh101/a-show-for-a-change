@@ -10,7 +10,7 @@ const BackVideo = () => {
         	<video loop muted autoPlay
                             className="backgrnd-video"
                             style={{objectFit: 'cover', width:'100%', height:'475px'}}
-                            src="https://www.youtube.com/watch?v=yNpff6jcSqI"
+                            src="https://d196vb1g1ujhpl.cloudfront.net/AShowForAChangeCompanyReel.mp4"
                             type="video/mp4"/>
 
              <div className="overlay">
