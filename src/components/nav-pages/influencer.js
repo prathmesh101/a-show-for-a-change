@@ -39,6 +39,9 @@ class Influencer extends React.Component{
 			<div className="container">
 				<section className="influencer mb-5" style={{marginTop: '100px'}}>
 					<div className="influencer-poster">
+					  <div className="row">
+					  	<div className="h4"><strong>Influener:</strong>Kiana Madani</div>
+					  </div>
 						<div className="row">
 							<div className="col-lg-6 m-0 p-0">
 								<img className="img-fluid" src={kiana_hero} />
