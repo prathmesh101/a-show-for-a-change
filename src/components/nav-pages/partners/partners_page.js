@@ -60,7 +60,7 @@ class Partners extends Component {
                 <div className="header">
                     <h1>Get to know our partnets</h1>
 
-                    <p>
+                    <p className="partner_desc">
                         <span>Sage Ape strives to connect and develop long-term relationships with</span>
                         <span>non-profit partners, private foundations and other funders who share our</span>
                         <span>commitment to improving the world thourhg the power of story.</span>
