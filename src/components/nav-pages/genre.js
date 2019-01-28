@@ -37,8 +37,8 @@ const Genre = () => {
               </video>
               <h3 className="mb-3 genre-cont-head">Willow: 7 Weeks in Aquarius</h3>
               <p className=" mb-5 genre-cont-para">A provocative look inside the challenges, along with the politics
-                       of animal disaster rescue, and the glorious mind who spent<br /> nearly two months rescuing pets and farm
-                       animals in the face of one of <br />Canada's worst natural disaster.  </p>
+                       of animal disaster rescue, and the glorious mind who spent nearly two months rescuing pets and farm
+                       animals in the face of one of Canada's worst natural disaster.  </p>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 text-center">
