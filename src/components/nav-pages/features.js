@@ -29,7 +29,7 @@ const Features = () => {
                   <div className="col-lg-4 col-md-6 text-center">
                     <div className="service-box mt-5 mx-auto">
                       <img src={Charity} alt="charity" />
-                      <h3 className="mb-3 features-cont-head">Partners</h3>
+                      <h3 className="mb-3 features-cont-head">Charities</h3>
                       <p className=" mb-0 features-cont-para">Get involved with the causes <br/>closest to your heart.</p>
                     </div>
                   </div>
@@ -37,7 +37,7 @@ const Features = () => {
                     <div className="service-box mt-5 mx-auto">
                       <img src={Video} alt="video" />
                       <h3 className="mb-3 features-cont-head">Filmmakers</h3>
-                      <p className=" mb-0 features-cont-para">Like the content? Support the <br/>filmmakers behind it.</p>
+                      <p className=" mb-0 features-cont-para">Like the content? Support the <br/>creators behind it.</p>
                     </div>
                   </div>
                 </div>

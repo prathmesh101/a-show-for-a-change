@@ -15,7 +15,7 @@ const Genre = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12 text-center">
-            <h2 className="genre-section-heading">Content That Matters</h2>
+            <h2 className="genre-section-heading">Stories With Impact</h2>
           </div>
         </div>
       </div>
@@ -36,7 +36,9 @@ const Genre = () => {
                <source src="http://djn1t69fp4pr0.cloudfront.net/weddingtrailer.mp4" type="video/mp4" />
               </video>
               <h3 className="mb-3 genre-cont-head">Marriage</h3>
-              <p className=" mb-5 genre-cont-para">Emigration and all its complications. </p>
+              <p className=" mb-5 genre-cont-para">A provocative look inside the challenges, along with the politics, <br />
+                       of animal disaster rescue, and the glorious mind who spent nearly two months rescuing pets and farm<br />
+                       animals in the face of one of Canada's worst natural disaster.  </p>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 text-center">
@@ -45,7 +47,7 @@ const Genre = () => {
                <source src="https://d2gm4ehypw4n5s.cloudfront.net/hurry.mp4" type="video/mp4" />
               </video>
               <h3 className="mb-3 genre-cont-head">Kharam</h3>
-              <p className=" mb-5 genre-cont-para">An eye-opening feature film about an Indian<br /> woman’s resistance to violent oppression.</p>
+              <p className=" mb-5 genre-cont-para">A man and a woman meet on a bus.<br />She's an engineer and married. He's homeless.</p>
             </div>
           </div>
         </div>
