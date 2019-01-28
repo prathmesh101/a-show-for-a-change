@@ -1,18 +1,13 @@
 import React from 'react';
 import kiana_hero from '../../assets/img/influencer/Kiana_HeroImage@2x.png';
 import kiana_pitch from '../../assets/img/influencer/Kiana_Screenshot.png';
-import kiana_Video1 from '../../assets/img/influencer/Kiana_Video1@2x.png';
-import kiana_Video2 from '../../assets/img/influencer/Kiana_Video2@2x.png';
+import cumpImg from '../../assets/img/Poster_Cumpleanera@2x.png';
+import emigrationImg from '../../assets/img/Poster_Emigration@2x.png';
 import kiana_Video3 from '../../assets/img/influencer/Kiana_Video3@2x.png';
-import kiana_Video4 from '../../assets/img/influencer/Kiana_Video4@2x.png';
-import kiana_Video5 from '../../assets/img/influencer/Kiana_Video5@2x.png';
 import jared_hero from '../../assets/img/influencer/Jared_HeroImage@2x.png';
 import jared_pitch from '../../assets/img/influencer/Jared_Screenshot.png';
-import jared_Video1 from '../../assets/img/influencer/Jared_Video1@2x.png';
-import jared_Video2 from '../../assets/img/influencer/Jared_Video2@2x.png';
-import jared_Video3 from '../../assets/img/influencer/Jared_Video3@2x.png';
-import jared_Video4 from '../../assets/img/influencer/Jared_Video4@2x.png';
-import jared_Video5 from '../../assets/img/influencer/Jared_Video5@2x.png';
+import marriedImg from '../../assets/img/married.png';
+import classmateImg from '../../assets/img/Poster_classmate.jpg';
 import StripeCheckout from 'react-stripe-checkout';
 import {Elements} from 'react-stripe-elements';
 import CheckoutForm from '../CheckoutForm.js';
@@ -40,7 +35,9 @@ class Influencer extends React.Component{
 				<section className="influencer mb-5" style={{marginTop: '100px'}}>
 					<div className="influencer-poster">
 					  <div className="row">
-					  	<div className="h4" style={{color: 'white'}}><bolder>Influencer:</bolder> Kiana Madani</div>
+					  	<div className="h4" style={{color: 'white'}}>Kiana Madani</div>
+					  	<p class="font-italic">Immigrants and Refugees</p>
+					  	<p>supporting the International Rescue Committee (IRC)</p>
 					  </div>
 						<div className="row">
 							<div className="col-lg-6 p-0" style={{marginTop: '70px'}}>
@@ -65,11 +62,11 @@ class Influencer extends React.Component{
 					<div>
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
 					{/*    <button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button> */}
-						<StripeCheckout 					name="A Show For A Change"
-															description="Donations for Kiana cause"
-									      					email="info@sageape.com"
+						<StripeCheckout 					name="Kiana Madani"
+															description="Donate to the International Rescue Committee"
+									      					email="info@movikarma.com"
 									      					shippingAddress
-									      					label="Give A Hand"
+									      					label="Donate"
 									      					amount={1000}
 									      					token={this.onToken} 
 									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
@@ -78,43 +75,44 @@ class Influencer extends React.Component{
 				</section>
 			
 				<section className="more-from mb-5">
-					<h3>More from Kiana</h3>
+					<h3>Featured Films</h3>
 					<div className="row">
-						<figure className="col-lg-3 col-md-6 figure text-center">
-							<img src={kiana_Video2} alt="Kiana2" className="img-fluid figure-img" />
-							<figcaption className="figure-caption">
-								Video Title
-							</figcaption>
-							
-						</figure>
-						<figure className="col-lg-3 col-md-6 figure text-center">
-							<img src={kiana_Video3} alt="Kiana3" className="img-fluid figure-img" />
-							<figcaption className="figure-caption">
-								Video Title
-							</figcaption>
-							
-						</figure>
-						<figure className="col-lg-3 col-md-6 figure text-center">
-							<img src={kiana_Video4} alt="Kiana4" className="img-fluid figure-img" />
-							<figcaption className="figure-caption">
-								Video Title
-							</figcaption>
-							
-						</figure>
-						<figure className="col-lg-3 col-md-6 figure text-center">
-							<img src={kiana_Video5} alt="Kiana5" className="img-fluid figure-img" />
-							<figcaption className="figure-caption">
-								Video Title
-							</figcaption>
-							
-						</figure>
+						<div className="col-lg-4 col-md-6 text-center">
+							<div className="service-box mt-5 mx-auto">
+	              				<video width="80%" height="400px" controls preload="metadata" id="vid" poster={cumpImg}>
+	               					<source src="http://dl1cz9lqgee4z.cloudfront.net/Cumplaneara.mp4" type="video/mp4" />
+	              				</video>
+	              				<h3 className="mb-3 genre-cont-head">Cumpleañera</h3>
+              					<p className=" mb-5 genre-cont-para">On her 13th birthday, Gabriela Morales is given a <br />magical heirloom that could change her future.</p>
+	            			</div>
+            			</div>
+						<div className="col-lg-4 col-md-6 text-center">
+							<div className="service-box mt-5 mx-auto">
+	              				<video width="80%" height="400px" controls preload="metadata" id="vid" poster={emigrationImg}>
+	               					<source src="http://dl1cz9lqgee4z.cloudfront.net/Cumplaneara.mp4" type="video/mp4" />
+	              				</video>
+	              				<h3 className="mb-3 genre-cont-head">Cumpleañera</h3>
+              					<p className=" mb-5 genre-cont-para">On her 13th birthday, Gabriela Morales is given a <br />magical heirloom that could change her future.</p>
+	            			</div>
+            			</div>
+						<div className="col-lg-4 col-md-6 text-center">
+							<div className="service-box mt-5 mx-auto">
+	              				<video width="80%" height="400px" controls preload="metadata" id="vid" poster={cumpImg}>
+	               					<source src="http://dl1cz9lqgee4z.cloudfront.net/Cumplaneara.mp4" type="video/mp4" />
+	              				</video>
+	              				<h3 className="mb-3 genre-cont-head">Cumpleañera</h3>
+              					<p className=" mb-5 genre-cont-para">On her 13th birthday, Gabriela Morales is given a <br />magical heirloom that could change her future.</p>
+	            			</div>
+            			</div>
 					</div>
 				</section>
 
 				<section className="influencer mb-5">
 					<div className="influencer-poster">
 					  <div className="row">
-					  	<div className="h4" style={{color: 'white'}}><bolder>Influencer:</bolder> Jared Milrad</div>
+					  	<div className="h4" style={{color: 'white'}}>Jared Milrad</div>
+					  	<p class="font-italic">LGBTQ Equality, Homelessness</p>
+					  	<p>supporting the Covenant House</p>
 					  </div>
 						<div className="row">
 							<div className="col-lg-6 p-0" style={{marginTop: '70px'}}>
@@ -139,11 +137,11 @@ class Influencer extends React.Component{
 					<div>
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
 					{/*	<button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button> */}
-						<StripeCheckout 					name="A Show For A Change"
-															description="Donations for Jared cause"
-									      					email="info@sageape.com"
+						<StripeCheckout 					name="Jared Milrad"
+															description="Donate to the Covenant House"
+									      					email="info@movikarma.com"
 									      					shippingAddress
-									      					label="Give A Hand"
+									      					label="Donate"
 									      					amount={1000}
 									      					token={this.onToken} 
 									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
@@ -154,34 +152,25 @@ class Influencer extends React.Component{
 				<section className="more-from mb-5">
 					<h3>More from Jared</h3>
 					<div className="row">
-						<figure className="col-lg-3 col-md-6 figure text-center">
-							<img src={jared_Video2} alt="Jared2" className="img-fluid figure-img" />
-							<figcaption className="figure-caption">
-								Video Title
-							</figcaption>
-							
-						</figure>
-						<figure className="col-lg-3 col-md-6 figure text-center">
-							<img src={jared_Video3} alt="Jared3" className="img-fluid figure-img" />
-							<figcaption className="figure-caption">
-								Video Title
-							</figcaption>
-							
-						</figure>
-						<figure className="col-lg-3 col-md-6 figure text-center">
-							<img src={jared_Video4} alt="Jared4" className="img-fluid figure-img" />
-							<figcaption className="figure-caption">
-								Video Title
-							</figcaption>
-							
-						</figure>
-						<figure className="col-lg-3 col-md-6 figure text-center">
-							<img src={jared_Video5} alt="Jared5" className="img-fluid figure-img" />
-							<figcaption className="figure-caption">
-								Video Title
-							</figcaption>
-							
-						</figure>
+						<div className="col-lg-4 col-md-6 text-center">
+							<div className="service-box mt-5 mx-auto">
+	              				<video width="80%" height="400px" controls preload="metadata" id="vid" poster={marriedImg}>
+	               					<source src="http://dl1cz9lqgee4z.cloudfront.net/weddingtrailer.mp4" type="video/mp4" />
+	              				</video>
+	              				<h3 className="mb-3 genre-cont-head">Cumpleañera</h3>
+              					<p className=" mb-5 genre-cont-para">Driving separately through a remote desert to attend their cousin's wedding, two married couples have similar arguments that unearth universal truths about love, forgiveness, and commitment. </p>
+	            			</div>
+            			</div>
+						<div className="col-lg-4 col-md-6 text-center">
+							<div className="service-box mt-5 mx-auto">
+	              				<video width="80%" height="400px" controls preload="metadata" id="vid" poster={classmateImg}>
+	               					<source src="http://dl1cz9lqgee4z.cloudfront.net/ClassmateTrailer.mp4" type="video/mp4" />
+	              				</video>
+	              				<h3 className="mb-3 genre-cont-head">Cumpleañera</h3>
+              					<p className=" mb-5 genre-cont-para">A man and a woman meet on a bus. She's an engineer and she's married. He's homeless.
+</p>
+	            			</div>
+            			</div>
 					</div>
 				</section>
 			</div>
