@@ -155,18 +155,18 @@ class Influencer extends React.Component{
 						<div className="col-lg-4 col-md-6 text-center">
 							<div className="service-box mt-5 mx-auto">
 	              				<video width="80%" height="400px" controls preload="metadata" id="vid" poster={marriedImg}>
-	               					<source src="http://dl1cz9lqgee4z.cloudfront.net/weddingtrailer.mp4" type="video/mp4" />
+	               					<source src="http://djn1t69fp4pr0.cloudfront.net/weddingtrailer.mp4" type="video/mp4" />
 	              				</video>
-	              				<h3 className="mb-3 genre-cont-head">Cumpleañera</h3>
+	              				<h3>Marriage</h3>
               					<p className=" mb-5 genre-cont-para">Driving separately through a remote desert to attend their cousin's wedding, two married couples have similar arguments that unearth universal truths about love, forgiveness, and commitment. </p>
 	            			</div>
             			</div>
 						<div className="col-lg-4 col-md-6 text-center">
 							<div className="service-box mt-5 mx-auto">
 	              				<video width="80%" height="400px" controls preload="metadata" id="vid" poster={classmateImg}>
-	               					<source src="http://dl1cz9lqgee4z.cloudfront.net/ClassmateTrailer.mp4" type="video/mp4" />
+	               					<source src="http://d196vb1g1ujhpl.cloudfront.net/ClassmateTrailer.mp4" type="video/mp4" />
 	              				</video>
-	              				<h3 className="mb-3 genre-cont-head">Cumpleañera</h3>
+	              				<h3>Classmate</h3>
               					<p className=" mb-5 genre-cont-para">A man and a woman meet on a bus. She's an engineer and she's married. He's homeless.
 </p>
 	            			</div>
