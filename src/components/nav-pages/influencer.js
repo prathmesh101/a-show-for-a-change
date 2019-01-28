@@ -36,8 +36,8 @@ class Influencer extends React.Component{
 					<div className="influencer-poster">
 					  <div className="row">
 					  	<div className="h4" style={{color: 'white'}}>Kiana Madani</div>
-					  	<p style={{color: 'white'}} class="font-italic">Immigrants and Refugees</p>
-					  	<p style={{color: 'white'}}>supporting the International Rescue Committee (IRC)</p>
+					  	<span class="d-block p-2 text-white font-italic">Immigrants and Refugees</span>
+					  	<span class="d-block p-2 text-white">supporting the International Rescue Committee (IRC)</span>
 					  </div>
 						<div className="row">
 							<div className="col-lg-6 p-0" style={{marginTop: '70px'}}>
@@ -110,9 +110,9 @@ class Influencer extends React.Component{
 				<section className="influencer mb-5">
 					<div className="influencer-poster">
 					  <div className="row">
-					  	<div className="h4" style={{color: 'white'}}>Jared Milrad</div>
-					  	<p style={{color: 'white'}} class="font-italic">LGBTQ Equality, Homelessness</p>
-					  	<p style={{color: 'white'}}>supporting the Covenant House</p>
+					  	<div className="h4 d-block text-white">Jared Milrad</div>
+					  	<span class="d-block text-white font-italic">LGBTQ Equality, Homelessness</span>
+					  	<span class="d-block text-white">supporting the Covenant House</span>
 					  </div>
 						<div className="row">
 							<div className="col-lg-6 p-0" style={{marginTop: '70px'}}>
