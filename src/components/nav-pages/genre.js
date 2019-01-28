@@ -4,8 +4,8 @@ import '../../assets/css/genre.css';
 //import { Link } from 'react-router-dom';
 
 import cumpImg from '../../assets/img/Poster_Cumpleanera@2x.png';
-import emigrantImg from '../../assets/img/Poster_Emigration@2x.png';
-import stressedImg from '../../assets/img/Poster_Stressed@2x.png';
+import willowImg from '../../assets/img/Willow-poster.jpg';
+import classmateImg from '../../assets/img/Poster_classmate.jpg';
 
 
 const Genre = () => {
@@ -32,21 +32,21 @@ const Genre = () => {
           </div>
           <div className="col-lg-4 col-md-6 text-center">
             <div className="service-box mt-5 mx-auto">
-              <video width="80%" height="400px" controls preload="metadata" id="vid2" poster={emigrantImg}>
-               <source src="http://djn1t69fp4pr0.cloudfront.net/weddingtrailer.mp4" type="video/mp4" />
+              <video width="80%" height="400px" controls preload="metadata" id="vid2" poster={willowImg}>
+               <source src="http://d196vb1g1ujhpl.cloudfront.net/Willow7WeeksInAquariusPromo.mp4" type="video/mp4" />
               </video>
-              <h3 className="mb-3 genre-cont-head">Marriage</h3>
-              <p className=" mb-5 genre-cont-para">A provocative look inside the challenges, along with the politics, <br />
+              <h3 className="mb-3 genre-cont-head">Willow: 7 Weeks in Aquarius</h3>
+              <p className=" mb-5 genre-cont-para">A provocative look inside the challenges, along with the politics<br />
                        of animal disaster rescue, and the glorious mind who spent nearly two months rescuing pets and farm<br />
                        animals in the face of one of Canada's worst natural disaster.  </p>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 text-center">
             <div className="service-box mt-5 mx-auto">
-              <video width="80%" height="400px" controls preload="metadata" id="vid3" poster={stressedImg}>
-               <source src="https://d2gm4ehypw4n5s.cloudfront.net/hurry.mp4" type="video/mp4" />
+              <video width="80%" height="400px" controls preload="metadata" id="vid3" poster={classmateImg}>
+               <source src="https://d196vb1g1ujhpl.cloudfront.net/ClassmateTrailer.mp4" type="video/mp4" />
               </video>
-              <h3 className="mb-3 genre-cont-head">Kharam</h3>
+              <h3 className="mb-3 genre-cont-head">Classmate</h3>
               <p className=" mb-5 genre-cont-para">A man and a woman meet on a bus.<br />She's an engineer and married. He's homeless.</p>
             </div>
           </div>
