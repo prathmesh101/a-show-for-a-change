@@ -70,7 +70,7 @@ class Influencer extends React.Component{
 															description="Donate to the International Rescue Committee"
 									      					email="info@movikarma.com"
 									      					shippingAddress
-									      					label="Donate"
+									      					label="  Donate  "
 									      					amount={1000}
 									      					token={this.onToken} 
 									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
@@ -149,7 +149,7 @@ class Influencer extends React.Component{
 															description="Donate to the Covenant House"
 									      					email="info@movikarma.com"
 									      					shippingAddress
-									      					label="Donate"
+									      					label="  Donate  "
 									      					amount={1000}
 									      					token={this.onToken} 
 									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
