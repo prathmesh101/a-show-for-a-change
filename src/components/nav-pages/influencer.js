@@ -3,7 +3,7 @@ import kiana_hero from '../../assets/img/influencer/Kiana_HeroImage@2x.png';
 import kiana_pitch from '../../assets/img/influencer/Kiana_Screenshot.png';
 import cumpImg from '../../assets/img/Poster_Cumpleanera@2x.png';
 import emigrationImg from '../../assets/img/Poster_Emigration@2x.png';
-import kiana_Video3 from '../../assets/img/influencer/Kiana_Video3@2x.png';
+import UNOImg from '../../assets/img/poster_UNO.jpg';
 import jared_hero from '../../assets/img/influencer/Jared_HeroImage@2x.png';
 import jared_pitch from '../../assets/img/influencer/Jared_Screenshot.png';
 import marriedImg from '../../assets/img/married.png';
@@ -84,7 +84,7 @@ class Influencer extends React.Component{
 						<div className="col-lg-4 col-md-6 text-center">
 							<div className="service-box mt-5 mx-auto">
 	              				<video width="80%" height="400px" controls preload="metadata" id="vid" poster={cumpImg}>
-	               					<source src="http://dl1cz9lqgee4z.cloudfront.net/Cumplaneara.mp4" type="video/mp4" />
+	               					<source src="http://d196vb1g1ujhpl.cloudfront.net/CumpTrailer.mp4" type="video/mp4" />
 	              				</video>
 	              				<h3 className="mb-3 genre-cont-head">Cumpleañera</h3>
               					<p className=" mb-5 genre-cont-para">On her 13th birthday, Gabriela Morales is given a <br />magical heirloom that could change her future.</p>
@@ -93,18 +93,18 @@ class Influencer extends React.Component{
 						<div className="col-lg-4 col-md-6 text-center">
 							<div className="service-box mt-5 mx-auto">
 	              				<video width="80%" height="400px" controls preload="metadata" id="vid" poster={emigrationImg}>
-	               					<source src="http://dl1cz9lqgee4z.cloudfront.net/Cumplaneara.mp4" type="video/mp4" />
+	               					<source src="http://d196vb1g1ujhpl.cloudfront.net/EmigrationTrailer.mp4" type="video/mp4" />
 	              				</video>
-	              				<h3 className="mb-3 genre-cont-head">Cumpleañera</h3>
+	              				<h3 className="mb-3 genre-cont-head">Emigration</h3>
               					<p className=" mb-5 genre-cont-para">On her 13th birthday, Gabriela Morales is given a <br />magical heirloom that could change her future.</p>
 	            			</div>
             			</div>
 						<div className="col-lg-4 col-md-6 text-center">
 							<div className="service-box mt-5 mx-auto">
-	              				<video width="80%" height="400px" controls preload="metadata" id="vid" poster={cumpImg}>
-	               					<source src="http://dl1cz9lqgee4z.cloudfront.net/Cumplaneara.mp4" type="video/mp4" />
+	              				<video width="80%" height="400px" controls preload="metadata" id="vid" poster={UNOImg}>
+	               					<source src="http://d196vb1g1ujhpl.cloudfront.net/Uno_trailer.mp4" type="video/mp4" />
 	              				</video>
-	              				<h3 className="mb-3 genre-cont-head">Cumpleañera</h3>
+	              				<h3 className="mb-3 genre-cont-head">UNO</h3>
               					<p className=" mb-5 genre-cont-para">On her 13th birthday, Gabriela Morales is given a <br />magical heirloom that could change her future.</p>
 	            			</div>
             			</div>

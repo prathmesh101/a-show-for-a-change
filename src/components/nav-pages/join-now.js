@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 import '../../assets/css/join-now.css';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 const JoinNow = () => { 
     return (
@@ -37,9 +37,9 @@ const JoinNow = () => {
                           arr.map((div) => {
                             div.innerHTML="Billed Annually"
                           })
-                          document.getElementById('student-plan').innerHTML='$57.90'
-                          document.getElementById('standard-plan').innerHTML='$89.70'
-                          document.getElementById('premium-plan').innerHTML='$149.70'
+                          document.getElementById('student-plan').innerHTML='$19.99'
+                          document.getElementById('standard-plan').innerHTML='$29.99'
+                          document.getElementById('premium-plan').innerHTML='$49.99'
                         }
                       }
                     
@@ -62,7 +62,7 @@ const JoinNow = () => {
                 <div className="plan-billed">Billed Monthly</div>
                 <div className="plan-device">1 device</div>
                 <div className="plan-format">Standard Definition</div>
-                <div className="plan-type">Valid Student ID Requirede</div>
+                <div className="plan-type">Valid Student ID Required</div>
                 <div className="plan-button">START FREE TRIAL</div>
               </div>
             </div>
@@ -78,7 +78,7 @@ const JoinNow = () => {
                   <div className="plan-billed">Billed Monthly</div>
                   <div className="plan-device">1 device</div>
                   <div className="plan-format">Standard Definition</div>
-                  <div className="plan-type">Celebrity Channels</div>
+                  <div className="plan-type">No Celebrity Channels</div>
                   <div className="plan-button">START FREE TRIAL</div>
                 </div>
               </div>
@@ -91,7 +91,7 @@ const JoinNow = () => {
                   <div className="plan-head">Premium Plan</div>
                   <div className="plan-price" id="premium-plan">$4.99</div>
                   <div className="plan-billed">Billed Monthly</div>
-                  <div className="plan-device">2 device</div>
+                  <div className="plan-device">2 devices</div>
                   <div className="plan-format">High Definition</div>
                   <div className="plan-type">Celebrity Channels</div>
                   <div className="plan-button">START FREE TRIAL</div>

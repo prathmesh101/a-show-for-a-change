@@ -24,7 +24,7 @@ const Genre = () => {
           <div className="col-lg-4 col-md-6 text-center">
             <div className="service-box mt-5 mx-auto">
               <video width="80%" height="400px" controls preload="metadata" id="vid" poster={cumpImg}>
-               <source src="http://dl1cz9lqgee4z.cloudfront.net/Cumplaneara.mp4" type="video/mp4" />
+               <source src="http://d196vb1g1ujhpl.cloudfront.net/CumpTrailer.mp4" type="video/mp4" />
               </video>
               <h3 className="mb-3 genre-cont-head">Cumpleañera</h3>
               <p className=" mb-5 genre-cont-para">On her 13th birthday, Gabriela Morales is given a <br />magical heirloom that could change her future.</p>
