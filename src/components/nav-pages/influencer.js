@@ -75,7 +75,7 @@ class Influencer extends React.Component{
 				</section>
 			
 				<section className="more-from mb-5">
-					<h3>Featured Films</h3>
+					<h3 style={{color: 'white'}}>Featured Films</h3>
 					<div className="row">
 						<div className="col-lg-4 col-md-6 text-center">
 							<div className="service-box mt-5 mx-auto">
@@ -150,7 +150,7 @@ class Influencer extends React.Component{
 				</section>
 			
 				<section className="more-from mb-5">
-					<h3>More from Jared</h3>
+					<h3 style={{color: 'white'}}>Featured films</h3>
 					<div className="row">
 						<div className="col-lg-4 col-md-6 text-center">
 							<div className="service-box mt-5 mx-auto">
