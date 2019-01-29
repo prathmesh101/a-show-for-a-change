@@ -13,7 +13,7 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="mainMenu">
           <div className="nav-start navbar-nav mr-auto mt-2">
             <NavLink className="nav-link nav-style" to="/" style={{}}>
-              <img className="img-fluid" src={{websiteLogo}} />
+              <img className="img-fluid" src={"../../assets/img/Movikarma_white.svg"} />
             </NavLink>
             <NavLink className="nav-link nav-style" to="/about">
               ABOUT
