@@ -3,7 +3,7 @@ import '../assets/css/footer.css';
 import Twitter from '../assets/img/twitter.png';
 import Facebook from '../assets/img/facebook.png';
 import Insta from '../assets/img/insta.png';
-import websiteLogo from '../assets/img/Movikarma_White.png';
+import websiteLogo from '../assets/img/Movikarma_white.svg';
 
 const Footer = () => {
     return (
