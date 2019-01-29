@@ -2,7 +2,7 @@ import React from 'react';
 //import 'bootstrap';
 import '../../assets/css/navbar.css';
 import { NavLink } from 'react-router-dom';
-import websiteLogo from '../../assets/img/Movikarma_White2.png';
+import websiteLogo from '../../assets/img/Movikarma_White.svg';
 
 const NavBar = () => {
     return (

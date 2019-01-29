@@ -15,13 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $first_name = !empty($form_values['first_name']) ? $form_values['first_name'] : '';
     $middle_name = !empty($form_values['middle_name']) ? $form_values['middle_name'] : '';
     $last_name = !empty($form_values['last_name']) ? $form_values['last_name'] : '';
-    // $address = empty($form_values['address']) ? $form_values['address'] : '';
-    // $address2 = empty($form_values['address2']) ? $form_values['addres2'] : '';
-    // $city = empty($form_values['city']) ? $form_values['city'] : '';
-    // $state = empty($form_values['state']) ? $form_values['state'] : '';
-    // $zipcode = empty($form_values['zipcode']) ? $form_values['zipcode'] : '';
-    // $phone_no = empty($form_values['phone_no']) ? $form_values['phone_no'] : '';
-    // $username = empty($form_values['username']) ? $form_values['username'] : '';
     $address = $address2 = $city = $state = $zipcode = $phone_no = $username = '';
     $password = !empty($form_values['password']) ? $form_values['password'] : '';
     $email = !empty($form_values['email']) ? $form_values['email'] : '';
