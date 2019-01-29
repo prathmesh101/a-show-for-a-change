@@ -1,5 +1,5 @@
 import React from 'react';
-//import 'bootstrap';
+import 'bootstrap';
 import '../../assets/css/navbar.css';
 import { NavLink } from 'react-router-dom';
 import websiteLogo from '../../assets/img/Movikarma_white.svg';
@@ -13,7 +13,7 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="mainMenu">
           <div className="nav-start navbar-nav mr-auto mt-2">
             <NavLink className="nav-link nav-style" to="/" style={{}}>
-              <img className="img-fluid" src={"../../assets/img/Movikarma_white.svg"} />
+              <img className="img-fluid" src={websiteLogo} />
             </NavLink>
             <NavLink className="nav-link nav-style" to="/about">
               ABOUT
