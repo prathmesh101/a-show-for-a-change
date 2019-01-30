@@ -14,6 +14,10 @@ import Influencer from './nav-pages/influencer.js';
 import UserPage from './nav-pages/user-page.js';
 import VideoPage from './nav-pages/video-page.js';
 
+myCallback = (dataFromChild) => {
+        console.log("inside app.js");
+}
+
 const App = () => (
     <div>
         <div className="spacing-div">
