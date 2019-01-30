@@ -35,7 +35,7 @@ class SignIn extends Component {
     axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
       .then((response) => {
         if (response.data["message"] == "success") {
-          <App callbackFromParent={this.myCallback}/>
+          this.props.callbackFromParent(true);
           this.setState({redirect: true});
         } else {
           alert("Problem logging in. \n Please try again.");

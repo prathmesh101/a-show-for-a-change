@@ -41,6 +41,11 @@ import VideoPage from './nav-pages/video-page.js';
 
 
 class App extends React.Component {
+
+    myCallback = (dataFromChild) => {
+        console.log("inside app.js");
+    };
+
     render () {
         return (
             <div>
@@ -54,7 +59,7 @@ class App extends React.Component {
                                 <Route path = "/partners" component = {Partners}/>
                                 <Route path="/genre" component={Genres} />
                                 <Route path="/influencer" component={Influencer} />
-                                <Route path="/sign-in" component={SignIn} />
+                                <Route path="/sign-in/:myCallback" component={SignIn} />
                                 <Route path="/sign-up" component={SignUp} />
                                 <Route path="/user-page" component={UserPage} />
                                 <Route path="/video-page" component={VideoPage} />
