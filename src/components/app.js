@@ -59,7 +59,7 @@ class App extends React.Component {
                                 <Route path = "/partners" component = {Partners}/>
                                 <Route path="/genre" component={Genres} />
                                 <Route path="/influencer" component={Influencer} />
-                                <Route path="/sign-in/:callbackFromParent" component={SignIn} />
+                                <Route path="/sign-in/" component={SignIn} />
                                 <Route path="/sign-up" component={SignUp} />
                                 <Route path="/user-page" component={UserPage} />
                                 <Route path="/video-page" component={VideoPage} />
