@@ -12,7 +12,7 @@ const NavBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="mainMenu">
           <div className="nav-start navbar-nav mr-auto mt-2">
-            <NavLink className="nav-link nav-style" to="/" style={{}}>
+            <NavLink style={{padding: ".1em", marginRight: "1.5em"}} className="nav-link nav-style" to="/">
               <img className="img-fluid" src={websiteLogo} />
             </NavLink>
             <NavLink className="nav-link nav-style" to="/about">
