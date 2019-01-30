@@ -42,27 +42,29 @@ import VideoPage from './nav-pages/video-page.js';
 
 class App extends React.Component {
     render () {
-        <div>
-            <div className="spacing-div">
-                <BrowserRouter>
-                    <main>
-                        <Header />
-                        <Switch>
-                            <Route exact path="/" component={Home} />
-                            <Route path="/about" component={About} />
-                            <Route path = "/partners" component = {Partners}/>
-                            <Route path="/genre" component={Genres} />
-                            <Route path="/influencer" component={Influencer} />
-                            <Route path="/sign-in" component={SignIn} />
-                            <Route path="/sign-up" component={SignUp} />
-                            <Route path="/user-page" component={UserPage} />
-                            <Route path="/video-page" component={VideoPage} />
-                        </Switch>
-                        <Footer />
-                    </main>
-                </BrowserRouter>
+        return (
+            <div>
+                <div className="spacing-div">
+                    <BrowserRouter>
+                        <main>
+                            <Header />
+                            <Switch>
+                                <Route exact path="/" component={Home} />
+                                <Route path="/about" component={About} />
+                                <Route path = "/partners" component = {Partners}/>
+                                <Route path="/genre" component={Genres} />
+                                <Route path="/influencer" component={Influencer} />
+                                <Route path="/sign-in" component={SignIn} />
+                                <Route path="/sign-up" component={SignUp} />
+                                <Route path="/user-page" component={UserPage} />
+                                <Route path="/video-page" component={VideoPage} />
+                            </Switch>
+                            <Footer />
+                        </main>
+                    </BrowserRouter>
+                </div>
             </div>
-        </div>
+            );
     }
 };
 
