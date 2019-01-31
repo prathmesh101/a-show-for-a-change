@@ -18,7 +18,7 @@ class Header extends React.Component
 		//const  logged_header  = props.loggedIn
 		//loggedIn = {this.isLoggedIn}
 		//console.log("logged " + logged_header)
-		const logged_header = this.state.loggedIn
+		const logged_header = state.loggedIn
 		console.log("logged " + logged_header)
 	}
 
