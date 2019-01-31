@@ -14,7 +14,9 @@ function NavbarGuest(state) {
 const NavBarToggle = state => {
 
 
-  const isLoggedIn = state.isLoggedIn;
+  //const isLoggedIn = state.isLoggedIn;
+  const isLoggedIn = this.props.isLoggedIn;
+
   if (isLoggedIn) {
     return <NavbarUser />;
   }
