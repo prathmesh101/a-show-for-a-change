@@ -13,7 +13,7 @@ import Navbar from './nav-pages/navbar-toggle.js';
 
 class Header extends React.Component 
 {
-	componentDidMount (props) {
+	componentDidMount (state) {
 		//console.log("here we are")
 		//const  logged_header  = props.loggedIn
 		//loggedIn = {this.isLoggedIn}
