@@ -14,13 +14,15 @@ import Navbar from './nav-pages/navbar-toggle.js';
 class Header extends React.Component 
 {
 	componentDidMount () {
+		console.log("here we are")
 		const { logged } = this.props.loggedIn
+		console.log("logged")
 	}
 
 	render() {
 		return (
 			<div className="header-cont">
-            	<Navbar isLoggedIn={logged}/>
+            	<Navbar isLoggedIn={this.props.loggedIn}/>
         	</div>
 		);
 	}
