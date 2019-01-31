@@ -36,7 +36,7 @@ class UserPage extends Component {
 
 
 
-     handleClick = this.handleClick.bind(this);
+  handleClick = this.handleClick.bind(this);
 
 
 
@@ -50,26 +50,6 @@ class UserPage extends Component {
 
   }
 
-
-
-
-
-
-
-  /*
-  onChange(e){
-    let files = e.target.files;
-    let reader = new FileReader();
-    reader.readAsDataURL(files[0]);
-
-    reader.onload = (e) => {
-      const url = "URL goes here";
-      const formData = { file: e.target.result }
-      return post (url, formData)
-              .then(response => console.warn("result", response))
-    }
-  }
-  */
 
 
   render() {
