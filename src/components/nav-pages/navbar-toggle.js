@@ -26,7 +26,7 @@ function NavbarGuest(state) {
 class NavBarToggle extends React.Component {
 
 	componentDidMount () {
-		const  { isLoggedIn }  = this.props.isLoggedIn;
+		const  { isLoggedIn }  = props.isLoggedIn;
 
 		if (isLoggedIn) {
 			const prog = "NavbarUser";
