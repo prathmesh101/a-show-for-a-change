@@ -15,7 +15,7 @@ const NavBarToggle = state => {
 
 
   //const isLoggedIn = state.isLoggedIn;
-  const isLoggedIn = this.props.isLoggedIn;
+  //const isLoggedIn = this.props.isLoggedIn;
 
   if (isLoggedIn) {
     return <NavbarUser />;
