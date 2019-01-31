@@ -23,7 +23,7 @@ class Header extends React.Component
 	render() {
 		return (
 			<div className="header-cont">
-            	<Navbar isLoggedIn={logged_header}/>
+            	<Navbar isLoggedIn={true}/>
         	</div>
 		);
 	}
