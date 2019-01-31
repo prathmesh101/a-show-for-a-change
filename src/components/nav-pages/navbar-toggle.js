@@ -11,46 +11,46 @@ function NavbarGuest(state) {
   return <NavbarGuestPart />;
 }
 
-// const NavBarToggle = state => {
+const NavBarToggle = state => {
 
 
-//   //const isLoggedIn = state.isLoggedIn;
-//   const isLoggedIn = this.props.isLoggedIn;
+  //const isLoggedIn = state.isLoggedIn;
+  const isLoggedIn = this.props.isLoggedIn;
 
-//   if (isLoggedIn) {
-//     return <NavbarUser />;
-//   }
-//   return <NavbarGuest />;
-// }
-
-class NavBarToggle extends React.Component {
-
-	componentDidMount (props) {
-		const  { isLogged }  = this.props.isLoggedIn;
-
-		if (isLogged) {
-			const prog = "NavbarUser";
-		} else {
-			const prog = "NavbarGuest";
-		}
-	}
-
-
-
-	render () {
-		return (
-
-		 //const isLoggedIn = state.isLoggedIn;
-		 
-		 <prog />
-		  // if (isLoggedIn) {
-		  //   return <NavbarUser />;
-		  // }
-		  // return <NavbarGuest />;
-
-		);
-	}
+  if (isLoggedIn) {
+    return <NavbarUser />;
+  }
+  return <NavbarGuest />;
 }
+
+// class NavBarToggle extends React.Component {
+
+// 	componentDidMount (props) {
+// 		const  { isLogged }  = this.props.isLoggedIn;
+
+// 		if (isLogged) {
+// 			const prog = "NavbarUser";
+// 		} else {
+// 			const prog = "NavbarGuest";
+// 		}
+// 	}
+
+
+
+// 	render () {
+// 		return (
+
+// 		 //const isLoggedIn = state.isLoggedIn;
+		 
+// 		 <prog />
+// 		  // if (isLoggedIn) {
+// 		  //   return <NavbarUser />;
+// 		  // }
+// 		  // return <NavbarGuest />;
+
+// 		);
+// 	}
+// }
 
 
 
