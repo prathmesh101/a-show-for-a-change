@@ -15,7 +15,7 @@ class Header extends React.Component
 {
 	componentDidMount (props) {
 		console.log("here we are")
-		const logged = this.props.loggedIn
+		const { logged } = this.props.loggedIn
 		//loggedIn = {this.isLoggedIn}
 		console.log("logged " + logged)
 	}
@@ -23,7 +23,7 @@ class Header extends React.Component
 	render() {
 		return (
 			<div className="header-cont">
-            	<Navbar isLoggedIn={this.props.loggedIn}/>
+            	<Navbar isLoggedIn={logged}/>
         	</div>
 		);
 	}
