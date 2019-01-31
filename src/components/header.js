@@ -15,15 +15,15 @@ class Header extends React.Component
 {
 	componentDidMount (props) {
 		console.log("here we are")
-		const { logged } = this.props.loggedIn
+		const  logged_header  = props.loggedIn
 		//loggedIn = {this.isLoggedIn}
-		console.log("logged " + logged)
+		console.log("logged " + logged_header)
 	}
 
 	render() {
 		return (
 			<div className="header-cont">
-            	<Navbar isLoggedIn={logged}/>
+            	<Navbar isLoggedIn={logged_header}/>
         	</div>
 		);
 	}
