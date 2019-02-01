@@ -56,23 +56,20 @@ const JoinNow = () => {
           <div className="col-lg-4 col-md-6 text-center center-block">
             <div className="service-box mt-5 mx-auto">
               <div className="flex-container plan">
-
                 <div className="plan-head">Student Plan</div>
                 <div className="plan-price" id="student-plan">$1.99</div>
                 <div className="plan-billed">Billed Monthly</div>
                 <div className="plan-device">1 device</div>
                 <div className="plan-format">Standard Definition</div>
                 <div className="plan-type">Valid Student ID Required</div>
-                <div className="btn btn-success plan-button">START FREE TRIAL</div>
+                <button type="button" className="btn btn-success plan-button">START YOUR FREE TRIAL</button>
               </div>
             </div>
           </div>
 
-
             <div className="col-lg-4 col-md-6 text-center center-block">
               <div className="service-box mt-5 mx-auto">
                 <div className="flex-container plan">
-
                   <div className="plan-head">Standard Plan</div>
                   <div className="plan-price" id="standard-plan">$2.99</div>
                   <div className="plan-billed">Billed Monthly</div>
@@ -87,14 +84,13 @@ const JoinNow = () => {
             <div className="col-lg-4 col-md-6 text-center center-block">
               <div className="service-box mt-5 mx-auto">
                 <div className="flex-container plan">
-
                   <div className="plan-head">Premium Plan</div>
                   <div className="plan-price" id="premium-plan">$4.99</div>
                   <div className="plan-billed">Billed Monthly</div>
                   <div className="plan-device">2 devices</div>
                   <div className="plan-format">High Definition</div>
                   <div className="plan-type">Celebrity Channels</div>
-                  <div className="plan-button">START FREE TRIAL</div>
+                  <button type="button" className="btn btn-success plan-button">START YOUR FREE TRIAL</button>
                 </div>
               </div>
             </div>
