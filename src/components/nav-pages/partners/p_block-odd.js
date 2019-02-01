@@ -4,7 +4,7 @@ import '../../../assets/css/partners/p_block-odd.css';
 function BlockEven(props){
     // console.log(props);
 
-    const { backImg, logo, text, num} = props;
+    const { backImg, logo, text, num, url_link} = props;
 
     const reverse = (num % 2 !== 0) ? "row flex-row-reverse": "row";
 
@@ -18,7 +18,7 @@ function BlockEven(props){
                     </div>
                     <div className="partner_info">
                         <p className="partner_desc">{text}</p>
-                        <a href="#">visit website</a>
+                        <a href={url_link}>visit website</a>
                     </div>
                 </div>
             </div>
