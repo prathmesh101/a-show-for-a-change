@@ -12,7 +12,7 @@ function BlockEven(props){
     return (
         <div className="odd container-fluid" style = {{backgroundImage: `url(${backImg})`}}>
             <div className={reverse}>
-                <div className="col-sm-6 col-md-6">
+                <div className="col-sm-12 col-md-6 col-lg-4">
                     <div className="img_container m-5">
                         <img src={logo} alt=""/>
                     </div>
