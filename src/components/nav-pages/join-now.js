@@ -62,7 +62,7 @@ const JoinNow = () => {
                 <div className="plan-device">1 device</div>
                 <div className="plan-format">Standard Definition</div>
                 <div className="plan-type">Valid Student ID Required</div>
-                <button type="button" className="btn btn-success plan-button">START YOUR FREE TRIAL</button>
+                <button type="button" className="btn btn-success mb-2 plan-button">START YOUR FREE TRIAL</button>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ const JoinNow = () => {
                   <div className="plan-device">1 device</div>
                   <div className="plan-format">Standard Definition</div>
                   <div className="plan-type">No Celebrity Channels</div>
-                  <button type="button" className="btn btn-success plan-button">START YOUR FREE TRIAL</button>
+                  <button type="button" className="btn btn-success mb-2 plan-button">START YOUR FREE TRIAL</button>
                 </div>
               </div>
             </div>
@@ -90,7 +90,7 @@ const JoinNow = () => {
                   <div className="plan-device">2 devices</div>
                   <div className="plan-format">High Definition</div>
                   <div className="plan-type">Celebrity Channels</div>
-                  <button type="button" className="btn btn-success plan-button">START YOUR FREE TRIAL</button>
+                  <button type="button" className="btn btn-success mb-2 plan-button">START YOUR FREE TRIAL</button>
                 </div>
               </div>
             </div>
