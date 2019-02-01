@@ -18,7 +18,7 @@ function BlockEven(props){
                     </div>
                     <div className="partner_info">
                         <p className="partner_desc">{text}</p>
-                        <a href={url_link}>visit website</a>
+                        <a target="_blank" href={url_link}>visit website</a>
                     </div>
                 </div>
             </div>

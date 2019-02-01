@@ -81,7 +81,7 @@ class Influencer extends React.Component{
 	               					<source src="http://d196vb1g1ujhpl.cloudfront.net/CumpTrailer.mp4" type="video/mp4" />
 	              				</video>
 	              				<h3 className="mb-3 genre-cont-head">Cumpleañera</h3>
-              					<p className="mb-5 ext-white genre-cont-para">On her 13th birthday, Gabriela Morales is given a <br />magical heirloom that could change her future.</p>
+              					<p className="mb-5 text-white genre-cont-para">On her 13th birthday, Gabriela Morales is given a <br />magical heirloom that could change her future.</p>
 	            			</div>
             			</div>
 						<div className="col-lg-4 col-md-6 text-center">
@@ -90,7 +90,7 @@ class Influencer extends React.Component{
 	               					<source src="http://d196vb1g1ujhpl.cloudfront.net/EmigrationTrailer.mp4" type="video/mp4" />
 	              				</video>
 	              				<h3 className="mb-3 genre-cont-head">Emigration</h3>
-              					<p className="mb-5 ext-white genre-cont-para">The plight of Iranian people who leave their country due to social and political issues.
+              					<p className="mb-5 text-white genre-cont-para">The plight of Iranian people who leave their country due to social and political issues.
 </p>
 	            			</div>
             			</div>
@@ -100,7 +100,7 @@ class Influencer extends React.Component{
 	               					<source src="http://d196vb1g1ujhpl.cloudfront.net/Uno_trailer.mp4" type="video/mp4" />
 	              				</video>
 	              				<h3 className="mb-3 genre-cont-head">UNO</h3>
-              					<p className="mb-5 ext-white genre-cont-para">Far out at sea, a cell phone floating inside an airtight bag starts to ring.</p>
+              					<p className="mb-5 text-white genre-cont-para">Far out at sea, a cell phone floating inside an airtight bag starts to ring.</p>
 	            			</div>
             			</div>
 					</div>
@@ -155,7 +155,7 @@ class Influencer extends React.Component{
 	               					<source src="http://djn1t69fp4pr0.cloudfront.net/weddingtrailer.mp4" type="video/mp4" />
 	              				</video>
 	              				<h3>Marriage</h3>
-              					<p className="mb-5 ext-white genre-cont-para">Driving separately through a remote desert to attend their cousin's wedding, two married couples have similar arguments that unearth universal truths about love, forgiveness, and commitment. </p>
+              					<p className="mb-5 text-white genre-cont-para">Driving separately through a remote desert to attend their cousin's wedding, two married couples have similar arguments that unearth universal truths about love, forgiveness, and commitment. </p>
 	            			</div>
             			</div>
 						<div className="col-lg-4 col-md-6 text-center">
@@ -164,7 +164,7 @@ class Influencer extends React.Component{
 	               					<source src="http://d196vb1g1ujhpl.cloudfront.net/ClassmateTrailer.mp4" type="video/mp4" />
 	              				</video>
 	              				<h3>Classmate</h3>
-              					<p className="mb-5 ext-white 	genre-cont-para">A man and a woman meet on a bus. She's an engineer and she's married. He's homeless.
+              					<p className="mb-5 text-white 	genre-cont-para">A man and a woman meet on a bus. She's an engineer and she's married. He's homeless.
 </p>
 	            			</div>
             			</div>
