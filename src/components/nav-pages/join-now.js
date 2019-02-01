@@ -63,7 +63,7 @@ const JoinNow = () => {
                 <div className="plan-device">1 device</div>
                 <div className="plan-format">Standard Definition</div>
                 <div className="plan-type">Valid Student ID Required</div>
-                <div className="plan-button">START FREE TRIAL</div>
+                <div className="btn btn-success plan-button">START FREE TRIAL</div>
               </div>
             </div>
           </div>
