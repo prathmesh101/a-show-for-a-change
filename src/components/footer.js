@@ -8,7 +8,7 @@ import websiteLogo from '../assets/img/Movikarma_white.svg';
 const Footer = () => {
     return (
       <div>
-        <div className="row justify-content-betwen footer-cont">
+        <div className="row justify-content-between footer-cont">
           <div className="col-4 pull-left footer-left p-3">
             <img className="img-fluid" src={websiteLogo} />
           </div>
@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
 
         </div>
-        <div className="row text-white">
+        <div className="row text-white copy-right">
           <p>&copy; {(new Date().getFullYear())} A Show For A Change, Inc. All rights reserved.</p>
         </div>
       </div>
