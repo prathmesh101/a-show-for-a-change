@@ -67,15 +67,13 @@ const JoinNow = () => {
             </div>
           </div>
 
-
-            
             <div className="col-lg-4 col-md-6 text-center center-block">
               <div className="service-box mt-5 mx-auto">
                 <div className="flex-container plan">
                   <div className="title_box bg-success text-white rounded">
                     <div id="title">RECOMMANDED</div>
                   </div>
-                  <div className="plan-head">Standard Plan</div>
+                  <div style={{paddingTop: '0px'}} className="plan-head">Standard Plan</div>
                   <div className="plan-price" id="standard-plan">$2.99</div>
                   <div className="plan-billed">Billed Monthly</div>
                   <div className="plan-device">1 device</div>
