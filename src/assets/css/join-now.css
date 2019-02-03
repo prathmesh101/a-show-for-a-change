@@ -92,7 +92,10 @@ font-size: 25px;
 
 }
 .title_box {
-	border: #3c5a86 1px dotted; 
+	border: #3c5a86 1px dotted;
+	position: relative;
+	top: 1em;
+	width: 60%;
 }
 .title_box #title {
 	position: relative; 
