@@ -101,4 +101,5 @@ font-size: 25px;
 .title_box #title {
 	position: relative; 
     display: inline; 
+    font-weight: 700;
 }
