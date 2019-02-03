@@ -67,6 +67,10 @@ const JoinNow = () => {
             </div>
           </div>
 
+
+            <div className="title_box bg-success text-white" id="bill_to">
+                <div id="title">RECOMMANDED</div>
+            </div>
             <div className="col-lg-4 col-md-6 text-center center-block">
               <div className="service-box mt-5 mx-auto">
                 <div className="flex-container plan">
