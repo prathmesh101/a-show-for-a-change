@@ -96,9 +96,9 @@ font-size: 25px;
 	position: relative;
 	top: -1em;
 	width: 60%;
+	margin-left: 20%;
 }
 .title_box #title {
 	position: relative; 
     display: inline; 
-    margin-left: 20%;
 }
