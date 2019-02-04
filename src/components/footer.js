@@ -7,7 +7,7 @@ import websiteLogo from '../assets/img/Movikarma_white.svg';
 
 const Footer = () => {
     return (
-      <div className="m-3">
+      <div className="ml-3">
         <div className="row justify-content-between footer-cont">
           <div className="col-4 pull-left footer-left p-3">
             <img className="img-fluid" src={websiteLogo} />

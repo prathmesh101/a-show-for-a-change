@@ -71,7 +71,7 @@ const JoinNow = () => {
               <div className="service-box mt-5 mx-auto">
                 <div className="flex-container plan">
                   <div className="title_box bg-success text-white rounded">
-                    <div id="title">RECOMMANDED</div>
+                    <div id="title">RECOMMENDED</div>
                   </div>
                   <div style={{paddingTop: '0px'}} className="plan-head">Standard Plan</div>
                   <div className="plan-price" id="standard-plan">$2.99</div>
