@@ -86,7 +86,6 @@ svg {
 .profiles {
   width: 100%;
   margin: 50px auto;
-  border-top: 1px solid #00CB94;
 }
 
 .employees h2 {
@@ -115,6 +114,7 @@ svg {
 .div-employeeContent h5 {
   font-size: 1em;
   padding-top: 8px;
+  margin-top: 50px;
 }
 
 .div-employeeContent p {
