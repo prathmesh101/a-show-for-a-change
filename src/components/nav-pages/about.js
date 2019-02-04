@@ -65,65 +65,23 @@ const About = () => {
 
     return (
 
-
-        <div className="row">
-
-            <section className="hero_poster">
-                <h1 className="hero_text">Movikarma works with mission-driven storytellers and charitable partners to change the world.</h1>
-                <p className="hero-subtext">Learn about us below!</p>
-            </section>
-
-      <div id="about" className="about-area area-padding">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12 col-sm-12 col-xs-12">
-              <div className="section-headline text-center">
-                <h2>About us</h2>
-              </div>
+        <div>
+            <div className="row">
+                <section className="hero_poster">
+                    <h1 className="hero_text">Movikarma works with mission-driven storytellers and charitable partners to change the world.</h1>
+                    <p className="hero-subtext">Learn about us below!</p>
+                </section>
             </div>
-          </div>
-          <div className="row about-us-content">
 
-            <div className="col-md-6 col-sm-6 col-xs-12">
-              <div className="well-left">
-                <div className="single-well">
-
-                                      <img src={aboutImg} alt="" className="about-img"/>
-
+            <div className="row">
+                <div className="employees">
+                    <h2>Meet our Team</h2>
+                    <div className="profiles">
+                      {employeesProfiles}
+                    </div>
                 </div>
-              </div>
             </div>
-
-            <div className="col-md-6 col-sm-6 col-xs-12">
-              <div className="well-middle">
-                <div className="single-well">
-                    <h4 className="sec-head">What do we do ?</h4>
-                    <p>
-                      Through exclusive partnerships with filmmakers, influencers, non-profits, and brands, we create and curate meaningful, impactful films and series on a mobile platform that inspires change - and we give audiences the tools to make a difference. By donating, volunteering, and supporting independent filmmakers, our engaged audience unlocks the power of story to accelerate charitable giving and global impact.
-                    </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
         </div>
-      </div>
-
-
-
-
-
-
-
-            <div className="employees">
-                <h2>Meet our Team</h2>
-                <div className="profiles">
-                  {employeesProfiles}
-                </div>
-            </div>
-    </div>
-
-
 
     )
 }

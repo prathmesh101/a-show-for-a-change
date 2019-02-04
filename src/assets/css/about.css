@@ -146,6 +146,7 @@ svg {
 }
 .hero_text {
   position: absolute;
+  color: white;
   left: 50%;
   bottom: 30%;
   width: 90%;
