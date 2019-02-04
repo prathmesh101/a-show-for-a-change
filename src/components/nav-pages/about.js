@@ -54,9 +54,9 @@ const About = () => {
                         <p>{employee.blurb}</p>
                     </div>
                     { index % 2 === 0 ? 
-                        <img src={employee.img} className="imgEmployee"/>
-                        :
                         <img src={employee.img} className="floatRight imgEmployee"/>
+                        :
+                        <img src={employee.img} className="imgEmployee"/>
                     }
                 </div>
             </div>
