@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import alex from '../../assets/img/emp-imgs/alex.jpg';
+import nancy from '../../assets/img/emp-imgs/Nancy.jpg';
 import daniel from '../../assets/img/emp-imgs/daniel.jpg';
 import jared from '../../assets/img/emp-imgs/jared.jpg';
 import prathmesh from '../../assets/img/emp-imgs/prathmesh.jpg';
@@ -30,16 +30,16 @@ const employees = [
         blurb: "Sivak Khodaverdian has been involved in web development for the last 7 years. He enjoys programming in new technologies and creating systems that are useful and easy to use. In addition to software development, Sivak is passionate about social issues and interested to find out how to best help the disenfranchised so that they also benefit from a society's progress. He holds a B.S. in Computer Science from San Francisco State University."
     },
     {
+        name: 'Nancy Cadena',
+        img: nancy,
+        position: 'Senior UI/UX Designer',
+        blurb: "Nancy Cadena is a designer with over 7 years of experience in the advertisement and entertainment industry. Born in Mexico, she has worked with renowned names such as Nestlé Waters México, Salesforce, Electronic Arts and, most recently, PlayStation. You can see some of her work at nancadena.com. Nancy’s a big advocate of simple, clean, and honest user-centered design solutions. She enjoys good stories and has way too many tabs open on her browser at all times."
+    },
+    {
         name: 'Prathmesh Pardiye',
         img: prathmesh,
         position: 'FRONT-END DEVELOPER/DESIGNER',
         blurb: "A creator with a passion to develop dynamic websites and android applications. Prath enjoys technology. Prath tries to put himself into places where he is a little fish in a big pond; he’s always learning. Born in Mumbai, India (also called as “Land of Bollywood”), Prath earned a Bachelors of Engineering in Computer Science from Mumbai University. Prath worked as a front-end developer in a digital marketing firm and created dynamic websites for various clients and small companies in India. Prath wanted to gain proficiency in Full Stack and Android Development, so he moved to California and graduated with a Master's Degree in Computer Science. Pursuing blogging as a hobby, Prath has written blogs regarding lifestyle and web development. He loves watching movies, short films or web series with a social message. Prath enjoys playing team sports like soccer, badminton and online team sports like Counter-Strike, DOTA, Fortnite, because he believes in growing together."
-    },
-    {
-        name: 'Alex Choi',
-        img: alex,
-        position: 'JUNIOR FRONT-END DEVELOPER/DESIGNER',
-        blurb: "Alex Choi is a front-end specialist on a mission to promote effective altruism. He lives to learn new skills while tackling complex challenges. With his past startup experiences in content marketing, Alex understands how to effectively capture an audience's attention and deliver a clear message in an increasingly distracting world. Alex currently resides in sunny Los Angeles. If he's not hunched over his laptop you can probably catch him shooting some hoops or listening to music."
     }
 ]
 
@@ -68,8 +68,8 @@ const About = () => {
         <div>
             <div className="row">
                 <section className="hero_poster">
-                    <h1 className="hero_text">Movikarma works with mission-driven storytellers and charitable partners to change the world.</h1>
-                    <p className="hero-subtext">Learn about us below!</p>
+                    <div><h1 className="hero_text">Movikarma works with mission-driven storytellers and charitable partners to change the world.</h1></div>
+                    <div><p className="hero-subtext">Learn about us below!</p></div>
                 </section>
             </div>
 
