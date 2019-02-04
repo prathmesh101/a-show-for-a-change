@@ -56,7 +56,7 @@ const About = () => {
                     { index % 2 === 0 ? 
                         <img src={employee.img} className="imgEmployee"/>
                         :
-                        <img src={employee.img} className="imgEmployee"/>
+                        <img src={employee.img} className="floatRight imgEmployee"/>
                     }
                 </div>
             </div>
@@ -74,7 +74,7 @@ const About = () => {
             </div>
 
             <div className="row">
-                <div className="employees">
+                <div className="col employees">
                     <h2>Meet our Team</h2>
                     <div className="profiles">
                       {employeesProfiles}
