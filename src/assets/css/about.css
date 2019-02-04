@@ -85,7 +85,7 @@ svg {
 
 .profiles {
   width: 100%;
-  margin: 0 auto;
+  margin: 50px auto;
   border-top: 1px solid #00CB94;
 }
 
@@ -99,6 +99,7 @@ svg {
   width: 90%;
   display: flex;
   align-content: center;
+  margin-top: 50px;
 }
 
 .div-employeeContent {
