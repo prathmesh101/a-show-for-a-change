@@ -46,7 +46,7 @@ const employees = [
 const About = () => {
     const employeesProfiles = employees.map((employee, index) => {
         return (
-            <div className="floatRight div-employee">
+            <div className="div-employee">
                 <div key={index} className="div-employeeContent">
                     <div className="employee-text">
                         <h3>{employee.name}</h3>
