@@ -154,7 +154,7 @@ class Influencer extends React.Component{
 	              				<video width="80%" height="400px" controls preload="metadata" id="vid" poster={marriedImg}>
 	               					<source src="http://djn1t69fp4pr0.cloudfront.net/weddingtrailer.mp4" type="video/mp4" />
 	              				</video>
-	              				<h3 classsName="text-white mb-3 genre-cont-head">Marriage</h3>
+	              				<h3  className="text-white mb-3 genre-cont-head">Marriage</h3>
               					<p className="mb-5 text-white genre-cont-para">Driving separately through a remote desert to attend their cousin's wedding, two married couples have similar arguments that unearth universal truths about love, forgiveness, and commitment. </p>
 	            			</div>
             			</div>
