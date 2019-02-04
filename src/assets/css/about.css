@@ -151,13 +151,13 @@ svg {
   left: 50%;
   bottom: 30%;
   width: 90%;
-  transform: translate(-50%, -50%);
+  transform: translate(100px, 400px);
   font-family: 'Montserrat', sans-serif;
 }
 .hero-subtext {
   position: absolute;
   bottom: 25%;
-  left: 40%;
+  left: 45%;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
