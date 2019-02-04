@@ -46,7 +46,7 @@ const employees = [
 const About = () => {
     const employeesProfiles = employees.map((employee, index) => {
         return (
-            <div className="div-employee">
+            <div className="floatRight div-employee">
                 <div key={index} className="div-employeeContent">
                     <div className="employee-text">
                         <h3>{employee.name}</h3>
@@ -54,7 +54,7 @@ const About = () => {
                         <p>{employee.blurb}</p>
                     </div>
                     { index % 2 === 0 ? 
-                        <img src={employee.img} className="floatRight imgEmployee"/>
+                        <img src={employee.img} className="imgEmployee"/>
                         :
                         <img src={employee.img} className="imgEmployee"/>
                     }
