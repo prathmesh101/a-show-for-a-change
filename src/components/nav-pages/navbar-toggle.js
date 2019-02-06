@@ -41,11 +41,7 @@ const NavBarToggle = state => {
 // 		return (
 
 // 		 //const isLoggedIn = state.isLoggedIn;
-<<<<<<< HEAD
 
-=======
-		 
->>>>>>> 42597b144d4c3c7d529e2b126967ba6fe4e56b15
 // 		 <prog />
 // 		  // if (isLoggedIn) {
 // 		  //   return <NavbarUser />;
