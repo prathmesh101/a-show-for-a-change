@@ -9,11 +9,11 @@ import Navbar from './navbar-toggle';
 import { Link } from 'react-router-dom';
 
 import { Helmet } from 'react-helmet';
-import hero from '../../assets/img/user-back.png';
+import hero from '../../assets/img/Poster_Emigration@2x.png';
 import jared from '../../assets/img/user-influ.png';
 
 import Video1 from '../../assets/img/cump.png';
-import Video2 from '../../assets/img/willow.png';
+import Video2 from '../../assets/img/Willow-poster-resized.png';
 import Video3 from '../../assets/img/office.png';
 import Video4 from '../../assets/img/hurry.png';
 import Video5 from '../../assets/img/married.png';
@@ -36,7 +36,7 @@ class UserPage extends Component {
 
 
 
-     handleClick = this.handleClick.bind(this);
+  handleClick = this.handleClick.bind(this);
 
 
 
@@ -50,26 +50,6 @@ class UserPage extends Component {
 
   }
 
-
-
-
-
-
-
-  /*
-  onChange(e){
-    let files = e.target.files;
-    let reader = new FileReader();
-    reader.readAsDataURL(files[0]);
-
-    reader.onload = (e) => {
-      const url = "URL goes here";
-      const formData = { file: e.target.result }
-      return post (url, formData)
-              .then(response => console.warn("result", response))
-    }
-  }
-  */
 
 
   render() {
@@ -86,7 +66,7 @@ class UserPage extends Component {
 
       <div className="user-page-main">
 
-          
+
       <div className="user-back-img-content">
 
       <img
@@ -204,7 +184,7 @@ class UserPage extends Component {
                             <div className="influencer-overlay-content">
                               <h1>Featured Influencer</h1>
                               <p className="influencer-overlay-para">Influencer content exclusive to the platform, updated weekly.</p>
-                              <button className="btn  " id="info-but" href="/">VISIT INFLUENCER CHANNEL</button>
+                              <button className="btn" id="info-but" href="/influencer">VISIT INFLUENCER CHANNEL</button>
 
                             </div>
                </div>
@@ -230,12 +210,8 @@ class UserPage extends Component {
         <p>Upload Video</p>
         <div onSubmit={this.onFormSubmit}>
           <input type="file" name="file" text="Upload Video" onChange={(e) => this.onChange(e)} />
-
         </div>
-
-
       </div>
-
 */
 
 

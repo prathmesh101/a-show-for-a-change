@@ -4,6 +4,7 @@ import axios from 'axios';
 import '../../assets/css/sign-in.css';
 import { Link } from 'react-router-dom';
 import UserPage from './user-page.js';
+import App from '../app.js';
 import { Redirect } from 'react-router';
 
 class SignIn extends Component {
@@ -17,11 +18,6 @@ class SignIn extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
-
-
-
-  // this.handleChange = this.handleChange.bind(this);
-  // this.handleClick = this.handleClick.bind(this);
 
   handleChange(event) {
      this.setState({ [event.target.name]: event.target.value })
@@ -39,6 +35,7 @@ class SignIn extends Component {
     axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
       .then((response) => {
         if (response.data["message"] == "success") {
+          // this.props.callbackFromParent(true);
           this.setState({redirect: true});
         } else {
           alert("Problem logging in. \n Please try again.");
