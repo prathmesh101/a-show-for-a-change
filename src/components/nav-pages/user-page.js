@@ -66,7 +66,7 @@ class UserPage extends Component {
 
       <div className="user-page-main">
 
-          
+
       <div className="user-back-img-content">
 
       <img
@@ -210,12 +210,8 @@ class UserPage extends Component {
         <p>Upload Video</p>
         <div onSubmit={this.onFormSubmit}>
           <input type="file" name="file" text="Upload Video" onChange={(e) => this.onChange(e)} />
-
         </div>
-
-
       </div>
-
 */
 
 
