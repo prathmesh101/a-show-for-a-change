@@ -13,7 +13,7 @@ import hero from '../../assets/img/Poster_Emigration@2x.png';
 import jared from '../../assets/img/user-influ.png';
 
 import Video1 from '../../assets/img/cump.png';
-import Video2 from '../../assets/img/Willow-poster.jpg';
+import Video2 from '../../assets/img/Willow-poster-resized.png';
 import Video3 from '../../assets/img/office.png';
 import Video4 from '../../assets/img/hurry.png';
 import Video5 from '../../assets/img/married.png';
