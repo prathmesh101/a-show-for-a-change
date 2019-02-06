@@ -30,7 +30,8 @@ class UserPage extends Component {
     super(props);
     this.state = {
 
-      redirect: false
+      redirect: false,
+      influencerRedirect: false
     }
   }
 
@@ -38,7 +39,17 @@ class UserPage extends Component {
 
   handleClick = this.handleClick.bind(this);
 
+  handleInfluClick = this.handleInfluClick.bind(this);
 
+
+  handleInfluClick(event) {
+
+
+
+      this.setState({ influencerRedirect: true });
+
+
+  }
 
 
   handleClick(event) {
@@ -59,6 +70,13 @@ class UserPage extends Component {
         if (redirect) {
 
           return <Redirect to='./video-page'/>;
+        }
+
+        const { influencerRedirect } = this.state;
+
+        if (influencerRedirect) {
+
+          return <Redirect to='./influencer'/>;
         }
 
 
@@ -184,7 +202,7 @@ class UserPage extends Component {
                             <div className="influencer-overlay-content">
                               <h1>Featured Influencer</h1>
                               <p className="influencer-overlay-para">Influencer content exclusive to the platform, updated weekly.</p>
-                              <button className="btn" id="info-but" href="/influencer">VISIT INFLUENCER CHANNEL</button>
+                              <button className="btn" id="info-but" onClick={(event) => this.handleInfluClick(event)}>VISIT INFLUENCER CHANNEL</button>
 
                             </div>
                </div>
