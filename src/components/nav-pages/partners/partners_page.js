@@ -19,28 +19,32 @@ class Partners extends Component {
                 id: 1,
                 name: 'Challenged Athletes Foundation',
                 img: caf,
-                info: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum fugiat doloremque perferendis, cupiditate quasi voluptatum?',
+                url_link: 'https://www.challengedathletes.org',
+                info: 'The Challenged Athletes Foundation (CAF) provides opportunities and support to people with physical challenges, so they can pursue active lifestyles through physical fitness and competitive athletics. CAF believes that involvement in sports at any level increases self-esteem, encourages independence and enhances quality of life.',
                 background: block1
             },
             {
                 id: 2,
                 name: 'Covenant House',
                 img: cf,
-                info: 'covenant house Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed sit repellendus atque',
+                url_link: 'https://www.covenanthouse.org',
+                info: 'Covenant House provides housing and supportive services to youth facing homelessness. We help young people transform their lives and put them on a path to independence.',
                 background: block2
             },
             {
                 id: 3,
                 name: 'First Descents',
                 img: fd,
-                info: 'first descents Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed sit repellendus atque',
+                url_link: 'https://firstdescents.org',
+                info: 'First Descents provides life-changing, outdoor adventures for young adults impacted by cancer.',
                 background: block3
             },
             {
                 id:4,
                 name: 'International Rescue Committee',
                 img: rescue,
-                info: 'international rescue committee Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed sit repellendus atque',
+                url_link: 'https://www.rescue.org',
+                info: 'IRC helps people whose lives and livelihoods are shattered by conflict and disaster to survive, recover and gain control of their future.',
                 background: block4
             }
         ];
@@ -48,9 +52,9 @@ class Partners extends Component {
     render(){
 
         const renderBlock = this.info.map((item, index) => {
-            const { img, info, background } = item;
+            const { img, info, background, url_link } = item;
             return(
-                <BlockOdd key={index} logo={img} text={info} backImg={background} num = {index} />
+                <BlockOdd key={index} logo={img} text={info} backImg={background} num = {index} url_link={url_link} />
             );
             
         });
@@ -58,10 +62,10 @@ class Partners extends Component {
         return (
             <div className = "partners d-flex flex-column align-items-center">
                 <div className="header">
-                    <h1>Get to know our partnets</h1>
+                    <h1>Get to know our partners</h1>
 
                     <p className="partner_desc">
-                        <span>Sage Ape strives to connect and develop long-term relationships with</span>
+                        <span>Movikarma strives to connect and develop long-term relationships with</span>
                         <span>non-profit partners, private foundations and other funders who share our</span>
                         <span>commitment to improving the world thourhg the power of story.</span>
                     </p>

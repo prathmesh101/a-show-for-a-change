@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import nancy from '../../assets/img/emp-imgs/Nancy.jpg';
+import alex from '../../assets/img/emp-imgs/alex.jpg';
 import daniel from '../../assets/img/emp-imgs/daniel.jpg';
 import jared from '../../assets/img/emp-imgs/jared.jpg';
 import prathmesh from '../../assets/img/emp-imgs/prathmesh.jpg';
 import sivak from '../../assets/img/emp-imgs/sivak.jpg';
 import aboutImg from '../../assets/img/about-us-img.jpg';
-import teamPhoto from '../../assets/img/team_front_of_house.jpg';
 
 import '../../assets/css/about.css';
 
@@ -30,16 +29,16 @@ const employees = [
         blurb: "Sivak Khodaverdian has been involved in web development for the last 7 years. He enjoys programming in new technologies and creating systems that are useful and easy to use. In addition to software development, Sivak is passionate about social issues and interested to find out how to best help the disenfranchised so that they also benefit from a society's progress. He holds a B.S. in Computer Science from San Francisco State University."
     },
     {
-        name: 'Nancy Cadena',
-        img: nancy,
-        position: 'Senior UI/UX Designer',
-        blurb: "Nancy Cadena is a designer with over 7 years of experience in the advertisement and entertainment industry. Born in Mexico, she has worked with renowned names such as Nestlé Waters México, Salesforce, Electronic Arts and, most recently, PlayStation. You can see some of her work at nancadena.com. Nancy’s a big advocate of simple, clean, and honest user-centered design solutions. She enjoys good stories and has way too many tabs open on her browser at all times."
-    },
-    {
         name: 'Prathmesh Pardiye',
         img: prathmesh,
         position: 'FRONT-END DEVELOPER/DESIGNER',
         blurb: "A creator with a passion to develop dynamic websites and android applications. Prath enjoys technology. Prath tries to put himself into places where he is a little fish in a big pond; he’s always learning. Born in Mumbai, India (also called as “Land of Bollywood”), Prath earned a Bachelors of Engineering in Computer Science from Mumbai University. Prath worked as a front-end developer in a digital marketing firm and created dynamic websites for various clients and small companies in India. Prath wanted to gain proficiency in Full Stack and Android Development, so he moved to California and graduated with a Master's Degree in Computer Science. Pursuing blogging as a hobby, Prath has written blogs regarding lifestyle and web development. He loves watching movies, short films or web series with a social message. Prath enjoys playing team sports like soccer, badminton and online team sports like Counter-Strike, DOTA, Fortnite, because he believes in growing together."
+    },
+    {
+        name: 'Alex Choi',
+        img: alex,
+        position: 'JUNIOR FRONT-END DEVELOPER/DESIGNER',
+        blurb: "Alex Choi is a front-end specialist on a mission to promote effective altruism. He lives to learn new skills while tackling complex challenges. With his past startup experiences in content marketing, Alex understands how to effectively capture an audience's attention and deliver a clear message in an increasingly distracting world. Alex currently resides in sunny Los Angeles. If he's not hunched over his laptop you can probably catch him shooting some hoops or listening to music."
     }
 ]
 
@@ -65,23 +64,74 @@ const About = () => {
 
     return (
 
-        <div>
-            <div className="row">
-                <section className="hero_poster">
-                    <div><h1 className="hero_text">Movikarma works with mission-driven storytellers and charitable partners to change the world.</h1></div>
-                    <div><p className="hero-subtext">Learn about us below!</p></div>
-                </section>
+
+        <div className="row">
+
+            <div className="about-header col-xs-12">
+                <div className="header-about-info">
+                    <h1 className="header-text">Who are we ?</h1>
+                    <h5 className="header-para">A Show For A Change is a socially conscious entertainment company that changes the world through the power of story.<br/> We believe that by learning about the world around us and giving audiences the tools to act, we can make the world a better place</h5>
+                </div>
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" preserveAspectRatio="none">
+                        <circle fill="white" cx="0" cy="100" r="100" />
+                        <circle fill="white" cx="200" cy="100" r="100" />
+                       </svg>
+
+
             </div>
 
-            <div className="row">
-                <div className="col employees">
-                    <h2>Meet our Team</h2>
-                    <div className="profiles">
-                      {employeesProfiles}
-                    </div>
+      <div id="about" className="about-area area-padding">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 col-sm-12 col-xs-12">
+              <div className="section-headline text-center">
+                <h2>About us</h2>
+              </div>
+            </div>
+          </div>
+          <div className="row about-us-content">
+
+            <div className="col-md-6 col-sm-6 col-xs-12">
+              <div className="well-left">
+                <div className="single-well">
+
+                                      <img src={aboutImg} alt="" className="about-img"/>
+
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-6 col-sm-6 col-xs-12">
+              <div className="well-middle">
+                <div className="single-well">
+                    <h4 className="sec-head">What do we do ?</h4>
+                    <p>
+                      Through exclusive partnerships with filmmakers, influencers, non-profits, and brands, we create and curate meaningful, impactful films and series on a mobile platform that inspires change - and we give audiences the tools to make a difference. By donating, volunteering, and supporting independent filmmakers, our engaged audience unlocks the power of story to accelerate charitable giving and global impact.
+                    </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+            <div className="employees">
+                <h2>Meet our Team</h2>
+                <div className="profiles">
+                  {employeesProfiles}
                 </div>
             </div>
-        </div>
+    </div>
+
+
+
     )
 }
 
