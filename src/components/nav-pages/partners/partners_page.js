@@ -62,7 +62,7 @@ class Partners extends Component {
         return (
             <div className = "partners d-flex flex-column align-items-center">
                 <div className="header">
-                    <h1>Get to know our partnets</h1>
+                    <h1>Get to know our partners</h1>
 
                     <p className="partner_desc">
                         <span>Movikarma strives to connect and develop long-term relationships with</span>
