@@ -4,6 +4,11 @@
   background-color: black!important;
 }
 
+body {
+  font-size: 1.6em;
+  
+}
+
 .about-header{
 		
   position: relative;
