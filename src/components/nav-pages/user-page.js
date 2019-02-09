@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import 'bootstrap';
-import axios from 'axios';
+
 import { Redirect } from 'react-router';
+
+
+import axios from 'axios';
+
 import '../../assets/css/user-page.css';
 import Navbar from './navbar-toggle';
 
 
-import { Link } from 'react-router-dom';
 
-import { Helmet } from 'react-helmet';
+
+
+
+
 import hero from '../../assets/img/Poster_Emigration@2x.png';
 import jared from '../../assets/img/user-influ.png';
 
@@ -31,8 +39,39 @@ class UserPage extends Component {
     this.state = {
 
       redirect: false,
-      influencerRedirect: false
+      influencerRedirect: false,
+      show: false,
+      show2: false,
+      show3: false,
+      show4: false,
+      show5: false,
+      show6: false,
+      show7: false,
+      show8: false,
+
     }
+
+
+    this.show = () => this.setState({ show: true });
+      this.show2 = () => this.setState({ show2: true });
+        this.show3 = () => this.setState({ show3: true });
+          this.show4 = () => this.setState({ show4: true });
+          this.show5 = () => this.setState({ show5: true });
+          this.show6 = () => this.setState({ show6: true });
+          this.show7 = () => this.setState({ show7: true });
+          this.show8 = () => this.setState({ show8: true });
+
+
+        this.hide = () => this.setState({ show: false });
+          this.hide2 = () => this.setState({ show2: false });
+            this.hide3 = () => this.setState({ show3: false });
+              this.hide4 = () => this.setState({ show4: false });
+                this.hide5 = () => this.setState({ show5: false });
+                  this.hide6 = () => this.setState({ show6: false });
+                    this.hide7 = () => this.setState({ show7: false });
+                      this.hide8 = () => this.setState({ show8: false });
+
+
   }
 
 
@@ -40,6 +79,8 @@ class UserPage extends Component {
   handleClick = this.handleClick.bind(this);
 
   handleInfluClick = this.handleInfluClick.bind(this);
+
+
 
 
   handleInfluClick(event) {
@@ -60,6 +101,9 @@ class UserPage extends Component {
 
 
   }
+
+
+
 
 
 
@@ -123,34 +167,142 @@ class UserPage extends Component {
           <h3  style={{paddingTop:'50px', paddingBottom:'30px'}}  className="head-movie-genre" >Popular</h3>
           <div className="row">
 
-            <figure className="col-lg-3 col-md-6 figure text-center" onClick={(event) => this.handleClick(event)}>
-              <img src={Video1} alt="Kiana2" className="img-fluid figure-img img-border" />
+            <figure className="col-lg-3 col-md-6 figure text-center">
+              <img src={Video1} alt="Kiana2" className="img-fluid figure-img img-border"  onClick={this.show} />
               <figcaption className="figure-caption">
                 Cumpleañera
               </figcaption>
 
             </figure>
-            <figure className="col-lg-3 col-md-6 figure text-center">
-              <img src={Video2} alt="Kiana3" className="img-fluid figure-img img-border" />
+            <figure className="col-lg-3 col-md-6 figure text-center" >
+              <img src={Video2} alt="Kiana3" className="img-fluid figure-img img-border" onClick={this.show2} />
               <figcaption className="figure-caption">
                 Willow
               </figcaption>
 
             </figure>
             <figure className="col-lg-3 col-md-6 figure text-center">
-              <img src={Video3} alt="Kiana4" className="img-fluid figure-img img-border" />
+              <img src={Video3} alt="Kiana4" className="img-fluid figure-img img-border" onClick={this.show3} />
               <figcaption className="figure-caption">
                 Office Party
               </figcaption>
 
             </figure>
             <figure className="col-lg-3 col-md-6 figure text-center">
-              <img src={Video4} alt="Kiana5" className="img-fluid figure-img img-border" />
+              <img src={Video4} alt="Kiana5" className="img-fluid figure-img img-border" onClick={this.show4}/>
               <figcaption className="figure-caption">
                 Hurry up and wait
               </figcaption>
 
             </figure>
+
+            {this.state.show && (
+              <div className="container img-border">
+                <div className="row">
+
+                  <div className="col-lg-6 col-md-6">
+                    <div className="service-box mt-5 mx-auto">
+                      <img src={jared} alt="actor" width="600" height="400" style={{paddingBottom:"40px"}} />
+                    </div>
+                  </div>
+                  <div className="col-lg-6 col-md-6" style={{paddingLeft:"60px"}}>
+                    <div className="service-box mt-5 mx-auto text-left">
+
+                      <h3 className="mb-3 features-cont-head">Cumpleañera</h3>
+                      <p >A Show for a Change Productions • 2018 • 13 min</p>
+                      <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
+                      <button className="btn btn-dark btn-outline-success"  style={{marginRight:'10px'}}>Play</button>
+                      <button className="btn btn-dark btn-outline-success"style={{marginRight:'10px'}} data-toggle="modal" data-target="#payment-processing">DONATE</button>
+
+
+                      <button className="btn-outline-close" style={{marginTop:'10px',marginRight: '10px',position:'absolute',top:'0',right:'0' }}onClick={this.hide}>Close</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+          )}
+
+          {this.state.show2 && (
+            <div className="container img-border">
+              <div className="row">
+
+                <div className="col-lg-6 col-md-6">
+                  <div className="service-box mt-5 mx-auto">
+                    <img src={jared} alt="actor" width="600" height="400" style={{paddingBottom:"40px"}} />
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-6" style={{paddingLeft:"60px"}}>
+                  <div className="service-box mt-5 mx-auto text-left">
+
+                    <h3 className="mb-3 features-cont-head">Willow</h3>
+                    <p >A Show for a Change Productions • 2018 • 13 min</p>
+                    <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
+                    <button className="btn btn-dark btn-outline-success"  style={{marginRight:'10px'}}>Play</button>
+                    <button className="btn btn-dark btn-outline-success"style={{marginRight:'10px'}} data-toggle="modal" data-target="#payment-processing">DONATE</button>
+
+
+                    <button className="btn-outline-close" style={{marginTop:'10px',marginRight: '10px',position:'absolute',top:'0',right:'0' }}onClick={this.hide2}>Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        )}
+        {this.state.show3 && (
+          <div className="container img-border">
+            <div className="row">
+
+              <div className="col-lg-6 col-md-6">
+                <div className="service-box mt-5 mx-auto">
+                  <img src={jared} alt="actor" width="600" height="400" style={{paddingBottom:"40px"}} />
+                </div>
+              </div>
+              <div className="col-lg-6 col-md-6" style={{paddingLeft:"60px"}}>
+                <div className="service-box mt-5 mx-auto text-left">
+
+                  <h3 className="mb-3 features-cont-head">Office Party</h3>
+                  <p >A Show for a Change Productions • 2018 • 13 min</p>
+                  <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
+                  <button className="btn btn-dark btn-outline-success"  style={{marginRight:'10px'}}>Play</button>
+                  <button className="btn btn-dark btn-outline-success"style={{marginRight:'10px'}} data-toggle="modal" data-target="#payment-processing">DONATE</button>
+
+
+                  <button className="btn-outline-close" style={{marginTop:'10px',marginRight: '10px',position:'absolute',top:'0',right:'0' }}onClick={this.hide3}>Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+      )}
+      {this.state.show4 && (
+        <div className="container img-border">
+          <div className="row">
+
+            <div className="col-lg-6 col-md-6">
+              <div className="service-box mt-5 mx-auto">
+                <img src={jared} alt="actor" width="600" height="400" style={{paddingBottom:"40px"}} />
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-6" style={{paddingLeft:"60px"}}>
+              <div className="service-box mt-5 mx-auto text-left">
+
+                <h3 className="mb-3 features-cont-head">Hurry Up and Wait</h3>
+                <p >A Show for a Change Productions • 2018 • 13 min</p>
+                <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
+                <button className="btn btn-dark btn-outline-success"  style={{marginRight:'10px'}}>Play</button>
+                <button className="btn btn-dark btn-outline-success"style={{marginRight:'10px'}} data-toggle="modal" data-target="#payment-processing">DONATE</button>
+
+
+                <button className="btn-outline-close" style={{marginTop:'10px',marginRight: '10px',position:'absolute',top:'0',right:'0' }}onClick={this.hide4}>Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    )}
+
+
 
           </div>
           </div>
@@ -161,33 +313,144 @@ class UserPage extends Component {
           <h3 style={{paddingBottom:'30px'}} className="head-movie-genre" >Newly Added</h3>
           <div className="row">
             <figure className="col-lg-3 col-md-6 figure text-center">
-              <img src={Video5} alt="Kiana2" className="img-fluid figure-img img-border" />
+              <img src={Video5} alt="Kiana2" className="img-fluid figure-img img-border" onClick={this.show5}/>
               <figcaption className="figure-caption">
                 Marriage
               </figcaption>
 
             </figure>
             <figure className="col-lg-3 col-md-6 figure text-center">
-              <img src={Video6} alt="Kiana3" className="img-fluid figure-img img-border" />
+              <img src={Video6} alt="Kiana3" className="img-fluid figure-img img-border" onClick={this.show6} />
               <figcaption className="figure-caption">
                 Emunah
               </figcaption>
 
             </figure>
             <figure className="col-lg-3 col-md-6 figure text-center">
-              <img src={Video7} alt="Kiana4" className="img-fluid figure-img img-border" />
+              <img src={Video7} alt="Kiana4" className="img-fluid figure-img img-border" onClick={this.show7} />
               <figcaption className="figure-caption">
                 Stressed
   </figcaption>
 
             </figure>
+
+
+
             <figure className="col-lg-3 col-md-6 figure text-center">
-              <img src={Video8} alt="Kiana5" className="img-fluid figure-img img-border" />
+              <img src={Video8} alt="Kiana5" className="img-fluid figure-img img-border" onClick={this.show8}/>
               <figcaption className="figure-caption">
                 Wear
               </figcaption>
 
             </figure>
+
+            {this.state.show5 && (
+              <div className="container img-border">
+                <div className="row">
+
+                  <div className="col-lg-6 col-md-6">
+                    <div className="service-box mt-5 mx-auto">
+                      <img src={jared} alt="actor" width="600" height="400" style={{paddingBottom:"40px"}} />
+                    </div>
+                  </div>
+                  <div className="col-lg-6 col-md-6" style={{paddingLeft:"60px"}}>
+                    <div className="service-box mt-5 mx-auto text-left">
+
+                      <h3 className="mb-3 features-cont-head">Marriage</h3>
+                      <p >A Show for a Change Productions • 2018 • 13 min</p>
+                      <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
+                      <button className="btn btn-dark btn-outline-success"  style={{marginRight:'10px'}}>Play</button>
+                      <button className="btn btn-dark btn-outline-success"style={{marginRight:'10px'}} data-toggle="modal" data-target="#payment-processing">DONATE</button>
+
+
+                      <button className="btn-outline-close" style={{marginTop:'10px',marginRight: '10px',position:'absolute',top:'0',right:'0' }}onClick={this.hide5}>Close</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+          )}
+
+          {this.state.show6 && (
+            <div className="container img-border">
+              <div className="row">
+
+                <div className="col-lg-6 col-md-6">
+                  <div className="service-box mt-5 mx-auto">
+                    <img src={jared} alt="actor" width="600" height="400" style={{paddingBottom:"40px"}} />
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-6" style={{paddingLeft:"60px"}}>
+                  <div className="service-box mt-5 mx-auto text-left">
+
+                    <h3 className="mb-3 features-cont-head">Enurah</h3>
+                    <p >A Show for a Change Productions • 2018 • 13 min</p>
+                    <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
+                    <button className="btn btn-dark btn-outline-success"  style={{marginRight:'10px'}}>Play</button>
+                    <button className="btn btn-dark btn-outline-success"style={{marginRight:'10px'}} data-toggle="modal" data-target="#payment-processing">DONATE</button>
+
+
+                    <button className="btn-outline-close" style={{marginTop:'10px',marginRight: '10px',position:'absolute',top:'0',right:'0' }}onClick={this.hide6}>Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        )}
+        {this.state.show7 && (
+          <div className="container img-border">
+            <div className="row">
+
+              <div className="col-lg-6 col-md-6">
+                <div className="service-box mt-5 mx-auto">
+                  <img src={jared} alt="actor" width="600" height="400" style={{paddingBottom:"40px"}} />
+                </div>
+              </div>
+              <div className="col-lg-6 col-md-6" style={{paddingLeft:"60px"}}>
+                <div className="service-box mt-5 mx-auto text-left">
+
+                  <h3 className="mb-3 features-cont-head">Stressed</h3>
+                  <p >A Show for a Change Productions • 2018 • 13 min</p>
+                  <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
+                  <button className="btn btn-dark btn-outline-success"  style={{marginRight:'10px'}}>Play</button>
+                  <button className="btn btn-dark btn-outline-success"style={{marginRight:'10px'}} data-toggle="modal" data-target="#payment-processing">DONATE</button>
+
+
+                  <button className="btn-outline-close" style={{marginTop:'10px',marginRight: '10px',position:'absolute',top:'0',right:'0' }}onClick={this.hide7}>Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+      )}
+      {this.state.show8 && (
+        <div className="container img-border">
+          <div className="row">
+
+            <div className="col-lg-6 col-md-6">
+              <div className="service-box mt-5 mx-auto">
+                <img src={jared} alt="actor" width="600" height="400" style={{paddingBottom:"40px"}} />
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-6" style={{paddingLeft:"60px"}}>
+              <div className="service-box mt-5 mx-auto text-left">
+
+                <h3 className="mb-3 features-cont-head">Wear</h3>
+                <p >A Show for a Change Productions • 2018 • 13 min</p>
+                <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
+                <button className="btn btn-dark btn-outline-success"  style={{marginRight:'10px'}}>Play</button>
+                <button className="btn btn-dark btn-outline-success"style={{marginRight:'10px'}} data-toggle="modal" data-target="#payment-processing">DONATE</button>
+
+
+                <button className="btn-outline-close" style={{marginTop:'10px',marginRight: '10px',position:'absolute',top:'0',right:'0' }}onClick={this.hide8}>Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    )}
+
+
           </div>
           </div>
         </section>

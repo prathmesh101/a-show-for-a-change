@@ -76,6 +76,16 @@ font-family: 'Montserrat';
   border: 1px solid #00CB94;
 }
 
+.btn-outline-close{
+  color: #28a745;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+  }
+
+
+
+
 /*influencers section*/
 
 .influencer-user-content{
