@@ -89,7 +89,7 @@ class SignIn extends Component {
             <div className="form-group">
               <div className="div-underline">
                 <i className="fas fa-unlock-alt fillPrimary"></i>
-                <input type="text" className="inline" name="password" id="password" placeholder="Password" onChange={this.handleChange} />
+                <input type="password" className="inline" name="password" id="password" placeholder="Password" onChange={this.handleChange} />
               </div>
             </div>
             <div className="div-submit">
