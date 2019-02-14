@@ -5,6 +5,7 @@ import 'bootstrap';
 
 import { Redirect } from 'react-router';
 
+import { RootCloseWrapper } from 'react-overlays';
 
 import axios from 'axios';
 
@@ -169,6 +170,8 @@ class UserPage extends Component {
 
             <figure className="col-lg-3 col-md-6 figure text-center">
               <img src={Video1} alt="Kiana2" className="img-fluid figure-img img-border"  onClick={this.show} />
+
+
               <figcaption className="figure-caption">
                 Cumpleañera
               </figcaption>
@@ -197,12 +200,14 @@ class UserPage extends Component {
             </figure>
 
             {this.state.show && (
+              <RootCloseWrapper onRootClose={this.hide}>
               <div className="container img-border">
                 <div className="row">
 
                   <div className="col-lg-6 col-md-6">
                     <div className="service-box mt-5 mx-auto">
                       <img src={jared} alt="actor" width="600" height="400" style={{paddingBottom:"40px"}} />
+
                     </div>
                   </div>
                   <div className="col-lg-6 col-md-6" style={{paddingLeft:"60px"}}>
@@ -221,9 +226,11 @@ class UserPage extends Component {
 
                 </div>
               </div>
+              </RootCloseWrapper>
           )}
 
           {this.state.show2 && (
+              <RootCloseWrapper onRootClose={this.hide2}>
             <div className="container img-border">
               <div className="row">
 
@@ -248,8 +255,10 @@ class UserPage extends Component {
 
               </div>
             </div>
+            </RootCloseWrapper>
         )}
         {this.state.show3 && (
+            <RootCloseWrapper onRootClose={this.hide3}>
           <div className="container img-border">
             <div className="row">
 
@@ -274,8 +283,10 @@ class UserPage extends Component {
 
             </div>
           </div>
+          </RootCloseWrapper>
       )}
       {this.state.show4 && (
+          <RootCloseWrapper onRootClose={this.hide4}>
         <div className="container img-border">
           <div className="row">
 
@@ -300,6 +311,7 @@ class UserPage extends Component {
 
           </div>
         </div>
+        </RootCloseWrapper>
     )}
 
 
@@ -345,6 +357,7 @@ class UserPage extends Component {
             </figure>
 
             {this.state.show5 && (
+                <RootCloseWrapper onRootClose={this.hide5}>
               <div className="container img-border">
                 <div className="row">
 
@@ -369,9 +382,11 @@ class UserPage extends Component {
 
                 </div>
               </div>
+              </RootCloseWrapper>
           )}
 
           {this.state.show6 && (
+              <RootCloseWrapper onRootClose={this.hide6}>
             <div className="container img-border">
               <div className="row">
 
@@ -396,8 +411,10 @@ class UserPage extends Component {
 
               </div>
             </div>
+            </RootCloseWrapper>
         )}
         {this.state.show7 && (
+            <RootCloseWrapper onRootClose={this.hide7}>
           <div className="container img-border">
             <div className="row">
 
@@ -422,8 +439,10 @@ class UserPage extends Component {
 
             </div>
           </div>
+          </RootCloseWrapper>
       )}
       {this.state.show8 && (
+          <RootCloseWrapper onRootClose={this.hide8}>
         <div className="container img-border">
           <div className="row">
 
@@ -448,6 +467,7 @@ class UserPage extends Component {
 
           </div>
         </div>
+        </RootCloseWrapper>
     )}
 
 
