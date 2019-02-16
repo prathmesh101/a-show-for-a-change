@@ -67,7 +67,7 @@ class Partners extends Component {
                     <p className="partner_desc">
                         <span>Movikarma strives to connect and develop long-term relationships with</span>
                         <span>non-profit partners, private foundations and other funders who share our</span>
-                        <span>commitment to improving the world thourhg the power of story.</span>
+                        <span>commitment to improving the world through the power of story.</span>
                     </p>
                 </div>
                 {renderBlock}

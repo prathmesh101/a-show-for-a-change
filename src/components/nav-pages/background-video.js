@@ -9,7 +9,7 @@ const BackVideo = () => {
         	<video loop muted autoPlay className="backgrnd-video" style={{objectFit: 'cover', width:'100%', height:'300px'}} src="https://d196vb1g1ujhpl.cloudfront.net/AShowForAChangeCompanyReel.mp4" type="video/mp4">
             </video>
              <div className="overlay">
-     			<div className="container">
+     			<div className="container" style="{{width:'0'}}">
 			        <div className="overlay-content">
                       <h1>Transforming entertainment into action</h1>
                       <p className="overlay-content-para">Movikarma offers a growing selection of socially conscious movies and series, <br/> and allows you to support the causes and creators closest to your heart.</p>
