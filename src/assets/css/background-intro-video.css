@@ -22,7 +22,7 @@ top:0;
 
  /*Align center text*/
  height: 100%;
-  width: auto;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
