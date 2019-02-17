@@ -95,9 +95,8 @@ class Influencer extends React.Component{
 					</div>
 					<div>
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
-					{/*    <button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button> */}
-						      <div>
-						        <button onClick={this.openModal}>Donate</button>
+						      <span>
+						        <button className="btn btn-dark btn-outline-success" onClick={this.openModal}>Donate to IRC</button>
 						        <Modal
 						          isOpen={this.state.modalIsOpen}
 						          onAfterOpen={this.afterOpenModal}
@@ -105,7 +104,6 @@ class Influencer extends React.Component{
 						          style={customStyles}
 						          contentLabel="Example Modal"
 						        >
-
 						          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
 						          <button onClick={this.closeModal}>close</button>
 						          <div>I am a modal</div>
@@ -117,8 +115,8 @@ class Influencer extends React.Component{
 						            <button>the modal</button>
 						          </form>
 						        </Modal>
-						      </div>
-						</div>
+						      </span>
+					</div>
 				</section>
 			
 				<section className="more-from mb-5">
