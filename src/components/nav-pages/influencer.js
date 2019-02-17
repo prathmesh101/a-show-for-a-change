@@ -94,28 +94,28 @@ class Influencer extends React.Component{
 						<p>Iranian-American actress Kiana Madani has been acting, modeling and performing for nearly ten years. Born and raised in San Jose, California, Kiana partook in theatre productions locally and participated in acting classes in San Francisco. She has worked on multiple TV pilots, national commercials and feature films amongst seasoned actors. Currently, you can watch her in the political drama THE PIRATES OF SOMALIA opposite Al Pacino, Evan Peters, Barkhad Abdi, and Melanie Griffith on Netflix.</p>
 					</div>
 					<div>
-						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
-						      <span>
-						        <button className="btn btn-dark btn-outline-success" onClick={this.openModal}>Donate to IRC</button>
-						        <Modal
-						          isOpen={this.state.modalIsOpen}
-						          onAfterOpen={this.afterOpenModal}
-						          onRequestClose={this.closeModal}
-						          style={customStyles}
-						          contentLabel="Example Modal"
-						        >
-						          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
-						          <button onClick={this.closeModal}>close</button>
-						          <div>I am a modal</div>
-						          <form>
-						            <input />
-						            <button>tab navigation</button>
-						            <button>stays</button>
-						            <button>inside</button>
-						            <button>the modal</button>
-						          </form>
-						        </Modal>
-						      </span>
+					  <button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
+				      <span>
+				        <button className="btn btn-dark btn-outline-success" onClick={this.openModal}>Donate to IRC</button>
+				        <Modal
+				          isOpen={this.state.modalIsOpen}
+				          onAfterOpen={this.afterOpenModal}
+				          onRequestClose={this.closeModal}
+				          style={customStyles}
+				          contentLabel="Example Modal"
+				        >
+				          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
+				          <button onClick={this.closeModal}>close</button>
+				          <div>I am a modal</div>
+				          <form>
+				            <input />
+				            <button>tab navigation</button>
+				            <button>stays</button>
+				            <button>inside</button>
+				            <button>the modal</button>
+				          </form>
+				        </Modal>
+				      </span>
 					</div>
 				</section>
 			
@@ -180,16 +180,27 @@ class Influencer extends React.Component{
 					</div>
 					<div>
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
-					{/*	<button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button> */}
-						<StripeCheckout 					name="Jared Milrad"
-															description="Donate to the Covenant House"
-									      					email="info@movikarma.com"
-									      					shippingAddress
-									      					label="  Donate  "
-									      					amount={1000}
-									      					token={this.onToken} 
-									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
-									      />
+						<span>
+					        <button className="btn btn-dark btn-outline-success" onClick={this.openModal}>Donate to Covenant House</button>
+					        <Modal
+					          isOpen={this.state.modalIsOpen}
+					          onAfterOpen={this.afterOpenModal}
+					          onRequestClose={this.closeModal}
+					          style={customStyles}
+					          contentLabel="Example Modal"
+					        >
+					          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
+					          <button onClick={this.closeModal}>close</button>
+					          <div>I am a modal</div>
+					          <form>
+					            <input />
+					            <button>tab navigation</button>
+					            <button>stays</button>
+					            <button>inside</button>
+					            <button>the modal</button>
+					          </form>
+				        	</Modal>
+				        </span>
 					</div>
 				</section>
 			
