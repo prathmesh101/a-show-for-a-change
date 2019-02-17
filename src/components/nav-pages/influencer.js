@@ -12,9 +12,45 @@ import StripeCheckout from 'react-stripe-checkout';
 import {Elements} from 'react-stripe-elements';
 import CheckoutForm from '../CheckoutForm.js';
 import CVLogo from '../../assets/img/partners/logos/CV-logo.png';
+import Modal from 'react-modal';
 
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
 
 class Influencer extends React.Component{
+
+	constructor() {
+    super();
+
+	    this.state = {
+	      modalIsOpen: false
+	    };
+
+	    this.openModal = this.openModal.bind(this);
+	    this.afterOpenModal = this.afterOpenModal.bind(this);
+	    this.closeModal = this.closeModal.bind(this);
+  	}
+
+	openModal() {
+	   this.setState({modalIsOpen: true});
+	}
+
+	afterOpenModal() {
+	    // references are now sync'd and can be accessed.
+	   this.subtitle.style.color = '#f00';
+	}
+
+    closeModal() {
+       this.setState({modalIsOpen: false});
+    }
 	
 	onToken = (token) => {
 		
@@ -60,15 +96,28 @@ class Influencer extends React.Component{
 					<div>
 						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
 					{/*    <button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button> */}
-						<StripeCheckout 					name="Kiana Madani"
-															description="Donate to the International Rescue Committee"
-									      					email="info@movikarma.com"
-									      					shippingAddress
-									      					label="  Donate  "
-									      					amount={1000}
-									      					token={this.onToken} 
-									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
-									      />
+						      <div>
+						        <button onClick={this.openModal}>Donate</button>
+						        <Modal
+						          isOpen={this.state.modalIsOpen}
+						          onAfterOpen={this.afterOpenModal}
+						          onRequestClose={this.closeModal}
+						          style={customStyles}
+						          contentLabel="Example Modal"
+						        >
+
+						          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
+						          <button onClick={this.closeModal}>close</button>
+						          <div>I am a modal</div>
+						          <form>
+						            <input />
+						            <button>tab navigation</button>
+						            <button>stays</button>
+						            <button>inside</button>
+						            <button>the modal</button>
+						          </form>
+						        </Modal>
+						      </div>
 						</div>
 				</section>
 			
