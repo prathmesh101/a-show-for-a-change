@@ -1,0 +1,218 @@
+.div-signIn {
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
+}
+
+/* Desktop wide breakpoint */
+@media screen and (min-width: 1366px) {
+
+}
+
+/* Tablet breakpoint */
+@media screen and (min-width: 1024px) {
+
+}
+
+/* Mobile breakpoint */
+@media screen and (min-width: 375px) {
+
+}
+
+.div-form {
+  width: 350px;
+}
+
+.div-headText {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.headText {
+  color: white;
+  padding: 10px 0;
+}
+
+h2 {
+  font-size: 2.5rem!important;
+  letter-spacing: 0.02em;
+}
+
+.inline {
+  display:inline;
+}
+
+.text-display {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.box-display {
+  background-color: #000 !important;
+  border: 1px solid #00CB94;
+}
+
+.checkbox_text {
+  font-family: Montserrat, Regular
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group input {
+  border: none;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.form-group input:focus {
+  color: white;
+  background-color: transparent;
+  font-size: 20px;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  text-transform: none;
+  color: darkgray;
+  letter-spacing: 0;
+  font-size: 15px;
+ }
+
+.div-underline {
+  border-bottom: 1px solid darkgray!important;
+  opacity: 0.7;
+  margin-bottom: 3em;
+}
+
+.div-underline i {
+  padding-right: 10px;
+}
+
+.fillPrimary {
+  color: #00CB94;
+}
+
+.div-submit {
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-options {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+#checkbox {
+  margin-right: 8px;
+}
+
+.buttonGreen {
+  font-weight: 400;
+  font-size: 1.7em;
+  background-color: #00CB94;
+  color: #00171D;
+  border: none;
+  height: 53px;
+  width: 100%;
+}
+
+.div-footer {
+  margin: 75px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.div-footer p {
+  color: grey;
+  font-size: .9em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.div-center {
+  display: flex;
+  justify-content: center;
+}
+
+.linkPrimary {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 600;
+  border-bottom: 2px solid #00CB94;
+  letter-spacing: 0.02em;
+}
+
+.div-progressIndicator {
+  width: 80vw;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.circle-active {
+  fill: "#00CB94";
+}
+
+/* auto-complete form styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #005C43 inset;
+  box-shadow: none;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Old css based on Prath's figma wireframe */
+/* .signin-background{
+
+
+ background-image: url("../img/Ticket1.png");
+
+  height: 660px;
+
+
+   background-repeat: no-repeat;
+   background-color: white;
+    background-position: center;
+}
+
+
+
+.signin-content{
+  display: block;
+
+  margin-left:100px;
+  padding-top:160px;
+
+}
+
+.signin-align{
+  padding-left: 165px;
+}
+
+h2.signin-head-text{
+  padding-top: 100px;
+  text-align: center;
+} */
