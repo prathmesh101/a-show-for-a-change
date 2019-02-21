@@ -10,6 +10,7 @@ import Join from './join-now';
 //import Footer from '../footer';
 
 const Home = () => {
+
 	return (
 		<div>
 			<BackgroundImg />
@@ -18,6 +19,6 @@ const Home = () => {
 			<Join />
 		</div>
 	)
-}
+};
 
 export default Home;
