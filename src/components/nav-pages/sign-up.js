@@ -47,6 +47,10 @@ class SignUp extends Component {
         email: this.state.email,
         password: this.state.password
       }
+    }).then(() => {
+
+    }).catch(err => {
+      console.log('error authenticating user: ', err)
     })
 
     /*****
