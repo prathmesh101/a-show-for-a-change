@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 import UserPage from './user-page.js';
 import { Redirect } from 'react-router';
 
+// sample data for user:
+import usersData from '../../../dist/api_php/data.js';
+
 class SignUp extends Component {
   constructor(props) {
     super(props);
@@ -37,21 +40,31 @@ class SignUp extends Component {
       "password": this.state.password,
     };
 
-    // axios to an endpoint for the json webtoke
+    // this will be run on axios:
+    const authenticate = () => {
+      usersData.push(params);
+      console.log('what is ', usersData);
+    }
+
+    authenticate();
+
+    // axios to an endpoint for the json webtoken
     axios({
-      method: 'post',
-      url: '/api/auth/tokens',
+      // temporary method for it to work
+      method: 'get',
+      url: '/',
       data: {
         first_name: this.state.first_name,
         last_name: this.state.last_name,
         email: this.state.email,
         password: this.state.password
       }
-    }).then(() => {
-
+    }).then(data => {
+      console.log('here')
     }).catch(err => {
       console.log('error authenticating user: ', err)
     })
+    //////////////////////////////////////////////
 
     /*****
     Assume axios (backend) works focus on authorization
