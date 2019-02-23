@@ -29,28 +29,34 @@ class SignUp extends Component {
 
   handleClick(event) {
     event.preventDefault();
-    var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
-    //console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
-    //To be done:check name empty values before hitting submit
-    var self = this;
-    var params = {
-      "first_name": this.state.first_name,
-      "last_name": this.state.last_name,
-      "email": this.state.email,
-      "password": this.state.password,
-    };
+    // var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
+    // console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
+    // To be done:check name empty values before hitting submit
+    // var self = this;
 
-    // this will be run on axios:
-    const authenticate = () => {
-      usersData.push(params);
-      console.log('what is ', usersData);
+    // clear the localStorage, async function that get run on timeout:
+    const clearToken = () => {
+      return setTimeout(() => localStorage.removeItem('authToken'), 300000);
+    }
+    // add token to localStorage
+    const setToken = (token) => {
+      return localStorage.setItem('authToken', token);
+    }
+    // token generator should be in the server
+    const generateToken = () => {
+      return Math.floor(Math.random() * (999999 - 100000) + 100000);
     }
 
-    authenticate();
-
+    const params = {
+      first_name: this.state.first_name,
+      last_name: this.state.last_name,
+      email: this.state.email,
+      password: this.state.password,
+      token: generateToken()
+    };
     // axios to an endpoint for the json webtoken
     axios({
-      // temporary method for it to work
+      // temporary method for it to
       method: 'get',
       url: '/',
       data: {
@@ -60,9 +66,14 @@ class SignUp extends Component {
         password: this.state.password
       }
     }).then(data => {
-      console.log('here')
+      console.log('data fetched');
+      usersData.push(params);
+      console.log('users: ', usersData);
+      setToken(usersData[usersData.length - 1].token);
+      // remove token in given time:
+      clearToken();
     }).catch(err => {
-      console.log('error authenticating user: ', err)
+      console.log('error authenticating user: ', err);
     })
     //////////////////////////////////////////////
 
