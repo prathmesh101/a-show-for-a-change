@@ -1,32 +1,45 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 
-import Header from './header.js';
-import Footer from './footer.js';
-import UserPage from './user-page.js';
-import SignIn from './sign-in.js';
-import SignUp from './sign-up.js';
-
-export default component => {
+export default (WrappedComponent) => {
   class AuthenticateRoute extends Component {
     constructor() {
       super();
 
-      this.state = {};
+      this.state = { withToken: false };
+    }
+
+    componentWillMount() {
+      this.isLoggedin();
     }
 
     componentDidMount() {
-      this.checkAndRedirect();
+      this.isLoggedin();
     }
 
     componentDidUpdate() {
-      this.checkAndRedirect();
+      this.isLoggedin();
     }
 
-    isLoggedin() {}
+    isLoggedin() {
+      // if no token:
+      if (localStorage.getItem('authToken')) {
+        this.setState({ withToken: true })
+      }
+    }
 
-    isLoggedOut() {}
+    // future implementation:
+    // isLoggedOut() { }
+    // isLoading() { }
 
-    isLoading() {}
+    render() {
+      if (this.state.withToken) {
+        return <WrappedComponent {...this.props} />
+      } else {
+        return <Redirect to='/sign-in' />;
+      }
+    }
   }
+
+  return AuthenticateRoute;
 };

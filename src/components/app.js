@@ -14,6 +14,8 @@ import Influencer from './nav-pages/influencer.js';
 import UserPage from './nav-pages/user-page.js';
 import VideoPage from './nav-pages/video-page.js';
 
+// authcomponent:
+import AuthComponent from './nav-pages/authHOC.js'
 
 // const App = () => (
 //     <div>
@@ -42,30 +44,30 @@ import VideoPage from './nav-pages/video-page.js';
 
 class App extends React.Component {
 
-    myCallback = (dataFromChild) => {
-        console.log("inside app.js");
-    };
+    // myCallback = (dataFromChild) => {
+    //     console.log("inside app.js");
+    // };
 
-    state = {
-        isLoggedIn: true
-    }
+    // state = {
+    //     isLoggedIn: true
+    // }
 
-    render () {
+    render() {
         return (
             <div>
                 <div className="spacing-div">
                     <BrowserRouter>
                         <main>
-                            <Header loggedIn = {this.isLoggedIn}/>
+                            <Header loggedIn={this.isLoggedIn} />
                             <Switch>
                                 <Route exact path="/" component={Home} />
                                 <Route path="/about" component={About} />
-                                <Route path = "/partners" component = {Partners}/>
+                                <Route path="/partners" component={Partners} />
                                 <Route path="/genre" component={Genres} />
                                 <Route path="/influencer" component={Influencer} />
                                 <Route path="/sign-in" component={SignIn} />
                                 <Route path="/sign-up" component={SignUp} />
-                                <Route path="/user-page" component={UserPage} />
+                                <Route path="/user-page" component={AuthComponent(UserPage)} />
                                 <Route path="/video-page" component={VideoPage} />
                             </Switch>
                             <Footer />
@@ -73,8 +75,8 @@ class App extends React.Component {
                     </BrowserRouter>
                 </div>
             </div>
-            );
+        );
     }
-};
+}
 
 export default App;
