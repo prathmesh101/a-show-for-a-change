@@ -168,7 +168,7 @@ class SignUp extends Component {
           </div>
           <div className="form-group">
             <div className="div-underline">
-              <i className="fas fa-envelope fillPrimary"></i>
+              <i className="fas fa-envelope inlineBlock fillPrimary"></i>
               <input type="email" className="inlineBlock" name="email" id="email" placeholder="Email" onChange={this.handleChange} />
             </div>
           </div>

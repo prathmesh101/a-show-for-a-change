@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../assets/css/influencer.css';
 import kiana_hero from '../../assets/img/influencer/Kiana_HeroImage@2x.png';
 import kiana_pitch from '../../assets/img/influencer/Kiana_Screenshot.png';
 import cumpImg from '../../assets/img/Poster_Cumpleanera@2x.png';
@@ -16,12 +17,16 @@ import Modal from 'react-modal';
 
 const customStyles = {
   content : {
-    top                   : '50%',
+    top                   : '55%',
     left                  : '50%',
     right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
+    bottom                : '-300px',
+    marginRight           : 'auto',
+    transform             : 'translate(-50%, -50%)',
+    backgroundColor		  : 'black',
+    display				  : 'inline-block',
+    textAlign			  : 'center',
+    marginLeft			  : 'auto',
   }
 };
 
@@ -45,7 +50,16 @@ class Influencer extends React.Component{
 
 	afterOpenModal() {
 	    // references are now sync'd and can be accessed.
-	   this.subtitle.style.color = '#f00';
+	   this.subtitle.style.color = '#FFFFFF';
+	   this.subtitle.style.fontFamily = 'Montserrat, SemiBold';
+	   this.subtitle.style.fontSize = '30px';
+	   this.subsubtitle.style.fontSize = '14px';
+	   this.subsubtitle.style.fontFamily = 'Montserrat, Regular';
+	   this.subsubtitle.style.color = '#68777C';
+	   this.btntitle.style.backgroundColor = 'transparent';
+	   this.btntitle.style.color = '#00CB94';
+	   this.btntitle.style.border = 'none';
+	   this.nonprofit.style.fontSize = '10px';
 	}
 
     closeModal() {
@@ -53,6 +67,8 @@ class Influencer extends React.Component{
     }
 	
 	onToken = (token) => {
+
+		console.log(token);
 		
 		fetch('https://dev.sageape.com/api_php/processpayment.php', {
 			method: "POST", 
@@ -104,16 +120,120 @@ class Influencer extends React.Component{
 				          style={customStyles}
 				          contentLabel="Example Modal"
 				        >
-				          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
-				          <button onClick={this.closeModal}>close</button>
-				          <div>I am a modal</div>
-				          <form>
-				            <input />
-				            <button>tab navigation</button>
-				            <button>stays</button>
-				            <button>inside</button>
-				            <button>the modal</button>
-				          </form>
+				          <div className="container-fluid">
+					          <div className="row">
+					          	<div className="col">
+					          		<div><button ref={btntitle => this.btntitle = btntitle} type="button" className="pull-right" onClick={this.closeModal}><i className="fas fa-times"></i></button></div>
+					          	</div>
+					          </div>
+					          <div className="row mt-1" style={{paddingRight: '50px', paddingLeft: '50px'}}>
+					          	<div className="col">
+						          <div><p className="text-center" ref={subtitle => this.subtitle = subtitle}>Donate</p></div>
+						          <div><p className="text-center" ref={subsubtitle => this.subsubtitle = subsubtitle}>Your tax-deductible donation will support:</p></div>
+						      	</div>
+						      </div>
+						      <div className="row">
+						        <div className="col">
+						          <p className="text-white" ref={nonprofit => this.nonprofit = nonprofit}><img width="30px" className="mr-3 align-left" src="https://s3-us-west-2.amazonaws.com/s4c-assets/images/logo_donation_popup_IRC.png" />International Rescue Committee</p>
+						      	</div>
+						      </div>
+						      <div className="row">
+						        <div className="col text-left align-bottom" style={{fontSize: '13px'}}>
+						          <i style={{color:'#00CB94'}} className="fas fa-envelope-open"></i><span className="text-white">  Amount</span>
+						      	</div>
+						      </div>
+						      <div className="row mt-2">
+						        <div className="col-2">
+						          <button style={{fontSize: '15px'}} className="btn btn-dark">$10</button>
+						      	</div>
+						      	<div className="col-2">
+						          <button style={{fontSize: '15px'}} className="btn btn-dark">$20</button>
+						      	</div>
+						      	<div className="col-2">
+						          <button style={{fontSize: '15px'}} className="btn btn-dark">$30</button>
+						      	</div>
+						      	<div className="col-2">
+						          <button style={{fontSize: '15px'}} className="btn btn-dark">$50</button>
+						      	</div>
+						      	<div className="col-2">
+						          <button style={{fontSize: '15px'}} className="btn btn-dark">Other</button>
+						      	</div>
+						      </div>
+					          <form>
+					              <div className="row mt-4">
+						            <div className="col-12 text-left">
+							          <div className="div-underline">
+          							    <i className="fas fa-user fillPrimary"></i>
+          							    <input required type="text" className="text-display" minLength="5" maxLength="100" size="50" name="cardholer_name" id="cardholder_name" placeholder="Cardholder Name" onChange={this.handleChange} />
+        						      </div>
+    							    </div>
+						          </div>
+						          <div className="row">
+						            <div className="col text-left">
+							          <div className="div-underline">
+          							    <i className="fas fa-credit-card fillPrimary"></i>
+          							    <input required type="text" className="text-display" minLength="16" maxLength="16" size="20" name="card_number" id="card_number" placeholder="Card Number" onChange={this.handleChange} />
+        						      </div>
+    							    </div>
+						          </div>
+						          <div className="row">
+						            <div className="col text-left">
+							          <div className="div-underline">
+          							    <i className="far fa-credit-card fillPrimary"></i>
+          							    <input required type="text" className="text-display" minLength="10" maxLength="10" size="30" name="card_exp_date" id="card_exp_date" placeholder="Expiration Date (MM/DD/YYYY)" onChange={this.handleChange} />
+        						        <i className="fas fa-lock fillPrimary"></i>
+          							    <input required type="text" className="text-display" minLength="3" maxLength="3" size="5" name="CVC" id="CVC" placeholder="CVC" onChange={this.handleChange} />
+        						      </div>
+    							    </div>
+						          </div>
+						          <div className="row">
+						            <div className="col text-left">
+							          <div className="div-underline">
+          							    <i className="fas fa-map-marker-alt fillPrimary"></i>
+          							    <input required type="text" className="text-display" minLength="5" maxLength="10" size="12" name="zip_code" id="zip_code" placeholder="Zip Code" onChange={this.handleChange} />
+        						      </div>
+    							    </div>
+						          </div>
+						          <div className="row">
+							          <div className="form-check">
+							            <div className="col text-left">
+								            <input className="form-check-input box-display" type="checkbox" value="" id="regular_payment" />
+								            <label className="form-check-label text-white" htmlFor="regular_payment">
+												Make this a monthly donation.
+												</label>
+        							    </div>
+        							  </div>
+						          </div>
+						          <div className="row mt-4">
+							          <div className="form-group">
+							            <div className="col text-center">
+								          <div>
+              							    <button type="button" style={{paddingLeft: '100px', paddingRight: '100px', color:'black', fontSize:'24px'}} className="btn btn-success">DONATE</button>
+            						      </div>
+        							    </div>
+        							  </div>
+						          </div>
+						          <div className="row mt-2">
+							          <div className="form-group">
+							            <div className="col text-center">
+								          <div>
+              							    <label type="label" style={{opacity: '.5', fontFamily:'Montserrat, Regular'}} className="text-white">Your card will be charged.</label>
+            						      </div>
+        							    </div>
+        							  </div>
+						          </div>
+					          </form>
+					        {/*  <StripeCheckout 			name="Kiana Madani"
+														description="Donate to the International Rescue Committee"
+								      					email="info@movikarma.com"
+								      					shippingAddress
+								      					label="  Donate  "
+								      					amount={8000}
+								      					token={this.onToken} 
+								      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
+								      />
+							*/}
+					      </div>
 				        </Modal>
 				      </span>
 					</div>
@@ -159,10 +279,10 @@ class Influencer extends React.Component{
 					  	<div className="h4 text-white">Jared Milrad</div>
 					  </div>
 					  <div className="row">
-					  	<span class="text-white font-italic h5">LGBTQ Equality, Homelessness</span>
+					  	<span className="text-white font-italic h5">LGBTQ Equality, Homelessness</span>
 					  </div>
 					  <div className="row">
-					  	<span class="text-white h5">supporting the Covenant House</span>
+					  	<span className="text-white h5">supporting the Covenant House</span>
 					  </div>
 						<div className="row">
 							<div className="col-lg-6 p-0" style={{marginTop: '70px'}}>
@@ -179,28 +299,20 @@ class Influencer extends React.Component{
 						<p>A filmmaker and entrepreneur, Jared Milrad worked for President Barack Obama and founded a nationally recognized non-profit organization. The founder of A Show For A Change, his recent film credits include Cumpleañera (writer/director), Marriage (writer/director), 1.20.17 (writer/director), Officer Party (writer/actor), and Hurry Up and Wait (writer/actor).</p>
 					</div>
 					<div>
-						<button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
-						<span>
-					        <button className="btn btn-dark btn-outline-success" onClick={this.openModal}>Donate to Covenant House</button>
-					        <Modal
-					          isOpen={this.state.modalIsOpen}
-					          onAfterOpen={this.afterOpenModal}
-					          onRequestClose={this.closeModal}
-					          style={customStyles}
-					          contentLabel="Example Modal"
-					        >
-					          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
-					          <button onClick={this.closeModal}>close</button>
-					          <div>I am a modal</div>
-					          <form>
-					            <input />
-					            <button>tab navigation</button>
-					            <button>stays</button>
-					            <button>inside</button>
-					            <button>the modal</button>
-					          </form>
-				        	</Modal>
-				        </span>
+					  <button className="btn btn-dark btn-outline-success">SUBSCRIBE TO CHANNEL</button>
+					  <span>
+				        <button className="btn btn-dark btn-outline-success" onClick={this.openModal}>Donate to Covenant House</button>
+				      </span>
+					{/*	<StripeCheckout 					name="Jared Milrad"
+															description="Donate to the Covenant House"
+									      					email="info@movikarma.com"
+									      					shippingAddress
+									      					label="  Donate  "
+									      					amount={1000}
+									      					token={this.onToken} 
+									      					stripeKey="pk_test_QnqxjgpNaY5eYWI0mhVwVvZA" 
+									      />
+					*/}
 					</div>
 				</section>
 			

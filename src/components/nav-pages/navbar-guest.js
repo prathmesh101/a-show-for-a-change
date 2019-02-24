@@ -6,7 +6,7 @@ import websiteLogo from '../../assets/img/Movikarma_White.png';
 
 const NavBar = () => {
     return (
-      <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-5">
+      <nav className="navbar navbar-expand-md mb-5">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon navbar-light"></span>
         </button>
