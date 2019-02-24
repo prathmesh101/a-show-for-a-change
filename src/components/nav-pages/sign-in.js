@@ -53,6 +53,8 @@ class SignIn extends Component {
         localStorage.setItem('authToken', generateToken());
         // remove token in given time:
         clearToken();
+        // set state to be able to redirect:
+        this.setState({ redirect: true });
         break;
       }
     }
@@ -98,49 +100,47 @@ class SignIn extends Component {
     const { redirect } = this.state;
 
     if (redirect) {
-      return <Redirect to='./user-page' />;
-    }
-
-    return (
-
-      <div className="div-signIn">
-        <div className="div-form">
-          <form>
-            <div className="div-headText">
-              <h2 className="headText">Sign in</h2>
-            </div>
-            <div className="form-group">
-              <div className="div-underline">
-                <i className="fas fa-envelope fillPrimary inline"></i>
-                <input type="email" className="inline" name="email" id="firstname" placeholder="Email" onChange={this.handleChange} />
+      return <Redirect to='/user-page' />;
+    } else {
+      return (
+        <div className="div-signIn">
+          <div className="div-form">
+            <form>
+              <div className="div-headText">
+                <h2 className="headText">Sign in</h2>
               </div>
-            </div>
-            <div className="form-group">
-              <div className="div-underline">
-                <i className="fas fa-unlock-alt fillPrimary"></i>
-                <input type="password" className="inline" name="password" id="password" placeholder="Password" onChange={this.handleChange} />
+              <div className="form-group">
+                <div className="div-underline">
+                  <i className="fas fa-envelope fillPrimary inline"></i>
+                  <input type="email" className="inline" name="email" id="firstname" placeholder="Email" onChange={this.handleChange} />
+                </div>
               </div>
-            </div>
-            <div className="div-submit">
-              <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >SIGN IN</button>
-            </div>
-            <div className="div-options">
-              <span><input type="checkbox" id="checkbox"></input>Remember Me</span>
-              <span>Need Help?</span>
-            </div>
-          </form>
-          <div className="div-footer">
-            <span>
-              <p>New to Sage Ape?</p>
-              <div className="div-center">
-                <p><Link to="/sign-up" className="linkPrimary">JOIN</Link></p>
+              <div className="form-group">
+                <div className="div-underline">
+                  <i className="fas fa-unlock-alt fillPrimary"></i>
+                  <input type="password" className="inline" name="password" id="password" placeholder="Password" onChange={this.handleChange} />
+                </div>
               </div>
-            </span>
+              <div className="div-submit">
+                <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >SIGN IN</button>
+              </div>
+              <div className="div-options">
+                <span><input type="checkbox" id="checkbox"></input>Remember Me</span>
+                <span>Need Help?</span>
+              </div>
+            </form>
+            <div className="div-footer">
+              <span>
+                <p>New to Sage Ape?</p>
+                <div className="div-center">
+                  <p><Link to="/sign-up" className="linkPrimary">JOIN</Link></p>
+                </div>
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-
-    );
+      );
+    }
   }
 }
 
