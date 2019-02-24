@@ -131,7 +131,7 @@ class SignIn extends Component {
             </form>
             <div className="div-footer">
               <span>
-                <p>New to Sage Ape?</p>
+                <p>New to movikarma?</p>
                 <div className="div-center">
                   <p><Link to="/sign-up" className="linkPrimary">JOIN</Link></p>
                 </div>
