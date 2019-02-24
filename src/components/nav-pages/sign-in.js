@@ -7,6 +7,9 @@ import UserPage from './user-page.js';
 import App from '../app.js';
 import { Redirect } from 'react-router';
 
+// sample data for user:
+import usersData from '../../../dist/api_php/data.js';
+
 class SignIn extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +23,7 @@ class SignIn extends Component {
   }
 
   handleChange(event) {
-     this.setState({ [event.target.name]: event.target.value })
+    this.setState({ [event.target.name]: event.target.value })
   }
 
 
@@ -29,89 +32,115 @@ class SignIn extends Component {
     var apiBaseUrl = "https://dev.sageape.com/api_php/signinapi.php";
     var self = this;
 
+    // clear the localStorage, async function that get run on timeout:
+    const clearToken = () => {
+      return setTimeout(() => localStorage.removeItem('authToken'), 300000);
+    }
+
+    // token generator should be in the server
+    const generateToken = () => {
+      return Math.floor(Math.random() * (999999 - 100000) + 100000);
+    }
+
+    // Will use sample data temporarily now
+    let userValid = false;
+
+    for (let user of usersData) {
+      console.log('user: ', user.email);
+      console.log('pass: ', user.password);
+      if (user.email === this.state.email && user.password === this.state.password) {
+        userValid = true;
+        localStorage.setItem('authToken', generateToken());
+        // remove token in given time:
+        clearToken();
+        // set state to be able to redirect:
+        this.setState({ redirect: true });
+        break;
+      }
+    }
+
+    /*******
     // axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
     //   .then(() => this.setState({ redirect: true }));
 
-    axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
+    axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password })
       .then((response) => {
         if (response.data["message"] == "success") {
           // this.props.callbackFromParent(true);
-          this.setState({redirect: true});
+          this.setState({ redirect: true });
         } else {
           alert("Problem logging in. \n Please try again.");
         }
       });
-
-/*
-      .then(function (response) {
-        console.log(response);
-        if (response.data.code == 200) {
-          console.log("Login successfull");
-          var uploadScreen = [];
-          uploadScreen.push(<UploadScreen appContext={self.props.appContext} />)
-          self.props.appContext.setState({ loginPage: [], uploadScreen: uploadScreen })
-        }
-        else if (response.data.code == 204) {
-          console.log("email password do not match");
-          alert("email password do not match")
-        }
-        else {
-          console.log("email does not exists");
-          alert("email does not exist");
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-*/
+        ////
+        // .then(function (response) {
+        //   console.log(response);
+        //   if (response.data.code == 200) {
+        //     console.log("Login successfull");
+        //     var uploadScreen = [];
+        //     uploadScreen.push(<UploadScreen appContext={self.props.appContext} />)
+        //     self.props.appContext.setState({ loginPage: [], uploadScreen: uploadScreen })
+        //   }
+        //   else if (response.data.code == 204) {
+        //     console.log("email password do not match");
+        //     alert("email password do not match")
+        //   }
+        //   else {
+        //     console.log("email does not exists");
+        //     alert("email does not exist");
+        //   }
+        // })
+        // .catch(function (error) {
+        //   console.log(error);
+        // });
+        ////
+    *******/
   }
   render() {
     const { redirect } = this.state;
 
     if (redirect) {
-        return <Redirect to='./user-page' />;
-    }
-
-    return (
-
-      <div className="div-signIn">
-        <div className="div-form">
-          <form>
-            <div className="div-headText">
-              <h2 className="headText">Sign in</h2>
-            </div>
-            <div className="form-group">
-              <div className="div-underline">
-                <i className="fas fa-envelope fillPrimary inline"></i>
-                <input type="email" className="inline" name="email" id="firstname" placeholder="Email" onChange={this.handleChange} />
+      return <Redirect to='/user-page' />;
+    } else {
+      return (
+        <div className="div-signIn">
+          <div className="div-form">
+            <form>
+              <div className="div-headText">
+                <h2 className="headText">Sign in</h2>
               </div>
-            </div>
-            <div className="form-group">
-              <div className="div-underline">
-                <i className="fas fa-unlock-alt fillPrimary"></i>
-                <input type="password" className="inline" name="password" id="password" placeholder="Password" onChange={this.handleChange} />
+              <div className="form-group">
+                <div className="div-underline">
+                  <i className="fas fa-envelope fillPrimary inline"></i>
+                  <input type="email" className="inline" name="email" id="firstname" placeholder="Email" onChange={this.handleChange} />
+                </div>
               </div>
-            </div>
-            <div className="div-submit">
-              <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >SIGN IN</button>
-            </div>
-            <div className="div-options">
-              <span><input type="checkbox" id="checkbox"></input>Remember Me</span>
-              <span>Need Help?</span>
-            </div>
-          </form>
-          <div className="div-footer">
-            <span>
-              <p>New to Sage Ape?</p>
+              <div className="form-group">
+                <div className="div-underline">
+                  <i className="fas fa-unlock-alt fillPrimary"></i>
+                  <input type="password" className="inline" name="password" id="password" placeholder="Password" onChange={this.handleChange} />
+                </div>
+              </div>
+              <div className="div-submit">
+                <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >SIGN IN</button>
+              </div>
+              <div className="div-options">
+                <span><input type="checkbox" id="checkbox"></input>Remember Me</span>
+                <span>Need Help?</span>
+              </div>
+            </form>
+            <div className="div-footer">
+              <span>
+                <p>New to movikarma?</p>
                 <div className="div-center">
                   <p><Link to="/sign-up" className="linkPrimary">JOIN</Link></p>
                 </div>
-            </span>
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-
-    );
+      );
+    }
   }
 }
 
