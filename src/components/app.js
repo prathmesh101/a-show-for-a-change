@@ -1,9 +1,13 @@
 import React from 'react';
-import '../assets/css/app.css';
 import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import '../assets/css/app.css';
+
+
 import Header from './header.js';
 import Footer from './footer.js';
 
+// pages:
 import Home from './nav-pages/home.js';
 import About from './nav-pages/about.js';
 import SignIn from './nav-pages/sign-in.js';
@@ -41,16 +45,17 @@ import AuthComponent from './nav-pages/authHOC.js'
 //     </div>
 // );
 
-
 class App extends React.Component {
-
     // myCallback = (dataFromChild) => {
     //     console.log("inside app.js");
     // };
+    constructor() {
+        super();
 
-    // state = {
-    //     isLoggedIn: true
-    // }
+        this.state = {
+            isLoggedIn: true
+        };
+    }
 
     render() {
         return (
@@ -58,7 +63,7 @@ class App extends React.Component {
                 <div className="spacing-div">
                     <BrowserRouter>
                         <main>
-                            <Header loggedIn={this.isLoggedIn} />
+                            <Header loggedIn={this.state.isLoggedIn} />
                             <Switch>
                                 <Route exact path="/" component={Home} />
                                 <Route path="/about" component={About} />

@@ -34,7 +34,7 @@ class SignIn extends Component {
 
     // clear the localStorage, async function that get run on timeout:
     const clearToken = () => {
-      return setTimeout(() => localStorage.removeItem('authToken'), 300000);
+      return setTimeout(() => localStorage.removeItem('authToken'), 5000);
     }
 
     // token generator should be in the server
@@ -46,8 +46,7 @@ class SignIn extends Component {
     let userValid = false;
 
     for (let user of usersData) {
-      console.log('user: ', user.email);
-      console.log('pass: ', user.password);
+      console.log(user.email)
       if (user.email === this.state.email && user.password === this.state.password) {
         userValid = true;
         localStorage.setItem('authToken', generateToken());
@@ -58,7 +57,8 @@ class SignIn extends Component {
         break;
       }
     }
-
+    console.log(generateToken())
+    console.log(usersData)
     /*******
     // axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
     //   .then(() => this.setState({ redirect: true }));
@@ -97,9 +97,7 @@ class SignIn extends Component {
     *******/
   }
   render() {
-    const { redirect } = this.state;
-
-    if (redirect) {
+    if (this.state.redirect) {
       return <Redirect to='/user-page' />;
     } else {
       return (

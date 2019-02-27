@@ -27,7 +27,6 @@ class UserPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
       redirect: false,
       influencerRedirect: false,
       show: false,
@@ -38,9 +37,7 @@ class UserPage extends Component {
       show6: false,
       show7: false,
       show8: false,
-
     }
-
 
     this.show = () => this.setState({ show: true });
     this.show2 = () => this.setState({ show2: true });
@@ -51,7 +48,6 @@ class UserPage extends Component {
     this.show7 = () => this.setState({ show7: true });
     this.show8 = () => this.setState({ show8: true });
 
-
     this.hide = () => this.setState({ show: false });
     this.hide2 = () => this.setState({ show2: false });
     this.hide3 = () => this.setState({ show3: false });
@@ -61,17 +57,14 @@ class UserPage extends Component {
     this.hide7 = () => this.setState({ show7: false });
     this.hide8 = () => this.setState({ show8: false });
 
-
+    this.handleClick = this.handleClick.bind(this);
+    this.handleInfluClick = this.handleInfluClick.bind(this);
   }
 
   // check if being loaded:
   componentWillMount() {
     console.log('mounting user-page')
   }
-
-  handleClick = this.handleClick.bind(this);
-
-  handleInfluClick = this.handleInfluClick.bind(this);
 
   handleInfluClick(event) {
     this.setState({ influencerRedirect: true });

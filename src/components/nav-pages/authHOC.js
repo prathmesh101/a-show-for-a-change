@@ -17,15 +17,13 @@ export default (WrappedComponent) => {
       this.isLoggedin();
     }
 
-    componentDidUpdate() {
-      this.isLoggedin();
-    }
-
     isLoggedin() {
       // if no token:
       if (localStorage.getItem('authToken')) {
         this.setState({ withToken: true })
+        return;
       }
+      return;
     }
 
     // future implementation:

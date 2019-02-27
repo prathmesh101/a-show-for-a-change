@@ -39,7 +39,7 @@ class SignUp extends Component {
     const clearToken = () => {
       // save token to state so that we can clear the async func if we logout before expiry
       this.setState({
-        tokenId: setTimeout(() => localStorage.removeItem('authToken'), 300000)
+        tokenId: setTimeout(() => localStorage.removeItem('authToken'), 5000)
       });
       return;
     }
@@ -79,6 +79,7 @@ class SignUp extends Component {
         // remove token in given time or if the user did not logout:
         clearToken();
         this.setState({ redirect: true })
+        return;
       }
     }
 
