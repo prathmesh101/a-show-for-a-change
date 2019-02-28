@@ -6,7 +6,7 @@ import Navbar from './nav-pages/navbar-toggle.js';
 const Header = state => {
     return (
         <div className="header-cont">
-            <Navbar isLoggedIn={state.loggedIn}/>
+            <Navbar isLoggedIn={state.loggedIn} />
         </div>
     )
 }
@@ -21,7 +21,7 @@ const Header = state => {
 // 		const logged_header = state.loggedIn
 // 		console.log("logged " + logged_header)
 // 	}
-
+//
 // 	render() {
 // 		return (
 // 			<div className="header-cont">
