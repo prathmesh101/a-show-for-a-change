@@ -16,49 +16,66 @@ class SignIn extends Component {
     this.state = {
       email: '',
       password: '',
-      redirect: false
-    }
+      redirect: false,
+      error: false,
+      incomplete: false
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
   }
 
   handleChange(event) {
-    this.setState({ [event.target.name]: event.target.value })
+    this.setState({ [event.target.name]: event.target.value });
   }
 
+  handleFocus() {
+    this.setState({ error: false });
+    this.setState({ incomplete: false });
+  }
 
-  handleClick(event) {
-    event.preventDefault();
-    var apiBaseUrl = "https://dev.sageape.com/api_php/signinapi.php";
-    var self = this;
+  handleValidation() {
+    if (!this.state.email || !this.state.password) {
+      this.setState({ incomplete: true });
+      return;
+    }
 
     // clear the localStorage, async function that get run on timeout:
     const clearToken = () => {
       return setTimeout(() => localStorage.removeItem('authToken'), 5000);
-    }
+    };
 
     // token generator should be in the server
     const generateToken = () => {
       return Math.floor(Math.random() * (999999 - 100000) + 100000);
-    }
+    };
 
     // Will use sample data temporarily now
-    let userValid = false;
-
     for (let user of usersData) {
-      console.log(user.email)
-      if (user.email === this.state.email && user.password === this.state.password) {
-        userValid = true;
+      console.log(user.email);
+      if (
+        user.email === this.state.email &&
+        user.password === this.state.password
+      ) {
         localStorage.setItem('authToken', generateToken());
         // remove token in given time:
         clearToken();
         // set state to be able to redirect:
         this.setState({ redirect: true });
-        break;
+        return;
       }
     }
-    console.log(generateToken())
-    console.log(usersData)
+    this.setState({ error: true });
+    return;
+  }
+
+  handleClick(event) {
+    event.preventDefault();
+    var apiBaseUrl = 'https://dev.sageape.com/api_php/signinapi.php';
+    var self = this;
+
+    this.handleValidation();
+
     /*******
     // axios.post(apiBaseUrl, { email: this.state.email, password: this.state.password})
     //   .then(() => this.setState({ redirect: true }));
@@ -97,8 +114,32 @@ class SignIn extends Component {
     *******/
   }
   render() {
+    const error = (() => {
+      if (!this.state.email && this.state.incomplete) {
+        return (
+          <div className={'text-danger'}>
+            <p>Email Input Missing</p>
+          </div>
+        );
+      } else if (!this.state.password && this.state.incomplete) {
+        return (
+          <div className={'text-danger'}>
+            <p>Password Input Missing</p>
+          </div>
+        );
+      } else if (this.state.error) {
+        return (
+          <div className={'text-danger'}>
+            <p>Invalid Login Credentials</p>
+          </div>
+        );
+      } else {
+        return '';
+      }
+    })();
+
     if (this.state.redirect) {
-      return <Redirect to='/user-page' />;
+      return <Redirect to="/user-page" />;
     } else {
       return (
         <div className="div-signIn">
@@ -109,21 +150,46 @@ class SignIn extends Component {
               </div>
               <div className="form-group">
                 <div className="div-underline">
-                  <i className="fas fa-envelope fillPrimary inline"></i>
-                  <input type="email" className="inline" name="email" id="firstname" placeholder="Email" onChange={this.handleChange} />
+                  <i className="fas fa-envelope fillPrimary inline" />
+                  <input
+                    type="email"
+                    className="inline"
+                    name="email"
+                    id="firstname"
+                    placeholder="Email"
+                    onChange={this.handleChange}
+                    onFocus={this.handleFocus}
+                  />
                 </div>
               </div>
               <div className="form-group">
                 <div className="div-underline">
-                  <i className="fas fa-unlock-alt fillPrimary"></i>
-                  <input type="password" className="inline" name="password" id="password" placeholder="Password" onChange={this.handleChange} />
+                  <i className="fas fa-unlock-alt fillPrimary" />
+                  <input
+                    type="password"
+                    className="inline password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    onChange={this.handleChange}
+                    onFocus={this.handleFocus}
+                  />
                 </div>
               </div>
+              {error}
               <div className="div-submit">
-                <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >SIGN IN</button>
+                <button
+                  type="submit"
+                  className="buttonGreen"
+                  onClick={event => this.handleClick(event)}
+                >
+                  SIGN IN
+                </button>
               </div>
               <div className="div-options">
-                <span><input type="checkbox" id="checkbox"></input>Remember Me</span>
+                <span>
+                  <input type="checkbox" id="checkbox" />Remember Me
+                </span>
                 <span>Need Help?</span>
               </div>
             </form>
@@ -131,7 +197,11 @@ class SignIn extends Component {
               <span>
                 <p>New to movikarma?</p>
                 <div className="div-center">
-                  <p><Link to="/sign-up" className="linkPrimary">JOIN</Link></p>
+                  <p>
+                    <Link to="/sign-up" className="linkPrimary">
+                      JOIN
+                    </Link>
+                  </p>
                 </div>
               </span>
             </div>
