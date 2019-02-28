@@ -3,7 +3,6 @@ import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import '../assets/css/app.css';
 
-
 import Header from './header.js';
 import Footer from './footer.js';
 
@@ -19,7 +18,7 @@ import UserPage from './nav-pages/user-page.js';
 import VideoPage from './nav-pages/video-page.js';
 
 // authcomponent:
-import AuthComponent from './nav-pages/authHOC.js'
+import AuthComponent from './nav-pages/authHOC.js';
 
 // const App = () => (
 //     <div>
@@ -46,51 +45,59 @@ import AuthComponent from './nav-pages/authHOC.js'
 // );
 
 class App extends React.Component {
-    // myCallback = (dataFromChild) => {
-    //     console.log("inside app.js");
-    // };
-    constructor() {
-        super();
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            isLoggedIn: false
-        };
-    }
+    this.state = {
+      isLoggedIn: false
+    };
+  }
 
     componentWillMount() {
-        console.log('state: ', this.state)
-        console.log('update ', localStorage.getItem('authToken'))
+      console.log('app state: ', this.state);
+      console.log('update ', localStorage.getItem('authToken'));
 
-        this.setState(() => {
-            return {isLoggedIn: localStorage.getItem('authToken') !== null ? true : false};
-        });
+      this.setState(() => {
+        return {
+          isLoggedIn: localStorage.getItem('authToken') !== null ? true : false
+        };
+      });
     }
 
-    render() {
-        return (
-            <div>
-                <div className="spacing-div">
-                    <BrowserRouter>
-                        <main>
-                            <Header loggedIn={this.state.isLoggedIn} />
-                            <Switch>
-                                <Route exact path="/" component={Home} />
-                                <Route path="/about" component={About} />
-                                <Route path="/partners" component={Partners} />
-                                <Route path="/genre" component={Genres} />
-                                <Route path="/influencer" component={Influencer} />
-                                <Route path="/sign-in" component={SignIn} />
-                                <Route path="/sign-up" component={SignUp} />
-                                <Route path="/user-page" component={AuthComponent(UserPage)} />
-                                <Route path="/video-page" component={VideoPage} />
-                            </Switch>
-                            <Footer />
-                        </main>
-                    </BrowserRouter>
-                </div>
-            </div>
-        );
-    }
+  render() {
+    return (
+        <div>
+          <div className="spacing-div">
+            <BrowserRouter>
+              <main>
+                <Header loggedIn={this.state.isLoggedIn} />
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/about" component={About} />
+                  <Route path="/partners" component={Partners} />
+                  <Route path="/genre" component={Genres} />
+                  <Route path="/influencer" component={Influencer} />
+                  <Route path="/sign-in" component={SignIn} />
+                  <Route path="/sign-up" component={SignUp} />
+                  <Route
+                    path="/user-page"
+                    component={AuthComponent(UserPage)}
+                  />
+                  <Route path="/video-page" component={VideoPage} />
+                </Switch>
+                <Footer />
+              </main>
+            </BrowserRouter>
+          </div>
+        </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    user: state
+  };
+};
+
+export default connect(mapStateToProps)(App);

@@ -10,14 +10,14 @@ const userReducer = (state = initialState, action) => {
       // state = {...state, isLoggedin: action.payload}
       // es5:
       state = Object.assign({}, state, {
-        isLoggedin: action.isLoggedin,
+        isLoggedIn: action.isLoggedin,
         user: action.user
       });
       break;
     case 'USER_LOGOUT':
       state = Object.assign({}, state, {
-        isLoggedin: action.isLoggedin,
-        user: action.user
+        isLoggedIn: action.payload.isLoggedin,
+        user: action.payload.user
       });
       break;
   }

@@ -9,6 +9,12 @@ import UserPage from './user-page.js';
 // sample data for user:
 import usersData from '../../../dist/api_php/data.js';
 
+// redux:
+import { connect } from 'react-redux';
+import store from '../../store/store.js';
+// action:
+import { userLogin } from '../../store/actions/userAction.js';
+
 class SignUp extends Component {
   constructor(props) {
     super(props);
@@ -19,13 +25,13 @@ class SignUp extends Component {
       password: '',
       redirect: false,
       tokenId: null
-    }
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleChange(event) {
-    this.setState({ [event.target.name]: event.target.value })
+    this.setState({ [event.target.name]: event.target.value });
   }
 
   handleClick(event) {
@@ -43,15 +49,15 @@ class SignUp extends Component {
         tokenId: setTimeout(() => localStorage.removeItem('authToken'), 5000)
       });
       return;
-    }
+    };
     // add token to localStorage
-    const setToken = (token) => {
+    const setToken = token => {
       return localStorage.setItem('authToken', token);
-    }
+    };
     // token generator should be in the server
     const generateToken = () => {
       return Math.floor(Math.random() * (999999 - 100000) + 100000);
-    }
+    };
 
     const params = {
       first_name: this.state.first_name,
@@ -61,9 +67,9 @@ class SignUp extends Component {
       token: generateToken()
     };
 
-    const userValidator = () => {
+    const userValidatorAndLogin = () => {
       let existingUser = false;
-
+      // check for all the users:
       for (let user of usersData) {
         if (user.email === this.state.email) {
           existingUser = true;
@@ -79,12 +85,15 @@ class SignUp extends Component {
         setToken(usersData[usersData.length - 1].token);
         // remove token in given time or if the user did not logout:
         clearToken();
-        this.setState({ redirect: true })
+        this.setState({ redirect: true });
+
+        // testing redux:
+        store.dispatch({ type: 'USER_LOGIN', isLoggedIn: true, user: 'test' });
         return;
       }
-    }
+    };
 
-    userValidator();
+    userValidatorAndLogin();
 
     /******
     // axios to an endpoint for the json webtoken
@@ -166,10 +175,9 @@ class SignUp extends Component {
     ******/
   }
 
-
   render() {
     if (this.state.redirect) {
-      return <Redirect to='/user-page' />;
+      return <Redirect to="/user-page" />;
     } else {
       return (
         <div className="div-signUpDiv">
@@ -179,36 +187,75 @@ class SignUp extends Component {
             </div>
             <div className="form-group">
               <div className="div-underline">
-                <i className="fas fa-user inlineBlock fillPrimary"></i>
-                <input type="text" className="inlineBlock" name="first_name" id="firstname" placeholder="First name" size="10" onChange={this.handleChange} />
+                <i className="fas fa-user inlineBlock fillPrimary" />
+                <input
+                  type="text"
+                  className="inlineBlock"
+                  name="first_name"
+                  id="firstname"
+                  placeholder="First name"
+                  size="10"
+                  onChange={this.handleChange}
+                />
               </div>
             </div>
             <div className="form-group">
               <div className="div-underline">
-                <i className="fas fa-user inlineBlock fillPrimary"></i>
-                <input type="text" className="inlineBlock" name="last_name" id="lastname" placeholder="Last name" onChange={this.handleChange} />
+                <i className="fas fa-user inlineBlock fillPrimary" />
+                <input
+                  type="text"
+                  className="inlineBlock"
+                  name="last_name"
+                  id="lastname"
+                  placeholder="Last name"
+                  onChange={this.handleChange}
+                />
               </div>
             </div>
             <div className="form-group">
               <div className="div-underline">
-                <i className="fas fa-envelope inlineBlock fillPrimary"></i>
-                <input type="email" className="inlineBlock" name="email" id="email" placeholder="Email" onChange={this.handleChange} />
+                <i className="fas fa-envelope inlineBlock fillPrimary" />
+                <input
+                  type="email"
+                  className="inlineBlock"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  onChange={this.handleChange}
+                />
               </div>
             </div>
             <div className="form-group">
               <div className="div-underline">
-                <i className="fas fa-unlock-alt fillPrimary"></i>
-                <input type="password" className="inlineBlock" name="password" id="password" placeholder="Password" onChange={this.handleChange} />
+                <i className="fas fa-unlock-alt fillPrimary" />
+                <input
+                  type="password"
+                  className="inlineBlock"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  onChange={this.handleChange}
+                />
               </div>
             </div>
             <div className="div-submit">
-              <button type="submit" className="buttonGreen" onClick={(event) => this.handleClick(event)} >CONTINUE</button>
+              <button
+                type="submit"
+                className="buttonGreen"
+                onClick={event => this.handleClick(event)}
+              >
+                CONTINUE
+              </button>
             </div>
             <div className="div-signUpFooter">
               <span>
                 <p>Already have an account?</p>
                 <div className="div-center">
-                  <p><Link to="/sign-in" className="linkPrimary">SIGN IN</Link></p>
+                  <p>
+                    <Link to="/sign-in" className="linkPrimary">
+                      SIGN IN
+                    </Link>
+                  </p>
                 </div>
               </span>
             </div>
@@ -219,4 +266,17 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+const mapStateToProps = state => {
+  return {
+    user: state.user
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    login: (status, user) => {
+      dispatch(userLogin(status, user));
+    }
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

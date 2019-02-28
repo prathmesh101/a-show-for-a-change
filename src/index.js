@@ -7,9 +7,22 @@ import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
+// redux:
+import store from './store/store.js';
+// provider:
+import { Provider } from 'react-redux';
+
 ReactDOM.render(
+  <Provider store={store}>
     <Router>
-        <App />
-    </Router>,
-    document.getElementById('root')
+      <App />
+    </Router>
+  </Provider>,
+  document.getElementById('root')
 );
+
+const mapStateToProps = state => {
+  return {
+    user: state
+  };
+};

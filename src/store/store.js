@@ -1,16 +1,22 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 
-import logger from 'redux-logger';
-
 import userReducer from './reducers/userReducer';
 
-const error = (store) => (next) => (action) => {
-  try{
-    next(action);
-  } catch(error) {
+const error = store => next => action => {
+  try {
+    return next(action);
+  } catch (error) {
     console.log('error ', error);
   }
-}
+};
+
+const logger = store => next => action => {
+  console.log('prev state', store.getState());
+  console.log('dispatching', action);
+  let result = next(action);
+  console.log('next state', store.getState());
+  return result;
+};
 
 const middleware = applyMiddleware(error, logger);
 
