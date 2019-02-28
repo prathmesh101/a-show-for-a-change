@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap';
 import '../../assets/css/navbar.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const NavBarUser = () => {
   return (
@@ -19,10 +19,13 @@ const NavBarUser = () => {
               <div className="genresDropdown">
               {/* 
               dont use a tags since they break a tags can't be nested
-              */}
               <a href="#">Documentary</a>
               <a href="#">Drama</a>
               <a href="#">Comedy</a>
+              */}
+              <p to="#">Documentary</p>
+              <p to="#">Drama</p>
+              <p to="#">Comedy</p>
             </div>
           </NavLink>
           <NavLink className="nav-link nav-style" to="/causes">
