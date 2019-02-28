@@ -35,6 +35,7 @@ class SignUp extends Component {
     // To be done:check name empty values before hitting submit
     // var self = this;
 
+    // the token expiry should come from the backend.
     // clear the localStorage, async function that get run on timeout:
     const clearToken = () => {
       // save token to state so that we can clear the async func if we logout before expiry

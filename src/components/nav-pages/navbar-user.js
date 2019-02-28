@@ -17,6 +17,9 @@ const NavBarUser = () => {
           <NavLink className="nav-link nav-style" to="/genre" id="navGenres">
             GENRES
               <div className="genresDropdown">
+              {/* 
+              dont use a tags since they break a tags can't be nested
+              */}
               <a href="#">Documentary</a>
               <a href="#">Drama</a>
               <a href="#">Comedy</a>

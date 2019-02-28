@@ -4,7 +4,6 @@ import '../assets/css/header.css';
 import Navbar from './nav-pages/navbar-toggle.js';
 
 const Header = state => {
-    console.log('what is ', state);
     return (
         <div className="header-cont">
             <Navbar isLoggedIn={state.loggedIn} />

@@ -53,8 +53,17 @@ class App extends React.Component {
         super();
 
         this.state = {
-            isLoggedIn: true
+            isLoggedIn: false
         };
+    }
+
+    componentWillMount() {
+        console.log('state: ', this.state)
+        console.log('update ', localStorage.getItem('authToken'))
+
+        this.setState(() => {
+            return {isLoggedIn: localStorage.getItem('authToken') !== null ? true : false};
+        });
     }
 
     render() {
