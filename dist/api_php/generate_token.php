@@ -16,7 +16,7 @@ session_start();
 $auth_token = urlencode(base64_encode(random_bytes(32)));
 
 $_SESSSION['auth_key'] = $auth_token;
-$_SESSSION['start_time'] = now();
+$_SESSSION['start_time'] = time();
 
 echo json_encode(array("access_token" => $auth_token));
 
