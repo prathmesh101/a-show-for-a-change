@@ -153,14 +153,14 @@ h2 {
 /* 
 Invalid input
 */
-.inline.password {
+.div-submit {
   position: relative;
 }
 
 .text-danger p {
   position: absolute;
   text-align: center;
-  bottom: 66%;
+  bottom: 80%;
   margin-left: auto;
   margin-right: auto;
   left: 0;

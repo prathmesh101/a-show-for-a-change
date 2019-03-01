@@ -176,8 +176,8 @@ class SignIn extends Component {
                   />
                 </div>
               </div>
-              {error}
               <div className="div-submit">
+                {error}
                 <button
                   type="submit"
                   className="buttonGreen"
