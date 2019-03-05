@@ -11,7 +11,6 @@ import usersData from '../../../dist/api_php/data.js';
 
 // redux:
 import { connect } from 'react-redux';
-import store from '../../store/store.js';
 // action:
 import { userLogin } from '../../store/actions/userAction.js';
 
@@ -23,51 +22,58 @@ class SignUp extends Component {
       last_name: '',
       email: '',
       password: '',
+      tokenId: null,
       redirect: false,
-      tokenId: null
+      error: false,
+      incomplete: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleValidation = this.handleValidation.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
   }
 
   handleChange(event) {
     this.setState({ [event.target.name]: event.target.value });
   }
 
-  handleClick(event) {
-    event.preventDefault();
-    // var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
-    // console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
-    // To be done:check name empty values before hitting submit
-    // var self = this;
+  handleFocus() {
+    this.setState({ error: false });
+    this.setState({ incomplete: false });
+  }
 
-    // the token expiry should come from the backend.
-    // clear the localStorage, async function that get run on timeout:
-    const clearToken = () => {
-      // save token to state so that we can clear the async func if we logout before expiry
-      this.setState({
-        tokenId: setTimeout(() => localStorage.removeItem('authToken'), 5000)
-      });
+  handleValidation() {
+    let state = this.state;
+    if (
+      !state.first_name ||
+      !state.last_name ||
+      !state.email ||
+      !state.password
+    ) {
+      this.setState({ incomplete: true });
       return;
-    };
-    // add token to localStorage
-    const setToken = token => {
-      return localStorage.setItem('authToken', token);
-    };
-    // token generator should be in the server
-    const generateToken = () => {
-      return Math.floor(Math.random() * (999999 - 100000) + 100000);
-    };
+    } else {
+      // save token to state so that we can clear the async func if we logout before expiry
+      const clearToken = () => {
+        return setTimeout(() => localStorage.removeItem('authToken'), 5000);
+      };
 
-    const params = {
-      first_name: this.state.first_name,
-      last_name: this.state.last_name,
-      email: this.state.email,
-      password: this.state.password,
-      token: generateToken()
-    };
+      // token generator should be in the server
+      const generateToken = () => {
+        let token = Math.floor(Math.random() * (999999 - 100000) + 100000);
+        localStorage.setItem('authToken', token);
+        this.setState({ tokenId: token });
+        return token;
+      };
 
-    const userValidatorAndLogin = () => {
+      const params = {
+        first_name: this.state.first_name,
+        last_name: this.state.last_name,
+        email: this.state.email,
+        password: this.state.password,
+        token: generateToken()
+      };
+
       let existingUser = false;
       // check for all the users:
       for (let user of usersData) {
@@ -82,18 +88,39 @@ class SignUp extends Component {
       } else {
         usersData.push(params);
         console.log('users: ', usersData);
-        setToken(usersData[usersData.length - 1].token);
+
         // remove token in given time or if the user did not logout:
         clearToken();
+
         this.setState({ redirect: true });
 
-        // testing redux:
-        store.dispatch({ type: 'USER_LOGIN', isLoggedIn: true, user: 'test' });
+        // redux:
+        this.props.login({
+          isLoggedIn: true,
+          first_name: this.state.first_name,
+          last_name: this.state.last_name,
+          email: this.state.email,
+          tokenId: params.token
+        });
+
         return;
       }
-    };
+    }
+  }
 
-    userValidatorAndLogin();
+  handleClick(event) {
+    console.log('what ', store.getState());
+
+    event.preventDefault();
+    // var apiBaseUrl = "https://dev.sageape.com/api_php/signupapi.php";
+    // console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
+    // To be done:check name empty values before hitting submit
+    // var self = this;
+
+    // the token expiry should come from the backend.
+    // clear the localStorage, async function that get run on timeout:
+
+    this.handleValidation();
 
     /******
     // axios to an endpoint for the json webtoken
@@ -176,6 +203,36 @@ class SignUp extends Component {
   }
 
   render() {
+    const error = (() => {
+      if (!this.state.first_name && this.state.incomplete) {
+        return (
+          <div className={'text-danger'}>
+            <p>First Name Input Missing</p>
+          </div>
+        );
+      } else if (!this.state.last_name && this.state.incomplete) {
+        return (
+          <div className={'text-danger'}>
+            <p>Last Name Input Missing</p>
+          </div>
+        );
+      } else if (!this.state.email && this.state.incomplete) {
+        return (
+          <div className={'text-danger'}>
+            <p>Email Input Missing</p>
+          </div>
+        );
+      } else if (!this.state.password && this.state.incomplete) {
+        return (
+          <div className={'text-danger'}>
+            <p>Password Input Missing</p>
+          </div>
+        );
+      } else {
+        return '';
+      }
+    })();
+
     if (this.state.redirect) {
       return <Redirect to="/user-page" />;
     } else {
@@ -196,6 +253,7 @@ class SignUp extends Component {
                   placeholder="First name"
                   size="10"
                   onChange={this.handleChange}
+                  onFocus={this.handleFocus}
                 />
               </div>
             </div>
@@ -209,6 +267,7 @@ class SignUp extends Component {
                   id="lastname"
                   placeholder="Last name"
                   onChange={this.handleChange}
+                  onFocus={this.handleFocus}
                 />
               </div>
             </div>
@@ -222,6 +281,7 @@ class SignUp extends Component {
                   id="email"
                   placeholder="Email"
                   onChange={this.handleChange}
+                  onFocus={this.handleFocus}
                 />
               </div>
             </div>
@@ -235,10 +295,13 @@ class SignUp extends Component {
                   id="password"
                   placeholder="Password"
                   onChange={this.handleChange}
+                  onFocus={this.handleFocus}
                 />
               </div>
             </div>
             <div className="div-submit">
+              \
+              {error}
               <button
                 type="submit"
                 className="buttonGreen"
@@ -268,15 +331,16 @@ class SignUp extends Component {
 
 const mapStateToProps = state => {
   return {
-    user: state.user
+    user: state
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    login: (status, user) => {
-      dispatch(userLogin(status, user));
+    login: userObj => {
+      dispatch(userLogin(userObj));
     }
   };
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

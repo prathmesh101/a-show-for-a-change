@@ -13,9 +13,9 @@ export default (WrappedComponent) => {
       this.isLoggedin();
     }
 
-    componentDidMount() {
-      this.isLoggedin();
-    }
+    // componentDidMount() {
+    //   this.isLoggedin();
+    // }
 
     isLoggedin() {
       // if no token:

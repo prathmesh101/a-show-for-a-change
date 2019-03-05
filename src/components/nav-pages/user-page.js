@@ -23,6 +23,10 @@ import Video6 from '../../assets/img/munah.png';
 import Video7 from '../../assets/img/stress.png';
 import Video8 from '../../assets/img/wear.png';
 
+// redux:
+import { connect } from 'react-redux';
+import store from '../../store/store.js';
+
 class UserPage extends Component {
   constructor(props) {
     super(props);
@@ -36,8 +40,8 @@ class UserPage extends Component {
       show5: false,
       show6: false,
       show7: false,
-      show8: false,
-    }
+      show8: false
+    };
 
     this.show = () => this.setState({ show: true });
     this.show2 = () => this.setState({ show2: true });
@@ -63,7 +67,7 @@ class UserPage extends Component {
 
   // check if being loaded:
   componentWillMount() {
-    console.log('mounting user-page')
+    console.log('mounting user-page');
   }
 
   handleInfluClick(event) {
@@ -75,16 +79,19 @@ class UserPage extends Component {
   }
 
   render() {
+    // log the current state:
+    console.log(store.getState());
+    
     const { redirect } = this.state;
-
+    
     if (redirect) {
-      return <Redirect to='./video-page' />;
+      return <Redirect to="./video-page" />;
     }
-
+    
     const { influencerRedirect } = this.state;
 
     if (influencerRedirect) {
-      return <Redirect to='./influencer' />;
+      return <Redirect to="./influencer" />;
     }
 
     return (
@@ -93,19 +100,37 @@ class UserPage extends Component {
           <img
             className="backgrnd-img-user"
             style={{ objectFit: 'cover', width: '100%' }}
-            src={hero} />
+            src={hero}
+          />
           <div className="overlay-main">
             <div className="container">
               <div className="overlay-main-user">
                 <div className="user-head-text" style={{ fontSize: '1.2em' }}>
                   <h1>Emigration</h1>
                 </div>
-                <div className="influencer-description" style={{ fontSize: 'medium', fontWeight: '100' }}>
-                  <p>depicts the plight of the Iranian people which leave their <br />country due to social and political issues. </p>
+                <div
+                  className="influencer-description"
+                  style={{ fontSize: 'medium', fontWeight: '100' }}
+                >
+                  <p>
+                    depicts the plight of the Iranian people which leave their{' '}
+                    <br />country due to social and political issues.{' '}
+                  </p>
                 </div>
                 <div>
-                  <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }}>Play</button>
-                  <button className="btn btn-dark btn-outline-success" data-toggle="modal" data-target="#payment-processing">DONATE</button>
+                  <button
+                    className="btn btn-dark btn-outline-success"
+                    style={{ marginRight: '10px' }}
+                  >
+                    Play
+                  </button>
+                  <button
+                    className="btn btn-dark btn-outline-success"
+                    data-toggle="modal"
+                    data-target="#payment-processing"
+                  >
+                    DONATE
+                  </button>
                 </div>
               </div>
             </div>
@@ -113,62 +138,111 @@ class UserPage extends Component {
         </div>
         <section className="more-from mb-5">
           <div className="container">
-            <h3 style={{ paddingTop: '50px', paddingBottom: '30px' }} className="head-movie-genre" >Popular</h3>
+            <h3
+              style={{ paddingTop: '50px', paddingBottom: '30px' }}
+              className="head-movie-genre"
+            >
+              Popular
+            </h3>
             <div className="row">
               <figure className="col-lg-3 col-md-6 figure text-center">
-                <img src={Video1} alt="Kiana2" className="img-fluid figure-img img-border" onClick={this.show} />
-                <figcaption className="figure-caption">
-                  Cumpleañera
-              </figcaption>
-
-              </figure>
-              <figure className="col-lg-3 col-md-6 figure text-center" >
-                <img src={Video2} alt="Kiana3" className="img-fluid figure-img img-border" onClick={this.show2} />
-                <figcaption className="figure-caption">
-                  Willow
-              </figcaption>
-
+                <img
+                  src={Video1}
+                  alt="Kiana2"
+                  className="img-fluid figure-img img-border"
+                  onClick={this.show}
+                />
+                <figcaption className="figure-caption">Cumpleañera</figcaption>
               </figure>
               <figure className="col-lg-3 col-md-6 figure text-center">
-                <img src={Video3} alt="Kiana4" className="img-fluid figure-img img-border" onClick={this.show3} />
-                <figcaption className="figure-caption">
-                  Office Party
-              </figcaption>
-
+                <img
+                  src={Video2}
+                  alt="Kiana3"
+                  className="img-fluid figure-img img-border"
+                  onClick={this.show2}
+                />
+                <figcaption className="figure-caption">Willow</figcaption>
               </figure>
               <figure className="col-lg-3 col-md-6 figure text-center">
-                <img src={Video4} alt="Kiana5" className="img-fluid figure-img img-border" onClick={this.show4} />
+                <img
+                  src={Video3}
+                  alt="Kiana4"
+                  className="img-fluid figure-img img-border"
+                  onClick={this.show3}
+                />
+                <figcaption className="figure-caption">Office Party</figcaption>
+              </figure>
+              <figure className="col-lg-3 col-md-6 figure text-center">
+                <img
+                  src={Video4}
+                  alt="Kiana5"
+                  className="img-fluid figure-img img-border"
+                  onClick={this.show4}
+                />
                 <figcaption className="figure-caption">
                   Hurry up and wait
-              </figcaption>
-
+                </figcaption>
               </figure>
 
               {this.state.show && (
                 <RootCloseWrapper onRootClose={this.hide}>
                   <div className="container img-border">
                     <div className="row">
-
                       <div className="col-lg-6 col-md-6">
                         <div className="service-box mt-5 mx-auto">
-                          <img src={jared} alt="actor" width="600" height="400" style={{ paddingBottom: "40px" }} />
-
+                          <img
+                            src={jared}
+                            alt="actor"
+                            width="600"
+                            height="400"
+                            style={{ paddingBottom: '40px' }}
+                          />
                         </div>
                       </div>
-                      <div className="col-lg-6 col-md-6" style={{ paddingLeft: "60px" }}>
+                      <div
+                        className="col-lg-6 col-md-6"
+                        style={{ paddingLeft: '60px' }}
+                      >
                         <div className="service-box mt-5 mx-auto text-left">
+                          <h3 className="mb-3 features-cont-head">
+                            Cumpleañera
+                          </h3>
+                          <p>A Show for a Change Productions • 2018 • 13 min</p>
+                          <p>
+                            On her thirteenth birthday, Gabriela Morales is
+                            given a magical heirloom that could change her
+                            family’s future.
+                          </p>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                          >
+                            Play
+                          </button>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                            data-toggle="modal"
+                            data-target="#payment-processing"
+                          >
+                            DONATE
+                          </button>
 
-                          <h3 className="mb-3 features-cont-head">Cumpleañera</h3>
-                          <p >A Show for a Change Productions • 2018 • 13 min</p>
-                          <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }}>Play</button>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }} data-toggle="modal" data-target="#payment-processing">DONATE</button>
-
-
-                          <button className="btn-outline-close" style={{ marginTop: '10px', marginRight: '10px', position: 'absolute', top: '0', right: '0' }} onClick={this.hide}>Close</button>
+                          <button
+                            className="btn-outline-close"
+                            style={{
+                              marginTop: '10px',
+                              marginRight: '10px',
+                              position: 'absolute',
+                              top: '0',
+                              right: '0'
+                            }}
+                            onClick={this.hide}
+                          >
+                            Close
+                          </button>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </RootCloseWrapper>
@@ -178,26 +252,59 @@ class UserPage extends Component {
                 <RootCloseWrapper onRootClose={this.hide2}>
                   <div className="container img-border">
                     <div className="row">
-
                       <div className="col-lg-6 col-md-6">
                         <div className="service-box mt-5 mx-auto">
-                          <img src={jared} alt="actor" width="600" height="400" style={{ paddingBottom: "40px" }} />
+                          <img
+                            src={jared}
+                            alt="actor"
+                            width="600"
+                            height="400"
+                            style={{ paddingBottom: '40px' }}
+                          />
                         </div>
                       </div>
-                      <div className="col-lg-6 col-md-6" style={{ paddingLeft: "60px" }}>
+                      <div
+                        className="col-lg-6 col-md-6"
+                        style={{ paddingLeft: '60px' }}
+                      >
                         <div className="service-box mt-5 mx-auto text-left">
-
                           <h3 className="mb-3 features-cont-head">Willow</h3>
-                          <p >A Show for a Change Productions • 2018 • 13 min</p>
-                          <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }}>Play</button>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }} data-toggle="modal" data-target="#payment-processing">DONATE</button>
+                          <p>A Show for a Change Productions • 2018 • 13 min</p>
+                          <p>
+                            On her thirteenth birthday, Gabriela Morales is
+                            given a magical heirloom that could change her
+                            family’s future.
+                          </p>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                          >
+                            Play
+                          </button>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                            data-toggle="modal"
+                            data-target="#payment-processing"
+                          >
+                            DONATE
+                          </button>
 
-
-                          <button className="btn-outline-close" style={{ marginTop: '10px', marginRight: '10px', position: 'absolute', top: '0', right: '0' }} onClick={this.hide2}>Close</button>
+                          <button
+                            className="btn-outline-close"
+                            style={{
+                              marginTop: '10px',
+                              marginRight: '10px',
+                              position: 'absolute',
+                              top: '0',
+                              right: '0'
+                            }}
+                            onClick={this.hide2}
+                          >
+                            Close
+                          </button>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </RootCloseWrapper>
@@ -206,26 +313,61 @@ class UserPage extends Component {
                 <RootCloseWrapper onRootClose={this.hide3}>
                   <div className="container img-border">
                     <div className="row">
-
                       <div className="col-lg-6 col-md-6">
                         <div className="service-box mt-5 mx-auto">
-                          <img src={jared} alt="actor" width="600" height="400" style={{ paddingBottom: "40px" }} />
+                          <img
+                            src={jared}
+                            alt="actor"
+                            width="600"
+                            height="400"
+                            style={{ paddingBottom: '40px' }}
+                          />
                         </div>
                       </div>
-                      <div className="col-lg-6 col-md-6" style={{ paddingLeft: "60px" }}>
+                      <div
+                        className="col-lg-6 col-md-6"
+                        style={{ paddingLeft: '60px' }}
+                      >
                         <div className="service-box mt-5 mx-auto text-left">
+                          <h3 className="mb-3 features-cont-head">
+                            Office Party
+                          </h3>
+                          <p>A Show for a Change Productions • 2018 • 13 min</p>
+                          <p>
+                            On her thirteenth birthday, Gabriela Morales is
+                            given a magical heirloom that could change her
+                            family’s future.
+                          </p>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                          >
+                            Play
+                          </button>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                            data-toggle="modal"
+                            data-target="#payment-processing"
+                          >
+                            DONATE
+                          </button>
 
-                          <h3 className="mb-3 features-cont-head">Office Party</h3>
-                          <p >A Show for a Change Productions • 2018 • 13 min</p>
-                          <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }}>Play</button>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }} data-toggle="modal" data-target="#payment-processing">DONATE</button>
-
-
-                          <button className="btn-outline-close" style={{ marginTop: '10px', marginRight: '10px', position: 'absolute', top: '0', right: '0' }} onClick={this.hide3}>Close</button>
+                          <button
+                            className="btn-outline-close"
+                            style={{
+                              marginTop: '10px',
+                              marginRight: '10px',
+                              position: 'absolute',
+                              top: '0',
+                              right: '0'
+                            }}
+                            onClick={this.hide3}
+                          >
+                            Close
+                          </button>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </RootCloseWrapper>
@@ -234,97 +376,170 @@ class UserPage extends Component {
                 <RootCloseWrapper onRootClose={this.hide4}>
                   <div className="container img-border">
                     <div className="row">
-
                       <div className="col-lg-6 col-md-6">
                         <div className="service-box mt-5 mx-auto">
-                          <img src={jared} alt="actor" width="600" height="400" style={{ paddingBottom: "40px" }} />
+                          <img
+                            src={jared}
+                            alt="actor"
+                            width="600"
+                            height="400"
+                            style={{ paddingBottom: '40px' }}
+                          />
                         </div>
                       </div>
-                      <div className="col-lg-6 col-md-6" style={{ paddingLeft: "60px" }}>
+                      <div
+                        className="col-lg-6 col-md-6"
+                        style={{ paddingLeft: '60px' }}
+                      >
                         <div className="service-box mt-5 mx-auto text-left">
+                          <h3 className="mb-3 features-cont-head">
+                            Hurry Up and Wait
+                          </h3>
+                          <p>A Show for a Change Productions • 2018 • 13 min</p>
+                          <p>
+                            On her thirteenth birthday, Gabriela Morales is
+                            given a magical heirloom that could change her
+                            family’s future.
+                          </p>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                          >
+                            Play
+                          </button>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                            data-toggle="modal"
+                            data-target="#payment-processing"
+                          >
+                            DONATE
+                          </button>
 
-                          <h3 className="mb-3 features-cont-head">Hurry Up and Wait</h3>
-                          <p >A Show for a Change Productions • 2018 • 13 min</p>
-                          <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }}>Play</button>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }} data-toggle="modal" data-target="#payment-processing">DONATE</button>
-
-
-                          <button className="btn-outline-close" style={{ marginTop: '10px', marginRight: '10px', position: 'absolute', top: '0', right: '0' }} onClick={this.hide4}>Close</button>
+                          <button
+                            className="btn-outline-close"
+                            style={{
+                              marginTop: '10px',
+                              marginRight: '10px',
+                              position: 'absolute',
+                              top: '0',
+                              right: '0'
+                            }}
+                            onClick={this.hide4}
+                          >
+                            Close
+                          </button>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </RootCloseWrapper>
               )}
-
-
-
             </div>
           </div>
         </section>
 
-        <section className="more-from mb-5" >
+        <section className="more-from mb-5">
           <div className="container">
-            <h3 style={{ paddingBottom: '30px' }} className="head-movie-genre" >Newly Added</h3>
+            <h3 style={{ paddingBottom: '30px' }} className="head-movie-genre">
+              Newly Added
+            </h3>
             <div className="row">
               <figure className="col-lg-3 col-md-6 figure text-center">
-                <img src={Video5} alt="Kiana2" className="img-fluid figure-img img-border" onClick={this.show5} />
-                <figcaption className="figure-caption">
-                  Marriage
-              </figcaption>
-
+                <img
+                  src={Video5}
+                  alt="Kiana2"
+                  className="img-fluid figure-img img-border"
+                  onClick={this.show5}
+                />
+                <figcaption className="figure-caption">Marriage</figcaption>
               </figure>
               <figure className="col-lg-3 col-md-6 figure text-center">
-                <img src={Video6} alt="Kiana3" className="img-fluid figure-img img-border" onClick={this.show6} />
-                <figcaption className="figure-caption">
-                  Emunah
-              </figcaption>
-
+                <img
+                  src={Video6}
+                  alt="Kiana3"
+                  className="img-fluid figure-img img-border"
+                  onClick={this.show6}
+                />
+                <figcaption className="figure-caption">Emunah</figcaption>
               </figure>
               <figure className="col-lg-3 col-md-6 figure text-center">
-                <img src={Video7} alt="Kiana4" className="img-fluid figure-img img-border" onClick={this.show7} />
-                <figcaption className="figure-caption">
-                  Stressed
-  </figcaption>
-
+                <img
+                  src={Video7}
+                  alt="Kiana4"
+                  className="img-fluid figure-img img-border"
+                  onClick={this.show7}
+                />
+                <figcaption className="figure-caption">Stressed</figcaption>
               </figure>
 
-
-
               <figure className="col-lg-3 col-md-6 figure text-center">
-                <img src={Video8} alt="Kiana5" className="img-fluid figure-img img-border" onClick={this.show8} />
-                <figcaption className="figure-caption">
-                  Wear
-              </figcaption>
-
+                <img
+                  src={Video8}
+                  alt="Kiana5"
+                  className="img-fluid figure-img img-border"
+                  onClick={this.show8}
+                />
+                <figcaption className="figure-caption">Wear</figcaption>
               </figure>
 
               {this.state.show5 && (
                 <RootCloseWrapper onRootClose={this.hide5}>
                   <div className="container img-border">
                     <div className="row">
-
                       <div className="col-lg-6 col-md-6">
                         <div className="service-box mt-5 mx-auto">
-                          <img src={jared} alt="actor" width="600" height="400" style={{ paddingBottom: "40px" }} />
+                          <img
+                            src={jared}
+                            alt="actor"
+                            width="600"
+                            height="400"
+                            style={{ paddingBottom: '40px' }}
+                          />
                         </div>
                       </div>
-                      <div className="col-lg-6 col-md-6" style={{ paddingLeft: "60px" }}>
+                      <div
+                        className="col-lg-6 col-md-6"
+                        style={{ paddingLeft: '60px' }}
+                      >
                         <div className="service-box mt-5 mx-auto text-left">
-
                           <h3 className="mb-3 features-cont-head">Marriage</h3>
-                          <p >A Show for a Change Productions • 2018 • 13 min</p>
-                          <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }}>Play</button>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }} data-toggle="modal" data-target="#payment-processing">DONATE</button>
+                          <p>A Show for a Change Productions • 2018 • 13 min</p>
+                          <p>
+                            On her thirteenth birthday, Gabriela Morales is
+                            given a magical heirloom that could change her
+                            family’s future.
+                          </p>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                          >
+                            Play
+                          </button>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                            data-toggle="modal"
+                            data-target="#payment-processing"
+                          >
+                            DONATE
+                          </button>
 
-
-                          <button className="btn-outline-close" style={{ marginTop: '10px', marginRight: '10px', position: 'absolute', top: '0', right: '0' }} onClick={this.hide5}>Close</button>
+                          <button
+                            className="btn-outline-close"
+                            style={{
+                              marginTop: '10px',
+                              marginRight: '10px',
+                              position: 'absolute',
+                              top: '0',
+                              right: '0'
+                            }}
+                            onClick={this.hide5}
+                          >
+                            Close
+                          </button>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </RootCloseWrapper>
@@ -334,26 +549,59 @@ class UserPage extends Component {
                 <RootCloseWrapper onRootClose={this.hide6}>
                   <div className="container img-border">
                     <div className="row">
-
                       <div className="col-lg-6 col-md-6">
                         <div className="service-box mt-5 mx-auto">
-                          <img src={jared} alt="actor" width="600" height="400" style={{ paddingBottom: "40px" }} />
+                          <img
+                            src={jared}
+                            alt="actor"
+                            width="600"
+                            height="400"
+                            style={{ paddingBottom: '40px' }}
+                          />
                         </div>
                       </div>
-                      <div className="col-lg-6 col-md-6" style={{ paddingLeft: "60px" }}>
+                      <div
+                        className="col-lg-6 col-md-6"
+                        style={{ paddingLeft: '60px' }}
+                      >
                         <div className="service-box mt-5 mx-auto text-left">
-
                           <h3 className="mb-3 features-cont-head">Enurah</h3>
-                          <p >A Show for a Change Productions • 2018 • 13 min</p>
-                          <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }}>Play</button>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }} data-toggle="modal" data-target="#payment-processing">DONATE</button>
+                          <p>A Show for a Change Productions • 2018 • 13 min</p>
+                          <p>
+                            On her thirteenth birthday, Gabriela Morales is
+                            given a magical heirloom that could change her
+                            family’s future.
+                          </p>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                          >
+                            Play
+                          </button>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                            data-toggle="modal"
+                            data-target="#payment-processing"
+                          >
+                            DONATE
+                          </button>
 
-
-                          <button className="btn-outline-close" style={{ marginTop: '10px', marginRight: '10px', position: 'absolute', top: '0', right: '0' }} onClick={this.hide6}>Close</button>
+                          <button
+                            className="btn-outline-close"
+                            style={{
+                              marginTop: '10px',
+                              marginRight: '10px',
+                              position: 'absolute',
+                              top: '0',
+                              right: '0'
+                            }}
+                            onClick={this.hide6}
+                          >
+                            Close
+                          </button>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </RootCloseWrapper>
@@ -362,26 +610,59 @@ class UserPage extends Component {
                 <RootCloseWrapper onRootClose={this.hide7}>
                   <div className="container img-border">
                     <div className="row">
-
                       <div className="col-lg-6 col-md-6">
                         <div className="service-box mt-5 mx-auto">
-                          <img src={jared} alt="actor" width="600" height="400" style={{ paddingBottom: "40px" }} />
+                          <img
+                            src={jared}
+                            alt="actor"
+                            width="600"
+                            height="400"
+                            style={{ paddingBottom: '40px' }}
+                          />
                         </div>
                       </div>
-                      <div className="col-lg-6 col-md-6" style={{ paddingLeft: "60px" }}>
+                      <div
+                        className="col-lg-6 col-md-6"
+                        style={{ paddingLeft: '60px' }}
+                      >
                         <div className="service-box mt-5 mx-auto text-left">
-
                           <h3 className="mb-3 features-cont-head">Stressed</h3>
-                          <p >A Show for a Change Productions • 2018 • 13 min</p>
-                          <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }}>Play</button>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }} data-toggle="modal" data-target="#payment-processing">DONATE</button>
+                          <p>A Show for a Change Productions • 2018 • 13 min</p>
+                          <p>
+                            On her thirteenth birthday, Gabriela Morales is
+                            given a magical heirloom that could change her
+                            family’s future.
+                          </p>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                          >
+                            Play
+                          </button>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                            data-toggle="modal"
+                            data-target="#payment-processing"
+                          >
+                            DONATE
+                          </button>
 
-
-                          <button className="btn-outline-close" style={{ marginTop: '10px', marginRight: '10px', position: 'absolute', top: '0', right: '0' }} onClick={this.hide7}>Close</button>
+                          <button
+                            className="btn-outline-close"
+                            style={{
+                              marginTop: '10px',
+                              marginRight: '10px',
+                              position: 'absolute',
+                              top: '0',
+                              right: '0'
+                            }}
+                            onClick={this.hide7}
+                          >
+                            Close
+                          </button>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </RootCloseWrapper>
@@ -390,67 +671,90 @@ class UserPage extends Component {
                 <RootCloseWrapper onRootClose={this.hide8}>
                   <div className="container img-border">
                     <div className="row">
-
                       <div className="col-lg-6 col-md-6">
                         <div className="service-box mt-5 mx-auto">
-                          <img src={jared} alt="actor" width="600" height="400" style={{ paddingBottom: "40px" }} />
+                          <img
+                            src={jared}
+                            alt="actor"
+                            width="600"
+                            height="400"
+                            style={{ paddingBottom: '40px' }}
+                          />
                         </div>
                       </div>
-                      <div className="col-lg-6 col-md-6" style={{ paddingLeft: "60px" }}>
+                      <div
+                        className="col-lg-6 col-md-6"
+                        style={{ paddingLeft: '60px' }}
+                      >
                         <div className="service-box mt-5 mx-auto text-left">
-
                           <h3 className="mb-3 features-cont-head">Wear</h3>
-                          <p >A Show for a Change Productions • 2018 • 13 min</p>
-                          <p>On her thirteenth birthday, Gabriela Morales is given a magical heirloom that could change her family’s future.</p>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }}>Play</button>
-                          <button className="btn btn-dark btn-outline-success" style={{ marginRight: '10px' }} data-toggle="modal" data-target="#payment-processing">DONATE</button>
+                          <p>A Show for a Change Productions • 2018 • 13 min</p>
+                          <p>
+                            On her thirteenth birthday, Gabriela Morales is
+                            given a magical heirloom that could change her
+                            family’s future.
+                          </p>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                          >
+                            Play
+                          </button>
+                          <button
+                            className="btn btn-dark btn-outline-success"
+                            style={{ marginRight: '10px' }}
+                            data-toggle="modal"
+                            data-target="#payment-processing"
+                          >
+                            DONATE
+                          </button>
 
-
-                          <button className="btn-outline-close" style={{ marginTop: '10px', marginRight: '10px', position: 'absolute', top: '0', right: '0' }} onClick={this.hide8}>Close</button>
+                          <button
+                            className="btn-outline-close"
+                            style={{
+                              marginTop: '10px',
+                              marginRight: '10px',
+                              position: 'absolute',
+                              top: '0',
+                              right: '0'
+                            }}
+                            onClick={this.hide8}
+                          >
+                            Close
+                          </button>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </RootCloseWrapper>
               )}
-
-
             </div>
           </div>
         </section>
 
-
         <div className="influencer-user-content">
           <div className="container-fluid">
-
-
             <div className="influencer-overlay">
               <div className="container">
                 <div className="influencer-overlay-content">
                   <h1>Featured Influencer</h1>
-                  <p className="influencer-overlay-para">Influencer content exclusive to the platform, updated weekly.</p>
-                  <button className="btn" id="info-but" onClick={(event) => this.handleInfluClick(event)}>VISIT INFLUENCER CHANNEL</button>
-
+                  <p className="influencer-overlay-para">
+                    Influencer content exclusive to the platform, updated
+                    weekly.
+                  </p>
+                  <button
+                    className="btn"
+                    id="info-but"
+                    onClick={event => this.handleInfluClick(event)}
+                  >
+                    VISIT INFLUENCER CHANNEL
+                  </button>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-
-
-
-
-
       </div>
-
-
-
-
-
-
-
 
       /*  <h1>Hello</h1>
       <p>Upload Video</p>
@@ -459,14 +763,8 @@ class UserPage extends Component {
       </div>
     </div>
 */
-
-
     );
   }
-
-
 }
-
-
 
 export default UserPage;

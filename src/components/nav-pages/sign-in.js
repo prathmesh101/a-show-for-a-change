@@ -10,12 +10,18 @@ import { Redirect } from 'react-router';
 // sample data for user:
 import usersData from '../../../dist/api_php/data.js';
 
+// redux:
+import { connect } from 'react-redux';
+// action:
+import { userLogin } from '../../store/actions/userAction.js';
+
 class SignIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
       email: '',
       password: '',
+      tokenId: '',
       redirect: false,
       error: false,
       incomplete: false
@@ -38,35 +44,47 @@ class SignIn extends Component {
     if (!this.state.email || !this.state.password) {
       this.setState({ incomplete: true });
       return;
-    }
+    } else {
+      // clear the localStorage, async function that get run on timeout:
+      const clearToken = () => {
+        return setTimeout(() => localStorage.removeItem('authToken'), 1000000);
+      };
 
-    // clear the localStorage, async function that get run on timeout:
-    const clearToken = () => {
-      return setTimeout(() => localStorage.removeItem('authToken'), 5000);
-    };
+      // token generator should be in the server
+      const generateToken = () => {
+        let token = Math.floor(Math.random() * (999999 - 100000) + 100000);
+        return token;
+      };
 
-    // token generator should be in the server
-    const generateToken = () => {
-      return Math.floor(Math.random() * (999999 - 100000) + 100000);
-    };
+      // Will use sample data temporarily now
+      for (let user of usersData) {
+        if (
+          user.email === this.state.email &&
+          user.password === this.state.password
+        ) {
+          const token = generateToken();
+          localStorage.setItem('authToken', token);
+          this.setState({ tokenId: token });
+          // remove token in given time:
+          clearToken();
 
-    // Will use sample data temporarily now
-    for (let user of usersData) {
-      console.log(user.email);
-      if (
-        user.email === this.state.email &&
-        user.password === this.state.password
-      ) {
-        localStorage.setItem('authToken', generateToken());
-        // remove token in given time:
-        clearToken();
-        // set state to be able to redirect:
-        this.setState({ redirect: true });
-        return;
+          // redux:
+          this.props.login({
+            isLoggedIn: true,
+            // first_name: this.state.first_name,
+            // last_name: this.state.last_name,
+            email: this.state.email,
+            tokenId: token
+          });
+
+          // set state to be able to redirect:
+          this.setState({ redirect: true });
+          return;
+        }
       }
+      this.setState({ error: true });
+      return;
     }
-    this.setState({ error: true });
-    return;
   }
 
   handleClick(event) {
@@ -212,4 +230,18 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn;
+const mapStateToProps = state => {
+  return {
+    user: state
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    login: userObj => {
+      dispatch(userLogin(userObj));
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

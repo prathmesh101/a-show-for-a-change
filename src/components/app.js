@@ -48,48 +48,45 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      isLoggedIn: false
-    };
+    // this.state = {
+    //   isLoggedIn: false
+    // };
   }
 
-    componentWillMount() {
-      console.log('app state: ', this.state);
-      console.log('update ', localStorage.getItem('authToken'));
+  // componentWillMount() {
+  //   console.log('app state: ', this.state);
+  //   console.log('update ', localStorage.getItem('authToken'));
 
-      this.setState(() => {
-        return {
-          isLoggedIn: localStorage.getItem('authToken') !== null ? true : false
-        };
-      });
-    }
+  //   this.setState(() => {
+  //     return {
+  //       isLoggedIn: localStorage.getItem('authToken') !== null ? true : false
+  //     };
+  //   });
+  // }
 
   render() {
     return (
-        <div>
-          <div className="spacing-div">
-            <BrowserRouter>
-              <main>
-                <Header loggedIn={this.state.isLoggedIn} />
-                <Switch>
-                  <Route exact path="/" component={Home} />
-                  <Route path="/about" component={About} />
-                  <Route path="/partners" component={Partners} />
-                  <Route path="/genre" component={Genres} />
-                  <Route path="/influencer" component={Influencer} />
-                  <Route path="/sign-in" component={SignIn} />
-                  <Route path="/sign-up" component={SignUp} />
-                  <Route
-                    path="/user-page"
-                    component={AuthComponent(UserPage)}
-                  />
-                  <Route path="/video-page" component={VideoPage} />
-                </Switch>
-                <Footer />
-              </main>
-            </BrowserRouter>
-          </div>
+      <div>
+        <div className="spacing-div">
+          <BrowserRouter>
+            <main>
+              <Header loggedIn={this.props.user.isLoggedIn} />
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/about" component={About} />
+                <Route path="/partners" component={Partners} />
+                <Route path="/genre" component={Genres} />
+                <Route path="/influencer" component={Influencer} />
+                <Route path="/sign-in" component={SignIn} />
+                <Route path="/sign-up" component={SignUp} />
+                <Route path="/user-page" component={AuthComponent(UserPage)} />
+                <Route path="/video-page" component={VideoPage} />
+              </Switch>
+              <Footer />
+            </main>
+          </BrowserRouter>
         </div>
+      </div>
     );
   }
 }

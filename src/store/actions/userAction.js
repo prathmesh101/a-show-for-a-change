@@ -1,11 +1,10 @@
-const userLogin = (status, user) => {
-  return {
-    type: 'USER_LOGIN',
-    status: status,
-    user: user
-  }
-}
+import { USER_LOGIN } from './type.js';
 
-export {
-  userLogin
-}
+const userLogin = ({ isLoggedIn, first_name, last_name, email, tokenId }) => {
+  return {
+    type: USER_LOGIN,
+    payload: { isLoggedIn, first_name, last_name, email, tokenId }
+  };
+};
+
+export { userLogin };
